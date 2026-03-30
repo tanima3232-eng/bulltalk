@@ -9,11 +9,19 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        background: "var(--background)",
-        foreground: "var(--foreground)",
+        navy: "#1A2E4A",
+        gold: "#C9A84C",
+        offwhite: "#F4F4F2",
+        dark: "#333333",
+        "light-gold": "#FFF8E7",
+        "light-navy": "#E8EEF4",
+      },
+      fontFamily: {
+        sans: ["var(--font-noto)", "var(--font-inter)", "sans-serif"],
+        inter: ["var(--font-inter)", "sans-serif"],
       },
     },
   },
-  plugins: [],
+  plugins: [require("@tailwindcss/typography")],
 };
 export default config;

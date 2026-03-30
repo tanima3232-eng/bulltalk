@@ -2,26 +2,58 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+  body {
+    @apply text-dark;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-bold;
   }
 }
 
-body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
-}
+@layer components {
+  .btn-primary {
+    @apply inline-block px-6 py-3 bg-gold text-navy font-bold rounded-lg hover:opacity-90 transition-all duration-200 text-center;
+  }
 
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
+  .btn-navy {
+    @apply inline-block px-6 py-3 bg-navy text-white font-bold rounded-lg hover:opacity-90 transition-all duration-200 text-center;
+  }
+
+  .btn-red {
+    @apply inline-block px-6 py-3 bg-red-600 text-white font-bold rounded-lg hover:opacity-90 transition-all duration-200 text-center;
+  }
+
+  .btn-blue {
+    @apply inline-block px-6 py-3 bg-blue-700 text-white font-bold rounded-lg hover:opacity-90 transition-all duration-200 text-center;
+  }
+
+  .btn-line {
+    @apply inline-flex items-center gap-2 px-6 py-3 bg-green-500 text-white font-bold rounded-lg hover:bg-green-600 transition-all duration-200;
+  }
+
+  .section-title {
+    @apply text-2xl md:text-3xl font-bold text-navy mb-2;
+  }
+
+  .section-subtitle {
+    @apply text-gray-500 text-sm md:text-base mb-8;
+  }
+
+  .card {
+    @apply bg-white rounded-xl shadow-md overflow-hidden hover:shadow-lg transition-shadow duration-300;
+  }
+
+  .blockquote-style {
+    @apply border-l-4 border-gold bg-light-gold px-6 py-4 my-6 text-navy font-bold italic text-lg rounded-r-lg;
+  }
+
+  .disclaimer {
+    @apply text-xs text-gray-500 leading-relaxed;
   }
 }
