@@ -9,9 +9,9 @@ import type { ColumnMeta } from "@/lib/columns";
 
 const CATEGORIES = [
   { id: "all",     label: "すべて" },
-  { id: "fudosan", label: "不動産" },
-  { id: "souzoku", label: "相続" },
   { id: "asset",   label: "資産形成" },
+  { id: "souzoku", label: "相続" },
+  { id: "fudosan", label: "不動産" },
 ];
 
 const ICONS: Record<string, string> = {

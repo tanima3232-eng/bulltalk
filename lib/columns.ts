@@ -15,10 +15,11 @@ export type ColumnMeta = {
   order: number;
 };
 
-const CATEGORY_MAP: Record<string, { label: string; color: string }> = {
-  fudosan: { label: "不動産", color: "#2E7D32" },
-  souzoku: { label: "相続",   color: "#1A2E4A" },
-  asset:   { label: "資産形成", color: "#C9A84C" },
+// カテゴリ表示順：資産形成 → 相続 → 不動産
+const CATEGORY_MAP: Record<string, { label: string; color: string; priority: number }> = {
+  asset:   { label: "資産形成", color: "#C9A84C", priority: 0 },
+  souzoku: { label: "相続",     color: "#1A2E4A", priority: 1 },
+  fudosan: { label: "不動産",   color: "#2E7D32", priority: 2 },
 };
 
 export function getAllColumns(): ColumnMeta[] {
@@ -36,7 +37,7 @@ export function getAllColumns(): ColumnMeta[] {
       const { data } = matter(raw);
       if (!data.published) continue;
 
-      const meta = CATEGORY_MAP[cat] ?? { label: cat, color: "#1A2E4A" };
+      const meta = CATEGORY_MAP[cat] ?? { label: cat, color: "#1A2E4A", priority: 99 };
       columns.push({
         slug: data.slug || file.replace(".mdx", ""),
         title: data.title || "",
@@ -45,7 +46,7 @@ export function getAllColumns(): ColumnMeta[] {
         categoryColor: meta.color,
         excerpt: data.excerpt || "",
         date: data.date || "",
-        order: data.order ?? 999,
+        order: meta.priority * 1000 + (data.order ?? 999),
       });
     }
   }
