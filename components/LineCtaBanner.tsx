@@ -8,7 +8,7 @@ export default function LineCtaBanner() {
         <p className="text-navy/80 mb-2">毎日の225分析 + 金融コラムをLINEで受け取る</p>
         <p className="text-navy/80 mb-8">無料Zoom相談もLINEから</p>
         <a
-          href="#line-url-placeholder"
+          href="https://lin.ee/FmH7NXr"
           className="btn-line inline-flex items-center justify-center gap-3 text-lg px-8 py-4 rounded-xl shadow-lg"
         >
           <svg className="w-6 h-6" viewBox="0 0 24 24" fill="currentColor">
@@ -16,7 +16,7 @@ export default function LineCtaBanner() {
           </svg>
           LINE で無料登録する
         </a>
-        <p className="text-navy/60 text-xs mt-4">※ LINE URLは準備中です。もうしばらくお待ちください。</p>
+
       </div>
     </section>
   );

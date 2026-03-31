@@ -20,7 +20,7 @@ export default function LinePage() {
             <p className="text-navy/80 text-lg mb-4">毎日の225分析 + 金融コラムをLINEで受け取る</p>
             <p className="text-navy/80 mb-10">無料Zoom相談もLINEから</p>
             <a
-              href="#line-url-placeholder"
+              href="https://lin.ee/FmH7NXr"
               className="btn-line inline-flex items-center justify-center gap-3 text-xl px-10 py-5 rounded-2xl shadow-xl"
             >
               <svg className="w-7 h-7" viewBox="0 0 24 24" fill="currentColor">
@@ -28,7 +28,7 @@ export default function LinePage() {
               </svg>
               LINE で無料登録する
             </a>
-            <p className="text-navy/50 text-sm mt-6">※ LINE URLは準備中です。もうしばらくお待ちください。</p>
+
           </div>
         </section>
       </main>

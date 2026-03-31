@@ -219,7 +219,7 @@ export default function AboutPage() {
               何でも気軽にLINEで相談してください。
             </p>
             <div className="mt-8">
-              <a href="#line-url-placeholder" className="btn-primary inline-block">
+              <a href="https://lin.ee/FmH7NXr" className="btn-primary inline-block">
                 LINEで無料相談する →
               </a>
             </div>

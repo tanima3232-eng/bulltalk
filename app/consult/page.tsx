@@ -33,7 +33,7 @@ export default function ConsultPage() {
                   <li>✅ NISA・iDeCoの始め方</li>
                   <li>✅ 資産運用の方向性確認</li>
                 </ul>
-                <a href="#line-url-placeholder" className="btn-line w-full block text-center py-3 rounded-xl">
+                <a href="https://lin.ee/FmH7NXr" className="btn-line w-full block text-center py-3 rounded-xl">
                   LINEから申し込む（無料）
                 </a>
               </div>
@@ -48,7 +48,7 @@ export default function ConsultPage() {
                   <li>✅ ポートフォリオ診断</li>
                   <li>✅ 個別の投資判断サポート</li>
                 </ul>
-                <a href="#line-url-placeholder" className="btn-primary w-full block text-center py-3 rounded-xl">
+                <a href="https://lin.ee/FmH7NXr" className="btn-primary w-full block text-center py-3 rounded-xl">
                   LINEから詳細を聞く
                 </a>
               </div>
