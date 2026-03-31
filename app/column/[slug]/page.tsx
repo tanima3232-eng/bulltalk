@@ -21,16 +21,10 @@ export async function generateMetadata({
   const data = getColumnBySlug(slug);
   if (!data) return {};
   return {
-    title: data.meta.title,
+    title: `${data.meta.title}｜Bulltalk`,
     description: data.meta.excerpt,
   };
 }
-
-const categoryColors: Record<string, string> = {
-  souzoku: "border-purple-500 text-purple-600 bg-purple-50",
-  asset: "border-green-500 text-green-600 bg-green-50",
-  fudosan: "border-blue-500 text-blue-600 bg-blue-50",
-};
 
 export default async function ColumnDetailPage({
   params,
@@ -43,59 +37,98 @@ export default async function ColumnDetailPage({
 
   const { meta, content } = data;
 
+  // 同カテゴリ優先で関連3本
+  const allColumns = getAllColumns().filter((c) => c.slug !== slug);
+  const sameCategory = allColumns.filter((c) => c.category === meta.category);
+  const others = allColumns.filter((c) => c.category !== meta.category);
+  const related = [...sameCategory, ...others].slice(0, 3);
+
+  const ICONS: Record<string, string> = {
+    fudosan: "🏠",
+    souzoku: "🏛️",
+    asset: "📊",
+  };
+
   return (
     <>
       <Header />
       <main>
-        {/* Header */}
+        {/* Hero */}
         <section className="bg-navy text-white py-16 px-4">
           <div className="max-w-3xl mx-auto">
-            <span className={`inline-block text-xs font-bold border rounded-full px-3 py-1 mb-4 ${categoryColors[meta.category] || "border-gray-400 text-gray-600 bg-gray-50"}`}>
+            <Link
+              href="/column"
+              className="text-white/50 hover:text-gold text-sm mb-6 inline-block transition-colors"
+            >
+              ← コラム一覧
+            </Link>
+            {/* Category Badge */}
+            <span
+              className="inline-block text-xs font-bold rounded-full px-4 py-1.5 mb-5 text-white"
+              style={{ backgroundColor: meta.categoryColor }}
+            >
               {meta.categoryLabel}
             </span>
-            <h1 className="text-2xl md:text-3xl font-bold text-white leading-tight">{meta.title}</h1>
-            <p className="text-white/50 text-sm mt-4">{meta.date}</p>
+            <h1 className="text-2xl md:text-3xl font-bold text-white leading-tight">
+              {meta.title}
+            </h1>
+            <p className="text-white/50 text-sm mt-5">{meta.date}</p>
           </div>
         </section>
 
-        {/* Article */}
-        <section className="bg-white py-12 px-4">
+        {/* Article Body */}
+        <section className="bg-white py-14 px-4">
           <div className="max-w-3xl mx-auto">
-            <article className="prose prose-lg max-w-none prose-headings:text-navy prose-a:text-gold">
+            <article className="prose prose-lg max-w-none prose-headings:text-navy prose-headings:font-bold prose-a:text-gold prose-blockquote:border-l-gold prose-blockquote:text-gray-500 prose-strong:text-navy prose-table:text-sm">
               <MDXRemote source={content} />
             </article>
 
             {/* Disclaimer */}
-            <div className="mt-10 pt-6 border-t border-gray-100">
-              <p className="disclaimer">
-                ※ 本サイトの情報は投資助言ではありません。投資は自己責任でお願いします。
+            <div className="mt-12 p-5 bg-gray-50 rounded-xl border border-gray-100">
+              <p className="text-xs text-gray-500 leading-relaxed">
+                ⚠️ 本記事は情報提供を目的としており、投資助言・法律相談・税務相談ではありません。
+                記載内容は作成時点の情報であり、制度改正等により変更になる場合があります。
+                具体的な判断は必ず税理士・弁護士・FP等の専門家にご相談ください。
               </p>
             </div>
           </div>
         </section>
 
-        {/* Related */}
-        <section className="bg-offwhite py-12 px-4">
+        {/* Related Articles */}
+        <section className="bg-offwhite py-14 px-4">
           <div className="max-w-3xl mx-auto">
             <h2 className="text-xl font-bold text-navy mb-6">関連コラム</h2>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-              {getAllColumns()
-                .filter((c) => c.slug !== slug)
-                .slice(0, 3)
-                .map((col) => (
-                  <Link key={col.slug} href={`/column/${col.slug}`} className="card p-4 group">
-                    <span className={`inline-block text-xs font-bold border rounded-full px-2 py-0.5 mb-2 ${categoryColors[col.category] || ""}`}>
-                      {col.categoryLabel}
-                    </span>
-                    <p className="text-sm font-bold text-navy group-hover:text-gold transition-colors leading-snug">
-                      {col.title}
-                    </p>
-                  </Link>
-                ))}
+              {related.map((col) => (
+                <Link
+                  key={col.slug}
+                  href={`/column/${col.slug}`}
+                  className="bg-white rounded-xl p-4 group hover:shadow-md transition-all duration-200 border border-gray-100 hover:-translate-y-0.5"
+                >
+                  <div
+                    className="w-8 h-8 rounded-lg flex items-center justify-center text-lg mb-3"
+                    style={{ backgroundColor: col.categoryColor + "20" }}
+                  >
+                    {ICONS[col.category] || "📄"}
+                  </div>
+                  <span
+                    className="inline-block text-xs font-bold rounded-full px-2.5 py-0.5 mb-2 text-white"
+                    style={{ backgroundColor: col.categoryColor }}
+                  >
+                    {col.categoryLabel}
+                  </span>
+                  <p className="text-sm font-bold text-navy group-hover:text-gold transition-colors leading-snug">
+                    {col.title}
+                  </p>
+                </Link>
+              ))}
             </div>
-            <div className="text-center mt-8">
-              <Link href="/column" className="btn-navy px-8 py-3 inline-block">
-                ← コラム一覧に戻る
+            <div className="text-center mt-10">
+              <Link
+                href="/column"
+                className="inline-block bg-navy text-white font-bold px-8 py-3 rounded-xl hover:bg-navy/90 transition-colors"
+              >
+                コラム一覧をすべて見る
               </Link>
             </div>
           </div>
