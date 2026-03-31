@@ -4,6 +4,7 @@ import Link from "next/link";
 import { useState } from "react";
 
 const navLinks = [
+  { href: "/", label: "ホーム" },
   { href: "/market", label: "225分析" },
   { href: "/column", label: "コラム" },
   { href: "/about", label: "経歴" },
