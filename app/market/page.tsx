@@ -21,12 +21,10 @@ export default async function MarketPage() {
         <section className="bg-navy text-white py-20 px-4">
           <div className="max-w-4xl mx-auto text-center">
             <p className="text-gold text-sm font-bold uppercase tracking-widest mb-6">毎日場引け前に更新</p>
-            <h1 className="font-bold mb-8" style={{lineHeight: "1.6"}}>
-              {/* 1行目 */}
-              <span className="block text-4xl md:text-6xl text-white">
+            <h1 className="font-bold mb-8">
+              <span className="block text-4xl md:text-6xl text-white mb-5">
                 勝ちたい奴、
               </span>
-              {/* 2行目：長いので自然に右に広がる */}
               <span className="block text-4xl md:text-6xl">
                 俺について
                 <span className="text-gold" style={{fontSize: "1.15em"}}>来い</span>

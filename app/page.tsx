@@ -19,10 +19,10 @@ export default function HomePage() {
         <section className="bg-navy text-white py-24 px-4">
           <div className="max-w-4xl mx-auto text-center">
             <p className="text-gold text-sm font-bold uppercase tracking-widest mb-4">元大手信託銀行員 × FP1級 × 証券アナリスト × 宅建士</p>
-            <h1 className="text-3xl md:text-5xl font-bold leading-loose mb-6">
-              投資と資産設計、両方わかる<br />
-              <span className="text-gold">元大手信託銀行員</span>が<br />
-              本音で発信します。
+            <h1 className="text-3xl md:text-5xl font-bold mb-8">
+              <span className="block mb-5">投資と資産設計、両方わかる</span>
+              <span className="block mb-5"><span className="text-gold">元大手信託銀行員</span>が</span>
+              <span className="block">本音で発信します。</span>
             </h1>
             <p className="text-white/80 text-base md:text-lg leading-relaxed mb-10 max-w-2xl mx-auto">
               日経225分析・相続・資産運用・不動産まで<br />
