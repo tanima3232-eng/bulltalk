@@ -132,8 +132,93 @@ export default async function MarketPage() {
                 </p>
               </div>
             </div>
-            <div className="bg-light-navy rounded-xl p-6 flex items-center justify-center min-h-40 border-2 border-dashed border-navy/20 mt-6">
-              <p className="text-navy/40 text-sm text-center">投資信託の仕組み図解<br />（後で追加）</p>
+            {/* 投資信託の仕組み図解 */}
+            <div className="my-4 w-full overflow-x-auto mt-6">
+              <div style={{fontFamily:"'Hiragino Kaku Gothic Pro','Noto Sans JP',sans-serif", padding:"20px"}}>
+                <h4 style={{textAlign:"center", color:"#1A2E4A", fontSize:"15px", fontWeight:"bold", marginBottom:"24px", letterSpacing:"0.05em"}}>投資信託の仕組み</h4>
+
+                {/* フォワードフロー：投資家 → 投資信託 → 運用先 */}
+                <div style={{display:"flex", alignItems:"center", justifyContent:"center", gap:"0", flexWrap:"nowrap"}}>
+
+                  {/* 投資家 */}
+                  <div style={{background:"#fff", border:"2px solid #1A2E4A", borderRadius:"10px", padding:"12px 10px", textAlign:"center", minWidth:"90px", maxWidth:"110px", flexShrink:0}}>
+                    <div style={{fontSize:"22px", marginBottom:"4px"}}>👥</div>
+                    <div style={{fontSize:"12px", fontWeight:"bold", color:"#1A2E4A", lineHeight:"1.4"}}>投資家<br />（受益者）</div>
+                    <div style={{fontSize:"10px", color:"#666", marginTop:"3px", lineHeight:"1.4"}}>少額から<br />参加可能</div>
+                  </div>
+
+                  {/* → 資金 → */}
+                  <div style={{display:"flex", flexDirection:"column", alignItems:"center", gap:"2px", flexShrink:0, width:"56px"}}>
+                    <div style={{fontSize:"9px", color:"#888", textAlign:"center", lineHeight:"1.3", whiteSpace:"nowrap"}}>資金を<br />まとめる</div>
+                    <svg width="48" height="20" viewBox="0 0 48 20">
+                      <defs><marker id="ah1" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto"><path d="M0,0 L6,3 L0,6 Z" fill="#1A2E4A"/></marker></defs>
+                      <line x1="2" y1="10" x2="42" y2="10" stroke="#1A2E4A" strokeWidth="2" markerEnd="url(#ah1)"/>
+                    </svg>
+                  </div>
+
+                  {/* 投資信託（ファンド） */}
+                  <div style={{background:"#1A2E4A", border:"2px solid #1A2E4A", borderRadius:"10px", padding:"12px 10px", textAlign:"center", minWidth:"90px", maxWidth:"110px", flexShrink:0}}>
+                    <div style={{fontSize:"20px", marginBottom:"4px"}}>📦</div>
+                    <div style={{fontSize:"12px", fontWeight:"bold", color:"#C9A84C", lineHeight:"1.4"}}>投資信託<br />（ファンド）</div>
+                    <div style={{fontSize:"10px", color:"#F4F4F2", marginTop:"3px", lineHeight:"1.4"}}>プロが運用</div>
+                  </div>
+
+                  {/* → 分散投資 → */}
+                  <div style={{display:"flex", flexDirection:"column", alignItems:"center", gap:"2px", flexShrink:0, width:"56px"}}>
+                    <div style={{fontSize:"9px", color:"#888", textAlign:"center", lineHeight:"1.3", whiteSpace:"nowrap"}}>分散<br />投資</div>
+                    <svg width="48" height="20" viewBox="0 0 48 20">
+                      <defs><marker id="ah2" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto"><path d="M0,0 L6,3 L0,6 Z" fill="#C9A84C"/></marker></defs>
+                      <line x1="2" y1="10" x2="42" y2="10" stroke="#C9A84C" strokeWidth="2" markerEnd="url(#ah2)"/>
+                    </svg>
+                  </div>
+
+                  {/* 運用先資産 */}
+                  <div style={{display:"flex", flexDirection:"column", gap:"6px", flexShrink:0}}>
+                    <div style={{background:"#fff", border:"1.5px solid #C9A84C", borderRadius:"8px", padding:"6px 10px", fontSize:"11px", fontWeight:"bold", color:"#1A2E4A", textAlign:"center", minWidth:"80px"}}>📈 株式</div>
+                    <div style={{background:"#fff", border:"1.5px solid #C9A84C", borderRadius:"8px", padding:"6px 10px", fontSize:"11px", fontWeight:"bold", color:"#1A2E4A", textAlign:"center", minWidth:"80px"}}>🏛️ 債券</div>
+                    <div style={{background:"#fff", border:"1.5px solid #C9A84C", borderRadius:"8px", padding:"6px 10px", fontSize:"11px", fontWeight:"bold", color:"#1A2E4A", textAlign:"center", minWidth:"80px"}}>🌏 不動産</div>
+                  </div>
+                </div>
+
+                {/* リターンフロー：収益が戻る */}
+                <div style={{display:"flex", alignItems:"center", justifyContent:"center", gap:"0", marginTop:"14px"}}>
+                  <div style={{width:"90px", minWidth:"90px"}}></div>
+                  <div style={{display:"flex", flexDirection:"column", alignItems:"center", gap:"2px", flexShrink:0, width:"56px"}}>
+                    <svg width="48" height="20" viewBox="0 0 48 20">
+                      <defs><marker id="ah3" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto"><path d="M0,0 L6,3 L0,6 Z" fill="#1A2E4A"/></marker></defs>
+                      <line x1="42" y1="10" x2="2" y2="10" stroke="#1A2E4A" strokeWidth="2" strokeDasharray="4 3" markerEnd="url(#ah3)"/>
+                    </svg>
+                    <div style={{fontSize:"9px", color:"#1A2E4A", fontWeight:"bold", textAlign:"center", lineHeight:"1.3"}}>収益還元</div>
+                  </div>
+                  <div style={{width:"110px", minWidth:"110px"}}></div>
+                  <div style={{display:"flex", flexDirection:"column", alignItems:"center", gap:"2px", flexShrink:0, width:"56px"}}>
+                    <svg width="48" height="20" viewBox="0 0 48 20">
+                      <defs><marker id="ah4" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto"><path d="M0,0 L6,3 L0,6 Z" fill="#C9A84C"/></marker></defs>
+                      <line x1="42" y1="10" x2="2" y2="10" stroke="#C9A84C" strokeWidth="2" strokeDasharray="4 3" markerEnd="url(#ah4)"/>
+                    </svg>
+                    <div style={{fontSize:"9px", color:"#C9A84C", fontWeight:"bold", textAlign:"center", lineHeight:"1.3"}}>運用益</div>
+                  </div>
+                  <div style={{width:"88px", minWidth:"88px"}}></div>
+                </div>
+
+                {/* ポイント3つ */}
+                <div style={{display:"flex", gap:"10px", marginTop:"18px", justifyContent:"center"}}>
+                  <div style={{background:"#fff", borderLeft:"4px solid #1A2E4A", borderRadius:"6px", padding:"8px 12px", fontSize:"11px", color:"#1A2E4A", flex:1, maxWidth:"150px", lineHeight:"1.6"}}>
+                    <strong>少額から参加</strong><br />100円〜投資可能
+                  </div>
+                  <div style={{background:"#fff", borderLeft:"4px solid #C9A84C", borderRadius:"6px", padding:"8px 12px", fontSize:"11px", color:"#1A2E4A", flex:1, maxWidth:"150px", lineHeight:"1.6"}}>
+                    <strong>分散でリスク低減</strong><br />個別銘柄リスクを分散
+                  </div>
+                  <div style={{background:"#fff", borderLeft:"4px solid #1A2E4A", borderRadius:"6px", padding:"8px 12px", fontSize:"11px", color:"#1A2E4A", flex:1, maxWidth:"150px", lineHeight:"1.6"}}>
+                    <strong>プロに任せる</strong><br />専門家が運用判断
+                  </div>
+                </div>
+
+                {/* 注記 */}
+                <div style={{fontSize:"10px", color:"#888", textAlign:"center", marginTop:"18px", borderTop:"1px solid #ccc", paddingTop:"10px", lineHeight:"1.6"}}>
+                  ※本図は投資助言ではありません。投資は自己責任でお願いします。
+                </div>
+              </div>
             </div>
           </div>
         </section>
