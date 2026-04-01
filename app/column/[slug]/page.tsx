@@ -56,19 +56,21 @@ export default async function ColumnDetailPage({
         {/* Hero */}
         <section className="bg-navy text-white py-16 px-4">
           <div className="max-w-3xl mx-auto">
-            <Link
-              href="/column"
-              className="text-white/50 hover:text-gold text-sm mb-6 inline-block transition-colors"
-            >
-              ← コラム一覧
-            </Link>
-            {/* Category Badge */}
-            <span
-              className="inline-block text-xs font-bold rounded-full px-4 py-1.5 mb-5 text-white"
-              style={{ backgroundColor: meta.categoryColor }}
-            >
-              {meta.categoryLabel}
-            </span>
+            <div className="flex items-center gap-6 mb-5">
+              <Link
+                href="/column"
+                className="text-white/50 hover:text-gold text-sm transition-colors shrink-0"
+              >
+                ← コラム一覧
+              </Link>
+              {/* Category Badge */}
+              <span
+                className="inline-block text-xs font-bold rounded-full px-4 py-1.5 text-white"
+                style={{ backgroundColor: meta.categoryColor }}
+              >
+                {meta.categoryLabel}
+              </span>
+            </div>
             <h1 className="text-2xl md:text-3xl font-bold text-white leading-tight">
               {meta.title}
             </h1>
