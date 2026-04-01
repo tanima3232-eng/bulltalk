@@ -142,7 +142,7 @@ export default async function MarketPage() {
         <section className="bg-offwhite py-16 px-4">
           <div className="max-w-5xl mx-auto">
             <h2 className="section-title">最新分析動画</h2>
-            <p className="section-subtitle">毎日場引け前に最新動画を公開中。YouTubeで自動更新されます。</p>
+            <p className="section-subtitle">毎日場引け前に最新動画を公開中。</p>
 
             {videos.length > 0 ? (
               <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
