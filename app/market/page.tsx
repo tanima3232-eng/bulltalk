@@ -245,7 +245,7 @@ export default async function MarketPage() {
             >
               🏦 SBI証券で口座を開設する（無料）
             </a>
-            <p className="text-xs text-gray-500 mt-3">※ アフィリエイトURLは準備中です</p>
+
           </div>
         </section>
 
