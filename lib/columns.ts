@@ -18,7 +18,7 @@ export type ColumnMeta = {
 // カテゴリ表示順：資産形成 → 相続 → 不動産
 const CATEGORY_MAP: Record<string, { label: string; color: string; priority: number }> = {
   asset:   { label: "資産形成", color: "#C9A84C", priority: 0 },
-  souzoku: { label: "相続",     color: "#1A2E4A", priority: 1 },
+  souzoku: { label: "相続",     color: "#7B5EA7", priority: 1 },
   fudosan: { label: "不動産",   color: "#2E7D32", priority: 2 },
 };
 
