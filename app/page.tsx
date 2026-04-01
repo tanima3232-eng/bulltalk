@@ -136,7 +136,7 @@ export default function HomePage() {
                 <div className="w-64 h-64 rounded-full bg-white/10 border-4 border-gold flex items-center justify-center">
                   <div className="text-center text-white/50">
                     <div className="text-5xl mb-2">👤</div>
-                    <p className="text-sm">プロフィール写真<br />（後で追加）</p>
+                    <p className="text-sm">プロフィール写真</p>
                   </div>
                 </div>
               </div>

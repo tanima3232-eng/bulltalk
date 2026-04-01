@@ -223,7 +223,7 @@ export default function AboutPage() {
                 LINEで無料相談する →
               </a>
             </div>
-            <p className="text-white/40 text-xs mt-4">※写真：後で追加（プロフィール写真・撮影後に差し替え）</p>
+
           </div>
         </section>
 
