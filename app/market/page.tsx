@@ -160,8 +160,61 @@ export default async function MarketPage() {
                   <p className="text-sm text-gray-500 mt-1">指数の4.3倍の値動き</p>
                 </div>
               </div>
-              <div className="bg-light-navy rounded-xl p-6 flex items-center justify-center min-h-32 border-2 border-dashed border-navy/20">
-                <p className="text-navy/40 text-sm text-center">通常 vs ブル型の比較グラフ<br />（後で追加）</p>
+              {/* ブルファンドの図 */}
+              <div className="my-4 w-full overflow-x-auto">
+                <div style={{maxWidth:"520px", margin:"0 auto", fontFamily:"'Hiragino Kaku Gothic Pro','Noto Sans JP',sans-serif"}}>
+                  <h4 style={{textAlign:"center", color:"#1A2E4A", fontSize:"15px", fontWeight:"bold", marginBottom:"24px", letterSpacing:"0.05em"}}>
+                    （イメージ図）ブル型4.3倍の仕組み
+                  </h4>
+                  <div style={{display:"flex", justifyContent:"center"}}>
+                    <div style={{position:"relative", height:"300px", display:"flex", alignItems:"flex-end", gap:"40px", paddingBottom:"2px"}}>
+                      {/* ベースライン */}
+                      <div style={{position:"absolute", bottom:"0", left:"0", right:"0", height:"2px", background:"#1A2E4A"}}></div>
+
+                      {/* 左バー：純資産総額 */}
+                      <div style={{display:"flex", flexDirection:"column", alignItems:"center", justifyContent:"flex-end", height:"100%"}}>
+                        <div style={{fontSize:"11px", color:"#1A2E4A", fontWeight:"bold", textAlign:"center", marginBottom:"6px", lineHeight:"1.5"}}>純資産<br />総額</div>
+                        <div style={{background:"#1A2E4A", width:"90px", height:"70px", borderRadius:"4px 4px 0 0"}}></div>
+                      </div>
+
+                      {/* 右バー：株価指数先物 + ブラケット */}
+                      <div style={{display:"flex", flexDirection:"column", alignItems:"center", justifyContent:"flex-end", height:"100%", position:"relative"}}>
+                        <div style={{fontSize:"11px", color:"#1A2E4A", fontWeight:"bold", textAlign:"center", marginBottom:"6px", lineHeight:"1.5"}}>株価指数先物<br />取引の買建て額</div>
+                        <div style={{background:"#C9A84C", width:"90px", height:"240px", borderRadius:"4px 4px 0 0", position:"relative"}}>
+                          <div style={{position:"absolute", bottom:"70px", left:"0", right:"0", height:"2px", background:"#F4F4F2", opacity:0.6}}></div>
+                        </div>
+                        {/* ブラケット */}
+                        <div style={{position:"absolute", right:"-52px", bottom:"0", height:"240px"}}>
+                          <div style={{position:"absolute", right:"0", top:"0", bottom:"0", width:"2px", background:"#888"}}></div>
+                          <div style={{position:"absolute", right:"0", top:"0", width:"10px", height:"2px", background:"#888"}}></div>
+                          <div style={{position:"absolute", right:"0", top:"170px", width:"10px", height:"2px", background:"#888"}}></div>
+                          <div style={{position:"absolute", right:"0", bottom:"0", width:"10px", height:"2px", background:"#888"}}></div>
+                          <div style={{position:"absolute", left:"14px", top:"70px", fontSize:"11px", color:"#333", fontWeight:"bold", lineHeight:"1.5", whiteSpace:"nowrap"}}>
+                            純資産の<br />概ね<br /><span style={{color:"#C9A84C", fontSize:"14px"}}>4.3倍</span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  {/* 凡例 */}
+                  <div style={{display:"flex", gap:"24px", justifyContent:"center", marginTop:"16px"}}>
+                    <div style={{display:"flex", alignItems:"center", gap:"6px", fontSize:"11px", color:"#1A2E4A"}}>
+                      <div style={{width:"14px", height:"14px", borderRadius:"2px", background:"#1A2E4A"}}></div>
+                      純資産総額
+                    </div>
+                    <div style={{display:"flex", alignItems:"center", gap:"6px", fontSize:"11px", color:"#1A2E4A"}}>
+                      <div style={{width:"14px", height:"14px", borderRadius:"2px", background:"#C9A84C"}}></div>
+                      株価指数先物取引の買建て額
+                    </div>
+                  </div>
+
+                  {/* 注記 */}
+                  <div style={{fontSize:"10px", color:"#666", textAlign:"center", marginTop:"20px", lineHeight:"1.6", borderTop:"1px solid #ccc", paddingTop:"12px"}}>
+                    ※本図は投資助言ではありません。投資は自己責任でお願いします。<br />
+                    下落時は損失も4.3倍程度になります。過去の実績は将来を保証しません。
+                  </div>
+                </div>
               </div>
             </div>
           </div>
