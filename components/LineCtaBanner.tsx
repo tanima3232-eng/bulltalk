@@ -3,10 +3,10 @@ export default function LineCtaBanner() {
     <section className="bg-gold py-12 px-4">
       <div className="max-w-3xl mx-auto text-center">
         <h2 className="text-2xl md:text-3xl font-bold text-navy mb-4">
-          Bull友になる（LINE登録・無料）
+          Bull友になる（LINE登録）
         </h2>
-        <p className="text-navy/80 mb-2">毎日の225分析 + 金融コラムをLINEで受け取る</p>
-        <p className="text-navy/80 mb-8">無料Zoom相談もLINEから</p>
+        <p className="text-navy/80 mb-2">セミナー情報を受け取る</p>
+        <p className="text-navy/80 mb-8">無料相談もLINEから</p>
         <a
           href="https://lin.ee/FmH7NXr"
           className="btn-line inline-flex items-center justify-center gap-3 text-lg px-8 py-4 rounded-xl shadow-lg"
