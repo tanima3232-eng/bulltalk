@@ -19,22 +19,32 @@ export default async function MarketPage() {
       <main>
         {/* M1: Hero */}
         <section className="bg-navy text-white py-20 px-4">
-          <div className="max-w-4xl mx-auto text-center">
-            <p className="text-gold text-sm font-bold uppercase tracking-widest mb-4">毎日場引け前に更新</p>
-            <h1 className="text-3xl md:text-5xl font-bold leading-relaxed mb-6">
-              今日の日経225、<span className="text-gold">買い？売り？</span><br />
-              場引け前に毎日分析します。
+          <div className="max-w-4xl mx-auto">
+            <p className="text-gold text-sm font-bold uppercase tracking-widest mb-6 text-center">毎日場引け前に更新</p>
+            <h1 className="font-bold mb-8" style={{lineHeight: "1.3"}}>
+              {/* 1行目：左から */}
+              <span className="block text-4xl md:text-6xl text-white">
+                勝ちたい奴、
+              </span>
+              {/* 2行目：右にずらしてドーパミン演出 */}
+              <span className="block text-4xl md:text-6xl" style={{paddingLeft: "clamp(2rem, 8vw, 6rem)"}}>
+                俺について
+                <span className="text-gold" style={{fontSize: "1.15em"}}>来い</span>
+                <span className="text-gold text-2xl md:text-4xl align-middle ml-2">🔥</span>
+              </span>
             </h1>
-            <p className="text-white/80 text-base md:text-lg mb-10 max-w-2xl mx-auto">
-              元大手信託銀行員・証券アナリストが<br />
-              日経225投資信託の投資判断を無料配信
-            </p>
-            <a href="https://lin.ee/FmH7NXr" className="btn-line inline-flex items-center gap-3 text-lg px-8 py-4 rounded-xl shadow-lg">
-              <svg className="w-6 h-6" viewBox="0 0 24 24" fill="currentColor">
-                <path d="M12 2C6.48 2 2 6.04 2 11c0 3.45 1.92 6.47 4.8 8.19L6 22l2.72-1.44C9.77 20.83 10.87 21 12 21c5.52 0 10-4.04 10-9S17.52 2 12 2z"/>
-              </svg>
-              LINEで無料相談する
-            </a>
+            <div className="text-white/80 text-base md:text-lg mb-10 max-w-2xl" style={{paddingLeft: "clamp(2rem, 8vw, 6rem)"}}>
+              <p className="text-gold font-bold text-xl md:text-2xl mb-3">今日は買い？売り？</p>
+              <p>元大手信託銀行員・証券アナリストが<br />毎日の日経225投資信託の投資判断を無料配信します</p>
+            </div>
+            <div className="flex justify-center">
+              <a href="https://lin.ee/FmH7NXr" className="btn-line inline-flex items-center gap-3 text-lg px-8 py-4 rounded-xl shadow-lg">
+                <svg className="w-6 h-6" viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M12 2C6.48 2 2 6.04 2 11c0 3.45 1.92 6.47 4.8 8.19L6 22l2.72-1.44C9.77 20.83 10.87 21 12 21c5.52 0 10-4.04 10-9S17.52 2 12 2z"/>
+                </svg>
+                LINEで無料相談する
+              </a>
+            </div>
           </div>
         </section>
 
