@@ -104,9 +104,9 @@ export default function HomePage() {
               </h3>
               <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
                 {[
-                  { cat: "相続", title: "相続税の基礎知識：まず知っておくべき3つのこと", slug: "souzoku" },
-                  { cat: "資産形成", title: "NISAとiDeCoの違いを元信託銀行員が解説", slug: "asset" },
-                  { cat: "不動産", title: "不動産相続で損しないための評価の仕組み", slug: "fudosan" },
+                  { cat: "相続", title: "遺言書が特に必要な7つのケース", slug: "souzoku-04-yuigon-hitsuyou" },
+                  { cat: "資産形成", title: "人生で必要なお金はいくら？ライフイベントから逆算する", slug: "asset-01-life-money" },
+                  { cat: "不動産", title: "土地の相続税評価額はどう決まる？4つの価格を理解しよう", slug: "fudosan-01-souzoku-hyoka" },
                 ].map((article) => (
                   <Link key={article.slug} href={`/column/${article.slug}`} className="card p-5 group">
                     <span className="inline-block text-xs font-bold text-gold border border-gold rounded-full px-3 py-1 mb-3">
