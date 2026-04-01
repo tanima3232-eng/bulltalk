@@ -47,11 +47,12 @@ export default function HomePage() {
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
               {/* Bulltalk Card */}
               <div className="card p-8 border-t-4 border-gold">
+                <span className="inline-block bg-gold/20 text-gold text-xs font-bold px-3 py-1 rounded-full mb-4">毎日勝負したい方</span>
                 <div className="text-5xl mb-4">📈</div>
                 <h3 className="text-2xl font-bold text-navy mb-2">Bulltalk</h3>
                 <p className="text-navy font-semibold mb-3">日経225・ブル投資信託に興味がある方へ</p>
                 <p className="text-gray-600 text-sm leading-relaxed mb-6">
-                  毎日場引け前に買い/売り判断を配信。元証券アナリストが相場の動きをわかりやすく解説します。
+                  毎日場引け前に買い/売り判断を配信。元大手信託銀行の証券アナリストが相場の動きをわかりやすく解説します。
                 </p>
                 <Link href="/market" className="btn-primary block text-center">
                   分析を見る →
@@ -60,6 +61,7 @@ export default function HomePage() {
 
               {/* 人生信託ラボ Card */}
               <div className="card p-8 border-t-4 border-navy">
+                <span className="inline-block bg-navy/10 text-navy text-xs font-bold px-3 py-1 rounded-full mb-4">人生を豊かにしたい方</span>
                 <div className="text-5xl mb-4">📚</div>
                 <h3 className="text-2xl font-bold text-navy mb-2">人生信託ラボ</h3>
                 <p className="text-navy font-semibold mb-3">相続・資産運用・不動産を学びたい方へ</p>
