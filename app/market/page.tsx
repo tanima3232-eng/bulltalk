@@ -21,7 +21,7 @@ export default async function MarketPage() {
         <section className="bg-navy text-white py-20 px-4">
           <div className="max-w-4xl mx-auto text-center">
             <p className="text-gold text-sm font-bold uppercase tracking-widest mb-4">毎日場引け前に更新</p>
-            <h1 className="text-3xl md:text-5xl font-bold leading-tight mb-6">
+            <h1 className="text-3xl md:text-5xl font-bold leading-relaxed mb-6">
               今日の日経225、<span className="text-gold">買い？売り？</span><br />
               場引け前に毎日分析します。
             </h1>
