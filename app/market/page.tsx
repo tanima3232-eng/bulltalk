@@ -19,21 +19,21 @@ export default async function MarketPage() {
       <main>
         {/* M1: Hero */}
         <section className="bg-navy text-white py-20 px-4">
-          <div className="max-w-4xl mx-auto">
-            <p className="text-gold text-sm font-bold uppercase tracking-widest mb-6 text-center">毎日場引け前に更新</p>
-            <h1 className="font-bold mb-8" style={{lineHeight: "1.3"}}>
-              {/* 1行目：左から */}
+          <div className="max-w-4xl mx-auto text-center">
+            <p className="text-gold text-sm font-bold uppercase tracking-widest mb-6">毎日場引け前に更新</p>
+            <h1 className="font-bold mb-8" style={{lineHeight: "1.35"}}>
+              {/* 1行目 */}
               <span className="block text-4xl md:text-6xl text-white">
                 勝ちたい奴、
               </span>
-              {/* 2行目：右にずらしてドーパミン演出 */}
-              <span className="block text-4xl md:text-6xl" style={{paddingLeft: "clamp(2rem, 8vw, 6rem)"}}>
+              {/* 2行目：長いので自然に右に広がる */}
+              <span className="block text-4xl md:text-6xl">
                 俺について
                 <span className="text-gold" style={{fontSize: "1.15em"}}>来い</span>
                 <span className="text-gold text-2xl md:text-4xl align-middle ml-2">🔥</span>
               </span>
             </h1>
-            <div className="text-white/80 text-base md:text-lg mb-10 max-w-2xl" style={{paddingLeft: "clamp(2rem, 8vw, 6rem)"}}>
+            <div className="text-white/80 text-base md:text-lg mb-10 max-w-2xl mx-auto">
               <p className="text-gold font-bold text-xl md:text-2xl mb-3">今日は買い？売り？</p>
               <p>元大手信託銀行員・証券アナリストが<br />毎日の日経225投資信託の投資判断を無料配信します</p>
             </div>
