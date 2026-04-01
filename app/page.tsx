@@ -19,7 +19,7 @@ export default function HomePage() {
         <section className="bg-navy text-white py-24 px-4">
           <div className="max-w-4xl mx-auto text-center">
             <p className="text-gold text-sm font-bold uppercase tracking-widest mb-4">元大手信託銀行員 × FP1級 × 証券アナリスト × 宅建士</p>
-            <h1 className="text-3xl md:text-5xl font-bold leading-relaxed mb-6">
+            <h1 className="text-3xl md:text-5xl font-bold leading-loose mb-6">
               投資と資産設計、両方わかる<br />
               <span className="text-gold">元大手信託銀行員</span>が<br />
               本音で発信します。
