@@ -58,62 +58,62 @@ export default async function MarketPage() {
               </p>
               <div className="my-4 w-full overflow-x-auto rounded-lg">
                 <p className="text-xs text-gray-400 mb-2">図：日経225セクター別構成イメージ</p>
-                <svg width="100%" viewBox="0 0 680 400" style={{fontFamily:"sans-serif"}}>
-                  {/* 外枠：日経225全体 */}
-                  <rect x="40" y="20" width="600" height="340" rx="16" fill="#EFF6FF" stroke="#3B82F6" strokeWidth="1"/>
-                  <text fontWeight="bold" fill="#1E3A5F" x="340" y="48" textAnchor="middle" dominantBaseline="central" fontSize="13">日経225（東証プライム上場企業から選ばれた225銘柄）</text>
+                <svg width="100%" viewBox="0 0 680 410" style={{fontFamily:"sans-serif"}}>
+                  {/* 外枠：全体 */}
+                  <rect x="20" y="10" width="640" height="385" rx="16" fill="#EEF1F7" stroke="#1A2E4A" strokeWidth="2"/>
+                  <text fontWeight="bold" fill="#1A2E4A" x="340" y="38" textAnchor="middle" dominantBaseline="central" fontSize="13">日経225（東証プライム上場企業から選ばれた225銘柄）</text>
 
-                  {/* テクノロジー */}
-                  <rect x="60" y="68" width="175" height="108" rx="10" fill="#DBEAFE" stroke="#3B82F6" strokeWidth="1"/>
-                  <text fontWeight="bold" fill="#1E3A5F" x="147" y="96" textAnchor="middle" dominantBaseline="central" fontSize="12">テクノロジー</text>
-                  <text fill="#374151" x="147" y="118" textAnchor="middle" fontSize="11">ソニー</text>
-                  <text fill="#374151" x="147" y="136" textAnchor="middle" fontSize="11">キーエンス</text>
-                  <text fill="#374151" x="147" y="154" textAnchor="middle" fontSize="11">東京エレクトロン</text>
-                  <text fill="#1D4ED8" x="147" y="170" textAnchor="middle" fontSize="11" fontWeight="bold">他多数</text>
+                  {/* テクノロジー：ネイビー薄め */}
+                  <rect x="40" y="60" width="185" height="115" rx="10" fill="#D6E0EF" stroke="#1A2E4A" strokeWidth="1.5"/>
+                  <text fontWeight="bold" fill="#1A2E4A" x="132" y="84" textAnchor="middle" dominantBaseline="central" fontSize="12">テクノロジー</text>
+                  <text fill="#2D3748" x="132" y="106" textAnchor="middle" fontSize="11">ソニー</text>
+                  <text fill="#2D3748" x="132" y="124" textAnchor="middle" fontSize="11">キーエンス</text>
+                  <text fill="#2D3748" x="132" y="142" textAnchor="middle" fontSize="11">東京エレクトロン</text>
+                  <text fill="#1A2E4A" x="132" y="162" textAnchor="middle" fontSize="11" fontWeight="bold">他多数</text>
 
-                  {/* 自動車・製造 */}
-                  <rect x="252" y="68" width="175" height="108" rx="10" fill="#CCFBF1" stroke="#0D9488" strokeWidth="1"/>
-                  <text fontWeight="bold" fill="#1E3A5F" x="339" y="96" textAnchor="middle" dominantBaseline="central" fontSize="12">自動車・製造</text>
-                  <text fill="#374151" x="339" y="118" textAnchor="middle" fontSize="11">トヨタ自動車</text>
-                  <text fill="#374151" x="339" y="136" textAnchor="middle" fontSize="11">本田技研工業</text>
-                  <text fill="#374151" x="339" y="154" textAnchor="middle" fontSize="11">三菱重工業</text>
-                  <text fill="#0F6E56" x="339" y="170" textAnchor="middle" fontSize="11" fontWeight="bold">他多数</text>
+                  {/* 自動車・製造：ゴールド薄め */}
+                  <rect x="247" y="60" width="185" height="115" rx="10" fill="#F5ECC8" stroke="#C9A84C" strokeWidth="1.5"/>
+                  <text fontWeight="bold" fill="#1A2E4A" x="339" y="84" textAnchor="middle" dominantBaseline="central" fontSize="12">自動車・製造</text>
+                  <text fill="#2D3748" x="339" y="106" textAnchor="middle" fontSize="11">トヨタ自動車</text>
+                  <text fill="#2D3748" x="339" y="124" textAnchor="middle" fontSize="11">本田技研工業</text>
+                  <text fill="#2D3748" x="339" y="142" textAnchor="middle" fontSize="11">三菱重工業</text>
+                  <text fill="#A88025" x="339" y="162" textAnchor="middle" fontSize="11" fontWeight="bold">他多数</text>
 
-                  {/* 金融・銀行 */}
-                  <rect x="444" y="68" width="175" height="108" rx="10" fill="#FEF3C7" stroke="#D97706" strokeWidth="1"/>
-                  <text fontWeight="bold" fill="#1E3A5F" x="531" y="96" textAnchor="middle" dominantBaseline="central" fontSize="12">金融・銀行</text>
-                  <text fill="#374151" x="531" y="118" textAnchor="middle" fontSize="11">三菱UFJ銀行</text>
-                  <text fill="#374151" x="531" y="136" textAnchor="middle" fontSize="11">三井住友銀行</text>
-                  <text fill="#374151" x="531" y="154" textAnchor="middle" fontSize="11">みずほ銀行</text>
-                  <text fill="#854F0B" x="531" y="170" textAnchor="middle" fontSize="11" fontWeight="bold">他多数</text>
+                  {/* 金融・銀行：deep gold */}
+                  <rect x="454" y="60" width="185" height="115" rx="10" fill="#EDDC9A" stroke="#A88025" strokeWidth="1.5"/>
+                  <text fontWeight="bold" fill="#1A2E4A" x="546" y="84" textAnchor="middle" dominantBaseline="central" fontSize="12">金融・銀行</text>
+                  <text fill="#2D3748" x="546" y="106" textAnchor="middle" fontSize="11">三菱UFJ銀行</text>
+                  <text fill="#2D3748" x="546" y="124" textAnchor="middle" fontSize="11">三井住友銀行</text>
+                  <text fill="#2D3748" x="546" y="142" textAnchor="middle" fontSize="11">みずほ銀行</text>
+                  <text fill="#7A5C10" x="546" y="162" textAnchor="middle" fontSize="11" fontWeight="bold">他多数</text>
 
-                  {/* 小売・消費 */}
-                  <rect x="60" y="192" width="175" height="108" rx="10" fill="#EDE9FE" stroke="#7C3AED" strokeWidth="1"/>
-                  <text fontWeight="bold" fill="#1E3A5F" x="147" y="220" textAnchor="middle" dominantBaseline="central" fontSize="12">小売・消費</text>
-                  <text fill="#374151" x="147" y="242" textAnchor="middle" fontSize="11">ファーストリテイリング</text>
-                  <text fill="#374151" x="147" y="260" textAnchor="middle" fontSize="11">セブン＆アイ</text>
-                  <text fill="#374151" x="147" y="278" textAnchor="middle" fontSize="11">リクルートHD</text>
-                  <text fill="#534AB7" x="147" y="294" textAnchor="middle" fontSize="11" fontWeight="bold">他多数</text>
+                  {/* 小売・消費：中間ネイビー */}
+                  <rect x="40" y="192" width="185" height="115" rx="10" fill="#C8D6EA" stroke="#2A4A7F" strokeWidth="1.5"/>
+                  <text fontWeight="bold" fill="#1A2E4A" x="132" y="216" textAnchor="middle" dominantBaseline="central" fontSize="12">小売・消費</text>
+                  <text fill="#2D3748" x="132" y="238" textAnchor="middle" fontSize="11">ファーストリテイリング</text>
+                  <text fill="#2D3748" x="132" y="256" textAnchor="middle" fontSize="11">セブン＆アイ</text>
+                  <text fill="#2D3748" x="132" y="274" textAnchor="middle" fontSize="11">リクルートHD</text>
+                  <text fill="#2A4A7F" x="132" y="294" textAnchor="middle" fontSize="11" fontWeight="bold">他多数</text>
 
-                  {/* 素材・化学 */}
-                  <rect x="252" y="192" width="175" height="108" rx="10" fill="#F3F4F6" stroke="#9CA3AF" strokeWidth="1"/>
-                  <text fontWeight="bold" fill="#1E3A5F" x="339" y="220" textAnchor="middle" dominantBaseline="central" fontSize="12">素材・化学</text>
-                  <text fill="#374151" x="339" y="242" textAnchor="middle" fontSize="11">信越化学工業</text>
-                  <text fill="#374151" x="339" y="260" textAnchor="middle" fontSize="11">旭化成</text>
-                  <text fill="#374151" x="339" y="278" textAnchor="middle" fontSize="11">住友化学</text>
-                  <text fill="#5F5E5A" x="339" y="294" textAnchor="middle" fontSize="11" fontWeight="bold">他多数</text>
+                  {/* 素材・化学：ベージュゴールド */}
+                  <rect x="247" y="192" width="185" height="115" rx="10" fill="#EDE5CB" stroke="#9C8A5A" strokeWidth="1.5"/>
+                  <text fontWeight="bold" fill="#1A2E4A" x="339" y="216" textAnchor="middle" dominantBaseline="central" fontSize="12">素材・化学</text>
+                  <text fill="#2D3748" x="339" y="238" textAnchor="middle" fontSize="11">信越化学工業</text>
+                  <text fill="#2D3748" x="339" y="256" textAnchor="middle" fontSize="11">旭化成</text>
+                  <text fill="#2D3748" x="339" y="274" textAnchor="middle" fontSize="11">住友化学</text>
+                  <text fill="#7A6840" x="339" y="294" textAnchor="middle" fontSize="11" fontWeight="bold">他多数</text>
 
-                  {/* その他 */}
-                  <rect x="444" y="192" width="175" height="108" rx="10" fill="#FFEDD5" stroke="#EA580C" strokeWidth="1"/>
-                  <text fontWeight="bold" fill="#1E3A5F" x="531" y="220" textAnchor="middle" dominantBaseline="central" fontSize="12">その他</text>
-                  <text fill="#374151" x="531" y="242" textAnchor="middle" fontSize="11">東日本旅客鉄道</text>
-                  <text fill="#374151" x="531" y="260" textAnchor="middle" fontSize="11">東京電力HD</text>
-                  <text fill="#374151" x="531" y="278" textAnchor="middle" fontSize="11">NTT</text>
-                  <text fill="#993C1D" x="531" y="294" textAnchor="middle" fontSize="11" fontWeight="bold">他多数</text>
+                  {/* その他：ネイビー+ゴールドグラデ */}
+                  <rect x="454" y="192" width="185" height="115" rx="10" fill="#E0D9C5" stroke="#B8962A" strokeWidth="1.5"/>
+                  <text fontWeight="bold" fill="#1A2E4A" x="546" y="216" textAnchor="middle" dominantBaseline="central" fontSize="12">その他</text>
+                  <text fill="#2D3748" x="546" y="238" textAnchor="middle" fontSize="11">東日本旅客鉄道</text>
+                  <text fill="#2D3748" x="546" y="256" textAnchor="middle" fontSize="11">東京電力HD</text>
+                  <text fill="#2D3748" x="546" y="274" textAnchor="middle" fontSize="11">NTT</text>
+                  <text fill="#C9A84C" x="546" y="294" textAnchor="middle" fontSize="11" fontWeight="bold">他多数</text>
 
                   {/* フッター注記 */}
-                  <rect x="60" y="316" width="560" height="28" rx="8" fill="#FFFFFF" stroke="#E2E8F0" strokeWidth="0.5" opacity="0.8"/>
-                  <text fill="#6B7280" x="340" y="330" textAnchor="middle" dominantBaseline="central" fontSize="11">構成銘柄は年2回定期見直し＋上場廃止等による臨時見直しあり</text>
+                  <rect x="60" y="323" width="560" height="28" rx="8" fill="#FFFFFF" stroke="#C9A84C" strokeWidth="0.8" opacity="0.7"/>
+                  <text fill="#1A2E4A" x="340" y="337" textAnchor="middle" dominantBaseline="central" fontSize="11">構成銘柄は年2回定期見直し＋上場廃止等による臨時見直しあり</text>
                 </svg>
               </div>
             </div>
