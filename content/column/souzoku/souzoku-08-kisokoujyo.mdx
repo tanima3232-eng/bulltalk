@@ -8,6 +8,46 @@ order: 208
 published: true
 ---
 
+<div className="my-8 w-full overflow-x-auto rounded-lg">
+  {/* 相続税の基礎控除と生命保険の非課税枠 */}
+  <p className="text-sm text-gray-500 mb-2">相続税の基礎控除額と生命保険非課税枠の計算式・具体例</p>
+  <svg width="100%" viewBox="0 0 680 460">
+
+<g class="c-blue">
+<rect x="40" y="20" width="600" height="40" rx="8" stroke-width="0.5"/>
+<text class="th" x="340" y="40" text-anchor="middle" dominant-baseline="central">相続税の基礎控除 ＝ 3,000万円 ＋ 600万円 × 法定相続人の数</text>
+</g>
+
+<rect x="40" y="76" width="600" height="104" rx="8" fill="var(--color-background-secondary)" stroke="var(--color-border-tertiary)" stroke-width="0.5"/>
+<text class="th" x="56" y="106" dominant-baseline="central">計算例：配偶者＋子ども2人（法定相続人3人）の場合</text>
+<text class="ts" x="56" y="134" dominant-baseline="central">3,000万円 ＋ 600万円 × 3人 ＝ 4,800万円（基礎控除）</text>
+<text class="ts" x="56" y="158" dominant-baseline="central">→ 遺産の合計が4,800万円以下なら相続税はかかりません</text>
+
+<line x1="40" y1="196" x2="640" y2="196" stroke="var(--color-border-tertiary)" stroke-width="0.5" stroke-dasharray="4 4"/>
+
+<g class="c-teal">
+<rect x="40" y="208" width="600" height="40" rx="8" stroke-width="0.5"/>
+<text class="th" x="340" y="228" text-anchor="middle" dominant-baseline="central">生命保険の非課税枠 ＝ 500万円 × 法定相続人の数</text>
+</g>
+
+<rect x="40" y="264" width="600" height="104" rx="8" fill="var(--color-background-secondary)" stroke="var(--color-border-tertiary)" stroke-width="0.5"/>
+<text class="th" x="56" y="294" dominant-baseline="central">計算例：法定相続人3人の場合</text>
+<text class="ts" x="56" y="322" dominant-baseline="central">500万円 × 3人 ＝ 1,500万円 が非課税で受け取れる</text>
+<text class="ts" x="56" y="346" dominant-baseline="central">→ 生命保険は口座凍結の影響を受けず、受取人に直接支払われる</text>
+
+<g class="c-amber">
+<rect x="40" y="384" width="288" height="56" rx="8" stroke-width="0.5"/>
+<text class="th" x="184" y="404" text-anchor="middle" dominant-baseline="central">相続税課税割合</text>
+<text class="ts" x="184" y="426" text-anchor="middle" dominant-baseline="central">全死亡者の約9.6%（2023年）</text>
+</g>
+<g class="c-coral">
+<rect x="352" y="384" width="288" height="56" rx="8" stroke-width="0.5"/>
+<text class="th" x="496" y="404" text-anchor="middle" dominant-baseline="central">都市部は要注意</text>
+<text class="ts" x="496" y="426" text-anchor="middle" dominant-baseline="central">自宅の評価だけで基礎控除超えも</text>
+</g>
+</svg>
+</div>
+
 相続税は全ての相続に課税されるわけではありません。「基礎控除額」以下の財産であれば相続税はかかりません。
 
 ## 基礎控除額の計算式

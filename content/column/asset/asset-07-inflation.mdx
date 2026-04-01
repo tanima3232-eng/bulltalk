@@ -23,6 +23,65 @@ published: true
 
 現在のインフレ環境では、物価が上がる分だけ預金の実質価値が目減りしていきます。年2%のインフレが続いた場合、10年後に1,000万円の実質的な購買力は**約820万円相当**になります。預金残高は変わらなくても、実際に買えるものが減っていくのです。
 
+<div className="my-8 w-full overflow-x-auto rounded-lg">
+  {/* 積立運用シミュレーション：複利の力の可視化 */}
+  <p className="text-sm text-gray-500 mb-2">毎月3万円×25年間の積立シミュレーション（元本900万円）</p>
+  <svg width="100%" viewBox="0 0 680 420">
+<defs>
+<marker id="arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+<path d="M2 1L8 5L2 9" fill="none" stroke="context-stroke" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+</marker>
+</defs>
+
+<line x1="80" y1="310" x2="620" y2="310" stroke="var(--color-text-secondary)" stroke-width="1"/>
+<line x1="80" y1="60" x2="80" y2="310" stroke="var(--color-text-secondary)" stroke-width="1"/>
+
+<line x1="80" y1="260" x2="620" y2="260" stroke="var(--color-border-tertiary)" stroke-width="0.5" stroke-dasharray="4 4"/>
+<line x1="80" y1="210" x2="620" y2="210" stroke="var(--color-border-tertiary)" stroke-width="0.5" stroke-dasharray="4 4"/>
+<line x1="80" y1="160" x2="620" y2="160" stroke="var(--color-border-tertiary)" stroke-width="0.5" stroke-dasharray="4 4"/>
+<line x1="80" y1="110" x2="620" y2="110" stroke="var(--color-border-tertiary)" stroke-width="0.5" stroke-dasharray="4 4"/>
+<text class="ts" x="72" y="314" text-anchor="end">0</text>
+<text class="ts" x="72" y="264" text-anchor="end">500</text>
+<text class="ts" x="72" y="214" text-anchor="end">1,000</text>
+<text class="ts" x="72" y="164" text-anchor="end">1,500</text>
+<text class="ts" x="72" y="114" text-anchor="end">2,000</text>
+<text class="ts" x="72" y="68" text-anchor="end">万円</text>
+
+<text class="ts" x="80" y="326" text-anchor="middle">0年</text>
+<text class="ts" x="188" y="326" text-anchor="middle">5年</text>
+<text class="ts" x="296" y="326" text-anchor="middle">10年</text>
+<text class="ts" x="404" y="326" text-anchor="middle">15年</text>
+<text class="ts" x="512" y="326" text-anchor="middle">20年</text>
+<text class="ts" x="620" y="326" text-anchor="middle">25年</text>
+
+<path d="M80,310 L620,197" fill="none" stroke="var(--color-text-secondary)" stroke-width="2" stroke-dasharray="6 4"/>
+<path d="M80,310 C188,292 296,268 404,238 C512,206 566,175 620,135" fill="none" stroke="#3B8BD4" stroke-width="2.5"/>
+<path d="M80,310 C188,288 296,258 404,218 C512,170 566,132 620,87" fill="none" stroke="#EF9F27" stroke-width="2.5"/>
+
+<rect x="430" y="68" width="88" height="26" rx="6" fill="#FAEEDA" stroke="#BA7517" stroke-width="0.5"/>
+<text class="th" x="474" y="81" text-anchor="middle" dominant-baseline="central" fill="#633806">年利5%運用</text>
+<text class="ts" x="524" y="90" text-anchor="start" fill="#BA7517">約1,800万円</text>
+
+<rect x="430" y="116" width="88" height="26" rx="6" fill="#E6F1FB" stroke="#185FA5" stroke-width="0.5"/>
+<text class="th" x="474" y="129" text-anchor="middle" dominant-baseline="central" fill="#0C447C">年利3%運用</text>
+<text class="ts" x="524" y="138" text-anchor="start" fill="#185FA5">約1,400万円</text>
+
+<rect x="430" y="162" width="88" height="26" rx="6" fill="var(--color-background-secondary)" stroke="var(--color-border-secondary)" stroke-width="0.5"/>
+<text class="th" x="474" y="175" text-anchor="middle" dominant-baseline="central">貯金のみ</text>
+<text class="ts" x="524" y="184" text-anchor="start">約900万円</text>
+
+<line x1="618" y1="90" x2="618" y2="198" stroke="#E8593C" stroke-width="1.5"/>
+<line x1="612" y1="90" x2="624" y2="90" stroke="#E8593C" stroke-width="1.5"/>
+<line x1="612" y1="198" x2="624" y2="198" stroke="#E8593C" stroke-width="1.5"/>
+<text class="ts" x="628" y="140" text-anchor="start" fill="#993C1D">最大</text>
+<text class="ts" x="628" y="156" text-anchor="start" fill="#993C1D">+900万円</text>
+
+<rect x="80" y="348" width="540" height="52" rx="8" fill="var(--color-background-secondary)" stroke="var(--color-border-tertiary)" stroke-width="0.5"/>
+<text class="ts" x="92" y="368">条件：毎月3万円を25年間積立（元本合計900万円）</text>
+<text class="ts" x="92" y="388">💡 NISAを使えばこの運用益に税金がかかりません（通常は利益の約20%課税）</text>
+</svg>
+</div>
+
 ## 対策の基本
 
 全資産を一度に投資するのではなく、生活防衛資金（生活費3〜6ヶ月分）は預金で確保しつつ、それ以外の余裕資金を新NISAやiDeCoを活用して運用することが基本的な考え方です。
