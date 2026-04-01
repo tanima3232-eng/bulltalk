@@ -8,7 +8,6 @@ const navLinks = [
   { href: "/market", label: "225分析" },
   { href: "/column", label: "コラム" },
   { href: "/about", label: "経歴" },
-  { href: "/line", label: "LINE相談" },
 ];
 
 export default function Header() {

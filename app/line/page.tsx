@@ -15,10 +15,10 @@ export default function LinePage() {
         <section className="bg-gold min-h-screen py-20 px-4 flex items-center">
           <div className="max-w-2xl mx-auto text-center">
             <h1 className="text-3xl md:text-4xl font-bold text-navy mb-6">
-              Bull友になる<br />（LINE登録・無料）
+              Bull友になる<br />（LINE登録）
             </h1>
-            <p className="text-navy/80 text-lg mb-4">毎日の225分析 + 金融コラムをLINEで受け取る</p>
-            <p className="text-navy/80 mb-10">無料Zoom相談もLINEから</p>
+            <p className="text-navy/80 text-lg mb-4">セミナー情報を受け取る</p>
+            <p className="text-navy/80 mb-10">無料相談もLINEから</p>
             <a
               href="https://lin.ee/FmH7NXr"
               className="btn-line inline-flex items-center justify-center gap-3 text-xl px-10 py-5 rounded-2xl shadow-xl"
