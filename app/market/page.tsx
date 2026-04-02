@@ -23,12 +23,11 @@ export default async function MarketPage() {
             <p className="text-gold text-sm font-bold uppercase tracking-widest mb-6">毎日場引け前に更新</p>
             <h1 className="font-bold mb-8">
               <span className="block text-4xl md:text-6xl text-white mb-5">
-                勝ちたい奴、
+                本気で勝つなら
               </span>
               <span className="block text-4xl md:text-6xl">
-                俺について
-                <span className="text-gold" style={{fontSize: "1.15em"}}>来い</span>
-                <span className="text-gold text-2xl md:text-4xl align-middle ml-2">🔥</span>
+                <span className="text-gold" style={{fontSize: "1.15em"}}>Bull友</span>
+                <span className="text-white">会員</span>
               </span>
             </h1>
             <div className="text-white/80 text-base md:text-lg mb-10 max-w-2xl mx-auto">
