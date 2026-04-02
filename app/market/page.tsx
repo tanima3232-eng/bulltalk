@@ -21,7 +21,7 @@ export default async function MarketPage() {
         <section className="bg-navy text-white py-20 px-4">
           <div className="max-w-4xl mx-auto text-center">
             <p className="text-gold text-sm font-bold uppercase tracking-widest mb-6">毎日場引け前に更新</p>
-            <h1 className="font-bold mb-8">
+            <h1 className="font-bold mb-6">
               <span className="block text-4xl md:text-6xl text-white mb-5">
                 本気で勝つなら
               </span>
@@ -30,7 +30,32 @@ export default async function MarketPage() {
                 <span className="text-white">会員</span>
               </span>
             </h1>
-            <div className="text-white/80 text-base md:text-lg max-w-2xl mx-auto">
+
+            {/* 安心バッジ：会員 = LINE登録だけ */}
+            <div className="flex justify-center items-center gap-2 flex-wrap mb-2">
+              <span className="text-white/40 text-sm">＼</span>
+              <span
+                className="inline-flex items-center gap-1.5 text-xs font-bold px-3 py-1.5 rounded-full"
+                style={{background:"rgba(6,199,85,0.15)", color:"#4ADE80", border:"1px solid rgba(6,199,85,0.35)"}}
+              >
+                ✓ 完全無料
+              </span>
+              <span
+                className="inline-flex items-center gap-1.5 text-xs font-bold px-3 py-1.5 rounded-full"
+                style={{background:"rgba(6,199,85,0.15)", color:"#4ADE80", border:"1px solid rgba(6,199,85,0.35)"}}
+              >
+                ✓ LINEを友だち追加するだけ
+              </span>
+              <span
+                className="inline-flex items-center gap-1.5 text-xs font-bold px-3 py-1.5 rounded-full"
+                style={{background:"rgba(6,199,85,0.15)", color:"#4ADE80", border:"1px solid rgba(6,199,85,0.35)"}}
+              >
+                ✓ いつでも解除OK
+              </span>
+              <span className="text-white/40 text-sm">／</span>
+            </div>
+
+            <div className="text-white/80 text-base md:text-lg max-w-2xl mx-auto mt-8">
               <p className="text-gold font-bold text-xl md:text-2xl mb-3">今日は買い？売り？</p>
               <p>元大手信託銀行12年・FP1級・CMA・宅建士が<br />毎日の日経225投資信託の投資判断を無料配信します</p>
             </div>
