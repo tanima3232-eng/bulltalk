@@ -556,7 +556,7 @@ export default async function MarketPage() {
                   </div>
 
                   {/* 注記 */}
-                  <div style={{fontSize:"10px", color:"#666", textAlign:"center", marginTop:"20px", lineHeight:"1.6", borderTop:"1px solid #ccc", paddingTop:"12px"}}>
+                  <div style={{fontSize:"9px", color:"#666", textAlign:"left", marginTop:"20px", lineHeight:"1.8", borderTop:"1px solid #ccc", paddingTop:"12px"}}>
                     ※本図は投資助言ではありません。投資は自己責任でお願いします。<br />
                     下落時は損失も4.3倍程度になります。過去の実績は将来を保証しません。
                   </div>
@@ -621,7 +621,7 @@ export default async function MarketPage() {
             >
               証券口座を開設する（無料）
             </a>
-            <p className="text-gray-500 text-xs mt-4">※投資信託や株式への投資には証券会社での口座開設が必要となります。</p>
+            <p style={{fontSize:"9px"}} className="text-gray-500 mt-4">※投資信託や株式への投資には証券会社での口座開設が必要となります。</p>
           </div>
         </section>
 
