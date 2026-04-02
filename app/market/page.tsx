@@ -328,7 +328,7 @@ export default async function MarketPage() {
                 </div>
                 <div className="bg-white/10 rounded-xl p-4">
                   <p className="text-gold font-bold mb-1">購入場所</p>
-                  <p className="text-white">各証券会社で購入可能<br /><span className="text-sm text-white/70">（SBI証券・楽天証券など）</span></p>
+                  <p className="text-white">各証券会社で購入可能</p>
                 </div>
               </div>
             </div>
