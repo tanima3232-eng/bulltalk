@@ -144,7 +144,7 @@ export default function AboutPage() {
                     { label: "FP資格", value: "ファイナンシャルプランナー1級（FP1級）" },
                     { label: "証券資格", value: "証券アナリスト（CMA）" },
                     { label: "不動産資格", value: "宅地建物取引士" },
-                    { label: "発信内容", value: "日経225分析・相続・資産運用・不動産・FP3級" },
+                    { label: "発信内容", value: "日経225分析・相続・資産運用・不動産" },
                   ].map((row) => (
                     <tr key={row.label} className="border-b border-gray-100">
                       <td className="py-4 pr-6 text-navy font-bold text-sm w-32 whitespace-nowrap">{row.label}</td>
