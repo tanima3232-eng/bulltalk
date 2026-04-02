@@ -106,7 +106,7 @@ export default function LinePage() {
               LINE追加で無料でBull友会員になる
             </a>
 
-            <p className="text-white/30 text-xs mt-5">※ 完全無料・投資情報のみ配信・退会はいつでも可能</p>
+            <p className="text-white/30 text-xs mt-5">※ 完全無料・退会はいつでも可能</p>
           </div>
         </section>
       </main>

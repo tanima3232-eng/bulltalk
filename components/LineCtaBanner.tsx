@@ -40,7 +40,7 @@ export default function LineCtaBanner() {
           LINE追加で無料でBull友会員になる
         </a>
 
-        <p className="text-navy/40 text-xs mt-4">※ 完全無料・投資情報のみ配信・退会はいつでも可能</p>
+        <p className="text-navy/40 text-xs mt-4">※ 完全無料・退会はいつでも可能</p>
       </div>
     </section>
   );
