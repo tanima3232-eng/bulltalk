@@ -325,6 +325,7 @@ export default async function MarketPage() {
                 <div className="bg-white/10 rounded-xl p-4">
                   <p className="text-gold font-bold mb-1">購入締切</p>
                   <p className="text-white">毎日 15:15</p>
+                  <p className="text-white/50 text-xs mt-1">※証券会社や商品によって異なる場合があります。</p>
                 </div>
                 <div className="bg-white/10 rounded-xl p-4">
                   <p className="text-gold font-bold mb-1">購入場所</p>
