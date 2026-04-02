@@ -242,10 +242,10 @@ export default async function MarketPage() {
               <svg className="w-6 h-6" viewBox="0 0 24 24" fill="currentColor">
                 <path d="M12 2C6.48 2 2 6.04 2 11c0 3.45 1.92 6.47 4.8 8.19L6 22l2.72-1.44C9.77 20.83 10.87 21 12 21c5.52 0 10-4.04 10-9S17.52 2 12 2z"/>
               </svg>
-              LINE追加で無料でBull友会員になる
+              今すぐBull友になる
             </a>
 
-            <p className="text-white/30 text-xs mt-5">※ 完全無料・退会はいつでも自由</p>
+            <p className="text-white/30 text-xs mt-5">LINE追加するだけ・完全無料</p>
           </div>
         </section>
 
