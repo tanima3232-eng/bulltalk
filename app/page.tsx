@@ -75,6 +75,7 @@ export default async function HomePage() {
         {/* M6: 最新分析動画 */}
         <section className="bg-white py-16 px-4">
           <div className="max-w-5xl mx-auto">
+            <p className="text-center font-black text-navy mb-2" style={{fontSize:"clamp(1.8rem,5vw,2.8rem)", letterSpacing:"0.1em"}}>毎日更新</p>
             <h2 className="section-title">最新分析動画</h2>
             <p className="section-subtitle">毎日場引け前に最新動画を公開中。</p>
 
@@ -301,6 +302,7 @@ export default async function HomePage() {
         {/* M2: 日経225とは */}
         <section className="bg-white py-16 px-4">
           <div className="max-w-4xl mx-auto">
+            <p className="text-center font-black text-navy mb-2" style={{fontSize:"clamp(1.8rem,5vw,2.8rem)", letterSpacing:"0.1em"}}>初めての方へ</p>
             <h2 className="section-title">日経225とは</h2>
             <div className="bg-white rounded-2xl p-8 shadow-sm">
               <p className="text-gray-700 leading-relaxed text-base md:text-lg mb-6">
