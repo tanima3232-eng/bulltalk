@@ -230,6 +230,45 @@ export default async function MarketPage() {
           </div>
         </section>
 
+        {/* 経歴サマリー */}
+        <section className="bg-navy text-white py-20 px-4">
+          <div className="max-w-5xl mx-auto">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+              {/* Photo Placeholder */}
+              <div className="flex justify-center">
+                <div className="w-64 h-64 rounded-full bg-white/10 border-4 border-gold flex items-center justify-center">
+                  <div className="text-center text-white/50">
+                    <div className="text-5xl mb-2">👤</div>
+                    <p className="text-sm">プロフィール写真</p>
+                  </div>
+                </div>
+              </div>
+
+              {/* Profile */}
+              <div>
+                <p className="text-gold text-sm font-bold uppercase tracking-wider mb-2">About</p>
+                <h2 className="text-3xl font-bold mb-6">谷本 光章とは</h2>
+                <ul className="space-y-3 mb-8">
+                  {[
+                    "🏦 元大手信託銀行 12年",
+                    "📜 FP1級 ／ 証券アナリスト（CMA）／ 宅建士",
+                    "🏆 新人コンペ全国2位・社長賞受賞",
+                    "💼 個人〜機関投資家まで幅広く担当",
+                  ].map((item) => (
+                    <li key={item} className="flex items-start gap-3 text-white/90">
+                      <span className="text-xl">{item.slice(0, 2)}</span>
+                      <span>{item.slice(3)}</span>
+                    </li>
+                  ))}
+                </ul>
+                <a href="/about" className="btn-primary">
+                  詳しく見る →
+                </a>
+              </div>
+            </div>
+          </div>
+        </section>
+
         {/* M2: 日経225とは */}
         <section className="bg-offwhite py-16 px-4">
           <div className="max-w-4xl mx-auto">
