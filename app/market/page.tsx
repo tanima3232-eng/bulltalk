@@ -50,7 +50,7 @@ export default async function MarketPage() {
                 className="inline-flex items-center gap-1.5 text-xs font-bold px-3 py-1.5 rounded-full"
                 style={{background:"rgba(6,199,85,0.15)", color:"#4ADE80", border:"1px solid rgba(6,199,85,0.35)"}}
               >
-                ✓ いつでも解除OK
+                ✓ いつでも退会可能
               </span>
               <span className="text-white/40 text-sm">／</span>
             </div>
@@ -174,9 +174,28 @@ export default async function MarketPage() {
               勝ちたい奴、<br />
               <span style={{color:"#C9A84C"}}>俺</span>についてこい
             </h2>
-            <p className="text-white/60 text-sm mb-10">
-              LINE登録は無料。いつでも解除できます。
-            </p>
+            <div className="flex justify-center items-center gap-2 flex-wrap mb-10">
+              <span className="text-white/40 text-sm">＼</span>
+              <span
+                className="inline-flex items-center gap-1.5 text-xs font-bold px-3 py-1.5 rounded-full"
+                style={{background:"rgba(6,199,85,0.15)", color:"#4ADE80", border:"1px solid rgba(6,199,85,0.35)"}}
+              >
+                ✓ 完全無料
+              </span>
+              <span
+                className="inline-flex items-center gap-1.5 text-xs font-bold px-3 py-1.5 rounded-full"
+                style={{background:"rgba(6,199,85,0.15)", color:"#4ADE80", border:"1px solid rgba(6,199,85,0.35)"}}
+              >
+                ✓ LINEを友だち追加するだけ
+              </span>
+              <span
+                className="inline-flex items-center gap-1.5 text-xs font-bold px-3 py-1.5 rounded-full"
+                style={{background:"rgba(6,199,85,0.15)", color:"#4ADE80", border:"1px solid rgba(6,199,85,0.35)"}}
+              >
+                ✓ いつでも退会可能
+              </span>
+              <span className="text-white/40 text-sm">／</span>
+            </div>
 
             {/* メリットカード */}
             <div className="flex flex-col gap-4 mb-10 text-left">
