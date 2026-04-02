@@ -430,7 +430,7 @@ export default async function MarketPage() {
             <p className="section-subtitle">SBI証券なら最短翌営業日から投資スタートできます</p>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-10">
               {[
-                { step: "STEP 1", title: "SBI証券のサイトにアクセス", icon: "🌐" },
+                { step: "STEP 1", title: "証券会社のサイトにアクセス", icon: "🌐" },
                 { step: "STEP 2", title: "無料登録", icon: "✍️" },
                 { step: "STEP 3", title: "本人確認書類を提出", desc: "最短翌営業日", icon: "📋" },
               ].map((s) => (
