@@ -127,6 +127,92 @@ export default async function MarketPage() {
           </div>
         </section>
 
+        {/* LINE CTA セクション */}
+        <section
+          className="py-20 px-4"
+          style={{
+            background: "linear-gradient(135deg, #0d1b2e 0%, #1A2E4A 50%, #0d1b2e 100%)",
+            position: "relative",
+            overflow: "hidden",
+          }}
+        >
+          {/* 背景グロー装飾 */}
+          <div style={{
+            position: "absolute", top: "-80px", left: "50%", transform: "translateX(-50%)",
+            width: "600px", height: "300px",
+            background: "radial-gradient(ellipse, rgba(201,168,76,0.18) 0%, transparent 70%)",
+            pointerEvents: "none",
+          }} />
+
+          <div className="max-w-2xl mx-auto text-center" style={{position:"relative", zIndex:1}}>
+
+            {/* バナーコピー */}
+            <p className="text-gold text-xs font-bold uppercase tracking-widest mb-4" style={{letterSpacing:"0.2em"}}>
+              🔥 BULL友 MEMBERS ONLY
+            </p>
+            <h2
+              className="font-bold mb-4"
+              style={{fontSize:"clamp(2rem,6vw,3.2rem)", lineHeight:1.15, color:"#FFFFFF"}}
+            >
+              勝ちたい奴、<br />
+              <span style={{color:"#C9A84C"}}>俺</span>についてこい
+            </h2>
+            <p className="text-white/60 text-sm mb-10">
+              LINE登録は無料。いつでも解除できます。
+            </p>
+
+            {/* メリットカード */}
+            <div className="flex flex-col gap-4 mb-10 text-left">
+              {[
+                { num: "①", title: "毎日の「買い・売り」判断をLINEで受け取れる", desc: "場引け前に届く、プロの投資判断をリアルタイムで確認。" },
+                { num: "②", title: "LINE登録者限定の相場情報・マーケットコメント", desc: "一般公開しないディープな相場分析をお届けします。" },
+                { num: "③", title: "元大手信託銀行員へのLINE無料相談（1回）", desc: "投資・資産運用の疑問を直接プロに相談できます。" },
+              ].map((item) => (
+                <div
+                  key={item.num}
+                  className="flex items-start gap-4 rounded-xl p-5"
+                  style={{
+                    background: "rgba(255,255,255,0.06)",
+                    border: "1px solid rgba(201,168,76,0.25)",
+                    backdropFilter: "blur(4px)",
+                  }}
+                >
+                  <span
+                    className="font-bold text-lg flex-shrink-0 w-8 h-8 flex items-center justify-center rounded-full"
+                    style={{background:"#C9A84C", color:"#1A2E4A", fontSize:"0.85rem"}}
+                  >
+                    {item.num}
+                  </span>
+                  <div>
+                    <p className="text-white font-bold text-sm leading-snug mb-1">{item.title}</p>
+                    <p className="text-white/50 text-xs leading-relaxed">{item.desc}</p>
+                  </div>
+                </div>
+              ))}
+            </div>
+
+            {/* CTAボタン */}
+            <a
+              href="https://lin.ee/FmH7NXr"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-3 font-bold text-lg px-10 py-5 rounded-2xl transition-all duration-300"
+              style={{
+                background: "#06C755",
+                color: "#FFFFFF",
+                boxShadow: "0 0 32px rgba(6,199,85,0.45), 0 4px 20px rgba(0,0,0,0.3)",
+              }}
+            >
+              <svg className="w-6 h-6" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M12 2C6.48 2 2 6.04 2 11c0 3.45 1.92 6.47 4.8 8.19L6 22l2.72-1.44C9.77 20.83 10.87 21 12 21c5.52 0 10-4.04 10-9S17.52 2 12 2z"/>
+              </svg>
+              LINEで情報を受け取る
+            </a>
+
+            <p className="text-white/30 text-xs mt-5">※ 無料・スパムなし・いつでも退会可能</p>
+          </div>
+        </section>
+
         {/* M2: 日経225とは */}
         <section className="bg-offwhite py-16 px-4">
           <div className="max-w-4xl mx-auto">
