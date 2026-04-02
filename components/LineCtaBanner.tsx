@@ -6,7 +6,7 @@ export default function LineCtaBanner() {
           🔥 BULL友 MEMBERS ONLY
         </p>
         <h2 className="text-2xl md:text-3xl font-bold text-navy mb-3">
-          Bull友会員になる
+          Bull友になる
         </h2>
 
         {/* メリット3点 */}

@@ -37,7 +37,7 @@ export default function LinePage() {
               className="font-bold mb-4 text-white"
               style={{ fontSize: "clamp(2rem,6vw,3rem)", lineHeight: 1.15 }}
             >
-              Bull友会員になる
+              Bull友になる
             </h1>
 
             {/* 安心バッジ */}
