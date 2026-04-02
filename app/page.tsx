@@ -627,17 +627,6 @@ export default async function HomePage() {
           </div>
         </section>
 
-        {/* M8: 免責表示 */}
-        <section className="bg-white py-8 px-4">
-          <div className="max-w-4xl mx-auto">
-            <div className="disclaimer space-y-1">
-              <p>※ 本ページの情報は投資助言ではありません。</p>
-              <p>※ 投資は自己責任でお願いします。</p>
-              <p>※ 過去の実績は将来の成果を保証しません。</p>
-            </div>
-          </div>
-        </section>
-
         <LineCtaBanner />
       </main>
       <Footer />
