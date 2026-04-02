@@ -116,8 +116,8 @@ export default function BulltalkPage() {
               <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
                 {[
                   { cat: "資産形成", title: "人生で必要なお金はいくら？ライフイベントから逆算する", slug: "asset-01-life-money" },
-                  { cat: "相続", title: "遺言書が特に必要な7つのケース", slug: "souzoku-04-yuigon-hitsuyou" },
-                  { cat: "不動産", title: "土地の相続税評価額はどう決まる？4つの価格を理解しよう", slug: "fudosan-01-souzoku-hyoka" },
+                  { cat: "資産形成", title: "インフレ時代に「預金だけ」が危険な理由", slug: "asset-07-inflation" },
+                  { cat: "資産形成", title: "NISA完全ガイド｜非課税で資産を増やす仕組みと始め方", slug: "asset-02-nisa-guide" },
                 ].map((article) => (
                   <Link key={article.slug} href={`/column/${article.slug}`} className="card p-5 group">
                     <span className="inline-block text-xs font-bold text-gold border border-gold rounded-full px-3 py-1 mb-3">
@@ -129,7 +129,10 @@ export default function BulltalkPage() {
                   </Link>
                 ))}
               </div>
-              <div className="text-center mt-8">
+              <p className="text-center text-xs text-gray-400 mt-5">
+                相続・不動産に関するコラムも多数掲載しています。
+              </p>
+              <div className="text-center mt-3">
                 <Link href="/column" className="btn-primary px-8 py-3">
                   もっと見る →
                 </Link>
