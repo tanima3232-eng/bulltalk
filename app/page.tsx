@@ -211,7 +211,7 @@ export default async function HomePage() {
             <div className="flex flex-col gap-4 mb-10 text-left">
               {[
                 { num: "①", title: "毎日の「買い・売り」判断をLINEで受け取れる", desc: "場引け前に届く、プロの投資判断をリアルタイムで確認。" },
-                { num: "②", title: "LINE登録者限定の相場情報・マーケットコメント", desc: "一般公開しないディープな相場分析をお届けします。" },
+                { num: "②", title: "LINE登録者限定の相場情報・マーケットコメント", desc: "一般公開しないディープな相場情報をお届けします。" },
                 { num: "③", title: "元大手信託銀行員へのLINE無料相談（1回）", desc: "投資・資産形成・相続・不動産等の疑問を直接プロに相談できます。" },
               ].map((item) => (
                 <div
