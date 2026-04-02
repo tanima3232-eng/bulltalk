@@ -197,6 +197,15 @@ export default async function MarketPage() {
               <span className="text-white/40 text-sm">／</span>
             </div>
 
+            {/* 3つの特典 見出し */}
+            <div className="mb-6 text-center">
+              <p className="text-xs font-bold uppercase tracking-widest mb-2" style={{color:"#C9A84C", letterSpacing:"0.2em"}}>MEMBER BENEFITS</p>
+              <p className="text-white font-bold" style={{fontSize:"clamp(1.2rem,3vw,1.6rem)"}}>
+                <span style={{color:"#C9A84C"}}>3つ</span>のBull友特典
+              </p>
+              <div style={{width:"40px", height:"2px", background:"linear-gradient(90deg,#C9A84C,transparent)", margin:"10px auto 0"}} />
+            </div>
+
             {/* メリットカード */}
             <div className="flex flex-col gap-4 mb-10 text-left">
               {[
