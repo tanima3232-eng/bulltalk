@@ -399,7 +399,7 @@ export default async function HomePage() {
                 <h4 style={{textAlign:"center", color:"#1A2E4A", fontSize:"15px", fontWeight:"bold", marginBottom:"24px", letterSpacing:"0.05em"}}>投資信託の仕組み</h4>
 
                 {/* フォワードフロー：投資家 → 投資信託 → 運用先 */}
-                <div style={{display:"flex", alignItems:"center", justifyContent:"center", gap:"0", flexWrap:"nowrap"}}>
+                <div style={{display:"flex", alignItems:"center", gap:"0", flexWrap:"nowrap", width:"max-content", margin:"0 auto"}}>
 
                   {/* 投資家 */}
                   <div style={{background:"#fff", border:"2px solid #1A2E4A", borderRadius:"10px", padding:"12px 10px", textAlign:"center", minWidth:"90px", maxWidth:"110px", flexShrink:0}}>
