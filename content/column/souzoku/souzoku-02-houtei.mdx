@@ -9,101 +9,97 @@ published: true
 ---
 
 <div className="my-8 w-full overflow-x-auto rounded-lg">
-  {/* 法定相続分・遺留分の比較表 */}
-  <p className="text-sm text-gray-500 mb-2">相続人の組み合わせ別・法定相続分と遺留分の一覧</p>
-  <svg width="100%" viewBox="0 0 680 520">
+<svg width="100%" viewBox="0 0 680 520" xmlns="http://www.w3.org/2000/svg">
 
-<rect x="40" y="20" width="200" height="36" fill="#C9A84C"/>
-<text fontWeight="bold" x="140" y="38" text-anchor="middle" dominant-baseline="central" fill="#1A2E4A">相続人の組み合わせ</text>
-<rect x="240" y="20" width="200" height="36" fill="#C9A84C"/>
-<text fontWeight="bold" x="340" y="38" text-anchor="middle" dominant-baseline="central" fill="#1A2E4A">法定相続分</text>
-<rect x="440" y="20" width="200" height="36" fill="#C9A84C"/>
-<text fontWeight="bold" x="540" y="38" text-anchor="middle" dominant-baseline="central" fill="#1A2E4A">遺留分</text>
-<line x1="240" y1="20" x2="240" y2="56" stroke="#1A2E4A" stroke-width="0.5"/>
-<line x1="440" y1="20" x2="440" y2="56" stroke="#1A2E4A" stroke-width="0.5"/>
-<rect x="40" y="20" width="600" height="36" fill="none" stroke="#C9A84C" stroke-width="1"/>
+<rect x="40" y="20" width="200" height="36" fill="#1A2E4A"/>
+<text font-size="14" font-weight="500" font-family="sans-serif" x="140" y="38" text-anchor="middle" dominant-baseline="central" fill="#C9A84C">相続人の組み合わせ</text>
+<rect x="240" y="20" width="200" height="36" fill="#1A2E4A"/>
+<text font-size="14" font-weight="500" font-family="sans-serif" x="340" y="38" text-anchor="middle" dominant-baseline="central" fill="#C9A84C">法定相続分</text>
+<rect x="440" y="20" width="200" height="36" fill="#1A2E4A"/>
+<text font-size="14" font-weight="500" font-family="sans-serif" x="540" y="38" text-anchor="middle" dominant-baseline="central" fill="#C9A84C">遺留分</text>
+<line x1="240" y1="20" x2="240" y2="56" stroke="#C9A84C" stroke-width="0.5"/>
+<line x1="440" y1="20" x2="440" y2="56" stroke="#C9A84C" stroke-width="0.5"/>
 
-<rect x="40" y="56" width="200" height="52" fill="#EEF2F8" stroke="#E2E8F0" stroke-width="0.5"/>
-<text fill="#374151" x="140" y="74" text-anchor="middle" dominant-baseline="central" fill="#1A2E4A">配偶者</text>
-<text fill="#374151" x="140" y="96" text-anchor="middle" dominant-baseline="central" fill="#1A2E4A">＋子ども（または孫）</text>
-<rect x="240" y="56" width="200" height="52" fill="#FFFFFF" stroke="#E2E8F0" stroke-width="0.5"/>
-<text fontWeight="bold" fill="#1A2E4A" x="290" y="74" text-anchor="middle" dominant-baseline="central" style={{fontSize:"16px"}}>1/2</text>
-<text fill="#374151" x="290" y="96" text-anchor="middle" dominant-baseline="central">配偶者</text>
-<text fontWeight="bold" fill="#1A2E4A" x="390" y="74" text-anchor="middle" dominant-baseline="central" style={{fontSize:"16px"}}>1/2</text>
-<text fill="#374151" x="390" y="96" text-anchor="middle" dominant-baseline="central">子（均等）</text>
-<line x1="340" y1="62" x2="340" y2="102" stroke="#E2E8F0" stroke-width="0.5"/>
-<rect x="440" y="56" width="200" height="52" fill="#FFFFFF" stroke="#E2E8F0" stroke-width="0.5"/>
-<text fontWeight="bold" fill="#1A2E4A" x="490" y="68" text-anchor="middle" dominant-baseline="central">1/4</text>
-<text fill="#374151" x="490" y="88" text-anchor="middle" dominant-baseline="central">配偶者</text>
-<text fontWeight="bold" fill="#1A2E4A" x="590" y="68" text-anchor="middle" dominant-baseline="central">1/4</text>
-<text fill="#374151" x="590" y="88" text-anchor="middle" dominant-baseline="central">子</text>
-<line x1="540" y1="62" x2="540" y2="102" stroke="#E2E8F0" stroke-width="0.5"/>
+<rect x="40" y="56" width="200" height="52" fill="#E8EEF4" stroke="#1A2E4A" stroke-width="0.5"/>
+<text font-size="12" font-family="sans-serif" x="140" y="74" text-anchor="middle" dominant-baseline="central" fill="#1A2E4A">配偶者</text>
+<text font-size="12" font-family="sans-serif" x="140" y="96" text-anchor="middle" dominant-baseline="central" fill="#1A2E4A">＋子ども（または孫）</text>
+<rect x="240" y="56" width="200" height="52" fill="#F4F4F2" stroke="#1A2E4A" stroke-width="0.5"/>
+<text font-size="16" font-weight="500" font-family="sans-serif" x="290" y="74" text-anchor="middle" dominant-baseline="central" fill="#1A2E4A">1/2</text>
+<text font-size="12" font-family="sans-serif" x="290" y="96" text-anchor="middle" dominant-baseline="central" fill="#1A2E4A">配偶者</text>
+<text font-size="16" font-weight="500" font-family="sans-serif" x="390" y="74" text-anchor="middle" dominant-baseline="central" fill="#1A2E4A">1/2</text>
+<text font-size="12" font-family="sans-serif" x="390" y="96" text-anchor="middle" dominant-baseline="central" fill="#1A2E4A">子（均等）</text>
+<line x1="340" y1="62" x2="340" y2="102" stroke="#1A2E4A" stroke-width="0.5"/>
+<rect x="440" y="56" width="200" height="52" fill="#F4F4F2" stroke="#1A2E4A" stroke-width="0.5"/>
+<text font-size="14" font-weight="500" font-family="sans-serif" x="490" y="68" text-anchor="middle" dominant-baseline="central" fill="#1A2E4A">1/4</text>
+<text font-size="12" font-family="sans-serif" x="490" y="88" text-anchor="middle" dominant-baseline="central" fill="#1A2E4A">配偶者</text>
+<text font-size="14" font-weight="500" font-family="sans-serif" x="590" y="68" text-anchor="middle" dominant-baseline="central" fill="#1A2E4A">1/4</text>
+<text font-size="12" font-family="sans-serif" x="590" y="88" text-anchor="middle" dominant-baseline="central" fill="#1A2E4A">子</text>
+<line x1="540" y1="62" x2="540" y2="102" stroke="#1A2E4A" stroke-width="0.5"/>
 
-<rect x="40" y="108" width="200" height="52" fill="#EEF2F8" stroke="#E2E8F0" stroke-width="0.5"/>
-<text fill="#374151" x="140" y="126" text-anchor="middle" dominant-baseline="central" fill="#1A2E4A">配偶者</text>
-<text fill="#374151" x="140" y="148" text-anchor="middle" dominant-baseline="central" fill="#1A2E4A">＋父母（または祖父母）</text>
-<rect x="240" y="108" width="200" height="52" fill="#FFFFFF" stroke="#E2E8F0" stroke-width="0.5"/>
-<text fontWeight="bold" fill="#1A2E4A" x="290" y="126" text-anchor="middle" dominant-baseline="central" style={{fontSize:"16px"}}>2/3</text>
-<text fill="#374151" x="290" y="148" text-anchor="middle" dominant-baseline="central">配偶者</text>
-<text fontWeight="bold" fill="#1A2E4A" x="390" y="126" text-anchor="middle" dominant-baseline="central" style={{fontSize:"16px"}}>1/3</text>
-<text fill="#374151" x="390" y="148" text-anchor="middle" dominant-baseline="central">父母</text>
-<line x1="340" y1="114" x2="340" y2="154" stroke="#E2E8F0" stroke-width="0.5"/>
-<rect x="440" y="108" width="200" height="52" fill="#FFFFFF" stroke="#E2E8F0" stroke-width="0.5"/>
-<text fontWeight="bold" fill="#1A2E4A" x="490" y="120" text-anchor="middle" dominant-baseline="central">1/3</text>
-<text fill="#374151" x="490" y="140" text-anchor="middle" dominant-baseline="central">配偶者</text>
-<text fontWeight="bold" fill="#1A2E4A" x="590" y="120" text-anchor="middle" dominant-baseline="central">1/6</text>
-<text fill="#374151" x="590" y="140" text-anchor="middle" dominant-baseline="central">父母</text>
-<line x1="540" y1="114" x2="540" y2="154" stroke="#E2E8F0" stroke-width="0.5"/>
+<rect x="40" y="108" width="200" height="52" fill="#E8EEF4" stroke="#1A2E4A" stroke-width="0.5"/>
+<text font-size="12" font-family="sans-serif" x="140" y="126" text-anchor="middle" dominant-baseline="central" fill="#1A2E4A">配偶者</text>
+<text font-size="12" font-family="sans-serif" x="140" y="148" text-anchor="middle" dominant-baseline="central" fill="#1A2E4A">＋父母（または祖父母）</text>
+<rect x="240" y="108" width="200" height="52" fill="#F4F4F2" stroke="#1A2E4A" stroke-width="0.5"/>
+<text font-size="16" font-weight="500" font-family="sans-serif" x="290" y="126" text-anchor="middle" dominant-baseline="central" fill="#1A2E4A">2/3</text>
+<text font-size="12" font-family="sans-serif" x="290" y="148" text-anchor="middle" dominant-baseline="central" fill="#1A2E4A">配偶者</text>
+<text font-size="16" font-weight="500" font-family="sans-serif" x="390" y="126" text-anchor="middle" dominant-baseline="central" fill="#1A2E4A">1/3</text>
+<text font-size="12" font-family="sans-serif" x="390" y="148" text-anchor="middle" dominant-baseline="central" fill="#1A2E4A">父母</text>
+<line x1="340" y1="114" x2="340" y2="154" stroke="#1A2E4A" stroke-width="0.5"/>
+<rect x="440" y="108" width="200" height="52" fill="#F4F4F2" stroke="#1A2E4A" stroke-width="0.5"/>
+<text font-size="14" font-weight="500" font-family="sans-serif" x="490" y="120" text-anchor="middle" dominant-baseline="central" fill="#1A2E4A">1/3</text>
+<text font-size="12" font-family="sans-serif" x="490" y="140" text-anchor="middle" dominant-baseline="central" fill="#1A2E4A">配偶者</text>
+<text font-size="14" font-weight="500" font-family="sans-serif" x="590" y="120" text-anchor="middle" dominant-baseline="central" fill="#1A2E4A">1/6</text>
+<text font-size="12" font-family="sans-serif" x="590" y="140" text-anchor="middle" dominant-baseline="central" fill="#1A2E4A">父母</text>
+<line x1="540" y1="114" x2="540" y2="154" stroke="#1A2E4A" stroke-width="0.5"/>
 
-<rect x="40" y="160" width="200" height="52" fill="#EEF2F8" stroke="#E2E8F0" stroke-width="0.5"/>
-<text fill="#374151" x="140" y="178" text-anchor="middle" dominant-baseline="central" fill="#1A2E4A">配偶者</text>
-<text fill="#374151" x="140" y="200" text-anchor="middle" dominant-baseline="central" fill="#1A2E4A">＋兄弟姉妹</text>
-<rect x="240" y="160" width="200" height="52" fill="#FFFFFF" stroke="#E2E8F0" stroke-width="0.5"/>
-<text fontWeight="bold" fill="#1A2E4A" x="290" y="178" text-anchor="middle" dominant-baseline="central" style={{fontSize:"16px"}}>3/4</text>
-<text fill="#374151" x="290" y="200" text-anchor="middle" dominant-baseline="central">配偶者</text>
-<text fontWeight="bold" fill="#1A2E4A" x="390" y="178" text-anchor="middle" dominant-baseline="central" style={{fontSize:"16px"}}>1/4</text>
-<text fill="#374151" x="390" y="200" text-anchor="middle" dominant-baseline="central">兄弟姉妹</text>
-<line x1="340" y1="166" x2="340" y2="206" stroke="#E2E8F0" stroke-width="0.5"/>
-<rect x="440" y="160" width="200" height="52" fill="#FFFFFF" stroke="#E2E8F0" stroke-width="0.5"/>
-<text fontWeight="bold" fill="#1A2E4A" x="490" y="172" text-anchor="middle" dominant-baseline="central">1/2</text>
-<text fill="#374151" x="490" y="192" text-anchor="middle" dominant-baseline="central">配偶者</text>
-<text fontWeight="bold" fill="#1A2E4A" x="590" y="178" text-anchor="middle" dominant-baseline="central">なし</text>
-<text fill="#374151" x="590" y="198" text-anchor="middle" dominant-baseline="central">兄弟姉妹</text>
-<line x1="540" y1="166" x2="540" y2="206" stroke="#E2E8F0" stroke-width="0.5"/>
+<rect x="40" y="160" width="200" height="52" fill="#E8EEF4" stroke="#1A2E4A" stroke-width="0.5"/>
+<text font-size="12" font-family="sans-serif" x="140" y="178" text-anchor="middle" dominant-baseline="central" fill="#1A2E4A">配偶者＋兄弟姉妹</text>
+<rect x="240" y="160" width="200" height="52" fill="#F4F4F2" stroke="#1A2E4A" stroke-width="0.5"/>
+<text font-size="16" font-weight="500" font-family="sans-serif" x="290" y="178" text-anchor="middle" dominant-baseline="central" fill="#1A2E4A">3/4</text>
+<text font-size="12" font-family="sans-serif" x="290" y="200" text-anchor="middle" dominant-baseline="central" fill="#1A2E4A">配偶者</text>
+<text font-size="16" font-weight="500" font-family="sans-serif" x="390" y="178" text-anchor="middle" dominant-baseline="central" fill="#1A2E4A">1/4</text>
+<text font-size="12" font-family="sans-serif" x="390" y="200" text-anchor="middle" dominant-baseline="central" fill="#1A2E4A">兄弟姉妹</text>
+<line x1="340" y1="166" x2="340" y2="206" stroke="#1A2E4A" stroke-width="0.5"/>
+<rect x="440" y="160" width="200" height="52" fill="#F4F4F2" stroke="#1A2E4A" stroke-width="0.5"/>
+<text font-size="14" font-weight="500" font-family="sans-serif" x="490" y="172" text-anchor="middle" dominant-baseline="central" fill="#1A2E4A">1/2</text>
+<text font-size="12" font-family="sans-serif" x="490" y="192" text-anchor="middle" dominant-baseline="central" fill="#1A2E4A">配偶者</text>
+<text font-size="14" font-weight="500" font-family="sans-serif" x="590" y="178" text-anchor="middle" dominant-baseline="central" fill="#1A2E4A">なし</text>
+<text font-size="12" font-family="sans-serif" x="590" y="198" text-anchor="middle" dominant-baseline="central" fill="#1A2E4A">兄弟姉妹</text>
+<line x1="540" y1="166" x2="540" y2="206" stroke="#1A2E4A" stroke-width="0.5"/>
 
-<rect x="40" y="212" width="200" height="40" fill="#EEF2F8" stroke="#E2E8F0" stroke-width="0.5"/>
-<text fill="#374151" x="140" y="232" text-anchor="middle" dominant-baseline="central" fill="#1A2E4A">配偶者のみ</text>
-<rect x="240" y="212" width="200" height="40" fill="#FFFFFF" stroke="#E2E8F0" stroke-width="0.5"/>
-<text fontWeight="bold" fill="#1A2E4A" x="340" y="232" text-anchor="middle" dominant-baseline="central" style={{fontSize:"16px"}}>全部</text>
-<rect x="440" y="212" width="200" height="40" fill="#FFFFFF" stroke="#E2E8F0" stroke-width="0.5"/>
-<text fontWeight="bold" fill="#1A2E4A" x="540" y="232" text-anchor="middle" dominant-baseline="central">1/2</text>
+<rect x="40" y="212" width="200" height="40" fill="#E8EEF4" stroke="#1A2E4A" stroke-width="0.5"/>
+<text font-size="12" font-family="sans-serif" x="140" y="232" text-anchor="middle" dominant-baseline="central" fill="#1A2E4A">配偶者のみ</text>
+<rect x="240" y="212" width="200" height="40" fill="#F4F4F2" stroke="#1A2E4A" stroke-width="0.5"/>
+<text font-size="16" font-weight="500" font-family="sans-serif" x="340" y="232" text-anchor="middle" dominant-baseline="central" fill="#1A2E4A">全部</text>
+<rect x="440" y="212" width="200" height="40" fill="#F4F4F2" stroke="#1A2E4A" stroke-width="0.5"/>
+<text font-size="14" font-weight="500" font-family="sans-serif" x="540" y="232" text-anchor="middle" dominant-baseline="central" fill="#1A2E4A">1/2</text>
 
-<rect x="40" y="252" width="200" height="40" fill="#EEF2F8" stroke="#E2E8F0" stroke-width="0.5"/>
-<text fill="#374151" x="140" y="272" text-anchor="middle" dominant-baseline="central" fill="#1A2E4A">子（または孫）のみ</text>
-<rect x="240" y="252" width="200" height="40" fill="#FFFFFF" stroke="#E2E8F0" stroke-width="0.5"/>
-<text fontWeight="bold" fill="#1A2E4A" x="340" y="272" text-anchor="middle" dominant-baseline="central" style={{fontSize:"16px"}}>全部</text>
-<rect x="440" y="252" width="200" height="40" fill="#FFFFFF" stroke="#E2E8F0" stroke-width="0.5"/>
-<text fontWeight="bold" fill="#1A2E4A" x="540" y="272" text-anchor="middle" dominant-baseline="central">1/2</text>
+<rect x="40" y="252" width="200" height="40" fill="#E8EEF4" stroke="#1A2E4A" stroke-width="0.5"/>
+<text font-size="12" font-family="sans-serif" x="140" y="272" text-anchor="middle" dominant-baseline="central" fill="#1A2E4A">子（または孫）のみ</text>
+<rect x="240" y="252" width="200" height="40" fill="#F4F4F2" stroke="#1A2E4A" stroke-width="0.5"/>
+<text font-size="16" font-weight="500" font-family="sans-serif" x="340" y="272" text-anchor="middle" dominant-baseline="central" fill="#1A2E4A">全部</text>
+<rect x="440" y="252" width="200" height="40" fill="#F4F4F2" stroke="#1A2E4A" stroke-width="0.5"/>
+<text font-size="14" font-weight="500" font-family="sans-serif" x="540" y="272" text-anchor="middle" dominant-baseline="central" fill="#1A2E4A">1/2</text>
 
-<rect x="40" y="292" width="200" height="40" fill="#EEF2F8" stroke="#E2E8F0" stroke-width="0.5"/>
-<text fill="#374151" x="140" y="312" text-anchor="middle" dominant-baseline="central" fill="#1A2E4A">父母（または祖父母）のみ</text>
-<rect x="240" y="292" width="200" height="40" fill="#FFFFFF" stroke="#E2E8F0" stroke-width="0.5"/>
-<text fontWeight="bold" fill="#1A2E4A" x="340" y="312" text-anchor="middle" dominant-baseline="central" style={{fontSize:"16px"}}>全部</text>
-<rect x="440" y="292" width="200" height="40" fill="#FFFFFF" stroke="#E2E8F0" stroke-width="0.5"/>
-<text fontWeight="bold" fill="#1A2E4A" x="540" y="312" text-anchor="middle" dominant-baseline="central">1/3</text>
+<rect x="40" y="292" width="200" height="40" fill="#E8EEF4" stroke="#1A2E4A" stroke-width="0.5"/>
+<text font-size="12" font-family="sans-serif" x="140" y="312" text-anchor="middle" dominant-baseline="central" fill="#1A2E4A">父母（または祖父母）のみ</text>
+<rect x="240" y="292" width="200" height="40" fill="#F4F4F2" stroke="#1A2E4A" stroke-width="0.5"/>
+<text font-size="16" font-weight="500" font-family="sans-serif" x="340" y="312" text-anchor="middle" dominant-baseline="central" fill="#1A2E4A">全部</text>
+<rect x="440" y="292" width="200" height="40" fill="#F4F4F2" stroke="#1A2E4A" stroke-width="0.5"/>
+<text font-size="14" font-weight="500" font-family="sans-serif" x="540" y="312" text-anchor="middle" dominant-baseline="central" fill="#1A2E4A">1/3</text>
 
-<rect x="40" y="332" width="200" height="40" fill="#EEF2F8" stroke="#E2E8F0" stroke-width="0.5"/>
-<text fill="#374151" x="140" y="352" text-anchor="middle" dominant-baseline="central" fill="#1A2E4A">兄弟姉妹のみ</text>
-<rect x="240" y="332" width="200" height="40" fill="#FFFFFF" stroke="#E2E8F0" stroke-width="0.5"/>
-<text fontWeight="bold" fill="#1A2E4A" x="340" y="352" text-anchor="middle" dominant-baseline="central" style={{fontSize:"16px"}}>全部</text>
-<rect x="440" y="332" width="200" height="40" fill="#FFFFFF" stroke="#E2E8F0" stroke-width="0.5"/>
-<text fontWeight="bold" fill="#1A2E4A" x="540" y="352" text-anchor="middle" dominant-baseline="central">なし</text>
+<rect x="40" y="332" width="200" height="40" fill="#E8EEF4" stroke="#1A2E4A" stroke-width="0.5"/>
+<text font-size="12" font-family="sans-serif" x="140" y="352" text-anchor="middle" dominant-baseline="central" fill="#1A2E4A">兄弟姉妹のみ</text>
+<rect x="240" y="332" width="200" height="40" fill="#F4F4F2" stroke="#1A2E4A" stroke-width="0.5"/>
+<text font-size="16" font-weight="500" font-family="sans-serif" x="340" y="352" text-anchor="middle" dominant-baseline="central" fill="#1A2E4A">全部</text>
+<rect x="440" y="332" width="200" height="40" fill="#F4F4F2" stroke="#1A2E4A" stroke-width="0.5"/>
+<text font-size="14" font-weight="500" font-family="sans-serif" x="540" y="352" text-anchor="middle" dominant-baseline="central" fill="#1A2E4A">なし</text>
 
-<rect x="40" y="388" width="600" height="112" rx="8" fill="#F8FAFC" stroke="#E2E8F0" stroke-width="0.5"/>
-<text fontWeight="bold" fill="#1A2E4A" x="56" y="412" dominant-baseline="central">ポイント</text>
-<text fill="#374151" x="56" y="440" dominant-baseline="central">・配偶者は常に相続人。上位順位（子＞父母＞兄弟姉妹）がいる場合、下位は相続人にならない</text>
-<text fill="#374151" x="56" y="464" dominant-baseline="central">・遺留分とは最低限もらえる権利。兄弟姉妹には遺留分がない</text>
-<text fill="#374151" x="56" y="488" dominant-baseline="central">・法定相続分は「目安」。全員が合意すれば自由に分割割合を変更できる</text>
+<rect x="40" y="388" width="600" height="112" rx="8" fill="#E8EEF4" stroke="#1A2E4A" stroke-width="0.5"/>
+<text font-size="14" font-weight="500" font-family="sans-serif" x="56" y="412" dominant-baseline="central" fill="#1A2E4A">ポイント</text>
+<text font-size="12" font-family="sans-serif" x="56" y="440" dominant-baseline="central" fill="#1A2E4A">・配偶者は常に相続人。上位順位（子＞父母＞兄弟姉妹）がいる場合、下位は相続人にならない</text>
+<text font-size="12" font-family="sans-serif" x="56" y="464" dominant-baseline="central" fill="#1A2E4A">・遺留分とは最低限もらえる権利。兄弟姉妹には遺留分がない</text>
+<text font-size="12" font-family="sans-serif" x="56" y="488" dominant-baseline="central" fill="#1A2E4A">・法定相続分は「目安」。全員が合意すれば自由に分割割合を変更できる</text>
 </svg>
 </div>
 

@@ -9,65 +9,66 @@ published: true
 ---
 
 <div className="my-8 w-full overflow-x-auto rounded-lg">
-  {/* 相続発生から10ヶ月のスケジュール全体図 */}
-  <p className="text-sm text-gray-500 mb-2">相続発生から申告・納付までの全体スケジュール（概要）</p>
-  <svg width="100%" viewBox="0 0 680 544">
+<svg width="100%" viewBox="0 0 680 544" xmlns="http://www.w3.org/2000/svg">
 <defs>
 <marker id="arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
-<path d="M2 1L8 5L2 9" fill="none" stroke="#64748B" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M2 1L8 5L2 9" fill="none" stroke="#1A2E4A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+</marker>
+<marker id="arrow2" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+<path d="M2 1L8 5L2 9" fill="none" stroke="#C9A84C" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
 </marker>
 </defs>
 
-<g fill="#DBEAFE" stroke="#3B82F6"><rect x="40" y="20" width="120" height="36" rx="18" stroke-width="0.5"/></g>
-<text fontWeight="bold" fill="#1A2E4A" x="100" y="38" text-anchor="middle" dominant-baseline="central">死亡直後</text>
-<rect x="170" y="20" width="470" height="36" rx="6" fill="#F8FAFC" stroke="#E2E8F0" stroke-width="0.5"/>
-<text fill="#374151" x="182" y="38" dominant-baseline="central">死亡届の提出（7日以内）・社会保険・生命保険の手続き</text>
-<line x1="100" y1="56" x2="100" y2="72" stroke="#94A3B8" stroke-width="1.5" marker-end="url(#arrow)"/>
+<rect x="40" y="20" width="120" height="36" rx="18" fill="#1A2E4A"/>
+<text font-size="14" font-weight="500" font-family="sans-serif" x="100" y="38" text-anchor="middle" dominant-baseline="central" fill="#FFFFFF">死亡直後</text>
+<rect x="170" y="20" width="470" height="36" rx="6" fill="#E8EEF4" stroke="#1A2E4A" stroke-width="0.5"/>
+<text font-size="12" font-family="sans-serif" x="182" y="38" dominant-baseline="central" fill="#1A2E4A">死亡届の提出（7日以内）・社会保険・生命保険の手続き</text>
+<line x1="100" y1="56" x2="100" y2="72" stroke="#1A2E4A" stroke-width="1.5" marker-end="url(#arrow)"/>
 
-<g fill="#DBEAFE" stroke="#3B82F6"><rect x="40" y="72" width="120" height="36" rx="18" stroke-width="0.5"/></g>
-<text fontWeight="bold" fill="#1A2E4A" x="100" y="90" text-anchor="middle" dominant-baseline="central">3ヶ月以内</text>
-<rect x="170" y="72" width="470" height="36" rx="6" fill="#F8FAFC" stroke="#E2E8F0" stroke-width="0.5"/>
-<text fill="#374151" x="182" y="90" dominant-baseline="central">相続人の確定（戸籍収集）・相続放棄の判断（家庭裁判所へ申述）</text>
-<line x1="100" y1="108" x2="100" y2="124" stroke="#94A3B8" stroke-width="1.5" marker-end="url(#arrow)"/>
+<rect x="40" y="72" width="120" height="36" rx="18" fill="#1A2E4A"/>
+<text font-size="14" font-weight="500" font-family="sans-serif" x="100" y="90" text-anchor="middle" dominant-baseline="central" fill="#FFFFFF">3ヶ月以内</text>
+<rect x="170" y="72" width="470" height="36" rx="6" fill="#E8EEF4" stroke="#1A2E4A" stroke-width="0.5"/>
+<text font-size="12" font-family="sans-serif" x="182" y="90" dominant-baseline="central" fill="#1A2E4A">相続人の確定（戸籍収集）・相続放棄の判断（家庭裁判所へ申述）</text>
+<line x1="100" y1="108" x2="100" y2="124" stroke="#1A2E4A" stroke-width="1.5" marker-end="url(#arrow)"/>
 
-<g fill="#FEF3C7" stroke="#D97706"><rect x="40" y="124" width="120" height="36" rx="18" stroke-width="0.5"/></g>
-<text fontWeight="bold" fill="#1A2E4A" x="100" y="142" text-anchor="middle" dominant-baseline="central">4ヶ月以内</text>
-<rect x="170" y="124" width="470" height="36" rx="6" fill="#F8FAFC" stroke="#E2E8F0" stroke-width="0.5"/>
-<text fill="#374151" x="182" y="142" dominant-baseline="central">準確定申告・納付（亡くなった方の所得税申告）</text>
-<line x1="100" y1="160" x2="100" y2="176" stroke="#94A3B8" stroke-width="1.5" marker-end="url(#arrow)"/>
+<rect x="40" y="124" width="120" height="36" rx="18" fill="#C9A84C"/>
+<text font-size="14" font-weight="500" font-family="sans-serif" x="100" y="142" text-anchor="middle" dominant-baseline="central" fill="#1A2E4A">4ヶ月以内</text>
+<rect x="170" y="124" width="470" height="36" rx="6" fill="#FFF8E7" stroke="#C9A84C" stroke-width="0.5"/>
+<text font-size="12" font-family="sans-serif" x="182" y="142" dominant-baseline="central" fill="#1A2E4A">準確定申告・納付（亡くなった方の所得税申告）</text>
+<line x1="100" y1="160" x2="100" y2="176" stroke="#C9A84C" stroke-width="1.5" marker-end="url(#arrow2)"/>
 
-<g fill="#FFEDD5" stroke="#EA580C"><rect x="40" y="176" width="120" height="44" rx="18" stroke-width="0.5"/></g>
-<text fontWeight="bold" fill="#1A2E4A" x="100" y="192" text-anchor="middle" dominant-baseline="central">10ヶ月以内</text>
-<text fontWeight="bold" fill="#1A2E4A" x="100" y="210" text-anchor="middle" dominant-baseline="central">①</text>
-<rect x="170" y="176" width="470" height="44" rx="6" fill="#F8FAFC" stroke="#E2E8F0" stroke-width="0.5"/>
-<text fill="#374151" x="182" y="198" dominant-baseline="central">遺産の調査・収集（預貯金・不動産・株式・借金の把握）</text>
-<line x1="100" y1="220" x2="100" y2="236" stroke="#94A3B8" stroke-width="1.5" marker-end="url(#arrow)"/>
+<rect x="40" y="176" width="120" height="44" rx="18" fill="#C9A84C"/>
+<text font-size="14" font-weight="500" font-family="sans-serif" x="100" y="192" text-anchor="middle" dominant-baseline="central" fill="#1A2E4A">10ヶ月以内</text>
+<text font-size="14" font-weight="500" font-family="sans-serif" x="100" y="210" text-anchor="middle" dominant-baseline="central" fill="#1A2E4A">①</text>
+<rect x="170" y="176" width="470" height="44" rx="6" fill="#FFF8E7" stroke="#C9A84C" stroke-width="0.5"/>
+<text font-size="12" font-family="sans-serif" x="182" y="198" dominant-baseline="central" fill="#1A2E4A">遺産の調査・収集（預貯金・不動産・株式・借金の把握）</text>
+<line x1="100" y1="220" x2="100" y2="236" stroke="#C9A84C" stroke-width="1.5" marker-end="url(#arrow2)"/>
 
-<g fill="#FFEDD5" stroke="#EA580C"><rect x="40" y="236" width="120" height="44" rx="18" stroke-width="0.5"/></g>
-<text fontWeight="bold" fill="#1A2E4A" x="100" y="252" text-anchor="middle" dominant-baseline="central">10ヶ月以内</text>
-<text fontWeight="bold" fill="#1A2E4A" x="100" y="270" text-anchor="middle" dominant-baseline="central">②</text>
-<rect x="170" y="236" width="470" height="44" rx="6" fill="#F8FAFC" stroke="#E2E8F0" stroke-width="0.5"/>
-<text fill="#374151" x="182" y="258" dominant-baseline="central">遺産分割協議（相続人全員で合意・遺産分割協議書の作成）</text>
-<line x1="100" y1="280" x2="100" y2="296" stroke="#94A3B8" stroke-width="1.5" marker-end="url(#arrow)"/>
+<rect x="40" y="236" width="120" height="44" rx="18" fill="#C9A84C"/>
+<text font-size="14" font-weight="500" font-family="sans-serif" x="100" y="252" text-anchor="middle" dominant-baseline="central" fill="#1A2E4A">10ヶ月以内</text>
+<text font-size="14" font-weight="500" font-family="sans-serif" x="100" y="270" text-anchor="middle" dominant-baseline="central" fill="#1A2E4A">②</text>
+<rect x="170" y="236" width="470" height="44" rx="6" fill="#FFF8E7" stroke="#C9A84C" stroke-width="0.5"/>
+<text font-size="12" font-family="sans-serif" x="182" y="258" dominant-baseline="central" fill="#1A2E4A">遺産分割協議（相続人全員で合意・遺産分割協議書の作成）</text>
+<line x1="100" y1="280" x2="100" y2="296" stroke="#C9A84C" stroke-width="1.5" marker-end="url(#arrow2)"/>
 
-<g fill="#FFEDD5" stroke="#EA580C"><rect x="40" y="296" width="120" height="44" rx="18" stroke-width="0.5"/></g>
-<text fontWeight="bold" fill="#1A2E4A" x="100" y="312" text-anchor="middle" dominant-baseline="central">10ヶ月以内</text>
-<text fontWeight="bold" fill="#1A2E4A" x="100" y="330" text-anchor="middle" dominant-baseline="central">③</text>
-<rect x="170" y="296" width="470" height="44" rx="6" fill="#F8FAFC" stroke="#E2E8F0" stroke-width="0.5"/>
-<text fill="#374151" x="182" y="318" dominant-baseline="central">名義変更（不動産・預貯金・株式の名義を相続人に変更）</text>
-<line x1="100" y1="340" x2="100" y2="356" stroke="#94A3B8" stroke-width="1.5" marker-end="url(#arrow)"/>
+<rect x="40" y="296" width="120" height="44" rx="18" fill="#C9A84C"/>
+<text font-size="14" font-weight="500" font-family="sans-serif" x="100" y="312" text-anchor="middle" dominant-baseline="central" fill="#1A2E4A">10ヶ月以内</text>
+<text font-size="14" font-weight="500" font-family="sans-serif" x="100" y="330" text-anchor="middle" dominant-baseline="central" fill="#1A2E4A">③</text>
+<rect x="170" y="296" width="470" height="44" rx="6" fill="#FFF8E7" stroke="#C9A84C" stroke-width="0.5"/>
+<text font-size="12" font-family="sans-serif" x="182" y="318" dominant-baseline="central" fill="#1A2E4A">名義変更（不動産・預貯金・株式の名義を相続人に変更）</text>
+<line x1="100" y1="340" x2="100" y2="356" stroke="#1A2E4A" stroke-width="1.5" marker-end="url(#arrow)"/>
 
-<g fill="#FEE2E2" stroke="#DC2626"><rect x="40" y="356" width="120" height="44" rx="18" stroke-width="0.5"/></g>
-<text fontWeight="bold" fill="#1A2E4A" x="100" y="370" text-anchor="middle" dominant-baseline="central">10ヶ月以内</text>
-<text fontWeight="bold" fill="#1A2E4A" x="100" y="388" text-anchor="middle" dominant-baseline="central">期限厳守</text>
-<g fill="#FEE2E2" stroke="#DC2626"><rect x="170" y="356" width="470" height="44" rx="6" stroke-width="0.5"/></g>
-<text fontWeight="bold" fill="#1A2E4A" x="405" y="378" text-anchor="middle" dominant-baseline="central">相続税の申告・納付（課税対象の場合のみ）</text>
+<rect x="40" y="356" width="120" height="44" rx="18" fill="#1A2E4A"/>
+<text font-size="14" font-weight="500" font-family="sans-serif" x="100" y="370" text-anchor="middle" dominant-baseline="central" fill="#C9A84C">10ヶ月以内</text>
+<text font-size="14" font-weight="500" font-family="sans-serif" x="100" y="388" text-anchor="middle" dominant-baseline="central" fill="#C9A84C">期限厳守</text>
+<rect x="170" y="356" width="470" height="44" rx="6" fill="#1A2E4A"/>
+<text font-size="14" font-weight="500" font-family="sans-serif" x="405" y="378" text-anchor="middle" dominant-baseline="central" fill="#C9A84C">相続税の申告・納付（課税対象の場合のみ）</text>
 
-<rect x="40" y="420" width="600" height="108" rx="8" fill="#F8FAFC" stroke="#E2E8F0" stroke-width="0.5"/>
-<text fontWeight="bold" fill="#1A2E4A" x="56" y="444" dominant-baseline="central">注意事項</text>
-<text fill="#374151" x="56" y="468" dominant-baseline="central">⚠️ 相続登記：2024年4月から義務化。相続を知った日から3年以内（違反で10万円以下の過料）</text>
-<text fill="#374151" x="56" y="490" dominant-baseline="central">⚠️ 過去の未登記分：2027年3月31日が期限</text>
-<text fill="#374151" x="56" y="512" dominant-baseline="central">💡 口座は死亡が金融機関に伝わった時点で凍結。葬儀費用は事前に配偶者名義口座に確保を</text>
+<rect x="40" y="420" width="600" height="108" rx="8" fill="#E8EEF4" stroke="#1A2E4A" stroke-width="0.5"/>
+<text font-size="14" font-weight="500" font-family="sans-serif" x="56" y="444" dominant-baseline="central" fill="#1A2E4A">注意事項</text>
+<text font-size="12" font-family="sans-serif" x="56" y="468" dominant-baseline="central" fill="#1A2E4A">⚠️ 相続登記：2024年4月から義務化。相続を知った日から3年以内（違反で10万円以下の過料）</text>
+<text font-size="12" font-family="sans-serif" x="56" y="490" dominant-baseline="central" fill="#1A2E4A">⚠️ 過去の未登記分：2027年3月31日が期限</text>
+<text font-size="12" font-family="sans-serif" x="56" y="512" dominant-baseline="central" fill="#1A2E4A">💡 口座は死亡が金融機関に伝わった時点で凍結。葬儀費用は事前に配偶者名義口座に確保を</text>
 </svg>
 </div>
 
