@@ -617,9 +617,9 @@ export default async function MarketPage() {
               href="#sbi-affiliate-url-placeholder"
               className="btn-primary text-lg px-10 py-5 rounded-xl shadow-lg inline-block"
             >
-              🏦 SBI証券で口座を開設する（無料）
+              証券口座を開設する（無料）
             </a>
-
+            <p className="text-gray-500 text-xs mt-4">※投資信託や株式への投資には証券会社での口座開設が必要となります。</p>
           </div>
         </section>
 
