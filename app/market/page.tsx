@@ -8,7 +8,7 @@ import Image from "next/image";
 export const metadata: Metadata = {
   title: "225分析｜日経225・ブル型投資信託の投資判断を毎日配信",
   description:
-    "今日の日経225は買い？売り？元大手信託銀行員・証券アナリストが場引け前に毎日分析。SBI証券で口座開設して日経225投資を始めよう。",
+    "今日の日経225は買い？売り？元大手信託銀行12年・FP1級・CMA・宅建士が場引け前に毎日分析。SBI証券で口座開設して日経225投資を始めよう。",
 };
 
 export default async function MarketPage() {
@@ -32,7 +32,7 @@ export default async function MarketPage() {
             </h1>
             <div className="text-white/80 text-base md:text-lg mb-10 max-w-2xl mx-auto">
               <p className="text-gold font-bold text-xl md:text-2xl mb-3">今日は買い？売り？</p>
-              <p>元大手信託銀行員・証券アナリストが<br />毎日の日経225投資信託の投資判断を無料配信します</p>
+              <p>元大手信託銀行12年・FP1級・CMA・宅建士が<br />毎日の日経225投資信託の投資判断を無料配信します</p>
             </div>
             <div className="flex justify-center">
               <a href="https://lin.ee/FmH7NXr" className="btn-line inline-flex items-center gap-3 text-lg px-8 py-4 rounded-xl shadow-lg">
