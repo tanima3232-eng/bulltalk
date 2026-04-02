@@ -28,15 +28,14 @@ export default function BulltalkPage() {
         {/* S1: Hero */}
         <section className="bg-navy text-white py-24 px-4">
           <div className="max-w-4xl mx-auto text-center">
-            <p className="text-gold text-sm font-bold uppercase tracking-widest mb-4">元大手信託銀行員 × FP1級 × 証券アナリスト × 宅建士</p>
+            <p className="text-gold text-sm font-bold uppercase tracking-widest mb-4">FP1級×証券アナリスト×宅建士</p>
             <h1 className="text-3xl md:text-5xl font-bold mb-8">
-              <span className="block mb-5">投資と資産設計、両方わかる</span>
-              <span className="block mb-5"><span className="text-gold">元大手信託銀行員</span>が</span>
-              <span className="block">本音で発信します。</span>
+              <span className="block mb-5">勝つための情報を</span>
+              <span className="block"><span className="text-gold">プロ</span>が直接届ける</span>
             </h1>
             <p className="text-white/80 text-base md:text-lg leading-relaxed mb-10 max-w-2xl mx-auto">
-              日経225分析・相続・資産運用・不動産まで<br />
-              元大手信託銀行員12年・FP1級・CMA・宅建士が無料で解説
+              相場分析から資産形成・相続・不動産まで<br />
+              元大手信託銀行員が、プロの視点で無料解説
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link href="/market" className="btn-red text-base px-8 py-4 rounded-xl">
