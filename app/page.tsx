@@ -57,7 +57,7 @@ export default async function HomePage() {
 
             <div className="text-white/80 text-base md:text-lg max-w-2xl mx-auto mt-8">
               <p className="text-gold font-bold text-xl md:text-2xl mb-3">今日は買い？売り？</p>
-              <p>元大手信託銀行12年・FP1級・CMA・宅建士が<br />毎日の日経225投資信託の投資判断を無料配信します</p>
+              <p>元大手信託銀行12年・FP1級・CMA・宅建士が<br />毎日の日経225指数の投資判断を無料配信します</p>
             </div>
           </div>
         </section>
