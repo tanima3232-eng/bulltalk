@@ -15,6 +15,16 @@ export default function BulltalkPage() {
     <>
       <Header />
       <main>
+        {/* ページ識別 */}
+        <div className="bg-navy text-center py-5 border-b border-gold/20">
+          <p
+            className="font-black text-gold tracking-widest"
+            style={{fontSize:"clamp(1.8rem,5vw,2.8rem)", letterSpacing:"0.15em"}}
+          >
+            初めての方へ
+          </p>
+        </div>
+
         {/* S1: Hero */}
         <section className="bg-navy text-white py-24 px-4">
           <div className="max-w-4xl mx-auto text-center">

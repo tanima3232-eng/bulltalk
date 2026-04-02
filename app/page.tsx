@@ -17,8 +17,18 @@ export default async function HomePage() {
     <>
       <Header />
       <main>
-        {/* M1: Hero */}
-        <section className="bg-navy text-white py-20 px-4">
+        {/* ページ識別 */}
+        <div className="bg-navy text-center py-5 border-b border-gold/20">
+          <p
+            className="font-black text-gold tracking-widest"
+            style={{fontSize:"clamp(1.8rem,5vw,2.8rem)", letterSpacing:"0.15em"}}
+          >
+            毎日更新
+          </p>
+        </div>
+
+        {/* S1: Hero */}
+        <section className="bg-navy text-white py-24 px-4">
           <div className="max-w-4xl mx-auto text-center">
             <p className="text-gold text-sm font-bold uppercase tracking-widest mb-6">毎日場引け前に更新</p>
             <h1 className="font-bold mb-6">
