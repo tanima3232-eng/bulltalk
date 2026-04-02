@@ -242,21 +242,21 @@ export default async function MarketPage() {
               <svg className="w-6 h-6" viewBox="0 0 24 24" fill="currentColor">
                 <path d="M12 2C6.48 2 2 6.04 2 11c0 3.45 1.92 6.47 4.8 8.19L6 22l2.72-1.44C9.77 20.83 10.87 21 12 21c5.52 0 10-4.04 10-9S17.52 2 12 2z"/>
               </svg>
-              LINEで情報を受け取る
+              LINE追加で無料でBull友会員になる
             </a>
 
-            <p className="text-white/30 text-xs mt-5">※ 無料・スパムなし・いつでも退会可能</p>
+            <p className="text-white/30 text-xs mt-5">※ 完全無料・投資情報のみ配信・退会はいつでも自由</p>
           </div>
         </section>
 
         {/* 経歴サマリー */}
-        <section className="bg-navy text-white py-20 px-4">
+        <section className="bg-offwhite py-20 px-4">
           <div className="max-w-5xl mx-auto">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
               {/* Photo Placeholder */}
               <div className="flex justify-center">
-                <div className="w-64 h-64 rounded-full bg-white/10 border-4 border-gold flex items-center justify-center">
-                  <div className="text-center text-white/50">
+                <div className="w-64 h-64 rounded-full bg-navy/10 border-4 border-gold flex items-center justify-center">
+                  <div className="text-center text-navy/50">
                     <div className="text-5xl mb-2">👤</div>
                     <p className="text-sm">プロフィール写真</p>
                   </div>
@@ -266,7 +266,7 @@ export default async function MarketPage() {
               {/* Profile */}
               <div>
                 <p className="text-gold text-sm font-bold uppercase tracking-wider mb-2">About</p>
-                <h2 className="text-3xl font-bold mb-6">谷本 光章とは</h2>
+                <h2 className="text-3xl font-bold text-navy mb-6">谷本 光章とは</h2>
                 <ul className="space-y-3 mb-8">
                   {[
                     "🏦 元大手信託銀行 12年",
@@ -274,7 +274,7 @@ export default async function MarketPage() {
                     "🏆 新人コンペ全国2位・社長賞受賞",
                     "💼 個人〜機関投資家まで幅広く担当",
                   ].map((item) => (
-                    <li key={item} className="flex items-start gap-3 text-white/90">
+                    <li key={item} className="flex items-start gap-3 text-navy/80">
                       <span className="text-xl">{item.slice(0, 2)}</span>
                       <span>{item.slice(3)}</span>
                     </li>
@@ -289,7 +289,7 @@ export default async function MarketPage() {
         </section>
 
         {/* M2: 日経225とは */}
-        <section className="bg-offwhite py-16 px-4">
+        <section className="bg-white py-16 px-4">
           <div className="max-w-4xl mx-auto">
             <h2 className="section-title">日経225とは</h2>
             <div className="bg-white rounded-2xl p-8 shadow-sm">
@@ -363,7 +363,7 @@ export default async function MarketPage() {
         </section>
 
         {/* M3: 日経225に投資するとは */}
-        <section className="bg-white py-16 px-4">
+        <section className="bg-offwhite py-16 px-4">
           <div className="max-w-4xl mx-auto">
             <h2 className="section-title">日経225に投資するとは</h2>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -474,7 +474,7 @@ export default async function MarketPage() {
         </section>
 
         {/* M4: ブル型という投資戦略 */}
-        <section className="bg-offwhite py-16 px-4">
+        <section className="bg-white py-16 px-4">
           <div className="max-w-4xl mx-auto">
             <h2 className="section-title">ブル型という投資戦略</h2>
             <div className="bg-white rounded-2xl p-8 shadow-sm">
@@ -556,7 +556,7 @@ export default async function MarketPage() {
         </section>
 
         {/* M5: 4.3倍ブルとは */}
-        <section className="bg-white py-16 px-4">
+        <section className="bg-offwhite py-16 px-4">
           <div className="max-w-4xl mx-auto">
             <h2 className="section-title">4.3倍ブルとは</h2>
             <div className="bg-navy text-white rounded-2xl p-8 mb-6">
