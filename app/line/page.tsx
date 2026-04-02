@@ -40,7 +40,7 @@ export default function LinePage() {
               Bull友会員になる
             </h1>
             <p className="text-white/60 text-sm mb-10">
-              LINEを友だち追加するだけ。1分で完了します。
+              LINEを友だち追加するだけ。
             </p>
 
             {/* 安心バッジ */}

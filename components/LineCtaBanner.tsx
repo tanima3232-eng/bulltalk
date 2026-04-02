@@ -9,7 +9,7 @@ export default function LineCtaBanner() {
           Bull友会員になる
         </h2>
         <p className="text-navy/70 text-sm mb-8">
-          LINEを友だち追加するだけ。1分で完了します。
+          LINEを友だち追加するだけ。
         </p>
 
         {/* メリット3点 */}
