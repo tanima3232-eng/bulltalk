@@ -44,13 +44,13 @@ export default async function HomePage() {
                 className="inline-flex items-center gap-1.5 text-xs font-bold px-3 py-1.5 rounded-full"
                 style={{background:"rgba(6,199,85,0.15)", color:"#4ADE80", border:"1px solid rgba(6,199,85,0.35)"}}
               >
-                ✓ LINEを友だち追加するだけ
+                ✓ LINE追加するだけ
               </span>
               <span
                 className="inline-flex items-center gap-1.5 text-xs font-bold px-3 py-1.5 rounded-full"
                 style={{background:"rgba(6,199,85,0.15)", color:"#4ADE80", border:"1px solid rgba(6,199,85,0.35)"}}
               >
-                ✓ いつでも退会可能
+                ✓ 特典あり
               </span>
               <span className="text-white/40 text-sm">／</span>
             </div>
@@ -187,13 +187,13 @@ export default async function HomePage() {
                 className="inline-flex items-center gap-1.5 text-xs font-bold px-3 py-1.5 rounded-full"
                 style={{background:"rgba(6,199,85,0.15)", color:"#4ADE80", border:"1px solid rgba(6,199,85,0.35)"}}
               >
-                ✓ LINEを友だち追加するだけ
+                ✓ LINE追加するだけ
               </span>
               <span
                 className="inline-flex items-center gap-1.5 text-xs font-bold px-3 py-1.5 rounded-full"
                 style={{background:"rgba(6,199,85,0.15)", color:"#4ADE80", border:"1px solid rgba(6,199,85,0.35)"}}
               >
-                ✓ いつでも退会可能
+                ✓ 特典あり
               </span>
               <span className="text-white/40 text-sm">／</span>
             </div>

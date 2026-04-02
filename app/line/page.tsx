@@ -46,7 +46,7 @@ export default function LinePage() {
             {/* 安心バッジ */}
             <div className="flex justify-center items-center gap-2 flex-wrap mb-10">
               <span className="text-white/40 text-sm">＼</span>
-              {["✓ 完全無料", "✓ LINEを友だち追加するだけ", "✓ いつでも退会可能"].map((badge) => (
+              {["\u2713 \u5b8c\u5168\u7121\u6599", "\u2713 LINE\u8ffd\u52a0\u3059\u308b\u3060\u3051", "\u2713 \u7279\u5178\u3042\u308a"].map((badge) => (
                 <span
                   key={badge}
                   className="inline-flex items-center gap-1.5 text-xs font-bold px-3 py-1.5 rounded-full"
