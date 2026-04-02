@@ -6,7 +6,7 @@ export default function LineCtaBanner() {
           🔥 BULL友 MEMBERS ONLY
         </p>
         <h2 className="text-2xl md:text-3xl font-bold text-navy mb-3">
-          完全無料でBull友会員になる
+          Bull友会員になる
         </h2>
         <p className="text-navy/70 text-sm mb-8">
           LINEを友だち追加するだけ。1分で完了します。
