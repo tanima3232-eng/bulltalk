@@ -398,8 +398,9 @@ export default async function HomePage() {
               <div style={{fontFamily:"'Hiragino Kaku Gothic Pro','Noto Sans JP',sans-serif", padding:"20px"}}>
                 <h4 style={{textAlign:"center", color:"#1A2E4A", fontSize:"15px", fontWeight:"bold", marginBottom:"24px", letterSpacing:"0.05em"}}>投資信託の仕組み</h4>
 
+                <div style={{width:"max-content", margin:"0 auto"}}>
                 {/* フォワードフロー：投資家 → 投資信託 → 運用先 */}
-                <div style={{display:"flex", alignItems:"center", gap:"0", flexWrap:"nowrap", width:"max-content", margin:"0 auto"}}>
+                <div style={{display:"flex", alignItems:"center", gap:"0", flexWrap:"nowrap"}}>
 
                   {/* 投資家 */}
                   <div style={{background:"#fff", border:"2px solid #1A2E4A", borderRadius:"10px", padding:"12px 10px", textAlign:"center", minWidth:"90px", maxWidth:"110px", flexShrink:0}}>
@@ -442,7 +443,7 @@ export default async function HomePage() {
                 </div>
 
                 {/* リターンフロー：収益が戻る */}
-                <div style={{display:"flex", alignItems:"center", justifyContent:"center", gap:"0", marginTop:"14px"}}>
+                <div style={{display:"flex", alignItems:"center", gap:"0", marginTop:"14px"}}>
                   <div style={{width:"90px", minWidth:"90px"}}></div>
                   <div style={{display:"flex", flexDirection:"column", alignItems:"center", gap:"2px", flexShrink:0, width:"56px"}}>
                     <svg width="48" height="20" viewBox="0 0 48 20">
@@ -463,16 +464,17 @@ export default async function HomePage() {
                 </div>
 
                 {/* ポイント3つ */}
-                <div style={{display:"flex", gap:"10px", marginTop:"18px", justifyContent:"center"}}>
-                  <div style={{background:"#fff", borderLeft:"4px solid #1A2E4A", borderRadius:"6px", padding:"8px 12px", fontSize:"11px", color:"#1A2E4A", flex:1, maxWidth:"150px", lineHeight:"1.6"}}>
+                <div style={{display:"flex", gap:"10px", marginTop:"18px"}}>
+                  <div style={{background:"#fff", borderLeft:"4px solid #1A2E4A", borderRadius:"6px", padding:"8px 12px", fontSize:"11px", color:"#1A2E4A", width:"110px", lineHeight:"1.6"}}>
                     <strong>少額から参加</strong><br />100円〜投資可能
                   </div>
-                  <div style={{background:"#fff", borderLeft:"4px solid #C9A84C", borderRadius:"6px", padding:"8px 12px", fontSize:"11px", color:"#1A2E4A", flex:1, maxWidth:"150px", lineHeight:"1.6"}}>
+                  <div style={{background:"#fff", borderLeft:"4px solid #C9A84C", borderRadius:"6px", padding:"8px 12px", fontSize:"11px", color:"#1A2E4A", width:"110px", lineHeight:"1.6"}}>
                     <strong>分散でリスク低減</strong><br />個別銘柄リスクを分散
                   </div>
-                  <div style={{background:"#fff", borderLeft:"4px solid #1A2E4A", borderRadius:"6px", padding:"8px 12px", fontSize:"11px", color:"#1A2E4A", flex:1, maxWidth:"150px", lineHeight:"1.6"}}>
+                  <div style={{background:"#fff", borderLeft:"4px solid #1A2E4A", borderRadius:"6px", padding:"8px 12px", fontSize:"11px", color:"#1A2E4A", width:"110px", lineHeight:"1.6"}}>
                     <strong>プロに任せる</strong><br />専門家が運用判断
                   </div>
+                </div>
                 </div>
 
                 {/* 注記 */}
