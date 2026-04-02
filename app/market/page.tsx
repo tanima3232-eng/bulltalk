@@ -245,7 +245,7 @@ export default async function MarketPage() {
               今すぐBull友になる
             </a>
 
-            <p className="text-white/30 text-xs mt-5">LINE追加するだけ・完全無料</p>
+            <p className="text-white/30 text-xs mt-5">LINE追加のみ・完全無料</p>
           </div>
         </section>
 

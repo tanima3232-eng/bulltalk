@@ -39,9 +39,6 @@ export default function LinePage() {
             >
               Bull友会員になる
             </h1>
-            <p className="text-white/60 text-sm mb-10">
-              LINEを友だち追加するだけ。
-            </p>
 
             {/* 安心バッジ */}
             <div className="flex justify-center items-center gap-2 flex-wrap mb-10">
@@ -106,7 +103,7 @@ export default function LinePage() {
               今すぐBull友になる
             </a>
 
-            <p className="text-white/30 text-xs mt-5">LINE追加するだけ・完全無料</p>
+            <p className="text-white/30 text-xs mt-5">LINE追加のみ・完全無料</p>
           </div>
         </section>
       </main>

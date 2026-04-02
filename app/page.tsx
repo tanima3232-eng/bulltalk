@@ -44,7 +44,7 @@ export default async function HomePage() {
                 className="inline-flex items-center gap-1.5 text-xs font-bold px-3 py-1.5 rounded-full"
                 style={{background:"rgba(6,199,85,0.15)", color:"#4ADE80", border:"1px solid rgba(6,199,85,0.35)"}}
               >
-                ✓ LINE追加するだけ
+                ✓ LINE追加のみ
               </span>
               <span
                 className="inline-flex items-center gap-1.5 text-xs font-bold px-3 py-1.5 rounded-full"
@@ -187,7 +187,7 @@ export default async function HomePage() {
                 className="inline-flex items-center gap-1.5 text-xs font-bold px-3 py-1.5 rounded-full"
                 style={{background:"rgba(6,199,85,0.15)", color:"#4ADE80", border:"1px solid rgba(6,199,85,0.35)"}}
               >
-                ✓ LINE追加するだけ
+                ✓ LINE追加のみ
               </span>
               <span
                 className="inline-flex items-center gap-1.5 text-xs font-bold px-3 py-1.5 rounded-full"
@@ -246,7 +246,7 @@ export default async function HomePage() {
               今すぐBull友になる
             </a>
 
-            <p className="text-white/30 text-xs mt-5">LINE追加するだけ・完全無料</p>
+            <p className="text-white/30 text-xs mt-5">LINE追加のみ・完全無料</p>
           </div>
         </section>
 

@@ -8,9 +8,6 @@ export default function LineCtaBanner() {
         <h2 className="text-2xl md:text-3xl font-bold text-navy mb-3">
           Bull友会員になる
         </h2>
-        <p className="text-navy/70 text-sm mb-8">
-          LINEを友だち追加するだけ。
-        </p>
 
         {/* メリット3点 */}
         <ul className="text-left space-y-3 mb-8 max-w-sm mx-auto">
@@ -40,7 +37,7 @@ export default function LineCtaBanner() {
           今すぐBull友になる
         </a>
 
-        <p className="text-navy/40 text-xs mt-4">LINE追加するだけ・完全無料</p>
+        <p className="text-navy/40 text-xs mt-4">LINE追加のみ・完全無料</p>
       </div>
     </section>
   );
