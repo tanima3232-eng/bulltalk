@@ -627,6 +627,40 @@ export default async function HomePage() {
           </div>
         </section>
 
+        {/* 最新コラム */}
+        <section className="bg-offwhite py-14 px-4">
+          <div className="max-w-5xl mx-auto">
+            <h2 className="text-xl font-bold text-navy mb-1 flex items-center gap-2">
+              <span>📝</span> 最新コラム
+            </h2>
+            <p className="text-gray-500 text-sm mb-6">資産形成の基礎から、プロの知識を無料で学べます。</p>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+              {[
+                { cat: "資産形成", title: "人生で必要なお金はいくら？ライフイベントから逆算する", slug: "asset-01-life-money" },
+                { cat: "資産形成", title: "インフレ時代に「預金だけ」が危険な理由", slug: "asset-07-inflation" },
+                { cat: "資産形成", title: "NISA完全ガイド｜非課税で資産を増やす仕組みと始め方", slug: "asset-02-nisa-guide" },
+              ].map((article) => (
+                <a key={article.slug} href={`/column/${article.slug}`} className="card p-5 group block">
+                  <span className="inline-block text-xs font-bold text-gold border border-gold rounded-full px-3 py-1 mb-3">
+                    {article.cat}
+                  </span>
+                  <h4 className="text-sm font-bold text-navy group-hover:text-gold transition-colors leading-relaxed">
+                    {article.title}
+                  </h4>
+                </a>
+              ))}
+            </div>
+            <p className="text-center text-xs text-gray-400 mt-5">
+              相続・不動産に関するコラムも多数掲載しています。
+            </p>
+            <div className="text-center mt-3">
+              <a href="/column" className="btn-primary px-8 py-3 inline-block">
+                もっと見る →
+              </a>
+            </div>
+          </div>
+        </section>
+
         <LineCtaBanner />
       </main>
       <Footer />
