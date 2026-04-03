@@ -12,7 +12,7 @@ export const metadata: Metadata = {
 const career = [
   {
     period: "2014〜2017年",
-    area: "リテール事業\n個人コンサル",
+    area: "個人顧客向けコンサル",
     detail: "富裕層を中心に個人のお客様への資産運用・相続対策・不動産コンサル。新人コンペ全国2位。支店内実績は常に最上位入賞。",
   },
   {
@@ -68,7 +68,7 @@ export default function AboutPage() {
         {/* Hero */}
         <section className="bg-navy text-white py-20 px-4">
           <div className="max-w-4xl mx-auto text-center">
-            <p className="text-gold text-sm font-bold uppercase tracking-widest mb-4">About</p>
+            <p className="text-gold text-sm font-bold uppercase tracking-widest mb-4">ABOUT ME</p>
             <h1 className="text-3xl md:text-5xl font-bold">谷本光章について</h1>
             <p className="text-gold text-sm font-semibold mt-4 leading-relaxed">
               FP1級 × 証券アナリスト × 宅建士<br />
@@ -169,8 +169,8 @@ export default function AboutPage() {
                     { label: "発信内容", value: "日経225分析・相続・資産運用・不動産" },
                   ].map((row) => (
                     <tr key={row.label} className="border-b border-gray-100">
-                      <td className="py-4 pr-6 text-navy font-bold text-sm w-32 whitespace-nowrap">{row.label}</td>
-                      <td className="py-4 text-gray-700">{row.value}</td>
+                      <td className="py-4 pr-6 text-navy font-bold text-sm w-28 whitespace-nowrap align-top">{row.label}</td>
+                      <td className="py-4 text-gray-700 text-sm whitespace-nowrap">{row.value}</td>
                     </tr>
                   ))}
                 </tbody>
