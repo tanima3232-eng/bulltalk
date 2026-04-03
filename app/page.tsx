@@ -112,7 +112,7 @@ export default async function HomePage() {
                 </div>
 
                 {/* PC: 3列グリッド */}
-                <div className="hidden md:grid grid-cols-3 gap-4 mb-8">
+                <div className="hidden md:grid grid-cols-3 gap-4 mb-8 max-w-2xl mx-auto">
                   {videos.map((video) => (
                     <a
                       key={video.id}
