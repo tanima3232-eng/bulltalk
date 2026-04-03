@@ -464,14 +464,14 @@ export default async function HomePage() {
                 </div>
 
                 {/* ポイント3つ */}
-                <div style={{display:"flex", gap:"10px", marginTop:"18px", paddingLeft:"16px"}}>
-                  <div style={{background:"#fff", borderLeft:"4px solid #1A2E4A", borderRadius:"6px", padding:"8px 12px", fontSize:"11px", color:"#1A2E4A", width:"110px", lineHeight:"1.6"}}>
+                <div style={{display:"flex", gap:"10px", marginTop:"18px"}}>
+                  <div style={{background:"#fff", borderLeft:"4px solid #1A2E4A", borderRadius:"6px", padding:"8px 12px", fontSize:"11px", color:"#1A2E4A", width:"120px", lineHeight:"1.6"}}>
                     <strong>少額から参加</strong><br />100円〜投資可能
                   </div>
-                  <div style={{background:"#fff", borderLeft:"4px solid #C9A84C", borderRadius:"6px", padding:"8px 12px", fontSize:"11px", color:"#1A2E4A", width:"110px", lineHeight:"1.6"}}>
+                  <div style={{background:"#fff", borderLeft:"4px solid #C9A84C", borderRadius:"6px", padding:"8px 12px", fontSize:"11px", color:"#1A2E4A", width:"120px", lineHeight:"1.6"}}>
                     <strong>分散でリスク低減</strong><br />個別銘柄リスクを分散
                   </div>
-                  <div style={{background:"#fff", borderLeft:"4px solid #1A2E4A", borderRadius:"6px", padding:"8px 12px", fontSize:"11px", color:"#1A2E4A", width:"110px", lineHeight:"1.6"}}>
+                  <div style={{background:"#fff", borderLeft:"4px solid #1A2E4A", borderRadius:"6px", padding:"8px 12px", fontSize:"11px", color:"#1A2E4A", width:"120px", lineHeight:"1.6"}}>
                     <strong>プロに任せる</strong><br />専門家が運用判断
                   </div>
                 </div>
