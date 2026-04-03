@@ -36,7 +36,7 @@ export default function ColumnListClient({ columns }: { columns: ColumnMeta[] })
             <p className="text-gold text-sm font-bold uppercase tracking-widest mb-4">Column</p>
             <h1 className="text-3xl md:text-4xl font-bold">金融コラム</h1>
             <p className="text-white/70 mt-4">
-              相続・資産形成・不動産の知識を元信託銀行員が解説｜全{columns.length}本
+              資産形成・相続・不動産の知識を元信託銀行員が解説｜全{columns.length}本
             </p>
           </div>
         </section>
