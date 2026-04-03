@@ -65,7 +65,7 @@ export default async function HomePage() {
         {/* M6: 最新分析動画 */}
         <section className="bg-white py-16 px-4">
           <div className="max-w-5xl mx-auto">
-            <p className="text-center font-black text-navy mb-2" style={{fontSize:"clamp(1.8rem,5vw,2.8rem)", letterSpacing:"0.1em"}}>毎日更新</p>
+            <p className="text-center font-black text-navy mb-8" style={{fontSize:"clamp(1.8rem,5vw,2.8rem)", letterSpacing:"0.1em"}}>毎日更新</p>
             <h2 className="section-title">最新分析動画</h2>
             <p className="section-subtitle">毎日場引け前に最新動画を公開中。</p>
 
@@ -263,13 +263,16 @@ export default async function HomePage() {
         <section className="bg-offwhite py-20 px-4">
           <div className="max-w-5xl mx-auto">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
-              {/* Photo Placeholder */}
+              {/* Profile Photo */}
               <div className="flex justify-center">
-                <div className="w-64 h-64 rounded-full bg-navy/10 border-4 border-gold flex items-center justify-center">
-                  <div className="text-center text-navy/50">
-                    <div className="text-5xl mb-2">👤</div>
-                    <p className="text-sm">プロフィール写真</p>
-                  </div>
+                <div className="w-64 h-64 rounded-full border-4 border-gold overflow-hidden shadow-xl">
+                  <Image
+                    src="/profile.jpg"
+                    alt="谷本光章 プロフィール写真"
+                    width={256}
+                    height={256}
+                    className="w-full h-full object-cover object-top"
+                  />
                 </div>
               </div>
 
@@ -301,7 +304,7 @@ export default async function HomePage() {
         {/* M2: 日経225とは */}
         <section className="bg-white py-16 px-4">
           <div className="max-w-4xl mx-auto">
-            <p className="text-center font-black text-navy mb-2" style={{fontSize:"clamp(1.8rem,5vw,2.8rem)", letterSpacing:"0.1em"}}>初めての方へ</p>
+            <p className="text-center font-black text-navy mb-8" style={{fontSize:"clamp(1.8rem,5vw,2.8rem)", letterSpacing:"0.1em"}}>初めての方へ</p>
             <h2 className="section-title">日経225とは</h2>
             <div className="bg-white rounded-2xl p-8 shadow-sm">
               <p className="text-gray-700 leading-relaxed text-base md:text-lg mb-6">
