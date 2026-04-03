@@ -4,6 +4,7 @@ import Footer from "@/components/Footer";
 import LineCtaBanner from "@/components/LineCtaBanner";
 import { getLatestVideos } from "@/lib/youtube";
 import Image from "next/image";
+import TrustDiagramScroll from "@/components/TrustDiagramScroll";
 
 export const metadata: Metadata = {
   title: "Bulltalk（ブルトーク）｜日経225・ブル型投資信託の投資判断を毎日配信",
@@ -64,10 +65,10 @@ export default async function HomePage() {
 
         {/* M6: 最新分析動画 */}
         <section className="bg-white py-16 px-4">
-          <div className="max-w-5xl mx-auto">
+          <div className="max-w-4xl mx-auto">
             <p className="text-center font-black text-navy mb-8" style={{fontSize:"clamp(1.8rem,5vw,2.8rem)", letterSpacing:"0.1em"}}>毎日更新</p>
-            <h2 className="section-title">最新分析動画</h2>
-            <p className="section-subtitle">毎日場引け前に最新動画を公開中。</p>
+            <h2 className="section-title text-center">最新分析動画</h2>
+            <p className="section-subtitle text-center">毎日場引け前に最新動画を公開中。</p>
 
             {videos.length > 0 ? (
               <>
@@ -472,11 +473,11 @@ export default async function HomePage() {
               </div>
             </div>
             {/* 投資信託の仕組み図解 */}
-            <div className="my-4 w-full overflow-x-auto mt-6">
+            <TrustDiagramScroll>
               <div style={{fontFamily:"'Hiragino Kaku Gothic Pro','Noto Sans JP',sans-serif", padding:"20px"}}>
                 <h4 style={{textAlign:"center", color:"#1A2E4A", fontSize:"15px", fontWeight:"bold", marginBottom:"24px", letterSpacing:"0.05em"}}>投資信託の仕組み</h4>
 
-                <div style={{width:"max-content", margin:"0 auto"}}>
+                <div className="trust-diagram-scale" style={{width:"max-content", margin:"0 auto"}}>
                 {/* フォワードフロー：投資家 → 投資信託 → 運用先 */}
                 <div style={{display:"flex", alignItems:"center", gap:"0", flexWrap:"nowrap"}}>
 
@@ -497,7 +498,7 @@ export default async function HomePage() {
                   </div>
 
                   {/* 投資信託（ファンド） */}
-                  <div style={{background:"#1A2E4A", border:"2px solid #1A2E4A", borderRadius:"10px", padding:"12px 10px", textAlign:"center", minWidth:"90px", maxWidth:"110px", flexShrink:0}}>
+                  <div className="trust-fund-box" style={{background:"#1A2E4A", border:"2px solid #1A2E4A", borderRadius:"10px", padding:"12px 10px", textAlign:"center", minWidth:"90px", maxWidth:"110px", flexShrink:0}}>
                     <div style={{fontSize:"20px", marginBottom:"4px"}}>📦</div>
                     <div style={{fontSize:"12px", fontWeight:"bold", color:"#C9A84C", lineHeight:"1.4"}}>投資信託<br />（ファンド）</div>
                     <div style={{fontSize:"10px", color:"#F4F4F2", marginTop:"3px", lineHeight:"1.4"}}>プロが運用</div>
@@ -560,7 +561,7 @@ export default async function HomePage() {
                   ※本図は投資助言ではありません。投資は自己責任でお願いします。
                 </div>
               </div>
-            </div>
+            </TrustDiagramScroll>
           </div>
         </section>
 

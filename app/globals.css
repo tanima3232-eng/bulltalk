@@ -57,3 +57,14 @@
     @apply text-xs text-gray-500 leading-relaxed;
   }
 }
+
+/* 投資信託の仕組み図：PCのみ拡大 */
+@media (min-width: 768px) {
+  .trust-diagram-scale {
+    transform: scale(1.5);
+    transform-origin: top center;
+  }
+  .trust-diagram-outer {
+    padding-bottom: 160px; /* scale後の高さ増加分を補填 */
+  }
+}
