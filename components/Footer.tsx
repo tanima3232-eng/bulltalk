@@ -24,11 +24,9 @@ export default function Footer() {
             <nav className="flex flex-col gap-2">
               {[
                 { href: "/", label: "トップ" },
-                { href: "/market", label: "225分析" },
                 { href: "/column", label: "コラム" },
                 { href: "/about", label: "経歴" },
-                { href: "/consult", label: "相談" },
-                { href: "/line", label: "LINE" },
+                { href: "/line", label: "無料相談" },
               ].map((link) => (
                 <Link
                   key={link.href}

@@ -5,10 +5,8 @@ import { useState } from "react";
 
 const navLinks = [
   { href: "/", label: "トップ" },
-  { href: "/market", label: "225分析" },
   { href: "/column", label: "コラム" },
   { href: "/about", label: "経歴" },
-  { href: "/consult", label: "相談" },
 ];
 
 export default function Header() {
@@ -37,7 +35,7 @@ export default function Header() {
             href="/line"
             className="bg-green-500 text-white text-sm font-bold px-4 py-2 rounded-full hover:bg-green-600 transition-colors duration-200"
           >
-            LINE
+            無料相談
           </Link>
         </nav>
 
@@ -72,7 +70,7 @@ export default function Header() {
               className="block w-full text-center bg-green-500 text-white font-bold py-3 rounded-lg hover:bg-green-600 transition-colors"
               onClick={() => setMenuOpen(false)}
             >
-              LINE
+              無料相談
             </Link>
           </div>
         </div>
