@@ -389,7 +389,7 @@ export default async function HomePage() {
               </p>
               <div className="my-4 w-full overflow-x-auto rounded-lg">
                 <p className="text-xs text-gray-400 mb-2">図：日経225セクター別構成イメージ</p>
-                <svg width="100%" viewBox="0 0 680 410" style={{fontFamily:"sans-serif", minHeight: "320px"}}>
+                <svg width="100%" viewBox="0 0 680 410" style={{fontFamily:"sans-serif", minWidth: "500px"}}>
                   {/* 外枠：全体 */}
                   <rect x="20" y="10" width="640" height="385" rx="16" fill="#EEF1F7" stroke="#1A2E4A" strokeWidth="2"/>
                   <text fontWeight="bold" fill="#1A2E4A" x="340" y="38" textAnchor="middle" dominantBaseline="central" fontSize="13">日経225（東証プライム上場企業から選ばれた225銘柄）</text>
