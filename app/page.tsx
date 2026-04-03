@@ -111,69 +111,101 @@ export default async function HomePage() {
                   ))}
                 </div>
 
-                {/* PC: 3列グリッド */}
-                <div className="hidden md:grid grid-cols-3 gap-4 mb-8 max-w-2xl mx-auto">
-                  {videos.map((video) => (
-                    <a
-                      key={video.id}
-                      href={video.url}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="bg-white rounded-xl overflow-hidden shadow-sm hover:shadow-md transition-all duration-200 group hover:-translate-y-1"
-                    >
-                      <div style={{position: "relative", paddingBottom: "177.78%", background: "#f3f4f6", overflow: "hidden"}}>
-                        <Image
-                          src={video.thumbnail}
-                          alt={video.title}
-                          fill
-                          className="object-cover"
-                          unoptimized
-                          style={{position: "absolute", top: 0, left: 0, width: "100%", height: "100%"}}
-                        />
-                        <div style={{position: "absolute", inset: 0, display: "flex", alignItems: "center", justifyContent: "center"}}>
-                          <div className="w-12 h-12 bg-red-600 rounded-full flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform">
-                            <svg className="w-5 h-5 text-white ml-1" fill="currentColor" viewBox="0 0 24 24">
-                              <path d="M8 5v14l11-7z" />
-                            </svg>
+                {/* PC: 3列 密着パネル */}
+                <div className="hidden md:flex justify-center mb-8">
+                  <div className="flex rounded-2xl overflow-hidden shadow-lg">
+                    {videos.map((video) => (
+                      <a
+                        key={video.id}
+                        href={video.url}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="bg-white hover:brightness-95 transition-all duration-200 group"
+                        style={{width: "200px", flexShrink: 0}}
+                      >
+                        <div style={{position: "relative", paddingBottom: "177.78%", background: "#f3f4f6", overflow: "hidden"}}>
+                          <Image
+                            src={video.thumbnail}
+                            alt={video.title}
+                            fill
+                            className="object-cover"
+                            unoptimized
+                            style={{position: "absolute", top: 0, left: 0, width: "100%", height: "100%"}}
+                          />
+                          <div style={{position: "absolute", inset: 0, display: "flex", alignItems: "center", justifyContent: "center"}}>
+                            <div className="w-12 h-12 bg-red-600 rounded-full flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform">
+                              <svg className="w-5 h-5 text-white ml-1" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M8 5v14l11-7z" />
+                              </svg>
+                            </div>
+                          </div>
+                          <div style={{position: "absolute", top: 8, left: 8}} className="bg-red-600 text-white text-xs font-bold px-2 py-0.5 rounded-full">
+                            Shorts
                           </div>
                         </div>
-                        <div style={{position: "absolute", top: 8, left: 8}} className="bg-red-600 text-white text-xs font-bold px-2 py-0.5 rounded-full">
-                          Shorts
+                        <div className="p-3">
+                          <p className="text-navy font-bold text-xs leading-snug line-clamp-2 group-hover:text-gold transition-colors">{video.title}</p>
+                          <p className="text-gray-400 text-xs mt-1">{video.published}</p>
                         </div>
-                      </div>
-                      <div className="p-3">
-                        <p className="text-navy font-bold text-xs leading-snug line-clamp-2 group-hover:text-gold transition-colors">{video.title}</p>
-                        <p className="text-gray-400 text-xs mt-1">{video.published}</p>
-                      </div>
-                    </a>
-                  ))}
+                      </a>
+                    ))}
+                  </div>
                 </div>
               </>
             ) : (
               // 動画がない場合のプレースホルダー
-              <div className="flex md:grid md:grid-cols-3 gap-4 mb-8 overflow-x-auto pb-3 -mx-4 px-4">
-                {[1, 2, 3].map((i) => (
-                  <div key={i} className="flex-none md:flex-auto bg-white rounded-xl overflow-hidden shadow-sm border border-gray-100"
-                    style={{width: "55vw", maxWidth: "200px"}}>
-                    <div style={{position: "relative", paddingBottom: "177.78%", background: "#f3f4f6"}}>
-                      <div style={{position: "absolute", inset: 0, display: "flex", alignItems: "center", justifyContent: "center"}}>
-                        <div className="text-center text-gray-400">
-                          <div className="w-10 h-10 bg-gray-200 rounded-full flex items-center justify-center mx-auto mb-2">
-                            <svg className="w-4 h-4 text-gray-400 ml-0.5" fill="currentColor" viewBox="0 0 24 24">
-                              <path d="M8 5v14l11-7z" />
-                            </svg>
+              <>
+                {/* スマホ：横スクロール */}
+                <div className="flex md:hidden gap-3 mb-8 overflow-x-auto pb-3 -mx-4 px-4">
+                  {[1, 2, 3].map((i) => (
+                    <div key={i} className="flex-none bg-white rounded-xl overflow-hidden shadow-sm border border-gray-100"
+                      style={{width: "55vw", maxWidth: "200px"}}>
+                      <div style={{position: "relative", paddingBottom: "177.78%", background: "#f3f4f6"}}>
+                        <div style={{position: "absolute", inset: 0, display: "flex", alignItems: "center", justifyContent: "center"}}>
+                          <div className="text-center text-gray-400">
+                            <div className="w-10 h-10 bg-gray-200 rounded-full flex items-center justify-center mx-auto mb-2">
+                              <svg className="w-4 h-4 text-gray-400 ml-0.5" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M8 5v14l11-7z" />
+                              </svg>
+                            </div>
+                            <p className="text-xs">動画準備中</p>
                           </div>
-                          <p className="text-xs">動画準備中</p>
                         </div>
                       </div>
+                      <div className="p-2">
+                        <div className="h-3 bg-gray-100 rounded w-3/4 mb-2" />
+                        <div className="h-2 bg-gray-100 rounded w-1/2" />
+                      </div>
                     </div>
-                    <div className="p-2">
-                      <div className="h-3 bg-gray-100 rounded w-3/4 mb-2" />
-                      <div className="h-2 bg-gray-100 rounded w-1/2" />
-                    </div>
+                  ))}
+                </div>
+                {/* PC: 密着パネル */}
+                <div className="hidden md:flex justify-center mb-8">
+                  <div className="flex rounded-2xl overflow-hidden shadow-lg">
+                    {[1, 2, 3].map((i) => (
+                      <div key={i} className="bg-white border-r border-gray-100 last:border-r-0"
+                        style={{width: "200px", flexShrink: 0}}>
+                        <div style={{position: "relative", paddingBottom: "177.78%", background: "#f3f4f6"}}>
+                          <div style={{position: "absolute", inset: 0, display: "flex", alignItems: "center", justifyContent: "center"}}>
+                            <div className="text-center text-gray-400">
+                              <div className="w-10 h-10 bg-gray-200 rounded-full flex items-center justify-center mx-auto mb-2">
+                                <svg className="w-4 h-4 text-gray-400 ml-0.5" fill="currentColor" viewBox="0 0 24 24">
+                                  <path d="M8 5v14l11-7z" />
+                                </svg>
+                              </div>
+                              <p className="text-xs">動画準備中</p>
+                            </div>
+                          </div>
+                        </div>
+                        <div className="p-2">
+                          <div className="h-3 bg-gray-100 rounded w-3/4 mb-2" />
+                          <div className="h-2 bg-gray-100 rounded w-1/2" />
+                        </div>
+                      </div>
+                    ))}
                   </div>
-                ))}
-              </div>
+                </div>
+              </>
             )}
 
             <div className="text-center">
@@ -257,7 +289,7 @@ export default async function HomePage() {
             {/* メリットカード */}
             <div className="flex flex-col gap-4 mb-10 text-left">
               {[
-                { num: "①", title: "毎日の「買い・売り」判断をLINEで受け取れる", desc: "場引け前に届く、プロの投資判断をリアルタイムで確認。" },
+                { num: "①", title: "毎日の日経225指数の「買い・売り」判断をLINEで受け取れる", desc: "場引け前に届く、プロの投資判断をリアルタイムで確認。" },
                 { num: "②", title: "LINE登録者限定の相場情報・マーケットコメント", desc: "一般公開しないディープな相場情報をお届けします。" },
                 { num: "③", title: "元大手信託銀行員へのLINE無料相談（1回）", desc: "投資・資産形成・相続・不動産等の疑問を直接プロに相談できます。" },
               ].map((item) => (

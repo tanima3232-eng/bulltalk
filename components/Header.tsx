@@ -67,12 +67,13 @@ export default function Header() {
           ))}
           <Link
             href="/line"
-            className="flex items-center gap-2 px-6 py-4 text-white hover:bg-white/10 transition-colors border-b border-white/5"
+            className="flex items-center gap-2 px-6 py-4 text-green-400 font-bold hover:bg-white/10 transition-colors border-b border-white/5"
             onClick={() => setMenuOpen(false)}
           >
-            <span className="bg-green-500 text-white text-sm font-bold px-3 py-0.5 rounded-full">
-              無料相談
-            </span>
+            <svg xmlns="http://www.w3.org/2000/svg" className="w-4 h-4" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M12 2C6.48 2 2 6.04 2 11c0 3.45 1.92 6.47 4.8 8.19L6 22l2.72-1.44C9.77 20.83 10.87 21 12 21c5.52 0 10-4.04 10-9S17.52 2 12 2z"/>
+            </svg>
+            無料相談
           </Link>
         </div>
       )}
