@@ -33,7 +33,7 @@ export default async function HomePage() {
 
             {/* 安心バッジ：会員 = LINE登録だけ */}
             <div className="flex justify-center items-center gap-2 flex-wrap mb-2">
-              <span className="text-white/40 text-sm">＼</span>
+              <span className="text-sm" style={{color:"#4ADE80"}}>＼</span>
               <span
                 className="inline-flex items-center gap-1.5 text-xs font-bold px-3 py-1.5 rounded-full"
                 style={{background:"rgba(6,199,85,0.15)", color:"#4ADE80", border:"1px solid rgba(6,199,85,0.35)"}}
@@ -52,7 +52,7 @@ export default async function HomePage() {
               >
                 ✓ 特典あり
               </span>
-              <span className="text-white/40 text-sm">／</span>
+              <span className="text-sm" style={{color:"#4ADE80"}}>／</span>
             </div>
 
             <div className="text-white/80 text-base md:text-lg max-w-2xl mx-auto mt-8">
@@ -176,7 +176,7 @@ export default async function HomePage() {
               <span style={{color:"#C9A84C"}}>俺</span>についてこい
             </h2>
             <div className="flex justify-center items-center gap-2 flex-wrap mb-10">
-              <span className="text-white/40 text-sm">＼</span>
+              <span className="text-sm" style={{color:"#4ADE80"}}>＼</span>
               <span
                 className="inline-flex items-center gap-1.5 text-xs font-bold px-3 py-1.5 rounded-full"
                 style={{background:"rgba(6,199,85,0.15)", color:"#4ADE80", border:"1px solid rgba(6,199,85,0.35)"}}
@@ -195,7 +195,7 @@ export default async function HomePage() {
               >
                 ✓ 特典あり
               </span>
-              <span className="text-white/40 text-sm">／</span>
+              <span className="text-sm" style={{color:"#4ADE80"}}>／</span>
             </div>
 
             {/* 3つの特典 見出し */}
