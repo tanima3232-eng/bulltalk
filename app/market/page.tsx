@@ -450,7 +450,7 @@ export default async function MarketPage() {
                     </svg>
                     <div style={{fontSize:"9px", color:"#1A2E4A", fontWeight:"bold", textAlign:"center", lineHeight:"1.3"}}>収益還元</div>
                   </div>
-                  <div style={{width:"110px", minWidth:"110px"}}></div>
+                  <div style={{width:"90px", minWidth:"90px"}}></div>
                   <div style={{display:"flex", flexDirection:"column", alignItems:"center", gap:"2px", flexShrink:0, width:"56px"}}>
                     <svg width="48" height="20" viewBox="0 0 48 20">
                       <defs><marker id="ah4" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto"><path d="M0,0 L6,3 L0,6 Z" fill="#C9A84C"/></marker></defs>
@@ -462,7 +462,7 @@ export default async function MarketPage() {
                 </div>
 
                 {/* ポイント3つ */}
-                <div style={{display:"flex", gap:"10px", marginTop:"18px"}}>
+                <div style={{display:"flex", gap:"10px", marginTop:"18px", paddingLeft:"16px"}}>
                   <div style={{background:"#fff", borderLeft:"4px solid #1A2E4A", borderRadius:"6px", padding:"8px 12px", fontSize:"11px", color:"#1A2E4A", width:"110px", lineHeight:"1.6"}}>
                     <strong>少額から参加</strong><br />100円〜投資可能
                   </div>
