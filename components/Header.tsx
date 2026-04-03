@@ -5,6 +5,7 @@ import { useState } from "react";
 
 const navLinks = [
   { href: "/", label: "トップ" },
+  { href: "/bulltalk", label: "Bulltalkとは" },
   { href: "/column", label: "コラム" },
   { href: "/about", label: "経歴" },
 ];
