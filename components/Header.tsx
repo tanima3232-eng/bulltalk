@@ -65,15 +65,15 @@ export default function Header() {
               {link.label}
             </Link>
           ))}
-          <div className="px-6 py-4">
-            <Link
-              href="/line"
-              className="block w-full text-center bg-green-500 text-white font-bold py-3 rounded-lg hover:bg-green-600 transition-colors"
-              onClick={() => setMenuOpen(false)}
-            >
+          <Link
+            href="/line"
+            className="flex items-center gap-2 px-6 py-4 text-white hover:bg-white/10 transition-colors border-b border-white/5"
+            onClick={() => setMenuOpen(false)}
+          >
+            <span className="bg-green-500 text-white text-sm font-bold px-3 py-0.5 rounded-full">
               無料相談
-            </Link>
-          </div>
+            </span>
+          </Link>
         </div>
       )}
     </header>

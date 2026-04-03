@@ -70,7 +70,7 @@ export default async function HomePage() {
             <p className="section-subtitle">毎日場引け前に最新動画を公開中。</p>
 
             {videos.length > 0 ? (
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
+              <div className="grid grid-cols-2 md:grid-cols-3 gap-4 mb-8">
                 {videos.map((video) => (
                   <a
                     key={video.id}
@@ -79,7 +79,8 @@ export default async function HomePage() {
                     rel="noopener noreferrer"
                     className="bg-white rounded-xl overflow-hidden shadow-sm hover:shadow-md transition-all duration-200 group hover:-translate-y-1"
                   >
-                    <div className="relative aspect-video bg-gray-100">
+                    {/* 9:16 縦型アスペクト比（Shorts用） */}
+                    <div className="relative bg-gray-100" style={{aspectRatio: "9/16"}}>
                       <Image
                         src={video.thumbnail}
                         alt={video.title}
@@ -89,40 +90,44 @@ export default async function HomePage() {
                       />
                       {/* 再生ボタン */}
                       <div className="absolute inset-0 flex items-center justify-center">
-                        <div className="w-14 h-14 bg-red-600 rounded-full flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform">
-                          <svg className="w-6 h-6 text-white ml-1" fill="currentColor" viewBox="0 0 24 24">
+                        <div className="w-12 h-12 bg-red-600 rounded-full flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform">
+                          <svg className="w-5 h-5 text-white ml-1" fill="currentColor" viewBox="0 0 24 24">
                             <path d="M8 5v14l11-7z" />
                           </svg>
                         </div>
                       </div>
+                      {/* Shortsバッジ */}
+                      <div className="absolute top-2 left-2 bg-red-600 text-white text-xs font-bold px-2 py-0.5 rounded-full">
+                        Shorts
+                      </div>
                     </div>
-                    <div className="p-4">
-                      <p className="text-navy font-bold text-sm leading-snug line-clamp-2 group-hover:text-gold transition-colors">
+                    <div className="p-3">
+                      <p className="text-navy font-bold text-xs leading-snug line-clamp-2 group-hover:text-gold transition-colors">
                         {video.title}
                       </p>
-                      <p className="text-gray-400 text-xs mt-2">{video.published}</p>
+                      <p className="text-gray-400 text-xs mt-1">{video.published}</p>
                     </div>
                   </a>
                 ))}
               </div>
             ) : (
               // 動画がない場合のプレースホルダー
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
+              <div className="grid grid-cols-2 md:grid-cols-3 gap-4 mb-8">
                 {[1, 2, 3].map((i) => (
                   <div key={i} className="bg-white rounded-xl overflow-hidden shadow-sm border border-gray-100">
-                    <div className="aspect-video bg-gray-100 flex items-center justify-center">
+                    <div className="bg-gray-100 flex items-center justify-center" style={{aspectRatio: "9/16"}}>
                       <div className="text-center text-gray-400">
-                        <div className="w-14 h-14 bg-gray-200 rounded-full flex items-center justify-center mx-auto mb-2">
-                          <svg className="w-6 h-6 text-gray-400 ml-1" fill="currentColor" viewBox="0 0 24 24">
+                        <div className="w-12 h-12 bg-gray-200 rounded-full flex items-center justify-center mx-auto mb-2">
+                          <svg className="w-5 h-5 text-gray-400 ml-1" fill="currentColor" viewBox="0 0 24 24">
                             <path d="M8 5v14l11-7z" />
                           </svg>
                         </div>
                         <p className="text-sm">動画準備中</p>
                       </div>
                     </div>
-                    <div className="p-4">
-                      <div className="h-4 bg-gray-100 rounded w-3/4 mb-2" />
-                      <div className="h-3 bg-gray-100 rounded w-1/2" />
+                    <div className="p-3">
+                      <div className="h-3 bg-gray-100 rounded w-3/4 mb-2" />
+                      <div className="h-2 bg-gray-100 rounded w-1/2" />
                     </div>
                   </div>
                 ))}
