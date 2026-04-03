@@ -73,7 +73,7 @@ export default function BulltalkPage() {
                 <span className="inline-block bg-navy/10 text-navy text-xs font-bold px-3 py-1 rounded-full mb-4">人生を豊かにしたい方</span>
                 <div className="text-5xl mb-4">📚</div>
                 <h3 className="text-2xl font-bold text-navy mb-2">人生信託ラボ</h3>
-                <p className="text-navy font-semibold mb-3">相続・資産形成・不動産を学びたい方へ</p>
+                <p className="text-navy font-semibold mb-3">資産形成・相続・不動産を学びたい方へ</p>
                 <p className="text-gray-600 text-sm leading-relaxed mb-6">
                   実務12年のプロが基礎から解説。信託銀行で培った知識を惜しみなくお伝えします。
                 </p>
