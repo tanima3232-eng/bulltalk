@@ -369,7 +369,7 @@ export default async function HomePage() {
                     </li>
                   ))}
                 </ul>
-                <div className="text-center">
+                <div className="text-center md:text-left">
                   <a href="/about" className="btn-primary">
                     詳しく見る →
                   </a>
