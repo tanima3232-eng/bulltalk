@@ -41,18 +41,18 @@ export default function LinePage() {
             </h1>
 
             {/* 安心バッジ */}
-            <div className="flex justify-center items-center gap-2 flex-wrap mb-10">
-              <span className="text-white/40 text-sm">＼</span>
+            <div className="flex justify-center items-center gap-1.5 mb-10" style={{flexWrap:"nowrap"}}>
+              <span style={{color:"#4ADE80", fontSize:"13px", flexShrink:0}}>＼</span>
               {["\u2713 \u5b8c\u5168\u7121\u6599", "\u2713 LINE\u8ffd\u52a0\u3059\u308b\u3060\u3051", "\u2713 \u7279\u5178\u3042\u308a"].map((badge) => (
                 <span
                   key={badge}
-                  className="inline-flex items-center gap-1.5 text-xs font-bold px-3 py-1.5 rounded-full"
-                  style={{ background: "rgba(6,199,85,0.15)", color: "#4ADE80", border: "1px solid rgba(6,199,85,0.35)" }}
+                  className="inline-flex items-center font-bold rounded-full"
+                  style={{ background: "rgba(6,199,85,0.15)", color: "#4ADE80", border: "1px solid rgba(6,199,85,0.35)", fontSize:"10px", padding:"4px 8px", whiteSpace:"nowrap" }}
                 >
                   {badge}
                 </span>
               ))}
-              <span className="text-white/40 text-sm">／</span>
+              <span style={{color:"#4ADE80", fontSize:"13px", flexShrink:0}}>／</span>
             </div>
 
             {/* メリット3点 */}
