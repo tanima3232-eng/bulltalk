@@ -111,16 +111,15 @@ export default async function HomePage() {
                   ))}
                 </div>
 
-                {/* PC: 3列 密着パネル */}
-                <div className="hidden md:flex justify-center mb-8">
-                  <div className="flex rounded-2xl overflow-hidden shadow-lg">
+                {/* PC: 3列 適度な間隔 */}
+                <div className="hidden md:flex justify-center gap-4 mb-8">
                     {videos.map((video) => (
                       <a
                         key={video.id}
                         href={video.url}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="bg-white hover:brightness-95 transition-all duration-200 group"
+                        className="bg-white rounded-xl overflow-hidden shadow-sm hover:shadow-md transition-all duration-200 group hover:-translate-y-1"
                         style={{width: "200px", flexShrink: 0}}
                       >
                         <div style={{position: "relative", paddingBottom: "177.78%", background: "#f3f4f6", overflow: "hidden"}}>
@@ -149,7 +148,6 @@ export default async function HomePage() {
                         </div>
                       </a>
                     ))}
-                  </div>
                 </div>
               </>
             ) : (
@@ -179,11 +177,10 @@ export default async function HomePage() {
                     </div>
                   ))}
                 </div>
-                {/* PC: 密着パネル */}
-                <div className="hidden md:flex justify-center mb-8">
-                  <div className="flex rounded-2xl overflow-hidden shadow-lg">
+                {/* PC: 適度な間隔 */}
+                <div className="hidden md:flex justify-center gap-4 mb-8">
                     {[1, 2, 3].map((i) => (
-                      <div key={i} className="bg-white border-r border-gray-100 last:border-r-0"
+                      <div key={i} className="bg-white rounded-xl overflow-hidden shadow-sm border border-gray-100"
                         style={{width: "200px", flexShrink: 0}}>
                         <div style={{position: "relative", paddingBottom: "177.78%", background: "#f3f4f6"}}>
                           <div style={{position: "absolute", inset: 0, display: "flex", alignItems: "center", justifyContent: "center"}}>
@@ -203,7 +200,6 @@ export default async function HomePage() {
                         </div>
                       </div>
                     ))}
-                  </div>
                 </div>
               </>
             )}
