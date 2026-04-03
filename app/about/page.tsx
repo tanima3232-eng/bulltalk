@@ -70,6 +70,28 @@ export default function AboutPage() {
           <div className="max-w-4xl mx-auto text-center">
             <p className="text-gold text-sm font-bold uppercase tracking-widest mb-4">About</p>
             <h1 className="text-3xl md:text-5xl font-bold">谷本光章について</h1>
+            <p className="text-gold text-sm font-semibold mt-4 leading-relaxed">
+              FP1級 × 証券アナリスト × 宅建士<br />
+              大手信託銀行12年勤務
+            </p>
+          </div>
+        </section>
+
+        {/* 実績ハイライト */}
+        <section className="bg-offwhite py-16 px-4">
+          <div className="max-w-4xl mx-auto">
+            <h2 className="section-title">実績ハイライト</h2>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+              {highlights.map((h) => (
+                <div key={h.title} className="bg-white rounded-2xl p-6 shadow-sm flex gap-4">
+                  <div className="text-4xl">{h.icon}</div>
+                  <div>
+                    <h3 className="font-bold text-navy mb-2">{h.title}</h3>
+                    <p className="text-gray-600 text-sm leading-relaxed">{h.desc}</p>
+                  </div>
+                </div>
+              ))}
+            </div>
           </div>
         </section>
 
@@ -181,23 +203,7 @@ export default function AboutPage() {
           </div>
         </section>
 
-        {/* 実績ハイライト */}
-        <section className="bg-offwhite py-16 px-4">
-          <div className="max-w-4xl mx-auto">
-            <h2 className="section-title">実績ハイライト</h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-              {highlights.map((h) => (
-                <div key={h.title} className="bg-white rounded-2xl p-6 shadow-sm flex gap-4">
-                  <div className="text-4xl">{h.icon}</div>
-                  <div>
-                    <h3 className="font-bold text-navy mb-2">{h.title}</h3>
-                    <p className="text-gray-600 text-sm leading-relaxed">{h.desc}</p>
-                  </div>
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
+
 
         {/* メッセージ */}
         <section className="bg-navy text-white py-16 px-4">
