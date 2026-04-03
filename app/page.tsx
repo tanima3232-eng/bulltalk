@@ -369,9 +369,11 @@ export default async function HomePage() {
                     </li>
                   ))}
                 </ul>
-                <a href="/about" className="btn-primary">
-                  詳しく見る →
-                </a>
+                <div className="text-center">
+                  <a href="/about" className="btn-primary">
+                    詳しく見る →
+                  </a>
+                </div>
               </div>
             </div>
           </div>
@@ -667,12 +669,9 @@ export default async function HomePage() {
                 </div>
               </div>
             </div>
-            <div className="bg-red-50 border-l-4 border-red-500 p-4 rounded-r-xl">
-              <p className="text-red-600 text-sm font-bold">
-                ⚠️ 注意事項<br />
-                本ページの情報は投資助言ではありません。投資は自己責任でお願いします。
-              </p>
-            </div>
+            <p className="text-xs text-gray-400 text-center mt-4">
+              ※本ページの情報は投資助言ではありません。投資は自己責任でお願いします。
+            </p>
           </div>
         </section>
 
