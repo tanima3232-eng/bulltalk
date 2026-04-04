@@ -244,7 +244,7 @@ export default function AboutPage() {
               何でも気軽にLINEで相談してください。
             </p>
             <div className="mt-8 text-center md:text-left">
-              <a href="https://lin.ee/FmH7NXr" className="btn-primary inline-block">
+              <a href="https://lin.ee/FmH7NXr" className="btn-line inline-flex items-center gap-2">
                 LINEで無料相談する →
               </a>
             </div>
