@@ -678,7 +678,7 @@ export default async function HomePage() {
         <section className="bg-light-gold py-16 px-4">
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="section-title">口座開設の方法</h2>
-            <p className="section-subtitle">SBI証券なら最短翌営業日から投資スタートできます</p>
+            <p className="section-subtitle">最短翌営業日から投資スタートできます</p>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-10">
               {[
                 { step: "STEP 1", title: "証券会社のサイトにアクセス", icon: "🌐" },
