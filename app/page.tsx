@@ -557,13 +557,12 @@ export default async function HomePage() {
                   </div>
                 </div>
                 </div>
-
-                {/* 注記 */}
-                <div style={{fontSize:"10px", color:"#888", textAlign:"center", marginTop:"18px", borderTop:"1px solid #ccc", paddingTop:"10px", lineHeight:"1.6"}}>
-                  ※本図は投資助言ではありません。投資は自己責任でお願いします。
-                </div>
               </div>
             </TrustDiagramScroll>
+            {/* 注記 */}
+            <div style={{fontSize:"10px", color:"#888", textAlign:"center", marginTop:"12px", borderTop:"1px solid #e5e7eb", paddingTop:"10px", lineHeight:"1.6"}}>
+              ※本図は投資助言ではありません。投資は自己責任でお願いします。
+            </div>
           </div>
         </section>
 

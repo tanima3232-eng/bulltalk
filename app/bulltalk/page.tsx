@@ -41,7 +41,7 @@ export default async function BulltalkPage() {
               元大手信託銀行員が、プロの視点で無料解説
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link href="/market" className="btn-red text-base px-8 py-4 rounded-xl">
+              <Link href="/" className="btn-red text-base px-8 py-4 rounded-xl">
                 📈 今日の225分析を見る
               </Link>
               <Link href="/column" className="btn-blue text-base px-8 py-4 rounded-xl">
@@ -66,7 +66,7 @@ export default async function BulltalkPage() {
                 <p className="text-gray-600 text-sm leading-relaxed mb-6">
                   毎日場引け前に買い/売り判断を配信。元大手信託銀行の証券アナリストが相場の動きをわかりやすく解説します。
                 </p>
-                <Link href="/market" className="btn-primary block text-center">
+                <Link href="/" className="btn-primary block text-center">
                   分析を見る →
                 </Link>
               </div>
