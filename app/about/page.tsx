@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import LineCtaBanner from "@/components/LineCtaBanner";
+import Image from "next/image";
 
 export const metadata: Metadata = {
   title: "谷本光章について｜元大手信託銀行員・FP1級・証券アナリスト・宅建士の経歴",
@@ -67,13 +68,34 @@ export default function AboutPage() {
       <main>
         {/* Hero */}
         <section className="bg-navy text-white py-20 px-4">
-          <div className="max-w-4xl mx-auto text-center">
-            <p className="text-gold text-sm font-bold uppercase tracking-widest mb-4">ABOUT ME</p>
-            <h1 className="text-3xl md:text-5xl font-bold">谷本光章について</h1>
-            <p className="text-gold text-sm font-semibold mt-4 leading-relaxed">
-              FP1級 × 証券アナリスト × 宅建士<br />
-              大手信託銀行12年勤務
-            </p>
+          <div className="max-w-4xl mx-auto">
+            <div className="flex flex-col md:flex-row items-center gap-10">
+              {/* プロフィール画像 */}
+              <div className="flex-shrink-0 flex justify-center">
+                <div className="w-48 h-48 md:w-64 md:h-64 rounded-full border-4 border-gold overflow-hidden shadow-2xl">
+                  <Image
+                    src="/profile.jpg"
+                    alt="谷本光章 プロフィール写真"
+                    width={256}
+                    height={256}
+                    className="w-full h-full object-cover object-top"
+                  />
+                </div>
+              </div>
+              {/* テキスト */}
+              <div className="text-center md:text-left">
+                <p className="text-gold text-sm font-bold uppercase tracking-widest mb-3">ABOUT ME</p>
+                <h1 className="text-3xl md:text-5xl font-bold mb-4">谷本光章について</h1>
+                <p className="text-gold text-sm font-semibold leading-relaxed mb-4">
+                  FP1級 × 証券アナリスト × 宅建士<br />
+                  大手信託銀行12年勤務
+                </p>
+                <p className="text-white/70 text-sm leading-relaxed">
+                  元大手信託銀行員として、個人・法人・機関投資家まで<br />
+                  幅広い資産課題を解決してきた実務のプロ。
+                </p>
+              </div>
+            </div>
           </div>
         </section>
 
