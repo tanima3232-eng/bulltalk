@@ -592,9 +592,7 @@ export default async function HomePage() {
               {/* ブルファンドの図 */}
               <div className="my-4 w-full overflow-x-auto">
                 <div style={{maxWidth:"520px", margin:"0 auto", fontFamily:"'Hiragino Kaku Gothic Pro','Noto Sans JP',sans-serif"}}>
-                  <h4 style={{textAlign:"center", color:"#1A2E4A", fontSize:"15px", fontWeight:"bold", marginBottom:"24px", letterSpacing:"0.05em"}}>
-                    （イメージ図）ブル型4.3倍の仕組み
-                  </h4>
+                  <p className="text-xs text-gray-400 mb-2">図：ブル型4.3倍の仕組み</p>
                   <div style={{display:"flex", justifyContent:"center"}}>
                     <div style={{position:"relative", height:"300px", display:"flex", alignItems:"flex-end", gap:"40px", paddingBottom:"2px"}}>
                       {/* ベースライン */}
