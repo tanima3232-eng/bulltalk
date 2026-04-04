@@ -66,11 +66,11 @@ export default function AboutPage() {
     <>
       <Header />
       <main>
-        {/* Hero */}
+
+        {/* ① Hero — bg-navy */}
         <section className="bg-navy text-white py-20 px-4">
           <div className="max-w-4xl mx-auto">
             <div className="flex flex-col md:flex-row items-center gap-10">
-              {/* プロフィール画像 */}
               <div className="flex-shrink-0 flex justify-center">
                 <div className="w-48 h-48 md:w-64 md:h-64 rounded-full border-4 border-gold overflow-hidden shadow-2xl">
                   <Image
@@ -82,7 +82,6 @@ export default function AboutPage() {
                   />
                 </div>
               </div>
-              {/* テキスト */}
               <div className="text-center md:text-left">
                 <p className="text-gold text-sm font-bold uppercase tracking-widest mb-3">ABOUT ME</p>
                 <h1 className="text-3xl md:text-5xl font-bold mb-4">谷本光章について</h1>
@@ -99,7 +98,7 @@ export default function AboutPage() {
           </div>
         </section>
 
-        {/* 実績ハイライト */}
+        {/* ② 実績ハイライト — bg-white */}
         <section className="bg-white py-16 px-4">
           <div className="max-w-4xl mx-auto">
             <h2 className="section-title">実績ハイライト</h2>
@@ -117,11 +116,61 @@ export default function AboutPage() {
           </div>
         </section>
 
-        {/* Why */}
+        {/* ③ 基本情報・資格 — bg-offwhite */}
         <section className="bg-offwhite py-16 px-4">
           <div className="max-w-3xl mx-auto">
+            <h2 className="section-title">基本情報・資格</h2>
+            <div className="overflow-x-auto bg-white rounded-2xl shadow-sm p-6">
+              <table className="w-full border-collapse">
+                <tbody>
+                  {[
+                    { label: "氏名", value: "谷本 光章（たにもと みつあき）" },
+                    { label: "前職", value: "元大手信託銀行（12年間勤務）" },
+                    { label: "FP資格", value: "ファイナンシャルプランナー1級（FP1級）" },
+                    { label: "証券資格", value: "証券アナリスト（CMA）" },
+                    { label: "不動産資格", value: "宅地建物取引士" },
+                    { label: "発信内容", value: "日経225分析・相続・資産運用・不動産" },
+                  ].map((row) => (
+                    <tr key={row.label} className="border-b border-gray-100">
+                      <td className="py-4 pr-6 text-navy font-bold text-sm w-28 whitespace-nowrap align-top">{row.label}</td>
+                      <td className="py-4 text-gray-700 text-sm">{row.value}</td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </section>
+
+        {/* ④ 職務経歴 — bg-light-navy（視覚的区切り） */}
+        <section className="bg-light-navy py-16 px-4">
+          <div className="max-w-4xl mx-auto">
+            <h2 className="section-title">職務経歴</h2>
+            <div className="space-y-4">
+              {career.map((c) => (
+                <div key={c.period} className="bg-white rounded-xl p-6 shadow-sm">
+                  <div className="flex flex-col md:flex-row md:items-start gap-4">
+                    <div className="md:w-36 shrink-0">
+                      <span className="text-gold font-bold text-sm">{c.period}</span>
+                    </div>
+                    <div className="md:w-40 shrink-0">
+                      <p className="font-bold text-navy text-sm whitespace-pre-line">{c.area}</p>
+                    </div>
+                    <div>
+                      <p className="text-gray-700 text-sm leading-relaxed">{c.detail}</p>
+                    </div>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* ⑤ なぜ情報発信を始めたのか — bg-white（読みやすい清潔感） */}
+        <section className="bg-white py-16 px-4">
+          <div className="max-w-3xl mx-auto">
             <h2 className="section-title">なぜ、情報発信を始めたのか</h2>
-            <div className="bg-white rounded-2xl p-8 shadow-sm prose prose-lg max-w-none text-gray-700 leading-loose">
+            <div className="bg-offwhite rounded-2xl p-8 shadow-sm prose prose-lg max-w-none text-gray-700 leading-loose">
               <p>
                 12年間、私は大手信託銀行で働いてきました。
               </p>
@@ -175,59 +224,7 @@ export default function AboutPage() {
           </div>
         </section>
 
-        {/* 基本情報 */}
-        <section className="bg-white py-16 px-4">
-          <div className="max-w-3xl mx-auto">
-            <h2 className="section-title">基本情報・資格</h2>
-            <div className="overflow-x-auto">
-              <table className="w-full border-collapse">
-                <tbody>
-                  {[
-                    { label: "氏名", value: "谷本 光章（たにもと みつあき）" },
-                    { label: "前職", value: "元大手信託銀行（12年間勤務）" },
-                    { label: "FP資格", value: "ファイナンシャルプランナー1級（FP1級）" },
-                    { label: "証券資格", value: "証券アナリスト（CMA）" },
-                    { label: "不動産資格", value: "宅地建物取引士" },
-                    { label: "発信内容", value: "日経225分析・相続・資産運用・不動産" },
-                  ].map((row) => (
-                    <tr key={row.label} className="border-b border-gray-100">
-                      <td className="py-4 pr-6 text-navy font-bold text-sm w-28 whitespace-nowrap align-top">{row.label}</td>
-                      <td className="py-4 text-gray-700 text-sm whitespace-nowrap">{row.value}</td>
-                    </tr>
-                  ))}
-                </tbody>
-              </table>
-            </div>
-          </div>
-        </section>
-
-        {/* 職務経歴 */}
-        <section className="bg-light-navy py-16 px-4">
-          <div className="max-w-4xl mx-auto">
-            <h2 className="section-title">職務経歴</h2>
-            <div className="space-y-4">
-              {career.map((c) => (
-                <div key={c.period} className="bg-white rounded-xl p-6 shadow-sm">
-                  <div className="flex flex-col md:flex-row md:items-start gap-4">
-                    <div className="md:w-36 shrink-0">
-                      <span className="text-gold font-bold text-sm">{c.period}</span>
-                    </div>
-                    <div className="md:w-40 shrink-0">
-                      <p className="font-bold text-navy text-sm whitespace-pre-line">{c.area}</p>
-                    </div>
-                    <div>
-                      <p className="text-gray-700 text-sm leading-relaxed">{c.detail}</p>
-                    </div>
-                  </div>
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
-
-
-
-        {/* メッセージ */}
+        {/* ⑥ あなたへのメッセージ — bg-navy（感情的な締め） */}
         <section className="bg-navy text-white py-16 px-4">
           <div className="max-w-3xl mx-auto">
             <h2 className="text-2xl md:text-3xl font-bold text-gold mb-8">あなたへのメッセージ</h2>
@@ -251,10 +248,10 @@ export default function AboutPage() {
                 LINEで無料相談する →
               </a>
             </div>
-
           </div>
         </section>
 
+        {/* ⑦ CTA — bg-gold */}
         <LineCtaBanner />
       </main>
       <Footer />
