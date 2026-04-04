@@ -8,12 +8,18 @@ export default function TrustDiagramScroll({ children }: { children: React.React
     const el = ref.current;
     if (!el || window.innerWidth >= 768) return;
 
-    // .trust-fund-box（📦投資信託ファンドボックス）の中心を画面中央に合わせる
+    // getBoundingClientRect で正確な位置を取得して📦を中央に合わせる
     const fundBox = el.querySelector<HTMLElement>('.trust-fund-box');
     if (!fundBox) return;
 
-    const fundCenter = fundBox.offsetLeft + fundBox.offsetWidth / 2;
-    el.scrollLeft = Math.max(0, fundCenter - el.clientWidth / 2);
+    const containerRect = el.getBoundingClientRect();
+    const fundBoxRect = fundBox.getBoundingClientRect();
+
+    const containerCenter = containerRect.left + containerRect.width / 2;
+    const fundBoxCenter = fundBoxRect.left + fundBoxRect.width / 2;
+
+    // 現在のscrollLeft（=0）から調整量を足す
+    el.scrollLeft += fundBoxCenter - containerCenter;
   }, []);
 
   return (
