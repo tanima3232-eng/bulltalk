@@ -462,8 +462,7 @@ export default async function HomePage() {
               <div className="bg-light-gold rounded-xl p-6">
                 <h3 className="text-lg font-bold text-navy mb-3">📊 投資信託</h3>
                 <p className="text-gray-700 text-sm leading-relaxed">
-                  個別株ではなく指数ごと丸ごと買えます。少額からでも日経225全体に投資でき、
-                  分散効果で個別銘柄リスクを低減できます。
+                  少額からでも日経225全体に投資でき、個別株のリスクを分散できます。
                 </p>
               </div>
               <div className="bg-light-gold rounded-xl p-6">
