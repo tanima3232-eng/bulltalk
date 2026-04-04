@@ -18,17 +18,8 @@ export default async function BulltalkPage() {
     <>
       <Header />
       <main>
-        {/* ページ識別 */}
-        <div className="bg-navy text-center py-5 border-b border-gold/20">
-          <p
-            className="font-black text-gold tracking-widest"
-            style={{fontSize:"clamp(1.8rem,5vw,2.8rem)", letterSpacing:"0.15em"}}
-          >
-            初めての方へ
-          </p>
-        </div>
 
-        {/* S1: Hero */}
+
         <section className="bg-navy text-white py-24 px-4">
           <div className="max-w-4xl mx-auto text-center">
             <p className="text-gold text-sm font-bold uppercase tracking-widest mb-4">FP1級×証券アナリスト×宅建士</p>
