@@ -27,7 +27,7 @@ export default function Footer() {
                 { href: "/market", label: "相場分析" },
                 { href: "/column", label: "金融コラム" },
                 { href: "/about", label: "経歴" },
-                { href: "/line", label: "無料相談" },
+                { href: "/line", label: "Bull友になる" },
               ].map((link) => (
                 <Link
                   key={link.href}

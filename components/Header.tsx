@@ -34,9 +34,10 @@ export default function Header() {
           ))}
           <Link
             href="/line"
-            className="bg-green-500 text-white text-sm font-bold px-4 py-2 rounded-full hover:bg-green-600 transition-colors duration-200"
+            className="text-navy text-sm font-bold px-4 py-2 rounded-full transition-all duration-200 hover:opacity-80"
+            style={{background: "#C9A84C"}}
           >
-            無料相談
+            Bull友になる
           </Link>
         </nav>
 
@@ -67,10 +68,10 @@ export default function Header() {
           ))}
           <Link
             href="/line"
-            className="flex items-center gap-2 px-6 py-4 text-green-400 font-bold hover:bg-white/10 transition-colors border-b border-white/5"
+            className="flex items-center gap-2 px-6 py-4 text-gold font-bold hover:bg-white/10 transition-colors border-b border-white/5"
             onClick={() => setMenuOpen(false)}
           >
-            無料相談
+            Bull友になる
           </Link>
         </div>
       )}
