@@ -11,22 +11,24 @@ export default function LineCtaBanner() {
         </h2>
 
         {/* 安心バッジ */}
-        <div className="flex justify-center items-center gap-2 flex-wrap mb-8">
-          <span className="text-navy/50 text-sm">＼</span>
+        <div className="flex justify-center items-center gap-1.5 mb-8">
+          <span className="text-xs font-bold" style={{color: "#1A2E4A"}}>＼</span>
           {["✓ 完全無料", "✓ LINE追加するだけ", "✓ 特典あり"].map((badge) => (
             <span
               key={badge}
-              className="inline-flex items-center font-bold rounded-full text-xs px-3 py-1.5"
+              className="inline-flex items-center font-bold rounded-full whitespace-nowrap"
               style={{
-                background: "rgba(26,46,74,0.12)",
+                background: "rgba(26,46,74,0.08)",
                 color: "#1A2E4A",
-                border: "1px solid rgba(26,46,74,0.25)",
+                border: "1.5px solid #1A2E4A",
+                fontSize: "11px",
+                padding: "4px 10px",
               }}
             >
               {badge}
             </span>
           ))}
-          <span className="text-navy/50 text-sm">／</span>
+          <span className="text-xs font-bold" style={{color: "#1A2E4A"}}>／</span>
         </div>
 
         {/* カード型メリット3点 */}
