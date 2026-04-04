@@ -12,7 +12,7 @@ export default function LineCtaBanner() {
         {/* メリット3点 */}
         <ul className="text-left space-y-3 mb-8 max-w-sm mx-auto">
           {[
-            { num: "①", text: "毎日の「買い・売り」判断をLINEで受け取れる" },
+            { num: "①", text: "毎日の日経225指数の「買い・売り」判断をLINEで受け取れる" },
             { num: "②", text: "LINE登録者限定の相場情報・マーケットコメント" },
             { num: "③", text: "元大手信託銀行員へのLINE無料相談（1回）" },
           ].map((item) => (
