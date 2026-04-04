@@ -3,6 +3,7 @@ import Link from "next/link";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import LineCtaBanner from "@/components/LineCtaBanner";
+import Image from "next/image";
 
 export const metadata: Metadata = {
   title: "Bulltalkとは｜元大手信託銀行員が本音で発信する金融教育サイト",
@@ -147,11 +148,14 @@ export default function BulltalkPage() {
             <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
               {/* Photo Placeholder */}
               <div className="flex justify-center">
-                <div className="w-64 h-64 rounded-full bg-white/10 border-4 border-gold flex items-center justify-center">
-                  <div className="text-center text-white/50">
-                    <div className="text-5xl mb-2">👤</div>
-                    <p className="text-sm">プロフィール写真</p>
-                  </div>
+                <div className="w-64 h-64 rounded-full border-4 border-gold overflow-hidden shadow-xl">
+                  <Image
+                    src="/profile.jpg"
+                    alt="谷本光章 プロフィール写真"
+                    width={256}
+                    height={256}
+                    className="w-full h-full object-cover object-top"
+                  />
                 </div>
               </div>
 
