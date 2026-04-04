@@ -161,27 +161,53 @@ export default async function BulltalkPage() {
                 </>
               ) : (
                 // プレースホルダー
-                <div className="hidden md:flex justify-center gap-4 mb-6">
-                  {[1, 2, 3].map((i) => (
-                    <div key={i} className="bg-white rounded-xl overflow-hidden shadow-sm border border-gray-100" style={{width: "200px", flexShrink: 0}}>
-                      <div style={{position: "relative", paddingBottom: "177.78%", background: "#f3f4f6"}}>
-                        <div style={{position: "absolute", inset: 0, display: "flex", alignItems: "center", justifyContent: "center"}}>
-                          <div className="text-center text-gray-400">
-                            <div className="w-10 h-10 bg-gray-200 rounded-full flex items-center justify-center mx-auto mb-2">
-                              <svg className="w-4 h-4 text-gray-400 ml-0.5" fill="currentColor" viewBox="0 0 24 24"><path d="M8 5v14l11-7z" /></svg>
+                <>
+                  {/* スマホ：横スクロール */}
+                  <div className="flex md:hidden gap-3 mb-6 overflow-x-auto pb-3 -mx-4 px-4">
+                    {[1, 2, 3].map((i) => (
+                      <div key={i} className="flex-none bg-white rounded-xl overflow-hidden shadow-sm border border-gray-100"
+                        style={{width: "55vw", maxWidth: "200px"}}>
+                        <div style={{position: "relative", paddingBottom: "177.78%", background: "#f3f4f6"}}>
+                          <div style={{position: "absolute", inset: 0, display: "flex", alignItems: "center", justifyContent: "center"}}>
+                            <div className="text-center text-gray-400">
+                              <div className="w-10 h-10 bg-gray-200 rounded-full flex items-center justify-center mx-auto mb-2">
+                                <svg className="w-4 h-4 text-gray-400 ml-0.5" fill="currentColor" viewBox="0 0 24 24"><path d="M8 5v14l11-7z" /></svg>
+                              </div>
+                              <p className="text-xs">動画準備中</p>
                             </div>
-                            <p className="text-xs">動画準備中</p>
                           </div>
                         </div>
+                        <div className="p-2">
+                          <div className="h-3 bg-gray-100 rounded w-3/4 mb-2" />
+                          <div className="h-2 bg-gray-100 rounded w-1/2" />
+                        </div>
                       </div>
-                      <div className="p-2">
-                        <div className="h-3 bg-gray-100 rounded w-3/4 mb-2" />
-                        <div className="h-2 bg-gray-100 rounded w-1/2" />
+                    ))}
+                  </div>
+                  {/* PC: 3列 */}
+                  <div className="hidden md:flex justify-center gap-4 mb-6">
+                    {[1, 2, 3].map((i) => (
+                      <div key={i} className="bg-white rounded-xl overflow-hidden shadow-sm border border-gray-100" style={{width: "200px", flexShrink: 0}}>
+                        <div style={{position: "relative", paddingBottom: "177.78%", background: "#f3f4f6"}}>
+                          <div style={{position: "absolute", inset: 0, display: "flex", alignItems: "center", justifyContent: "center"}}>
+                            <div className="text-center text-gray-400">
+                              <div className="w-10 h-10 bg-gray-200 rounded-full flex items-center justify-center mx-auto mb-2">
+                                <svg className="w-4 h-4 text-gray-400 ml-0.5" fill="currentColor" viewBox="0 0 24 24"><path d="M8 5v14l11-7z" /></svg>
+                              </div>
+                              <p className="text-xs">動画準備中</p>
+                            </div>
+                          </div>
+                        </div>
+                        <div className="p-2">
+                          <div className="h-3 bg-gray-100 rounded w-3/4 mb-2" />
+                          <div className="h-2 bg-gray-100 rounded w-1/2" />
+                        </div>
                       </div>
-                    </div>
-                  ))}
-                </div>
+                    ))}
+                  </div>
+                </>
               )}
+
             </div>
 
             {/* Column Placeholder */}
