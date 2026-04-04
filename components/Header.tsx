@@ -5,8 +5,8 @@ import { useState } from "react";
 
 const navLinks = [
   { href: "/", label: "トップ" },
-  { href: "/bulltalk", label: "はじめに" },
-  { href: "/column", label: "コラム" },
+  { href: "/market", label: "相場分析" },
+  { href: "/column", label: "金融コラム" },
   { href: "/about", label: "経歴" },
 ];
 
