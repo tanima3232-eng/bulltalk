@@ -4,6 +4,7 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import LineCtaBanner from "@/components/LineCtaBanner";
 import Image from "next/image";
+import { getLatestVideos } from "@/lib/youtube";
 
 export const metadata: Metadata = {
   title: "Bulltalkとは｜元大手信託銀行員が本音で発信する金融教育サイト",
@@ -11,7 +12,8 @@ export const metadata: Metadata = {
     "日経225分析・相続・資産運用・不動産まで。元大手信託銀行員12年・FP1級・証券アナリスト（CMA）・宅建士が無料で解説します。",
 };
 
-export default function BulltalkPage() {
+export default async function BulltalkPage() {
+  const videos = await getLatestVideos(3);
   return (
     <>
       <Header />
@@ -92,21 +94,94 @@ export default function BulltalkPage() {
             <h2 className="section-title text-center">最新コンテンツ</h2>
             <p className="section-subtitle text-center">最新の分析・コラムをチェック</p>
 
-            {/* YouTube Placeholder */}
+            {/* 動画セクション */}
             <div className="mb-12">
               <h3 className="text-xl font-bold text-navy mb-4 flex items-center gap-2">
                 <span>🎬</span> 最新分析動画
               </h3>
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-                {[1, 2, 3].map((i) => (
-                  <div key={i} className="bg-gray-100 rounded-xl aspect-video flex items-center justify-center border-2 border-dashed border-gray-300">
-                    <div className="text-center text-gray-400 p-4">
-                      <div className="text-3xl mb-2">▶️</div>
-                      <p className="text-sm">YouTube動画<br />（近日追加予定）</p>
-                    </div>
+
+              {videos.length > 0 ? (
+                <>
+                  {/* スマホ：横スクロール */}
+                  <div className="flex md:hidden gap-3 mb-6 overflow-x-auto pb-3 -mx-4 px-4"
+                    style={{scrollSnapType: "x mandatory", WebkitOverflowScrolling: "touch"}}>
+                    {videos.map((video) => (
+                      <a
+                        key={video.id}
+                        href={video.url}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="flex-none bg-white rounded-xl overflow-hidden shadow-sm group"
+                        style={{width: "55vw", maxWidth: "200px", scrollSnapAlign: "start"}}
+                      >
+                        <div style={{position: "relative", paddingBottom: "177.78%", background: "#f3f4f6", overflow: "hidden"}}>
+                          <Image src={video.thumbnail} alt={video.title} fill className="object-cover" unoptimized style={{position: "absolute", top: 0, left: 0, width: "100%", height: "100%"}} />
+                          <div style={{position: "absolute", inset: 0, display: "flex", alignItems: "center", justifyContent: "center"}}>
+                            <div className="w-10 h-10 bg-red-600 rounded-full flex items-center justify-center shadow-lg">
+                              <svg className="w-4 h-4 text-white ml-0.5" fill="currentColor" viewBox="0 0 24 24"><path d="M8 5v14l11-7z" /></svg>
+                            </div>
+                          </div>
+                          <div style={{position: "absolute", top: 6, left: 6}} className="bg-red-600 text-white text-xs font-bold px-2 py-0.5 rounded-full">Shorts</div>
+                        </div>
+                        <div className="p-2">
+                          <p className="text-navy font-bold text-xs leading-snug line-clamp-2">{video.title}</p>
+                          <p className="text-gray-400 text-xs mt-1">{video.published}</p>
+                        </div>
+                      </a>
+                    ))}
                   </div>
-                ))}
-              </div>
+
+                  {/* PC: 3列 */}
+                  <div className="hidden md:flex justify-center gap-4 mb-6">
+                    {videos.map((video) => (
+                      <a
+                        key={video.id}
+                        href={video.url}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="bg-white rounded-xl overflow-hidden shadow-sm hover:shadow-md transition-all duration-200 group hover:-translate-y-1"
+                        style={{width: "200px", flexShrink: 0}}
+                      >
+                        <div style={{position: "relative", paddingBottom: "177.78%", background: "#f3f4f6", overflow: "hidden"}}>
+                          <Image src={video.thumbnail} alt={video.title} fill className="object-cover" unoptimized style={{position: "absolute", top: 0, left: 0, width: "100%", height: "100%"}} />
+                          <div style={{position: "absolute", inset: 0, display: "flex", alignItems: "center", justifyContent: "center"}}>
+                            <div className="w-12 h-12 bg-red-600 rounded-full flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform">
+                              <svg className="w-5 h-5 text-white ml-1" fill="currentColor" viewBox="0 0 24 24"><path d="M8 5v14l11-7z" /></svg>
+                            </div>
+                          </div>
+                          <div style={{position: "absolute", top: 8, left: 8}} className="bg-red-600 text-white text-xs font-bold px-2 py-0.5 rounded-full">Shorts</div>
+                        </div>
+                        <div className="p-3">
+                          <p className="text-navy font-bold text-xs leading-snug line-clamp-2 group-hover:text-gold transition-colors">{video.title}</p>
+                          <p className="text-gray-400 text-xs mt-1">{video.published}</p>
+                        </div>
+                      </a>
+                    ))}
+                  </div>
+                </>
+              ) : (
+                // プレースホルダー
+                <div className="hidden md:flex justify-center gap-4 mb-6">
+                  {[1, 2, 3].map((i) => (
+                    <div key={i} className="bg-white rounded-xl overflow-hidden shadow-sm border border-gray-100" style={{width: "200px", flexShrink: 0}}>
+                      <div style={{position: "relative", paddingBottom: "177.78%", background: "#f3f4f6"}}>
+                        <div style={{position: "absolute", inset: 0, display: "flex", alignItems: "center", justifyContent: "center"}}>
+                          <div className="text-center text-gray-400">
+                            <div className="w-10 h-10 bg-gray-200 rounded-full flex items-center justify-center mx-auto mb-2">
+                              <svg className="w-4 h-4 text-gray-400 ml-0.5" fill="currentColor" viewBox="0 0 24 24"><path d="M8 5v14l11-7z" /></svg>
+                            </div>
+                            <p className="text-xs">動画準備中</p>
+                          </div>
+                        </div>
+                      </div>
+                      <div className="p-2">
+                        <div className="h-3 bg-gray-100 rounded w-3/4 mb-2" />
+                        <div className="h-2 bg-gray-100 rounded w-1/2" />
+                      </div>
+                    </div>
+                  ))}
+                </div>
+              )}
             </div>
 
             {/* Column Placeholder */}
