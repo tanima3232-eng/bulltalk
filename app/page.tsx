@@ -477,7 +477,7 @@ export default async function HomePage() {
             {/* 投資信託の仕組み図解 */}
             <TrustDiagramScroll>
               <div style={{fontFamily:"'Hiragino Kaku Gothic Pro','Noto Sans JP',sans-serif", padding:"20px"}}>
-                <h4 style={{textAlign:"center", color:"#1A2E4A", fontSize:"15px", fontWeight:"bold", marginBottom:"24px", letterSpacing:"0.05em"}}>投資信託の仕組み</h4>
+                <p className="text-xs text-gray-400 mb-2">図：投資信託の仕組み</p>
 
                 <div className="trust-diagram-scale" style={{width:"max-content", margin:"0 auto"}}>
                 {/* フォワードフロー：投資家 → 投資信託 → 運用先 */}
