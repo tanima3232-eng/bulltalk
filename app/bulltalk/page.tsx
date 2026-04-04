@@ -157,7 +157,7 @@ export default function BulltalkPage() {
 
               {/* Profile */}
               <div>
-                <p className="text-gold text-sm font-bold uppercase tracking-wider mb-2">About</p>
+                <p className="text-gold text-sm font-bold uppercase tracking-wider mb-2">ABOUT ME</p>
                 <h2 className="text-3xl font-bold mb-6">谷本 光章とは</h2>
                 <ul className="space-y-3 mb-8">
                   {[
