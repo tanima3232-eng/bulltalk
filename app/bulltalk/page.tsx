@@ -176,9 +176,11 @@ export default function BulltalkPage() {
                     </li>
                   ))}
                 </ul>
-                <Link href="/about" className="btn-primary">
-                  詳しく見る →
-                </Link>
+                <div className="text-center md:text-left">
+                  <Link href="/about" className="btn-primary">
+                    詳しく見る →
+                  </Link>
+                </div>
               </div>
             </div>
           </div>
