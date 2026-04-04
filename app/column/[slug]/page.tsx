@@ -86,11 +86,11 @@ export default async function ColumnDetailPage({
             </article>
 
             {/* Disclaimer */}
-            <div className="mt-12 p-5 bg-gray-50 rounded-xl border border-gray-100">
+            <div className="mt-12 p-5 bg-gray-50 rounded-xl border-l-4 border-gray-200">
               <p className="text-xs text-gray-500 leading-relaxed">
-                ⚠️ 本記事は情報提供を目的としており、投資助言・法律相談・税務相談ではありません。
+                ※ 本記事は情報提供を目的としており、投資助言・法律相談・税務相談ではありません。
                 記載内容は作成時点の情報であり、制度改正等により変更になる場合があります。
-                具体的な判断は必ず税理士・弁護士・FP等の専門家にご相談ください。
+                個別状況へのアドバイスは<a href="https://lin.ee/FmH7NXr" className="text-gold underline hover:opacity-80">LINEよりお気軽にご相談ください</a>。
               </p>
             </div>
           </div>
