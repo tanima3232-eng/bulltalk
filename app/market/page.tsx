@@ -691,6 +691,22 @@ export default async function MarketPage() {
                 </div>
               ))}
             </div>
+
+            {/* NISA口座開設CTAボタン */}
+            <div className="mt-2 mb-8">
+              <a
+                href="#nisa-broker-comparison"
+                className="inline-flex items-center gap-2 font-bold text-base px-8 py-4 rounded-xl transition-all duration-300 shadow-md hover:shadow-lg hover:-translate-y-0.5"
+                style={{
+                  background: "linear-gradient(135deg, #C9A84C 0%, #E8C96A 50%, #C9A84C 100%)",
+                  color: "#1A2E4A",
+                }}
+              >
+                🏦 NISA口座を開設する
+              </a>
+              <p className="text-xs text-gray-500 mt-2">※口座開設は無料です</p>
+            </div>
+
             <a
               href="#sbi-affiliate-url-placeholder"
               className="btn-primary text-lg px-10 py-5 rounded-xl shadow-lg inline-block"
