@@ -70,7 +70,13 @@ export default async function HomePage() {
                 <p className="text-gray-600 text-sm leading-relaxed mb-6">
                   実務12年のプロが基礎から解説。信託銀行で培った知識を惜しみなくお伝えします。
                 </p>
-                <Link href="/column" className="btn-navy block text-center">
+                <Link href="/simulation" className="btn-navy block text-center mb-3">
+                  資産形成シミュレーションを実施する →
+                </Link>
+                <Link
+                  href="/column"
+                  className="block text-center text-sm font-bold py-3 px-4 rounded-xl border-2 border-navy text-navy hover:bg-navy hover:text-white transition-all duration-200"
+                >
                   コラムを読む →
                 </Link>
               </div>

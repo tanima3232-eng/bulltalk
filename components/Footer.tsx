@@ -25,7 +25,11 @@ export default function Footer() {
               {[
                 { href: "/", label: "トップ" },
                 { href: "/market", label: "相場分析" },
+                { href: "/simulation", label: "シミュレーション" },
                 { href: "/column", label: "金融コラム" },
+                { href: "/accounts/stock", label: "NISA・証券口座開設" },
+                { href: "/accounts/ideco", label: "iDeCo口座開設" },
+                { href: "/alternative", label: "オルタナティブ投資" },
                 { href: "/about", label: "経歴" },
                 { href: "/line", label: "Bull友になる" },
               ].map((link) => (
