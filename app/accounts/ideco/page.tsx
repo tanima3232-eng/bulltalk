@@ -18,7 +18,7 @@ const idecoProviders = [
     products: "◎ 40本",
     points: "◎ 最大1%",
     app: "○",
-    target: "eMAXIS Slim派・ポイントも貯めたい方",
+    target: "コスト重視・商品多数・ポイントも貯めたい方",
     ctaUrl: "https://h.accesstrade.net/sp/cc?rk=0100mnux00oqbc",
     pixelUrl: "https://h.accesstrade.net/sp/rr?rk=0100mnux00oqbc",
     hidden: false,
