@@ -14,6 +14,13 @@ const RSS_URL = `https://www.youtube.com/feeds/videos.xml?channel_id=${CHANNEL_I
 // 新しい動画を上げたら先頭に追加してください。
 const FALLBACK_VIDEOS: YTVideo[] = [
   {
+    id: "9bdegMXCeas",
+    title: "4/9 日本株｜本日は様子見、攻めるなら売り📉",
+    url: "https://www.youtube.com/shorts/9bdegMXCeas",
+    thumbnail: "https://i.ytimg.com/vi/9bdegMXCeas/hqdefault.jpg",
+    published: "2026-04-09",
+  },
+  {
     id: "OtdkmKTdaIA",
     title: "4/8 日本株｜中東リスク緩和・原油下落→日本株上昇。上値目安57,000〜58,000円",
     url: "https://www.youtube.com/shorts/OtdkmKTdaIA",
