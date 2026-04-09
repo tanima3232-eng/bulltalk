@@ -170,7 +170,7 @@ export default function IDeCoPage() {
                 </li>
                 <li className="flex items-start gap-2">
                   <span className="text-yellow-500 font-bold mt-0.5">⚠</span>
-                  <span className="text-gray-600">企業型DCがある会社員はiDeCoよりマッチング拠出が有利になるケースが増加しています。一般的には個別の状況により異なるため、ご自身の状況を確認することが目安とされています。</span>
+                  <span className="text-gray-600">iDeCoは掛金が全額所得控除になるため、課税所得が高い方ほど節税メリットが大きくなります。一般的には、まずNISAを最大活用した後に、iDeCoを検討するのが目安とされています。また、企業型DCがある方はiDeCoよりマッチング拠出が有利になるケースが増加しています。ただし会社がマッチング拠出を導入していない場合は、iDeCoが選択肢となります。まずはご自身の会社の制度をご確認ください。</span>
                 </li>
               </ul>
             </div>
@@ -311,7 +311,7 @@ export default function IDeCoPage() {
               <div>
                 <p className="text-gold text-xs font-bold uppercase tracking-widest mb-1">谷本コメント</p>
                 <p className="text-navy font-bold text-sm leading-relaxed">
-                  「iDeCoは掛金が全額所得控除になるため、課税所得が高い方ほど節税メリットが大きくなります。一般的には、まずNISAを最大活用した後に、iDeCoを検討するのが目安とされています。また、企業型DCがある方は、マッチング拠出の活用を先に確認しましょう。」
+                  「iDeCoは掛金が全額所得控除になるため、課税所得が高い方ほど節税メリットが大きくなります。一般的には、まずNISAを最大活用した後に、iDeCoを検討するのが目安とされています。また、企業型DCがある方はiDeCoよりマッチング拠出が有利になるケースが増加しています。ただし会社がマッチング拠出を導入していない場合は、iDeCoが選択肢となります。まずはご自身の会社の制度をご確認ください。」
                 </p>
                 <p className="text-gray-400 text-xs mt-2">元大手信託銀行12年・FP1級・CMA・宅建士</p>
               </div>
