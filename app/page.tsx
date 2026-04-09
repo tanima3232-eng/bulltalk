@@ -71,7 +71,7 @@ export default async function HomePage() {
                   実務12年のプロが基礎から解説。信託銀行で培った知識を惜しみなくお伝えします。
                 </p>
                 <Link href="/simulation" className="btn-navy block text-center mb-3">
-                  資産形成シミュレーションを実施する →
+                  資産形成シミュレーションを<br />実施する →
                 </Link>
                 <Link
                   href="/column"
