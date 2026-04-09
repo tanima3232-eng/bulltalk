@@ -151,7 +151,7 @@ export default function IDeCoPage() {
                   className="text-xs font-bold px-3 py-1 rounded-full"
                   style={{ background: "#4ADE80", color: "#1A2E4A" }}
                 >
-                  2026年4月〜 制度改正
+                  2026年4月〜<br className="sm:hidden" />制度改正
                 </span>
                 <h2 className="text-navy font-bold text-base">② マッチング拠出の変更点</h2>
               </div>
