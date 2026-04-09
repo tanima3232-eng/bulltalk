@@ -108,8 +108,7 @@ export default function AlternativePage() {
               </div>
             </div>
             <p className="text-gray-500 text-sm leading-relaxed mb-8 pl-1">
-              不動産やインフラを裏付資産とするデジタル証券です。暗号資産と比べて価格変動は小さく、
-              安定した分配金収入を目的とした投資に向いています。
+              不動産やインフラを裏付資産とするデジタル証券です。値動きだけでなく、安定した分配金収入を重視したい方に向いています。
             </p>
 
             {/* ALTERNA カード（審査中・非表示） */}
