@@ -311,7 +311,7 @@ export default function IDeCoPage() {
               <div>
                 <p className="text-gold text-xs font-bold uppercase tracking-widest mb-1">谷本コメント</p>
                 <p className="text-navy font-bold text-sm leading-relaxed">
-                  「iDeCoは所得控除のメリットが大きく、特に年収400〜700万円台の方に向いています。一般的には、まずNISAを最大活用した後にiDeCoを検討するのが目安とされています。」
+                  「iDeCoは掛金が全額所得控除になるため、課税所得が高い方ほど節税メリットが大きくなります。一般的には、まずNISAを最大活用した後に、iDeCoを検討するのが目安とされています。また、企業型DCがある方は、マッチング拠出の活用を先に確認しましょう。」
                 </p>
                 <p className="text-gray-400 text-xs mt-2">元大手信託銀行12年・FP1級・CMA・宅建士</p>
               </div>
