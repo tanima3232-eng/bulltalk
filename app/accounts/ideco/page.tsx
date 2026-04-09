@@ -222,7 +222,7 @@ export default function IDeCoPage() {
                           href={p.ctaUrl}
                           target="_blank"
                           rel={p.affiliateRel ? "nofollow" : "noopener noreferrer"}
-                          referrerPolicy={p.affiliateRel ? "no-referrer-when-downgrade" : undefined}
+                          referrerPolicy="no-referrer-when-downgrade"
                           className="inline-flex items-center justify-center px-4 py-2 rounded-lg font-bold text-xs transition-all duration-200 hover:-translate-y-0.5 hover:shadow-md"
                           style={{
                             background: p.star
@@ -278,7 +278,7 @@ export default function IDeCoPage() {
                       href={p.ctaUrl}
                       target="_blank"
                       rel={p.affiliateRel ? "nofollow" : "noopener noreferrer"}
-                      referrerPolicy={p.affiliateRel ? "no-referrer-when-downgrade" : undefined}
+                      referrerPolicy="no-referrer-when-downgrade"
                       className="w-full flex items-center justify-center gap-2 py-3 rounded-xl font-bold text-sm transition-all duration-200 hover:shadow-md"
                       style={{
                         background: p.star ? "linear-gradient(135deg,#C9A84C,#E8C96A)" : "#1A2E4A",

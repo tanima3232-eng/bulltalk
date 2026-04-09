@@ -32,8 +32,8 @@ const brokers = [
     app: "◎ 便利",
     target: "dポイント・クレカ積立派",
     point: "NISA手数料0円！dポイントが貯まる",
-    ctaUrl: "https://h.accesstrade.net/sp/cc?rk=0100q1bu00oqbc",
-    pixelUrl: "https://h.accesstrade.net/sp/rr?rk=0100q1bu00oqbc",
+    ctaUrl: "https://h.accesstrade.net/sp/cc?rk=010072vk00oqbc",
+    pixelUrl: "https://h.accesstrade.net/sp/rr?rk=010072vk00oqbc",
     hidden: false,
     affiliateRel: true,
   },
@@ -104,7 +104,7 @@ export default function StockAccountPage() {
             <p className="text-gold text-xs font-bold uppercase tracking-widest mb-4">SECURITIES ACCOUNT</p>
             <p className="text-white/60 text-sm mb-2">元大手信託銀行員が選ぶ</p>
             <h1 className="font-bold mb-4" style={{ fontSize: "clamp(1.6rem,4.5vw,2.8rem)", lineHeight: 1.2 }}>
-              あなたに合った<span className="text-gold">NISA口座</span>・証券口座、<br />
+              あなたに合った<br className="md:hidden" /><span className="text-gold">NISA口座</span>・証券口座、<br />
               <span className="text-gold">一緒に選びましょう。</span>
             </h1>
             <p className="text-white/70 text-sm md:text-base leading-relaxed max-w-xl mx-auto">
@@ -183,7 +183,7 @@ export default function StockAccountPage() {
                           href={broker.ctaUrl}
                           target="_blank"
                           rel={broker.affiliateRel ? "nofollow" : "noopener noreferrer"}
-                          referrerPolicy={broker.affiliateRel ? "no-referrer-when-downgrade" : undefined}
+                          referrerPolicy="no-referrer-when-downgrade"
                           className="inline-flex items-center justify-center px-4 py-2 rounded-lg font-bold text-xs transition-all duration-200 hover:-translate-y-0.5 hover:shadow-md"
                           style={{
                             background: broker.star
@@ -240,7 +240,7 @@ export default function StockAccountPage() {
                       href={broker.ctaUrl}
                       target="_blank"
                       rel={broker.affiliateRel ? "nofollow" : "noopener noreferrer"}
-                      referrerPolicy={broker.affiliateRel ? "no-referrer-when-downgrade" : undefined}
+                      referrerPolicy="no-referrer-when-downgrade"
                       className="w-full flex items-center justify-center gap-2 py-3 rounded-xl font-bold text-sm transition-all duration-200 hover:shadow-md"
                       style={{
                         background: broker.star

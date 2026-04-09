@@ -362,8 +362,7 @@ export default function AlternativePage() {
             <p className="text-xs text-gray-400">※本ページは情報提供を目的としており、投資助言ではありません。</p>
             <p className="text-xs text-gray-400">※投資は自己責任でお願いします。</p>
             <p className="text-xs text-gray-400">※2026年4月時点の情報に基づきます。制度・サービス内容は変更される可能性があります。</p>
-            <p className="text-xs text-gray-400">※「確実に上昇します」「絶対に儲かります」等の断定表現は一切使用していません。</p>
-            <p className="text-xs text-gray-400">※ALTERNAガイドライン：セミナー・対面講座・LINE・SNS DMでのアフィリエイトリンク配布は行っておりません。</p>
+
           </div>
         </section>
       </main>
