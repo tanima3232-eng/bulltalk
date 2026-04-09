@@ -68,7 +68,7 @@ function buildPriorities(checks: Checks, housing: string, insVal: number) {
   if (checks.hoken && housing==="持ち家（ローンあり）" && checks.loan3) cards.push({ num:"確認事項", highlight:false, title:"生命保険料、払いすぎている可能性があります。", desc:"住宅ローンで3大疾病特約付き団信に加入している場合、保障が重複しているケースが多いです。", note:"※ご自身の保険内容を確認した上で専門家にご相談ください。", style:"green" });
   if (checks.hoken && insVal > 0) cards.push({ num:"確認事項", highlight:false, title:"変額保険・積立保険の見直しを検討しましょう。", desc:"資産形成が目的なら、変額保険よりNISAなどの制度を優先して考える方が一般的です。保障が必要なら、まずは必要な保障額を確認し、保険は保険、運用は運用で分ける方がコストを抑えやすくなります。", style:"green" });
   if (checks.alt) cards.push({ num:"次のステップ", highlight:false, title:"オルタナティブ投資に関心がある場合は、投資対象を理解することで、より自分に合った選択がしやすくなります。", desc:"不動産やインフラ、暗号資産などは、株式や債券とは異なる特徴があるため、分散投資の選択肢になります。", cta:"オルタナティブ投資を学ぶ", style:"outline", href:"/alternative" });
-  else if (checks.nisa && (checks.ideco || checks.matching)) cards.push({ num:"次のステップ", highlight:false, title:"オルタナティブ投資で資産分散を検討しましょう", desc:"株・債券以外への分散として、不動産デジタル証券や暗号資産への少額投資も選択肢の一つです。", cta:"オルタナティブ投資について詳しく知る", style:"outline", href:"/alternative" });
+  else if (checks.nisa && (checks.ideco || checks.matching)) cards.push({ num:"次のステップ", highlight:false, title:"オルタナティブ投資で資産分散を検討しましょう", desc:"株・債券以外への分散として、不動産やインフラ、暗号資産などへの少額投資も選択肢の一つです。", cta:"オルタナティブ投資について詳しく知る", style:"outline", href:"/alternative" });
   if (cards.length === 0) cards.push({ num:"", highlight:false, title:"現状の資産形成は順調です", desc:"NISA・iDeCo・DC等をバランスよく活用されています。次のステップとして相続対策や不動産投資についてもご相談ください。", style:"green" });
   return cards;
 }
