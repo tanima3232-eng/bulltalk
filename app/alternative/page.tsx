@@ -82,8 +82,8 @@ export default function AlternativePage() {
                 </div>
               </div>
             </div>
-            <p className="text-xs text-gray-400 mt-4 text-center leading-relaxed">
-              ※オルタナティブ投資は元本保証はありません。投資は自己責任でお願いします。
+            <p className="text-xs text-gray-400 mt-4 leading-relaxed">
+              ※オルタナティブ投資は株、債券、投資信託と同様に元本保証はありません。投資は自己責任でお願いします。
             </p>
           </div>
         </section>
@@ -190,7 +190,7 @@ export default function AlternativePage() {
             </div>
             <p className="text-gray-500 text-sm leading-relaxed mb-2 pl-1">
               暗号資産は不動産・インフラとは異なり、<strong className="text-navy">価格変動が非常に大きい高リスク資産</strong>です。一方で
-              積立投資を活用するなど、リスクを減らしながら、暗号資産の大きな値動き・期待リターンを狙うことも可能です。
+              <strong className="text-navy">積立投資を活用するなど、リスクを減らしながら、暗号資産の大きな値動き・期待リターンを狙うことも可能</strong>です。
               投資資産全体の一部（目安：5〜10%以内）として分散投資することで、市場が大きく上昇した時の恩恵が受けられます。分散投資の選択肢の一つとして掲載しております。
             </p>
             <div
