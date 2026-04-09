@@ -217,12 +217,7 @@ export default function AlternativePage() {
                     <h3 className="text-white font-bold text-xl">マネックスビットコイン</h3>
                     <p className="text-white/50 text-xs mt-1">提供：マネックス証券株式会社</p>
                   </div>
-                  <span
-                    className="text-xs font-bold px-3 py-1.5 rounded-full"
-                    style={{ background: "#C9A84C", color: "#1A2E4A" }}
-                  >
-                    CTA 設置中
-                  </span>
+
                 </div>
               </div>
 
