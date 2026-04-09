@@ -163,9 +163,7 @@ export default function SimulationPage() {
           <h1 style={{ fontSize:"clamp(1.4rem,5vw,1.8rem)", fontWeight:800, lineHeight:1.4, marginBottom:"12px" }}>毎月いくら積み立てると<br />将来どうなる？</h1>
           <p style={{ fontSize:"13px", opacity:0.8, lineHeight:1.7 }}>積立額、積立期間、想定リターンを選ぶだけ。<br />あなたの将来の資産設計イメージがわかります。</p>
         </section>
-        <div style={{ background:"#f9f9f9", borderBottom:"1px solid #E8EEF4", padding:"8px", textAlign:"center" }}>
-          <p style={{ fontSize:"11px", color:"#9CA3AF" }}>本ページにはアフィリエイト広告（PR）が含まれています</p>
-        </div>
+
 
         <div style={{ maxWidth:"640px", margin:"0 auto" }}>
 
