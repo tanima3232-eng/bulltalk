@@ -62,7 +62,7 @@ function buildPriorities(checks: Checks, housing: string, insVal: number) {
   let idx = 1;
   const n = (i: number) => ["優先①","優先②","優先③","優先④","優先⑤"][i-1]||"優先";
   if (!checks.nisa) cards.push({ num:n(idx++), highlight:true, title:"NISA口座を開設しましょう", desc:"運用益が全額非課税になります。まず取り組むべき制度として一般的に広く知られています。", cta:"NISA口座を開設する（無料）", style:"gold", href:"/accounts/stock" });
-  if (checks.dc && !checks.matching) cards.push({ num:n(idx++), highlight:false, title:"企業型DCのマッチング拠出を確認しましょう", desc:"2026年4月より上限が撤廃され、拠出限度額内で自由に上乗せ可能になりました。", note:"※2026年12月以降は上限が月6.2万円に拡大予定", cta:"LINEで詳しく相談する", style:"green", href:"line" });
+  if (checks.dc && !checks.matching) cards.push({ num:n(idx++), highlight:false, title:"企業型DCのマッチング拠出を確認しましょう", desc:"2026年4月より上限が撤廃され、拠出限度額内で自由に上乗せ可能になりました。", note:"※2026年12月以降は上限が月6.2万円に拡大予定", style:"green" });
   if (checks.kabu) cards.push({ num:n(idx++), highlight:false, title:"持株会の奨励金を最大活用しましょう", desc:"持株会の奨励金は、使えるなら最大限活用したい制度です。まずは奨励金が出る上限の掛金額を確認し、無理のない範囲で活用するのがお勧めです。一方で、自社株に偏りすぎるとリスクも高まるため、その点は注意しましょう。", style:"green" });
   if (checks.nisa && !checks.ideco && !checks.dc) cards.push({ num:n(idx++), highlight:false, title:"iDeCoで節税しながら老後資金を積立しましょう", desc:"掛金が全額所得控除になるため、節税しながら老後資金を積み立てられます。", cta:"iDeCoで将来に備える", style:"navy", href:"/accounts/ideco" });
   if (checks.hoken && housing==="持ち家（ローンあり）" && checks.loan3) cards.push({ num:"確認事項", highlight:false, title:"生命保険料、払いすぎている可能性があります。", desc:"住宅ローンで3大疾病特約付き団信に加入している場合、保障が重複しているケースが多いです。", note:"※ご自身の保険内容を確認した上で専門家にご相談ください。", style:"green" });
