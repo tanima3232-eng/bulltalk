@@ -188,9 +188,9 @@ export default function AlternativePage() {
               </div>
             </div>
             <p className="text-gray-500 text-sm leading-relaxed mb-2 pl-1">
-              暗号資産は不動産・インフラとは異なり、<strong className="text-navy">価格変動が非常に大きい高リスク資産</strong>です。一方で積立投資を活用するなど、
-              <strong className="text-navy">リスクを分散しながら、暗号資産の大きな値動きによる値上がり益を狙える可能性があります。</strong>
-              一般的に資産全体の一部に留めることがリスク管理の観点から望ましいとされています。選択肢の一つとして掲載しております。
+              暗号資産は一般的に価格変動が大きく、リスクが高い資産です。一方で積立投資を活用するなど、
+              リスクを分散しながら、<strong className="text-navy">暗号資産の大きな値動きによる値上がり益を狙える可能性があります。</strong>
+              選択肢の一つとして掲載しております。
             </p>
             <div
               className="flex items-start gap-2 text-xs leading-relaxed mb-8 p-3 rounded-xl"
