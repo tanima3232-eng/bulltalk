@@ -220,7 +220,7 @@ export default function IDeCoPage() {
                       <td className="px-4 py-5 text-center">
                         <a
                           href={p.ctaUrl}
-                          target="_blank"
+                          target={p.affiliateRel ? "_self" : "_blank"}
                           rel={p.affiliateRel ? "nofollow" : "noopener noreferrer"}
                           referrerPolicy="no-referrer-when-downgrade"
                           className="inline-flex items-center justify-center px-4 py-2 rounded-lg font-bold text-xs transition-all duration-200 hover:-translate-y-0.5 hover:shadow-md"
@@ -276,7 +276,7 @@ export default function IDeCoPage() {
                     <p className="text-xs text-navy mb-4"><span className="text-gold font-bold">こんな人に：</span>{p.target}</p>
                     <a
                       href={p.ctaUrl}
-                      target="_blank"
+                      target={p.affiliateRel ? "_self" : "_blank"}
                       rel={p.affiliateRel ? "nofollow" : "noopener noreferrer"}
                       referrerPolicy="no-referrer-when-downgrade"
                       className="w-full flex items-center justify-center gap-2 py-3 rounded-xl font-bold text-sm transition-all duration-200 hover:shadow-md"
