@@ -238,7 +238,7 @@ export default function StockAccountPage() {
                     <p className="text-xs text-navy mb-1"><span className="text-gold font-bold">こんな人に：</span>{broker.target}</p>
                     <p className="text-xs text-gray-500 mb-4 leading-relaxed">{broker.point}</p>
                     <a
-                      href={(broker as { mobileUrl?: string }).mobileUrl ?? broker.ctaUrl}
+                      href={broker.id === "monex" ? "https://www.monex.co.jp/" : broker.ctaUrl}
                       target="_blank"
                       rel="noopener noreferrer"
                       className="w-full flex items-center justify-center gap-2 py-3 rounded-xl font-bold text-sm transition-all duration-200 hover:shadow-md"
