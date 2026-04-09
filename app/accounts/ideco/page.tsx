@@ -345,7 +345,7 @@ export default function IDeCoPage() {
 
         {/* 免責 */}
         <section className="bg-gray-50 py-8 px-4 border-t border-gray-200">
-          <div className="max-w-3xl mx-auto space-y-2 text-center">
+          <div className="max-w-3xl mx-auto space-y-2">
             <p className="text-xs text-gray-400">※iDeCoの掛金は原則60歳まで引き出せません。</p>
             <p className="text-xs text-gray-400">※国民年金基金連合会・信託銀行への手数料（計171円/月）は全社共通でかかります。</p>
             <p className="text-xs text-gray-400">※運用成果は保証されません。将来の受取額は運用結果により異なります。</p>

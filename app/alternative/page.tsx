@@ -353,7 +353,7 @@ export default function AlternativePage() {
 
         {/* 免責 */}
         <section className="bg-gray-50 py-8 px-4 border-t border-gray-200">
-          <div className="max-w-3xl mx-auto space-y-2 text-center">
+          <div className="max-w-3xl mx-auto space-y-2">
             <p className="text-xs text-gray-400">※マネックスビットコインはビットコイン現物取引ではなく、暗号資産CFD（差金決済取引）です。</p>
             <p className="text-xs text-gray-400">※レバレッジ最大2倍をかけた取引であり、投資元本を超える損失が生じる可能性があります。</p>
             <p className="text-xs text-gray-400">※スマートフォンアプリ専用のサービスです。PCからの取引には対応していません。</p>

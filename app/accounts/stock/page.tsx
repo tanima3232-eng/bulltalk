@@ -310,7 +310,7 @@ export default function StockAccountPage() {
 
         {/* 免責 */}
         <section className="bg-gray-50 py-8 px-4 border-t border-gray-200">
-          <div className="max-w-3xl mx-auto space-y-2 text-center">
+          <div className="max-w-3xl mx-auto space-y-2">
             <p className="text-xs text-gray-400">※マネックス証券の手数料0円はNISA口座での国内株・投資信託取引を指します（一部商品除く）。</p>
             <p className="text-xs text-gray-400">※手数料は条件により異なる場合があります。詳細は公式サイトをご確認ください。</p>
             <p className="text-xs text-gray-400">※NISAの運用成果は保証されません。</p>
