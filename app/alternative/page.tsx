@@ -15,7 +15,7 @@ export default function AlternativePage() {
       <main>
         {/* PR表示 */}
         <div className="bg-gray-50 border-b border-gray-200 px-4 py-2 text-center">
-          <p className="text-xs text-gray-400">本ページにはアフィリエイト広告（PR）が含まれています。2026年4月時点の情報に基づきます。</p>
+          <p className="text-xs text-gray-400">本ページにはアフィリエイト広告（PR）が含まれています。<br className="sm:hidden" />2026年4月時点の情報に基づきます。</p>
         </div>
 
         {/* Hero */}
