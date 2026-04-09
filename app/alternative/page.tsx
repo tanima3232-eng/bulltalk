@@ -71,7 +71,7 @@ export default function AlternativePage() {
                 <span className="text-3xl flex-shrink-0">🏢</span>
                 <div>
                   <p className="font-bold text-navy mb-1">不動産・インフラ投資</p>
-                  <p className="text-gray-500 text-sm leading-relaxed">不動産やインフラを裏付資産とするデジタル証券です。分配金収入を目的とした比較的安定した運用を目指す方に向いています。</p>
+                  <p className="text-gray-500 text-sm leading-relaxed">不動産やインフラ投資は、主に分配金収入を目的とした比較的安定した運用を目指す方に向いています。</p>
                 </div>
               </div>
               <div className="flex items-start gap-4 bg-offwhite rounded-2xl p-5">
