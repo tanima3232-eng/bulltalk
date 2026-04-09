@@ -33,6 +33,7 @@ const brokers = [
     target: "dポイント・クレカ積立派",
     point: "NISA手数料0円！dポイントが貯まる",
     ctaUrl: "https://h.accesstrade.net/sp/cc?rk=010072zr00oqbc",
+    mobileUrl: "https://www.monex.co.jp/",
     pixelUrl: "https://h.accesstrade.net/sp/rr?rk=010072zr00oqbc",
     hidden: false,
     affiliateRel: true,
@@ -237,10 +238,9 @@ export default function StockAccountPage() {
                     <p className="text-xs text-navy mb-1"><span className="text-gold font-bold">こんな人に：</span>{broker.target}</p>
                     <p className="text-xs text-gray-500 mb-4 leading-relaxed">{broker.point}</p>
                     <a
-                      href={broker.ctaUrl}
-                      target={broker.affiliateRel ? "_self" : "_blank"}
-                      rel={broker.affiliateRel ? "nofollow" : "noopener noreferrer"}
-                      referrerPolicy="no-referrer-when-downgrade"
+                      href={(broker as { mobileUrl?: string }).mobileUrl ?? broker.ctaUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
                       className="w-full flex items-center justify-center gap-2 py-3 rounded-xl font-bold text-sm transition-all duration-200 hover:shadow-md"
                       style={{
                         background: broker.star
@@ -249,9 +249,6 @@ export default function StockAccountPage() {
                         color: broker.star ? "#1A2E4A" : "#FFFFFF",
                       }}
                     >
-                      {broker.affiliateRel && broker.pixelUrl && (
-                        <img src={broker.pixelUrl} alt="" style={{ display: "none" }} width={1} height={1} />
-                      )}
                       公式サイトへ →
                     </a>
                   </div>
