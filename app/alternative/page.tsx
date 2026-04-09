@@ -294,6 +294,11 @@ export default function AlternativePage() {
                 >
                   公式サイトへ →
                 </a>
+                {/* PC推奨通知 */}
+                <div className="flex items-center justify-center gap-1.5 mt-3 px-3 py-2 rounded-xl" style={{ background: "rgba(201,168,76,0.08)", border: "1px solid rgba(201,168,76,0.3)" }}>
+                  <span style={{ fontSize: "13px" }}>🖥</span>
+                  <p className="text-xs font-bold text-center" style={{ color: "#C9A84C" }}>マネックス証券の登録・確認はパソコンからのみ可能</p>
+                </div>
               </div>
             </div>
 
