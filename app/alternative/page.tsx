@@ -189,16 +189,16 @@ export default function AlternativePage() {
               </div>
             </div>
             <p className="text-gray-500 text-sm leading-relaxed mb-2 pl-1">
-              暗号資産は不動産・インフラとは異なり、<strong className="text-red-500">価格変動が非常に大きい高リスク資産</strong>です。
-              積立投資を活用するなど、リスクを減らしながら、暗号資産の期待リターンを狙うことも可能です。
-              資産全体の一部（目安：5〜10%以内）として分散投資を検討する場合の選択肢として掲載しております。
+              暗号資産は不動産・インフラとは異なり、<strong className="text-navy">価格変動が非常に大きい高リスク資産</strong>です。一方で
+              積立投資を活用するなど、リスクを減らしながら、暗号資産の大きな値動き・期待リターンを狙うことも可能です。
+              投資資産全体の一部（目安：5〜10%以内）として分散投資することで、市場が大きく上昇した時の恩恵が受けられます。分散投資の選択肢の一つとして掲載しております。
             </p>
             <div
               className="flex items-start gap-2 text-xs leading-relaxed mb-8 p-3 rounded-xl"
-              style={{ background: "#FEF2F2", border: "1px solid #FCA5A5" }}
+              style={{ background: "#F3F4F6", border: "1px solid #D1D5DB" }}
             >
-              <span className="font-bold flex-shrink-0 text-red-500">⚠</span>
-              <span className="text-red-600">暗号資産は法定通貨と異なり、価格変動リスクが非常に高い資産です。余裕資金の範囲内で、リスクを十分理解した上で投資してください。</span>
+              <span className="font-bold flex-shrink-0 text-gray-400">※</span>
+              <span className="text-gray-500">暗号資産は法定通貨と異なり、価格変動リスクが非常に高い資産です。余裕資金の範囲内で、リスクを十分理解した上で投資してください。</span>
             </div>
 
             {/* マネックスビットコイン カード */}
@@ -235,7 +235,7 @@ export default function AlternativePage() {
                   </div>
                   <div className="bg-offwhite rounded-xl p-3">
                     <p className="text-gray-400 text-xs mb-1">リスク</p>
-                    <p className="font-bold" style={{ color: "#EF4444" }}>高（レバレッジ最大2倍）</p>
+                    <p className="font-bold text-orange-500">高（レバレッジ最大2倍）</p>
                   </div>
                   <div className="col-span-2 bg-offwhite rounded-xl p-3">
                     <p className="text-gray-400 text-xs mb-1">こんな人に</p>
@@ -254,9 +254,9 @@ export default function AlternativePage() {
                     <div
                       key={i}
                       className="flex items-start gap-2 text-xs leading-relaxed"
-                      style={{ color: "#EF4444" }}
+                      style={{ color: "#6B7280" }}
                     >
-                      <span className="font-bold flex-shrink-0">⚠</span>
+                      <span className="flex-shrink-0 text-gray-400">※</span>
                       <span>{text}</span>
                     </div>
                   ))}
