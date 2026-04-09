@@ -69,7 +69,7 @@ function buildPriorities(checks: Checks, housing: string, insVal: number) {
   if (checks.hoken && insVal > 0) cards.push({ num:"確認事項", highlight:false, title:"変額保険・積立保険の見直しを検討しましょう。", desc:"資産形成が目的なら、変額保険よりNISAなどの制度を優先して考える方が一般的です。保障が必要なら、まずは必要な保障額を確認し、保険は保険、運用は運用で分ける方がコストを抑えやすくなります。", style:"green" });
   if (checks.alt) cards.push({ num:"次のステップ", highlight:false, title:"オルタナティブ投資に関心がある場合、まずは投資対象を理解することが必要です", desc:"不動産デジタル証券・暗号資産などは伝統的な株・債券と異なるリスク特性を持ちます。", cta:"オルタナティブ投資を学ぶ", style:"outline", href:"/alternative" });
   else if (checks.nisa && (checks.ideco || checks.matching)) cards.push({ num:"次のステップ", highlight:false, title:"オルタナティブ投資で資産分散を検討しましょう", desc:"株・債券以外への分散として、不動産デジタル証券や暗号資産への少額投資も選択肢の一つです。", cta:"オルタナティブ投資について詳しく知る", style:"outline", href:"/alternative" });
-  if (cards.length === 0) cards.push({ num:"", highlight:false, title:"現状の資産形成は順調です", desc:"NISA・iDeCo・DC等をバランスよく活用されています。次のステップとして相続対策や不動産投資についてもご相談ください。", cta:"まずはLINEで無料相談する", style:"green", href:"line" });
+  if (cards.length === 0) cards.push({ num:"", highlight:false, title:"現状の資産形成は順調です", desc:"NISA・iDeCo・DC等をバランスよく活用されています。次のステップとして相続対策や不動産投資についてもご相談ください。", style:"green" });
   return cards;
 }
 
