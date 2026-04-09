@@ -78,7 +78,7 @@ export default function AlternativePage() {
                 <span className="text-3xl flex-shrink-0">₿</span>
                 <div>
                   <p className="font-bold text-navy mb-1">暗号資産</p>
-                  <p className="text-gray-500 text-sm leading-relaxed">価格変動が非常に大きい高リスク資産です。資産の一部として分散投資を検討する際の選択肢の一つです。仕組みを十分理解した上での投資が必要です。</p>
+                  <p className="text-gray-500 text-sm leading-relaxed">一般的に価格変動が大きく、リスクが高い資産です。資産の一部として分散投資を検討する際の選択肢の一つです。仕組みを十分理解した上での投資が必要です。</p>
                 </div>
               </div>
             </div>
