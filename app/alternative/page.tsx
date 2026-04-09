@@ -333,7 +333,7 @@ export default function AlternativePage() {
             <p className="text-xs font-bold uppercase tracking-widest mb-3" style={{ color: "#A78BFA" }}>投資を始める前に</p>
             <h2 className="text-white font-bold text-xl mb-4">まずは仕組みを理解しましょう</h2>
             <p className="text-white/60 text-sm mb-6">
-              オルタナティブ投資はリスクが高く、仕組みを理解してから始めることが重要です。<br />
+              オルタナティブ投資はリスクが高く、<br className="sm:hidden" />仕組みを理解してから始めることが重要です。<br className="sm:hidden" />
               不明点は無料相談できます。
             </p>
             <a
