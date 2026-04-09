@@ -254,7 +254,7 @@ export default function SimulationPage() {
                 <polyline points="6 9 12 15 18 9" />
               </svg>
             </div>
-            <p style={{ fontSize:"11px", color:"#1A2E4A", fontWeight:700, marginTop:"4px" }}>さらに詳しく診断できます</p>
+            <p style={{ fontSize:"15px", color:"#1A2E4A", fontWeight:800, marginTop:"6px", letterSpacing:"0.05em" }}>さらに詳しく診断できます</p>
           </div>
 
           <div style={{
@@ -287,7 +287,7 @@ export default function SimulationPage() {
 
               <h2 style={{ fontSize:"22px", fontWeight:800, lineHeight:1.4, marginBottom:"12px" }}>
                 家計・資産の状況を入力して<br />
-                <span style={{ color:"#C9A84C" }}>最適なアクションを確認する</span>
+                <span style={{ color:"#C9A84C" }}>最適な資産形成方法を確認する</span>
               </h2>
               <p style={{ fontSize:"12px", color:"rgba(244,244,242,0.65)", lineHeight:1.8, marginBottom:"18px" }}>
                 NISA・iDeCo・保険・持株会など<br />
@@ -298,6 +298,7 @@ export default function SimulationPage() {
               <div style={{ display:"inline-flex", flexDirection:"column", gap:"6px", textAlign:"left", marginBottom:"4px" }}>
                 {[
                   "所要時間：1分程度",
+                  "無料",
                   "入力内容は外部に送信されません",
                 ].map((txt, i) => (
                   <div key={i} style={{ display:"flex", alignItems:"center", gap:"8px", fontSize:"12px", color:"rgba(244,244,242,0.75)" }}>
