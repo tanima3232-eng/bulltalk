@@ -30,7 +30,7 @@ const brokers = [
     fee: "0円※",
     products: "◎ 豊富",
     app: "◎ 便利",
-    target: "dポイントユーザー・中級者",
+    target: "dポイント・クレカ積立派",
     point: "NISA手数料0円！dポイントが貯まる",
     ctaUrl: "https://h.accesstrade.net/sp/cc?rk=0100q1bu00oqbc",
     pixelUrl: "https://h.accesstrade.net/sp/rr?rk=0100q1bu00oqbc",
@@ -104,11 +104,11 @@ export default function StockAccountPage() {
             <p className="text-gold text-xs font-bold uppercase tracking-widest mb-4">SECURITIES ACCOUNT</p>
             <p className="text-white/60 text-sm mb-2">元大手信託銀行員が選ぶ</p>
             <h1 className="font-bold mb-4" style={{ fontSize: "clamp(1.6rem,4.5vw,2.8rem)", lineHeight: 1.2 }}>
-              あなたに合った証券口座、<br />
+              あなたに合った<span className="text-gold">NISA口座</span>・証券口座、<br />
               <span className="text-gold">一緒に選びましょう。</span>
             </h1>
             <p className="text-white/70 text-sm md:text-base leading-relaxed max-w-xl mx-auto">
-              手数料・使いやすさ・NISA対応まで<br />
+              NISA対応・手数料・使いやすさ・ポイント還元まで<br />
               実務12年のプロが忖度なしで解説します。
             </p>
           </div>
@@ -129,7 +129,7 @@ export default function StockAccountPage() {
               <div>
                 <p className="text-gold text-xs font-bold uppercase tracking-widest mb-1">谷本コメント</p>
                 <p className="text-navy font-bold text-sm leading-relaxed">
-                  「証券口座は複数持てます。ご自身が活用しやすい証券口座を使うことが重要です。例えば、dポイントと連携したい方にはマネックス証券が選択肢の一つです。」
+                  「NISA口座は証券会社によって選べる商品・ポイント還元が異なります。同じ「0円」でも使い勝手は全然違う。dポイントを活用したい方にはマネックス証券、幅広い商品を比較したい方にはSBI証券が選択肢の一つです。」
                 </p>
                 <p className="text-gray-400 text-xs mt-2">元大手信託銀行12年・FP1級・CMA・宅建士</p>
               </div>
@@ -142,9 +142,6 @@ export default function StockAccountPage() {
           <div className="max-w-5xl mx-auto">
             <p className="text-gold text-xs font-bold uppercase tracking-widest text-center mb-2">COMPARISON</p>
             <h2 className="section-title text-center mb-2">証券口座 比較表</h2>
-            <p className="text-gray-400 text-sm text-center mb-8">
-              ※比較表に順位付けなし。「こんな人に」欄で属性別に訴求しています。
-            </p>
 
             {/* PC テーブル */}
             <div className="hidden md:block overflow-x-auto rounded-2xl shadow-sm">
@@ -262,11 +259,6 @@ export default function StockAccountPage() {
               ))}
             </div>
 
-            <p className="text-xs text-gray-400 text-center mt-6">
-              ※順次掲載証券会社を追加予定。楽天証券は提携審査通過後に追加予定。<br />
-              ※「1位」「おすすめ」等の根拠のない順位付けは行っておりません。<br />
-              ※マネックス証券の手数料0円はNISA口座での国内株・投資信託取引を指します（一部商品除く）。
-            </p>
           </div>
         </section>
 

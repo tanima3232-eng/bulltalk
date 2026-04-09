@@ -256,7 +256,7 @@ export default function SimulationPage() {
                 <polyline points="6 9 12 15 18 9" />
               </svg>
             </div>
-            <p style={{ fontSize:"11px", color:"#9CA3AF", marginTop:"4px" }}>さらに詳しく診断できます</p>
+            <p style={{ fontSize:"11px", color:"#1A2E4A", fontWeight:700, marginTop:"4px" }}>さらに詳しく診断できます</p>
           </div>
 
           <div style={{

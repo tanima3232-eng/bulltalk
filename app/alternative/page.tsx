@@ -5,7 +5,7 @@ import Footer from "@/components/Footer";
 export const metadata: Metadata = {
   title: "オルタナティブ投資｜Bulltalk - 株・債券以外の資産分散を学ぶ",
   description:
-    "仮想通貨・不動産デジタル証券など伝統的資産以外への分散投資を元大手信託銀行員12年・FP1級が解説。マネックスビットコイン・ALTERNA（オルタナ）などを紹介。",
+    "暗号資産・不動産デジタル証券など伝統的資産以外への分散投資を元大手信託銀行員12年・FP1級が解説。マネックスビットコイン・ALTERNA（オルタナ）などを紹介。",
 };
 
 export default function AlternativePage() {
@@ -50,7 +50,7 @@ export default function AlternativePage() {
               <span className="text-gold">次の一手を、ここから。</span>
             </h1>
             <p className="text-white/70 text-sm md:text-base leading-relaxed max-w-xl mx-auto">
-              仮想通貨・不動産デジタル証券など<br />
+              暗号資産・不動産デジタル証券など<br />
               伝統的資産以外への分散投資を学ぶ
             </p>
           </div>
@@ -62,7 +62,7 @@ export default function AlternativePage() {
             <h2 className="section-title mb-4">オルタナティブ投資とは</h2>
             <p className="text-gray-600 leading-relaxed mb-6">
               株式・債券などの伝統的資産以外の投資対象を指します。
-              仮想通貨・不動産・インフラ・ヘッジファンドなどが含まれ、
+              不動産・インフラ・ヘッジファンド・暗号資産などが含まれ、
               <strong className="text-navy">伝統資産との相関が低く、ポートフォリオの分散効果</strong>が期待されています。
               ただし、<strong className="text-navy">商品によってリスク特性が大きく異なります</strong>ので、目的に合わせて選ぶことが重要です。
             </p>
@@ -164,27 +164,7 @@ export default function AlternativePage() {
             </div>
             ============================================================= */}
 
-            {/* 審査中プレースホルダー */}
-            <div
-              className="rounded-3xl overflow-hidden"
-              style={{ border: "2px dashed #CBD5E1", background: "#F8FAFC" }}
-            >
-              <div className="px-8 py-10 text-center">
-                <p className="text-3xl mb-3">🏢</p>
-                <p className="text-navy font-bold text-lg mb-1">ALTERNA（オルタナ）</p>
-                <p className="text-gray-400 text-sm mb-2">三井物産デジタル・アセットマネジメント（MDM）</p>
-                <span
-                  className="inline-block text-xs font-bold px-3 py-1.5 rounded-full mb-4"
-                  style={{ background: "#E5E7EB", color: "#6B7280" }}
-                >
-                  提携審査中・掲載準備中
-                </span>
-                <p className="text-gray-400 text-xs leading-relaxed">
-                  不動産・インフラを裏付資産としたデジタル証券。<br />
-                  想定利回り3.0〜4.3%/年（過去実績）。提携審査通過後に掲載予定。
-                </p>
-              </div>
-            </div>
+
 
           </div>
         </section>
@@ -210,7 +190,8 @@ export default function AlternativePage() {
             </div>
             <p className="text-gray-500 text-sm leading-relaxed mb-2 pl-1">
               暗号資産は不動産・インフラとは異なり、<strong className="text-red-500">価格変動が非常に大きい高リスク資産</strong>です。
-              資産全体の一部（目安：5〜10%以内）として分散投資を検討する場合の選択肢として紹介します。
+              積立投資を活用するなど、リスクを減らしながら、暗号資産の期待リターンを狙うことも可能です。
+              資産全体の一部（目安：5〜10%以内）として分散投資を検討する場合の選択肢として掲載しております。
             </p>
             <div
               className="flex items-start gap-2 text-xs leading-relaxed mb-8 p-3 rounded-xl"
@@ -258,7 +239,7 @@ export default function AlternativePage() {
                   </div>
                   <div className="col-span-2 bg-offwhite rounded-xl p-3">
                     <p className="text-gray-400 text-xs mb-1">こんな人に</p>
-                    <p className="text-navy font-bold">アクティブ投資家・相場下落時も取引したい方</p>
+                    <p className="text-navy font-bold">値上がりを期待して、伝統的資産（株や債券）との一部分散投資で保有したい方</p>
                   </div>
                 </div>
 
@@ -343,27 +324,7 @@ export default function AlternativePage() {
             </div>
             ============================================================= */}
 
-            {/* 審査中プレースホルダー */}
-            <div
-              className="rounded-3xl overflow-hidden"
-              style={{ border: "2px dashed #CBD5E1", background: "#F8FAFC" }}
-            >
-              <div className="px-8 py-10 text-center">
-                <p className="text-3xl mb-3">₿</p>
-                <p className="text-navy font-bold text-lg mb-1">コインチェック（Coincheck）</p>
-                <p className="text-gray-400 text-sm mb-2">コインチェック株式会社（マネックスグループ傘下）</p>
-                <span
-                  className="inline-block text-xs font-bold px-3 py-1.5 rounded-full mb-4"
-                  style={{ background: "#E5E7EB", color: "#6B7280" }}
-                >
-                  提携審査中・掲載準備中
-                </span>
-                <p className="text-gray-400 text-xs leading-relaxed">
-                  暗号資産現物取引。国内最大級の取扱通貨数。<br />
-                  提携審査通過後に掲載予定。
-                </p>
-              </div>
-            </div>
+
 
           </div>
         </section>

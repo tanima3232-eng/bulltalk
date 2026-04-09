@@ -11,42 +11,18 @@ export const metadata: Metadata = {
 
 const idecoProviders = [
   {
-    id: "rakuten",
-    name: "楽天証券",
-    star: false,
-    mgmtFee: "0円",
-    products: "◎ 32本",
-    points: "○ 楽天P",
-    app: "◎",
-    target: "楽天ユーザー・NISAも楽天の方",
-    ctaUrl: "https://www.rakuten-sec.co.jp/",
-    hidden: false,
-  },
-  {
     id: "matsui",
     name: "松井証券",
-    star: true, // ゴールドハイライト
+    star: true,
     mgmtFee: "0円",
     products: "◎ 40本",
     points: "◎ 最大1%",
     app: "○",
-    target: "コスト重視・ポイント最大化したい方",
+    target: "eMAXIS Slim派・ポイントも貯めたい方",
     ctaUrl: "https://h.accesstrade.net/sp/cc?rk=0100mnux00oqbc",
     pixelUrl: "https://h.accesstrade.net/sp/rr?rk=0100mnux00oqbc",
     hidden: false,
     affiliateRel: true,
-  },
-  {
-    id: "monex",
-    name: "マネックス証券",
-    star: false,
-    mgmtFee: "0円",
-    products: "○ 27本",
-    points: "○ dポイント",
-    app: "◎",
-    target: "dポイントユーザー・証券もマネックスの方",
-    ctaUrl: "https://www.monex.co.jp/",
-    hidden: false,
   },
   {
     id: "sbi",
@@ -61,6 +37,18 @@ const idecoProviders = [
     hidden: false,
   },
   {
+    id: "monex",
+    name: "マネックス証券",
+    star: true,
+    mgmtFee: "0円",
+    products: "○ 27本",
+    points: "○ dポイント",
+    app: "◎",
+    target: "dポイントユーザー・証券もマネックスの方",
+    ctaUrl: "https://www.monex.co.jp/",
+    hidden: false,
+  },
+  {
     id: "mufg",
     name: "三菱UFJeスマート証券",
     star: false,
@@ -71,6 +59,18 @@ const idecoProviders = [
     target: "auユーザー・三菱UFJメインの方",
     ctaUrl: "https://www.bk.mufg.jp/",
     hidden: false,
+  },
+  {
+    id: "rakuten",
+    name: "楽天証券",
+    star: true,
+    mgmtFee: "0円",
+    products: "◎ 32本",
+    points: "○ 楽天P",
+    app: "◎",
+    target: "楽天ユーザー・NISAも楽天の方",
+    ctaUrl: "https://www.rakuten-sec.co.jp/",
+    hidden: true,
   },
 ];
 
@@ -182,10 +182,7 @@ export default function IDeCoPage() {
           <div className="max-w-5xl mx-auto">
             <p className="text-gold text-xs font-bold uppercase tracking-widest text-center mb-2">COMPARISON</p>
             <h2 className="section-title text-center mb-2">iDeCo口座 比較表</h2>
-            <p className="text-gray-400 text-sm text-center mb-8">
-              ※比較表に順位付けなし。「こんな人に」欄で属性別に訴求しています。<br />
-              ※運営管理手数料は各社の税込金額（2026年4月時点）。上記共通手数料171円/月は別途かかります。
-            </p>
+
 
             {/* PC テーブル */}
             <div className="hidden md:block overflow-x-auto rounded-2xl shadow-sm">
@@ -213,17 +210,7 @@ export default function IDeCoPage() {
                       }}
                     >
                       <td className="px-4 py-5">
-                        <div className="flex items-center gap-2">
-                          {p.star && (
-                            <span
-                              className="text-xs font-bold px-2 py-0.5 rounded-full"
-                              style={{ background: "#C9A84C", color: "#1A2E4A" }}
-                            >
-                              推薦
-                            </span>
-                          )}
-                          <span className="font-bold text-navy">{p.name}</span>
-                        </div>
+                        <span className="font-bold text-navy">{p.name}</span>
                       </td>
                       <td className="px-4 py-5 text-center text-navy font-bold">{p.mgmtFee}</td>
                       <td className="px-4 py-5 text-center text-navy">{p.products}</td>
@@ -269,17 +256,7 @@ export default function IDeCoPage() {
                 >
                   <div className="p-5">
                     <div className="flex items-center justify-between mb-3">
-                      <div className="flex items-center gap-2">
-                        {p.star && (
-                          <span
-                            className="text-xs font-bold px-2 py-0.5 rounded-full"
-                            style={{ background: "#C9A84C", color: "#1A2E4A" }}
-                          >
-                            推薦
-                          </span>
-                        )}
-                        <h3 className="font-bold text-navy text-base">{p.name}</h3>
-                      </div>
+                      <h3 className="font-bold text-navy text-base">{p.name}</h3>
                       <span className="text-gold font-bold text-sm">手数料 {p.mgmtFee}</span>
                     </div>
                     <div className="grid grid-cols-3 gap-2 text-xs mb-3">
@@ -318,10 +295,6 @@ export default function IDeCoPage() {
               ))}
             </div>
 
-            <p className="text-xs text-gray-400 text-center mt-6">
-              ※順次掲載金融機関を追加予定。<br />
-              ※「1位」「おすすめ」等の根拠のない順位付けは行っておりません。
-            </p>
           </div>
         </section>
 
