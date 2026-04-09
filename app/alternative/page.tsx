@@ -284,6 +284,7 @@ export default function AlternativePage() {
                   href="https://www.monex.co.jp/"
                   target="_blank"
                   rel="noopener noreferrer"
+                  referrerPolicy="no-referrer"
                   className="block md:hidden w-full text-center py-4 rounded-2xl font-bold text-base transition-all duration-300 hover:-translate-y-0.5 hover:shadow-lg"
                   style={{
                     background: "linear-gradient(135deg,#C9A84C,#E8C96A)",

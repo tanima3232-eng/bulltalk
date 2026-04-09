@@ -278,7 +278,7 @@ export default function IDeCoPage() {
                       href={p.ctaUrl}
                       target={p.affiliateRel ? "_self" : "_blank"}
                       rel={p.affiliateRel ? "nofollow" : "noopener noreferrer"}
-                      referrerPolicy="no-referrer-when-downgrade"
+                      referrerPolicy={p.id === "monex" ? "no-referrer" : "no-referrer-when-downgrade"}
                       className="w-full flex items-center justify-center gap-2 py-3 rounded-xl font-bold text-sm transition-all duration-200 hover:shadow-md"
                       style={{
                         background: p.star ? "linear-gradient(135deg,#C9A84C,#E8C96A)" : "#1A2E4A",

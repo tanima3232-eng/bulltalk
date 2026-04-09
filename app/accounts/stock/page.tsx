@@ -241,6 +241,7 @@ export default function StockAccountPage() {
                       href={broker.id === "monex" ? "https://www.monex.co.jp/" : broker.ctaUrl}
                       target="_blank"
                       rel="noopener noreferrer"
+                      referrerPolicy="no-referrer"
                       className="w-full flex items-center justify-center gap-2 py-3 rounded-xl font-bold text-sm transition-all duration-200 hover:shadow-md"
                       style={{
                         background: broker.star
