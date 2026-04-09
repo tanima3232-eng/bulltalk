@@ -50,7 +50,7 @@ export default function AlternativePage() {
               <span className="text-gold">次の一手を、ここから。</span>
             </h1>
             <p className="text-white/70 text-sm md:text-base leading-relaxed max-w-xl mx-auto">
-              暗号資産・不動産デジタル証券など<br />
+              不動産・インフラ・暗号資産など<br />
               伝統的資産以外への分散投資を学ぶ
             </p>
           </div>
