@@ -297,8 +297,7 @@ export default function SimulationPage() {
               {/* ベネフィット一覧 */}
               <div style={{ display:"inline-flex", flexDirection:"column", gap:"6px", textAlign:"left", marginBottom:"4px" }}>
                 {[
-                  "所要時間：約2〜3分",
-                  "無料・登録不要",
+                  "所要時間：1分程度",
                   "入力内容は外部に送信されません",
                 ].map((txt, i) => (
                   <div key={i} style={{ display:"flex", alignItems:"center", gap:"8px", fontSize:"12px", color:"rgba(244,244,242,0.75)" }}>
