@@ -475,7 +475,7 @@ export default function SimulationPage() {
           )}
 
           {/* Disclaimer */}
-          <div style={{ fontSize:"10px", color:"#9CA3AF", textAlign:"center", padding:"16px 14px 32px", lineHeight:1.7 }}>
+          <div style={{ fontSize:"10px", color:"#9CA3AF", textAlign:"left", padding:"16px 14px 32px", lineHeight:1.7 }}>
             本シミュレーションは概算であり、投資助言を目的とするものではありません。<br />
             掲載している参考リターンは過去実績・長期予測の参考値であり、将来の運用成果を保証するものではありません。<br />
             出典：JPモルガン・アセットマネジメント「長期資本市場予測2025年版」・J-REIT分配金利回り実績等。<br />
