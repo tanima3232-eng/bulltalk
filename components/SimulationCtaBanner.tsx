@@ -25,7 +25,7 @@ export default function SimulationCtaBanner() {
 
         {/* タイトル */}
         <h2 className="text-2xl md:text-3xl font-bold text-white mb-3 leading-snug">
-          <span className="md:hidden">あなたに最適な資産形成方法<br />がわかる！</span>
+          <span className="md:hidden">あなたに最適な<br />資産形成方法がわかる！</span>
           <span className="hidden md:inline">あなたに最適な資産形成方法がわかる！</span>
         </h2>
         <p className="text-sm md:text-base leading-relaxed mb-8"
