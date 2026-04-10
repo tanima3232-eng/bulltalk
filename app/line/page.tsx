@@ -43,7 +43,7 @@ export default function LinePage() {
             {/* 安心バッジ */}
             <div className="flex justify-center items-center gap-1.5 mb-10" style={{flexWrap:"nowrap"}}>
               <span style={{color:"#4ADE80", fontSize:"13px", flexShrink:0}}>＼</span>
-              {["⏱ 所要時間1分", "\u2713 LINE\u8ffd\u52a0\u3059\u308b\u3060\u3051", "\u2713 \u7279\u5178\u3042\u308a"].map((badge) => (
+              {["✓ 完全無料", "\u2713 LINE\u8ffd\u52a0\u3059\u308b\u3060\u3051", "\u2713 \u7279\u5178\u3042\u308a"].map((badge) => (
                 <span
                   key={badge}
                   className="inline-flex items-center font-bold rounded-full"
@@ -103,7 +103,7 @@ export default function LinePage() {
               今すぐBull友になる
             </a>
 
-            <p className="text-white/30 text-xs mt-5">所要時間1分</p>
+            <p className="text-white/30 text-xs mt-5">完全無料</p>
           </div>
         </section>
       </main>
