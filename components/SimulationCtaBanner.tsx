@@ -35,6 +35,22 @@ export default function SimulationCtaBanner() {
         </p>
 
 
+        {/* バッジ */}
+        <div className="flex justify-center flex-wrap gap-2 mb-8">
+          {["✓ 完全無料", "✓ 登録不要", "✓ 1分で完了"].map((badge) => (
+            <span
+              key={badge}
+              className="text-xs font-bold rounded-full px-4 py-1.5"
+              style={{
+                background: "rgba(255,255,255,0.12)",
+                color: "rgba(255,255,255,0.9)",
+                border: "1px solid rgba(255,255,255,0.25)",
+              }}
+            >
+              {badge}
+            </span>
+          ))}
+        </div>
 
         {/* CTAボタン */}
         <Link
@@ -49,10 +65,6 @@ export default function SimulationCtaBanner() {
           シミュレーションを実施する
           <span>→</span>
         </Link>
-
-        <p className="text-xs mt-4" style={{ color: "rgba(255,255,255,0.35)" }}>
-          無料・30秒で完了
-        </p>
       </div>
     </section>
   );
