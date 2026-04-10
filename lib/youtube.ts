@@ -14,6 +14,13 @@ const RSS_URL = `https://www.youtube.com/feeds/videos.xml?channel_id=${CHANNEL_I
 // 新しい動画を上げたら先頭に追加してください。
 const FALLBACK_VIDEOS: YTVideo[] = [
   {
+    id: "rIwi0mzsQJw",
+    title: "4/10 日本株｜停戦継続期待で上昇も、CPI・中東リスクで上値重い",
+    url: "https://www.youtube.com/shorts/rIwi0mzsQJw",
+    thumbnail: "https://i.ytimg.com/vi/rIwi0mzsQJw/hqdefault.jpg",
+    published: "2026-04-10",
+  },
+  {
     id: "9bdegMXCeas",
     title: "4/9 日本株｜本日は様子見、攻めるなら売り📉",
     url: "https://www.youtube.com/shorts/9bdegMXCeas",
