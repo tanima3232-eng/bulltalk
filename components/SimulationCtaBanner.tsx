@@ -28,7 +28,7 @@ export default function SimulationCtaBanner() {
           <span className="md:hidden">あなたに最適な<br />資産形成方法がわかる！</span>
           <span className="hidden md:inline">あなたに最適な資産形成方法がわかる！</span>
         </h2>
-        <p className="text-sm md:text-base leading-relaxed mb-8"
+        <p className="text-xs md:text-base leading-relaxed mb-8"
            style={{ color: "rgba(255,255,255,0.7)" }}>
           <span className="md:hidden">積立シミュレーションから、NISA・iDeCoの優先順位まで。<br />あなたの資産形成に必要な情報が<br />すべてわかります。</span>
           <span className="hidden md:inline">積立シミュレーションから、NISA・iDeCoの優先順位まで。<br />あなたの資産形成に必要な情報がすべてわかります。</span>
