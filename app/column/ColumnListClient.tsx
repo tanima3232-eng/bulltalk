@@ -5,6 +5,7 @@ import Link from "next/link";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import LineCtaBanner from "@/components/LineCtaBanner";
+import SimulationCtaBanner from "@/components/SimulationCtaBanner";
 import type { ColumnMeta } from "@/lib/columns";
 
 const CATEGORIES = [
@@ -111,6 +112,7 @@ export default function ColumnListClient({ columns }: { columns: ColumnMeta[] })
           </div>
         </section>
 
+        <SimulationCtaBanner />
         <LineCtaBanner />
       </main>
       <Footer />

@@ -3,6 +3,7 @@ import { notFound } from "next/navigation";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import LineCtaBanner from "@/components/LineCtaBanner";
+import SimulationCtaBanner from "@/components/SimulationCtaBanner";
 import { getColumnBySlug, getAllColumns } from "@/lib/columns";
 import { MDXRemote } from "next-mdx-remote/rsc";
 import Link from "next/link";
@@ -95,6 +96,8 @@ export default async function ColumnDetailPage({
             </div>
           </div>
         </section>
+
+        <SimulationCtaBanner />
 
         {/* Related Articles */}
         <section className="bg-offwhite py-14 px-4">
