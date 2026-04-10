@@ -34,22 +34,7 @@ export default function SimulationCtaBanner() {
           <span className="hidden md:inline">目標金額・期間・積立額を入力するだけ。<br />元大手信託銀行員が設計した無料シミュレーションをお試しください。</span>
         </p>
 
-        {/* バッジ */}
-        <div className="flex justify-center flex-wrap gap-2 mb-8">
-          {["✓ 完全無料", "✓ 登録不要", "✓ 1分で完了"].map((badge) => (
-            <span
-              key={badge}
-              className="text-xs font-bold rounded-full px-4 py-1.5"
-              style={{
-                background: "rgba(255,255,255,0.12)",
-                color: "rgba(255,255,255,0.9)",
-                border: "1px solid rgba(255,255,255,0.25)",
-              }}
-            >
-              {badge}
-            </span>
-          ))}
-        </div>
+
 
         {/* CTAボタン */}
         <Link
@@ -66,7 +51,7 @@ export default function SimulationCtaBanner() {
         </Link>
 
         <p className="text-xs mt-4" style={{ color: "rgba(255,255,255,0.35)" }}>
-          登録・ログイン不要
+          無料・30秒で完了
         </p>
       </div>
     </section>
