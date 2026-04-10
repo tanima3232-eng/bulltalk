@@ -25,12 +25,13 @@ export default function SimulationCtaBanner() {
 
         {/* タイトル */}
         <h2 className="text-2xl md:text-3xl font-bold text-white mb-3 leading-snug">
-          あなたの最適な資産形成方法がわかる！
+          <span className="md:hidden">あなたに最適な資産形成方法<br />がわかる！</span>
+          <span className="hidden md:inline">あなたに最適な資産形成方法がわかる！</span>
         </h2>
         <p className="text-sm md:text-base leading-relaxed mb-8"
            style={{ color: "rgba(255,255,255,0.7)" }}>
-          目標金額・期間・積立額を入力するだけ。<br />
-          元大手信託銀行員が設計した無料シミュレーションをお試しください。
+          <span className="md:hidden">目標金額・期間・積立額を入力するだけ。<br />元大手信託銀行員が設計した無料シミュレーションを<br />お試しください。</span>
+          <span className="hidden md:inline">目標金額・期間・積立額を入力するだけ。<br />元大手信託銀行員が設計した無料シミュレーションをお試しください。</span>
         </p>
 
         {/* バッジ */}
