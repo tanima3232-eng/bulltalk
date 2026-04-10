@@ -30,8 +30,8 @@ export default function SimulationCtaBanner() {
         </h2>
         <p className="text-sm md:text-base leading-relaxed mb-8"
            style={{ color: "rgba(255,255,255,0.7)" }}>
-          <span className="md:hidden">目標金額・期間・積立額を入力するだけ。<br />元大手信託銀行員が設計した無料シミュレーションを<br />お試しください。</span>
-          <span className="hidden md:inline">目標金額・期間・積立額を入力するだけ。<br />元大手信託銀行員が設計した無料シミュレーションをお試しください。</span>
+          <span className="md:hidden">積立シミュレーションから、NISA・iDeCoの優先順位まで。<br />あなたの資産形成に必要な情報が<br />すべてわかります。</span>
+          <span className="hidden md:inline">積立シミュレーションから、NISA・iDeCoの優先順位まで。<br />あなたの資産形成に必要な情報がすべてわかります。</span>
         </p>
 
 
