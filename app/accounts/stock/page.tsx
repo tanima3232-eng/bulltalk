@@ -105,7 +105,7 @@ export default function StockAccountPage() {
             <p className="text-gold text-xs font-bold uppercase tracking-widest mb-4">SECURITIES ACCOUNT</p>
             <p className="text-white/60 text-sm mb-2">元大手信託銀行員が選ぶ</p>
             <h1 className="font-bold mb-4" style={{ fontSize: "clamp(1.6rem,4.5vw,2.8rem)", lineHeight: 1.2 }}>
-              あなたに合った<br className="md:hidden" /><span className="text-gold">NISA口座</span>・証券口座、<br />
+              あなたに合った<br /><span className="text-gold">NISA口座</span>・証券口座、<br />
               <span className="text-gold">一緒に選びましょう。</span>
             </h1>
             <p className="text-white/70 text-sm md:text-base leading-relaxed max-w-xl mx-auto">
