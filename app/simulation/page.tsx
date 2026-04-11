@@ -194,7 +194,7 @@ export default function SimulationPage() {
               </div>
             </div>
             <div style={{ marginTop:"18px" }}>
-              <div style={S.sliderRow}><span style={S.sliderName}>📈 想定リターン（手動調整も可）</span><span style={S.sliderVal}>{rate}%</span></div>
+              <div style={S.sliderRow}><span style={S.sliderName}>📈 想定リターン</span><span style={S.sliderVal}>{rate}%</span></div>
               <input type="range" min={0} max={30} step={0.5} value={rate} onChange={e=>{ setRate(parseFloat(e.target.value)); setActiveAsset(null); }} style={S.range} />
             </div>
           </div>
