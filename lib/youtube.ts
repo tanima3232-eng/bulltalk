@@ -14,25 +14,25 @@ const RSS_URL = `https://www.youtube.com/feeds/videos.xml?channel_id=${CHANNEL_I
 // 新しい動画を上げたら先頭に追加してください。
 const FALLBACK_VIDEOS: YTVideo[] = [
   {
-    id: "rIwi0mzsQJw",
-    title: "4/10 日本株｜停戦継続期待で上昇も、CPI・中東リスクで上値重い",
-    url: "https://www.youtube.com/shorts/rIwi0mzsQJw",
-    thumbnail: "https://i.ytimg.com/vi/rIwi0mzsQJw/hqdefault.jpg",
-    published: "2026-04-10",
+    id: "AFrqqKEH1rg",
+    title: "4/14 日本株｜停戦期待で楽観継続も、まだリスクは消えていない",
+    url: "https://www.youtube.com/shorts/AFrqqKEH1rg",
+    thumbnail: "https://i.ytimg.com/vi/AFrqqKEH1rg/hqdefault.jpg",
+    published: "2026-04-14",
   },
   {
-    id: "9bdegMXCeas",
-    title: "4/9 日本株｜本日は様子見、攻めるなら売り📉",
-    url: "https://www.youtube.com/shorts/9bdegMXCeas",
-    thumbnail: "https://i.ytimg.com/vi/9bdegMXCeas/hqdefault.jpg",
-    published: "2026-04-09",
+    id: "jetXSiYPCbk",
+    title: "4/13 日本株｜中東緊張再燃、原油上昇で株には逆風",
+    url: "https://www.youtube.com/shorts/jetXSiYPCbk",
+    thumbnail: "https://i.ytimg.com/vi/jetXSiYPCbk/hqdefault.jpg",
+    published: "2026-04-13",
   },
   {
-    id: "OtdkmKTdaIA",
-    title: "4/8 日本株｜中東リスク緩和・原油下落→日本株上昇。上値目安57,000〜58,000円",
-    url: "https://www.youtube.com/shorts/OtdkmKTdaIA",
-    thumbnail: "https://i.ytimg.com/vi/OtdkmKTdaIA/hqdefault.jpg",
-    published: "2026-04-08",
+    id: "rzpZSIHfzDE",
+    title: "富裕層に絶対に聞いてはいけない話",
+    url: "https://www.youtube.com/shorts/rzpZSIHfzDE",
+    thumbnail: "https://i.ytimg.com/vi/rzpZSIHfzDE/hqdefault.jpg",
+    published: "2026-04-11",
   },
 ];
 
