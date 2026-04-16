@@ -279,12 +279,12 @@ export default function AlternativePage() {
                   />
                   公式サイトへ →
                 </a>
-                {/* スマホ用（スマホ専用アフィリエイトリンク取得まで） */}
+                {/* スマホ用 */}
                 <a
-                  href="https://www.monex.co.jp/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  referrerPolicy="no-referrer"
+                  href="https://h.accesstrade.net/sp/cc?rk=0100p7mq00oqbc"
+                  target="_self"
+                  rel="nofollow"
+                  referrerPolicy="no-referrer-when-downgrade"
                   className="block md:hidden w-full text-center py-4 rounded-2xl font-bold text-base transition-all duration-300 hover:-translate-y-0.5 hover:shadow-lg"
                   style={{
                     background: "linear-gradient(135deg,#C9A84C,#E8C96A)",
@@ -292,6 +292,13 @@ export default function AlternativePage() {
                     boxShadow: "0 4px 20px rgba(201,168,76,0.35)",
                   }}
                 >
+                  <img
+                    src="https://h.accesstrade.net/sp/rr?rk=0100p7mq00oqbc"
+                    alt=""
+                    style={{ display: "none" }}
+                    width={1}
+                    height={1}
+                  />
                   公式サイトへ →
                 </a>
                 {/* PC推奨通知 */}
