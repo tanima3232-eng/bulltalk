@@ -125,6 +125,13 @@ export default function Header() {
             </Link>
           ))}
           <Link
+            href="/about"
+            className="block px-6 py-4 text-white hover:bg-white/10 transition-colors border-b border-white/5"
+            onClick={() => setMenuOpen(false)}
+          >
+            経歴
+          </Link>
+          <Link
             href="/line"
             className="flex items-center gap-2 px-6 py-4 text-gold font-bold hover:bg-white/10 transition-colors border-b border-white/5"
             onClick={() => setMenuOpen(false)}
