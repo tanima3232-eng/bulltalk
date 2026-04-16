@@ -14,6 +14,13 @@ const RSS_URL = `https://www.youtube.com/feeds/videos.xml?channel_id=${CHANNEL_I
 // 新しい動画を上げたら先頭に追加してください。
 const FALLBACK_VIDEOS: YTVideo[] = [
   {
+    id: "g-0sOZb_f90",
+    title: "4/16 日本株",
+    url: "https://www.youtube.com/shorts/g-0sOZb_f90",
+    thumbnail: "https://i.ytimg.com/vi/g-0sOZb_f90/hqdefault.jpg",
+    published: "2026-04-16",
+  },
+  {
     id: "n2sTAADLUWA",
     title: "4/15 日本株｜停戦期待で700円超の上げも、上値は追いにくい局面",
     url: "https://www.youtube.com/shorts/n2sTAADLUWA",
