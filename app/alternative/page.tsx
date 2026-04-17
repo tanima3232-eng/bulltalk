@@ -307,7 +307,7 @@ export default function AlternativePage() {
                   style={{ background: "#F8F9FA", border: "1px solid #E5E7EB" }}
                 >
                   <span className="text-base flex-shrink-0">📱</span>
-                  <p className="text-xs text-gray-500 leading-relaxed">
+                  <p className="text-[11px] md:text-xs text-gray-500 leading-relaxed">
                     スマートフォンでアクセスの際、環境によっては一時的にエラーが表示される場合があります。その際はChromeまたはSafariの通常モードからお試しいただくか、PCからのアクセスをお試しください。
                   </p>
                 </div>
