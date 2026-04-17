@@ -301,10 +301,15 @@ export default function AlternativePage() {
                   />
                   公式サイトへ →
                 </a>
-                {/* PC推奨通知 */}
-                <div className="flex items-center justify-center gap-1.5 mt-3 px-3 py-2 rounded-xl" style={{ background: "rgba(201,168,76,0.08)", border: "1px solid rgba(201,168,76,0.3)" }}>
-                  <span style={{ fontSize: "13px" }}>🖥</span>
-                  <p className="text-xs font-bold text-center" style={{ color: "#C9A84C" }}>マネックス証券の登録・確認はパソコンからのみ可能</p>
+                {/* スマホ環境注意 */}
+                <div
+                  className="flex items-start gap-3 mt-4 rounded-2xl px-4 py-3"
+                  style={{ background: "#F8F9FA", border: "1px solid #E5E7EB" }}
+                >
+                  <span className="text-base flex-shrink-0">📱</span>
+                  <p className="text-xs text-gray-500 leading-relaxed">
+                    スマートフォンでアクセスの際、環境によっては一時的にエラーが表示される場合があります。その際はChromeまたはSafariの通常モードからお試しいただくか、PCからのアクセスをお試しください。
+                  </p>
                 </div>
               </div>
             </div>
