@@ -52,7 +52,7 @@ function getAdvice(rate: number): string {
   if (rate <= 4) return "📌 NISAで非課税運用がおすすめです。NISAを使えば、運用益が全額非課税になります。口座開設は無料・最短即日。";
   if (rate <= 6) return "📌 NISAとiDeCoの併用で節税効果を最大化。iDeCoは掛金が所得控除になるため、さらにお得に老後資金を積立できます。";
   if (rate <= 15) return "📌 積極運用の水準です。リスク管理も大切に。分散投資でリスクを低減しながら運用することが一般的です。";
-  return "📌 ビットコインは超高リスク・超高リターンの資産です。資産全体の5〜10%以内での分散投資が一般的とされています。";
+  return "📌 積極運用の水準です。リスク管理も大切に。分散投資でリスクを低減しながら運用することが一般的です。";
 }
 
 interface Checks { nisa:boolean; dc:boolean; matching:boolean; ideco:boolean; kabu:boolean; hoken:boolean; loan3:boolean; alt:boolean; }
@@ -291,7 +291,7 @@ export default function SimulationPage() {
               </h2>
               <p style={{ fontSize:"12px", color:"rgba(244,244,242,0.65)", lineHeight:1.8, marginBottom:"18px" }}>
                 NISA・iDeCo・保険・持株会など<br />
-                あなたの状況に合った優先順位をAIが診断します。
+                あなたの状況に合った優先順位を診断します。
               </p>
 
               {/* ベネフィット一覧 */}
