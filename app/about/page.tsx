@@ -34,7 +34,7 @@ const career = [
   {
     period: "2026年〜",
     area: "情報発信",
-    detail: "Bulltalkとして日経225分析・金融教育コンテンツを発信。LINE・サイトを通じ情報発信・相談受付開始。",
+    detail: "Bulltalkとして日経225分析・金融市場分析・金融教育コンテンツを発信。LINE・サイトを通じ情報発信・相談受付開始。",
   },
 ];
 
@@ -129,7 +129,7 @@ export default function AboutPage() {
                     { label: "FP資格", value: "ファイナンシャルプランナー1級（FP1級）" },
                     { label: "証券資格", value: "証券アナリスト（CMA）" },
                     { label: "不動産資格", value: "宅地建物取引士" },
-                    { label: "発信内容", value: "日経225分析・相続・資産運用・不動産" },
+                    { label: "発信内容", value: "日経225分析・金融市場分析・相続・資産運用・不動産" },
                   ].map((row) => (
                     <tr key={row.label} className="border-b border-gray-100">
                       <td className="py-4 pr-6 text-navy font-bold text-sm w-28 whitespace-nowrap align-top">{row.label}</td>
@@ -207,7 +207,7 @@ export default function AboutPage() {
                 こうした知識は、どなたにとっても役に立つものばかりです。
                 正しく、わかりやすく伝えれば、誰でも理解できる。
                 信託銀行で培ってきた経験を、もっと多くの人の役に立てたい。
-                それが独立を決めた理由です。
+                それが情報発信を始めた理由です。
               </p>
 
               <blockquote className="blockquote-style">
