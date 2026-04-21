@@ -177,8 +177,8 @@ export default function StockAccountPage() {
                       <td className="px-4 py-5 text-center">
                         <a
                           href={broker.ctaUrl}
-                          target={broker.affiliateRel ? "_self" : "_blank"}
-                          rel={broker.affiliateRel ? "nofollow" : "noopener noreferrer"}
+                          target="_blank"
+                          rel="noopener noreferrer"
                           referrerPolicy="no-referrer-when-downgrade"
                           className="inline-flex items-center justify-center px-4 py-2 rounded-lg font-bold text-xs transition-all duration-200 hover:-translate-y-0.5 hover:shadow-md"
                           style={{
@@ -188,9 +188,6 @@ export default function StockAccountPage() {
                             color: broker.star ? "#1A2E4A" : "#FFFFFF",
                           }}
                         >
-                          {broker.affiliateRel && broker.pixelUrl && (
-                            <img src={broker.pixelUrl} alt="" style={{ display: "none" }} width={1} height={1} />
-                          )}
                           公式サイトへ →
                         </a>
 
@@ -235,8 +232,8 @@ export default function StockAccountPage() {
                     <p className="text-xs text-gray-500 mb-4 leading-relaxed">{broker.point}</p>
                     <a
                       href={broker.id === "monex" ? broker.mobileUrl! : broker.ctaUrl}
-                      target={broker.affiliateRel ? "_self" : "_blank"}
-                      rel={broker.affiliateRel ? "nofollow" : "noopener noreferrer"}
+                      target="_blank"
+                      rel="noopener noreferrer"
                       referrerPolicy="no-referrer-when-downgrade"
                       className="w-full flex items-center justify-center gap-2 py-3 rounded-xl font-bold text-sm transition-all duration-200 hover:shadow-md"
                       style={{
