@@ -32,11 +32,9 @@ const brokers = [
     app: "◎ 便利",
     target: "dポイント・クレカ積立派",
     point: "NISA手数料0円！dポイントが貯まる",
-    ctaUrl: "https://h.accesstrade.net/sp/cc?rk=010072vk00oqbc",
-    mobileUrl: "https://h.accesstrade.net/sp/cc?rk=010072vk00oqbc",
-    pixelUrl: "https://h.accesstrade.net/sp/rr?rk=010072vk00oqbc",
+    ctaUrl: "https://www.monex.co.jp/",
+    mobileUrl: "https://www.monex.co.jp/",
     hidden: false,
-    affiliateRel: true,
   },
   {
     id: "sbi",
@@ -83,10 +81,7 @@ export default function StockAccountPage() {
     <>
       <Header />
       <main>
-        {/* PR表示 */}
-        <div className="bg-gray-50 border-b border-gray-200 px-4 py-2 text-center">
-          <p className="text-xs text-gray-400">本ページにはアフィリエイト広告（PR）が含まれています。<br className="sm:hidden" />2026年4月時点の情報に基づきます。</p>
-        </div>
+
 
         {/* Hero */}
         <section
@@ -322,11 +317,9 @@ export default function StockAccountPage() {
         {/* 免責 */}
         <section className="bg-gray-50 py-8 px-4 border-t border-gray-200">
           <div className="max-w-3xl mx-auto space-y-2">
-            <p className="text-xs text-gray-400">※マネックス証券の手数料0円はNISA口座での国内株・投資信託取引を指します（一部商品除く）。</p>
             <p className="text-xs text-gray-400">※手数料は条件により異なる場合があります。詳細は公式サイトをご確認ください。</p>
             <p className="text-xs text-gray-400">※NISAの運用成果は保証されません。</p>
             <p className="text-xs text-gray-400">※投資にはリスクが伴い、元本を割り込む可能性があります。</p>
-            <p className="text-xs text-gray-400">※本ページにはアフィリエイト広告（PR）が含まれています。</p>
             <p className="text-xs text-gray-400">※本ページは情報提供を目的としており、投資助言ではありません。</p>
             <p className="text-xs text-gray-400">※投資は自己責任でお願いします。</p>
             <p className="text-xs text-gray-400">※2026年4月時点の情報に基づきます。</p>
