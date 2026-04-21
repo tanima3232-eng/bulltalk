@@ -19,10 +19,8 @@ const idecoProviders = [
     points: "◎ 最大1%",
     app: "○",
     target: "コスト重視・商品多数・ポイントも貯めたい方",
-    ctaUrl: "https://h.accesstrade.net/sp/cc?rk=0100mnux00oqbc",
-    pixelUrl: "https://h.accesstrade.net/sp/rr?rk=0100mnux00oqbc",
+    ctaUrl: "https://www.matsui.co.jp/",
     hidden: false,
-    affiliateRel: true,
   },
   {
     id: "sbi",
@@ -354,11 +352,9 @@ export default function IDeCoPage() {
         {/* 免責 */}
         <section className="bg-gray-50 py-8 px-4 border-t border-gray-200">
           <div className="max-w-3xl mx-auto space-y-2">
-            <p className="text-xs text-gray-400">※iDeCoの掛金は原則60歳まで引き出せません。</p>
             <p className="text-xs text-gray-400">※国民年金基金連合会・信託銀行への手数料（計171円/月）は全社共通でかかります。</p>
             <p className="text-xs text-gray-400">※運用成果は保証されません。将来の受取額は運用結果により異なります。</p>
             <p className="text-xs text-gray-400">※加入資格・掛金上限は職業・加入状況により異なります。詳細は公式サイトをご確認ください。</p>
-            <p className="text-xs text-gray-400">※本ページにはアフィリエイト広告（PR）が含まれています。</p>
             <p className="text-xs text-gray-400">※本ページは情報提供を目的としており、投資助言ではありません。</p>
             <p className="text-xs text-gray-400">※投資は自己責任でお願いします。</p>
             <p className="text-xs text-gray-400">※2026年4月時点の情報に基づきます。制度改正等により内容が変更される場合があります。最新情報は各社公式サイトおよび国民年金基金連合会でご確認ください。</p>

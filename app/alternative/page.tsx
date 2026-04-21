@@ -195,12 +195,14 @@ export default function AlternativePage() {
               <span className="text-gray-500">暗号資産は法定通貨と異なり、価格変動リスクが非常に高い資産です。余裕資金の範囲内で、リスクを十分理解した上で投資してください。</span>
             </div>
 
-            {/* マネックスビットコイン カード */}
+            {/* マネックスビットコイン カード（アフィリエイト保留中・非表示） */}
+            {/*
+            ========== アフィリエイト復活時に下記コメントを解除 ==========
             <div
               className="rounded-3xl overflow-hidden shadow-lg mb-6"
               style={{ border: "2px solid #C9A84C" }}
             >
-              {/* カードヘッダー */}
+              カードヘッダー
               <div
                 className="px-8 py-6"
                 style={{ background: "linear-gradient(135deg,#1A2E4A,#2A4A7F)" }}
@@ -211,103 +213,11 @@ export default function AlternativePage() {
                     <h3 className="text-white font-bold text-xl">マネックスビットコイン</h3>
                     <p className="text-white/50 text-xs mt-1">提供：マネックス証券株式会社</p>
                   </div>
-
                 </div>
               </div>
-
-              {/* カード本文 */}
-              <div className="bg-white px-8 py-6">
-                <div className="grid grid-cols-2 gap-4 mb-6 text-sm">
-                  <div className="bg-offwhite rounded-xl p-3">
-                    <p className="text-gray-400 text-xs mb-1">種類</p>
-                    <p className="text-navy font-bold">暗号資産CFD（差金決済取引）</p>
-                  </div>
-                  <div className="bg-offwhite rounded-xl p-3">
-                    <p className="text-gray-400 text-xs mb-1">リスク</p>
-                    <p className="font-bold text-orange-500">高（レバレッジ最大2倍）</p>
-                  </div>
-                  <div className="col-span-2 bg-offwhite rounded-xl p-3">
-                    <p className="text-gray-400 text-xs mb-1">こんな人に</p>
-                    <p className="text-navy font-bold">値上がりを期待して、伝統的資産（株や債券）との一部分散投資で保有したい方</p>
-                  </div>
-                </div>
-
-                {/* 必須注意表示 */}
-                <div className="space-y-2 mb-6">
-                  {[
-                    "マネックスビットコインはビットコイン現物取引ではなく、暗号資産CFD（差金決済取引）です。",
-                    "レバレッジ最大2倍をかけた取引であり、投資元本を超える損失が生じる可能性があります。",
-                    "スマートフォンアプリ専用のサービスです。PCからの取引には対応していません。",
-                    "暗号資産は法定通貨と異なり、価格変動リスクが非常に高い資産です。",
-                  ].map((text, i) => (
-                    <div
-                      key={i}
-                      className="flex items-start gap-2 text-xs leading-relaxed"
-                      style={{ color: "#6B7280" }}
-                    >
-                      <span className="flex-shrink-0 text-gray-400">※</span>
-                      <span>{text}</span>
-                    </div>
-                  ))}
-                </div>
-
-                {/* CTAボタン（PC：アフィリエイトURL / スマホ：monex.co.jp） */}
-                {/* PC用 */}
-                <a
-                  href="https://h.accesstrade.net/sp/cc?rk=0100p7mq00oqbc"
-                  target="_self"
-                  rel="nofollow"
-                  referrerPolicy="no-referrer-when-downgrade"
-                  className="hidden md:block w-full text-center py-4 rounded-2xl font-bold text-base transition-all duration-300 hover:-translate-y-0.5 hover:shadow-lg"
-                  style={{
-                    background: "linear-gradient(135deg,#C9A84C,#E8C96A)",
-                    color: "#1A2E4A",
-                    boxShadow: "0 4px 20px rgba(201,168,76,0.35)",
-                  }}
-                >
-                  <img
-                    src="https://h.accesstrade.net/sp/rr?rk=0100p7mq00oqbc"
-                    alt=""
-                    style={{ display: "none" }}
-                    width={1}
-                    height={1}
-                  />
-                  公式サイトへ →
-                </a>
-                {/* スマホ用 */}
-                <a
-                  href="https://h.accesstrade.net/sp/cc?rk=0100p7mq00oqbc"
-                  target="_self"
-                  rel="nofollow"
-                  referrerPolicy="no-referrer-when-downgrade"
-                  className="block md:hidden w-full text-center py-4 rounded-2xl font-bold text-base transition-all duration-300 hover:-translate-y-0.5 hover:shadow-lg"
-                  style={{
-                    background: "linear-gradient(135deg,#C9A84C,#E8C96A)",
-                    color: "#1A2E4A",
-                    boxShadow: "0 4px 20px rgba(201,168,76,0.35)",
-                  }}
-                >
-                  <img
-                    src="https://h.accesstrade.net/sp/rr?rk=0100p7mq00oqbc"
-                    alt=""
-                    style={{ display: "none" }}
-                    width={1}
-                    height={1}
-                  />
-                  公式サイトへ →
-                </a>
-                {/* スマホ環境注意 */}
-                <div
-                  className="flex items-start gap-3 mt-4 rounded-2xl px-4 py-3"
-                  style={{ background: "#F8F9FA", border: "1px solid #E5E7EB" }}
-                >
-                  <span className="text-base flex-shrink-0">📱</span>
-                  <p className="text-[11px] md:text-xs text-gray-500 leading-relaxed">
-                    スマートフォンでアクセスの際、環境によっては一時的にエラーが表示される場合があります。その際はChromeまたはSafariの通常モードからお試しいただくか、PCからのアクセスをお試しください。
-                  </p>
-                </div>
-              </div>
+              カード本文省略
             </div>
+            ============================================================= */}
 
             {/* コインチェック カード（審査中・非表示） */}
             {/*
@@ -381,15 +291,10 @@ export default function AlternativePage() {
         {/* 免責 */}
         <section className="bg-gray-50 py-8 px-4 border-t border-gray-200">
           <div className="max-w-3xl mx-auto space-y-2">
-            <p className="text-xs text-gray-400">※マネックスビットコインはビットコイン現物取引ではなく、暗号資産CFD（差金決済取引）です。</p>
-            <p className="text-xs text-gray-400">※レバレッジ最大2倍をかけた取引であり、投資元本を超える損失が生じる可能性があります。</p>
-            <p className="text-xs text-gray-400">※スマートフォンアプリ専用のサービスです。PCからの取引には対応していません。</p>
             <p className="text-xs text-gray-400">※暗号資産は法定通貨と異なり、価格変動リスクが非常に高い資産です。</p>
-            <p className="text-xs text-gray-400">※本ページにはアフィリエイト広告（PR）が含まれています。</p>
             <p className="text-xs text-gray-400">※本ページは情報提供を目的としており、投資助言ではありません。</p>
             <p className="text-xs text-gray-400">※投資は自己責任でお願いします。</p>
             <p className="text-xs text-gray-400">※2026年4月時点の情報に基づきます。制度・サービス内容は変更される可能性があります。</p>
-
           </div>
         </section>
       </main>
