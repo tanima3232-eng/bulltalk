@@ -38,12 +38,12 @@ const S: Record<string, React.CSSProperties> = {
 };
 
 const assets = [
-  { rate: 1.4, name: "🏛️ 日本国債",            rateLabel: "利回り 約1.4%",       note: "長期予測（JPモルガンAM 2026年版）" },
-  { rate: 3.5, name: "🥇 金（ゴールド）",        rateLabel: "期待リターン 約3〜4%", note: "長期予測（JPモルガンAM 2026年版）" },
-  { rate: 4,   name: "🏢 J-REIT",               rateLabel: "利回り 約4%",         note: "分配金利回り実績（2024年末）" },
-  { rate: 5.2, name: "🌐 世界株式（オルカン）",  rateLabel: "期待リターン 約5.2%", note: "長期予測（JPモルガンAM 2026年版）" },
+  { rate: 2.1, name: "🏛️ 日本国債",            rateLabel: "利回り 約2.1%",       note: "円ベース・長期予測（JPモルガンAM 2026年版）" },
+  { rate: 4,   name: "🏢 J-REIT",               rateLabel: "利回り 約4%",         note: "円ベース・分配金利回り実績（2024年末）" },
+  { rate: 5.5, name: "🥇 金（ゴールド）",        rateLabel: "期待リターン 約5.5%", note: "米ドルベース・長期予測（JPモルガンAM 2026年版）" },
   { rate: 6.7, name: "🇺🇸 米国大型株（S&P500）", rateLabel: "期待リターン 約6.7%", note: "米ドルベース・長期予測（JPモルガンAM 2026年版）" },
-  { rate: 7.1, name: "🇯🇵 日本株",              rateLabel: "期待リターン 約7.1%", note: "長期予測（JPモルガンAM 2026年版）" },
+  { rate: 7,   name: "🌐 世界株式（オルカン）",  rateLabel: "期待リターン 約7.0%", note: "米ドルベース・長期予測（JPモルガンAM 2026年版）" },
+  { rate: 7.1, name: "🇯🇵 日本株",              rateLabel: "期待リターン 約7.1%", note: "円ベース・長期予測（JPモルガンAM 2026年版）" },
 ];
 
 function getAdvice(rate: number): string {
