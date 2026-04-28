@@ -38,12 +38,12 @@ const S: Record<string, React.CSSProperties> = {
 };
 
 const assets = [
-  { rate: 1.4, name: "🇯🇵 日本国債", rateLabel: "利回り 約1.4%", note: "長期予測（JPモルガンAM）" },
-  { rate: 4,   name: "🏢 J-REIT",   rateLabel: "利回り 約4%",   note: "分配金利回り実績（2024年末）" },
-  { rate: 7.1, name: "🇯🇵 日本株",  rateLabel: "期待リターン 約7.1%", note: "長期予測（JPモルガンAM）" },
-  { rate: 5.1, name: "🌍 先進国株", rateLabel: "期待リターン 約5.1%", note: "長期予測（JPモルガンAM）" },
-  { rate: 5.2, name: "🌐 世界株式", rateLabel: "期待リターン 約5.2%", note: "長期予測（JPモルガンAM）" },
-  { rate: 30,  name: "₿ ビットコイン", rateLabel: "過去平均 約30%〜", note: "高リスク・変動大（分散で一部検討）" },
+  { rate: 1.4, name: "🏛️ 日本国債",            rateLabel: "利回り 約1.4%",       note: "長期予測（JPモルガンAM 2026年版）" },
+  { rate: 3.5, name: "🥇 金（ゴールド）",        rateLabel: "期待リターン 約3〜4%", note: "長期予測（JPモルガンAM 2026年版）" },
+  { rate: 4,   name: "🏢 J-REIT",               rateLabel: "利回り 約4%",         note: "分配金利回り実績（2024年末）" },
+  { rate: 5.2, name: "🌐 世界株式（オルカン）",  rateLabel: "期待リターン 約5.2%", note: "長期予測（JPモルガンAM 2026年版）" },
+  { rate: 6.7, name: "🇺🇸 米国大型株（S&P500）", rateLabel: "期待リターン 約6.7%", note: "米ドルベース・長期予測（JPモルガンAM 2026年版）" },
+  { rate: 7.1, name: "🇯🇵 日本株",              rateLabel: "期待リターン 約7.1%", note: "長期予測（JPモルガンAM 2026年版）" },
 ];
 
 function getAdvice(rate: number): string {
@@ -182,7 +182,7 @@ export default function SimulationPage() {
             ))}
             <div>
               <p style={{ fontSize:"12px", fontWeight:700, color:"#6B7280", marginBottom:"6px" }}>📊 資産クラス別の参考リターンから選ぶ（任意）</p>
-              <p style={{ fontSize:"10px", color:"#9CA3AF", marginBottom:"10px", lineHeight:1.5 }}>※過去実績・長期予測の参考値です。将来の運用成果を保証するものではありません。<br />出典：JPモルガンAM 長期資本市場予測2025年版・各種公開データ</p>
+              <p style={{ fontSize:"10px", color:"#9CA3AF", marginBottom:"10px", lineHeight:1.5 }}>※過去実績・長期予測の参考値です。将来の運用成果を保証するものではありません。<br />出典：JPモルガンAM 長期資本市場予測2026年版・各種公開データ</p>
               <div style={{ display:"grid", gridTemplateColumns:"1fr 1fr", gap:"8px" }}>
                 {assets.map((a,i) => (
                   <button key={i} onClick={()=>{ setRate(a.rate); setActiveAsset(i); }} style={{ border:activeAsset===i?"1.5px solid #C9A84C":"1.5px solid #E8EEF4", borderRadius:"10px", padding:"10px 8px", background:activeAsset===i?"#FDF8EE":"#fff", cursor:"pointer", textAlign:"left", transition:"all 0.15s" }}>
@@ -478,7 +478,7 @@ export default function SimulationPage() {
           <div style={{ fontSize:"10px", color:"#9CA3AF", textAlign:"left", padding:"16px 14px 32px", lineHeight:1.7 }}>
             本シミュレーションは概算であり、投資助言を目的とするものではありません。<br />
             掲載している参考リターンは過去実績・長期予測の参考値であり、将来の運用成果を保証するものではありません。<br />
-            出典：JPモルガン・アセットマネジメント「長期資本市場予測2025年版」・J-REIT分配金利回り実績等。<br />
+            出典：JPモルガン・アセットマネジメント「長期資本市場予測2026年版」・J-REIT分配金利回り実績等。<br />
             投資は自己責任でお願いします。2026年4月時点の情報に基づきます。
           </div>
 
