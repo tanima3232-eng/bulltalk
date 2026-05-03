@@ -14,6 +14,27 @@ const RSS_URL = `https://www.youtube.com/feeds/videos.xml?channel_id=${CHANNEL_I
 // 新しい動画を上げたら先頭に追加してください。
 const FALLBACK_VIDEOS: YTVideo[] = [
   {
+    id: "4T1HnpFA6Fk",
+    title: "AIバブルの真の勝者",
+    url: "https://www.youtube.com/shorts/4T1HnpFA6Fk",
+    thumbnail: "https://i.ytimg.com/vi/4T1HnpFA6Fk/hqdefault.jpg",
+    published: "2026-05-03",
+  },
+  {
+    id: "2NQAhWq8B18",
+    title: "5/1 日本株",
+    url: "https://www.youtube.com/shorts/2NQAhWq8B18",
+    thumbnail: "https://i.ytimg.com/vi/2NQAhWq8B18/hqdefault.jpg",
+    published: "2026-05-01",
+  },
+  {
+    id: "QeBlOsxhqbw",
+    title: "4/30 日本株",
+    url: "https://www.youtube.com/shorts/QeBlOsxhqbw",
+    thumbnail: "https://i.ytimg.com/vi/QeBlOsxhqbw/hqdefault.jpg",
+    published: "2026-04-30",
+  },
+  {
     id: "g-0sOZb_f90",
     title: "4/16 日本株",
     url: "https://www.youtube.com/shorts/g-0sOZb_f90",
