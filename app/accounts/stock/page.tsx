@@ -27,7 +27,7 @@ const brokers = [
     id: "monex",
     name: "マネックス証券",
     star: true, // ゴールドハイライト
-    fee: "0円※",
+    fee: "0円",
     products: "◎ 豊富",
     app: "◎ 便利",
     target: "dポイント・クレカ積立派",
