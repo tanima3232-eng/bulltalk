@@ -87,7 +87,7 @@ const brokers = [
   {
     id: "hifumi",
     name: "ひふみ投信",
-    star: true,
+    star: false,
     fee: "0円",
     products: "○ 厳選",
     app: "○ 普通",
@@ -210,7 +210,7 @@ export default function StockAccountPage() {
                           target="_blank"
                           rel="noopener noreferrer"
                           referrerPolicy="no-referrer-when-downgrade"
-                          className="inline-flex items-center justify-center px-4 py-2 rounded-lg font-bold text-xs transition-all duration-200 hover:-translate-y-0.5 hover:shadow-md"
+                          className="inline-flex items-center justify-center px-4 py-2 rounded-lg font-bold text-xs whitespace-nowrap transition-all duration-200 hover:-translate-y-0.5 hover:shadow-md"
                           style={{
                             background: broker.star
                               ? "linear-gradient(135deg,#C9A84C,#E8C96A)"
