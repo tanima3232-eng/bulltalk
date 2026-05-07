@@ -72,6 +72,18 @@ const brokers = [
     ctaUrl: "https://www.bk.mufg.jp/",
     hidden: false,
   },
+  {
+    id: "iwaicosmo",
+    name: "岩井コスモ証券",
+    star: true,
+    fee: "0円",
+    products: "○ 多い",
+    app: "○ 普通",
+    target: "アクティブトレーダー・株式投資家",
+    point: "マンスリーコースで1取引220円〜！米国株リアルタイムトレード対応。かんたん入力10分で口座開設完了",
+    ctaUrl: "https://www.iwaicosmo.net/",
+    hidden: false,
+  },
 ];
 
 const visibleBrokers = brokers.filter((b) => !b.hidden);
