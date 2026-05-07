@@ -169,9 +169,9 @@ export default function StockAccountPage() {
                 <thead>
                   <tr style={{ background: "#1A2E4A", color: "#FFFFFF" }}>
                     <th className="px-4 py-4 text-left font-bold">証券会社</th>
-                    <th className="px-4 py-4 text-center font-bold">手数料</th>
-                    <th className="px-4 py-4 text-center font-bold">商品数</th>
-                    <th className="px-4 py-4 text-center font-bold">アプリ</th>
+                    <th className="px-4 py-4 text-center font-bold whitespace-nowrap">手数料</th>
+                    <th className="px-4 py-4 text-center font-bold whitespace-nowrap">商品数</th>
+                    <th className="px-4 py-4 text-center font-bold whitespace-nowrap">アプリ</th>
                     <th className="px-4 py-4 text-center font-bold">こんな人に</th>
                     <th className="px-4 py-4 text-center font-bold">おすすめポイント</th>
                     <th className="px-4 py-4 text-center font-bold">詳細</th>
@@ -193,10 +193,16 @@ export default function StockAccountPage() {
                           <span className="font-bold text-navy">{broker.name}</span>
                         </div>
                       </td>
-                      <td className="px-4 py-5 text-center text-navy">{broker.fee}</td>
-                      <td className="px-4 py-5 text-center text-navy">{broker.products}</td>
-                      <td className="px-4 py-5 text-center text-navy">{broker.app}</td>
-                      <td className="px-4 py-5 text-center text-navy text-xs">{broker.target}</td>
+                      <td className="px-4 py-5 text-center text-navy whitespace-nowrap">{broker.fee}</td>
+                      <td className="px-4 py-5 text-center text-navy whitespace-nowrap">{broker.products}</td>
+                      <td className="px-4 py-5 text-center text-navy whitespace-nowrap">{broker.app}</td>
+                      <td className="px-4 py-5 text-center text-navy text-xs">
+                        {broker.id === "mufg" ? (
+                          <>auユーザー・<br />三菱UFJ銀行利用者</>
+                        ) : (
+                          <span className="whitespace-nowrap">{broker.target}</span>
+                        )}
+                      </td>
                       <td className="px-4 py-5 text-navy text-xs leading-relaxed">{broker.point}</td>
                       <td className="px-4 py-5 text-center">
                         <a
