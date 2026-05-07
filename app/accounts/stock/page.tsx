@@ -188,7 +188,7 @@ export default function StockAccountPage() {
                         borderBottom: "1px solid #F3F4F6",
                       }}
                     >
-                      <td className="px-4 py-5">
+                      <td className="px-4 py-5 whitespace-nowrap">
                         <div className="flex items-center gap-2">
                           <span className="font-bold text-navy">{broker.name}</span>
                         </div>
