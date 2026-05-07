@@ -91,7 +91,7 @@ const brokers = [
     fee: "0円",
     products: "○ 厳選",
     app: "○ 普通",
-    target: "長期積立派・日本株応援したい人",
+    target: "長期積立派・日本株を応援したい人",
     point: "藤野英人氏率いるカリスマ直販投信。5年超保有で信託報酬還元（最大0.4%）。市場変化に応じた柔軟な運用が特徴",
     ctaUrl: "https://www.rheos.jp/",
     hidden: false,
