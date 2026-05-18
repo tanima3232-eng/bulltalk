@@ -160,7 +160,7 @@ export default function SimulationPage() {
         {/* Hero */}
         <section style={{ background:"#1A2E4A", color:"#F4F4F2", textAlign:"center", padding:"48px 24px 40px" }}>
           <p style={{ color:"#C9A84C", fontSize:"12px", letterSpacing:"2px", marginBottom:"10px" }}>FREE SIMULATOR</p>
-          <h1 style={{ fontSize:"clamp(1.4rem,5vw,1.8rem)", fontWeight:800, lineHeight:1.4, marginBottom:"12px" }}>毎月いくら積み立てると<br />将来どうなる？</h1>
+          <h1 style={{ fontSize:"clamp(1.4rem,5vw,1.8rem)", fontWeight:800, lineHeight:1.4, marginBottom:"12px" }}>毎月いくら積み立てると<br />将来どのくらいになる？</h1>
           <p style={{ fontSize:"13px", opacity:0.8, lineHeight:1.7 }}>積立額、積立期間、想定リターンを選ぶだけ。<br />あなたの将来の資産設計イメージがわかります。</p>
         </section>
 
