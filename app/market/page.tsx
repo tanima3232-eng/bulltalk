@@ -218,6 +218,21 @@ export default async function MarketPage() {
                 分析動画をもっと見る →
               </a>
             </div>
+
+            {/* 動画セクション下部：口座開設CTA */}
+            <div className="text-center mt-10 pt-8 border-t border-gray-100">
+              <a
+                href="/accounts/stock"
+                className="inline-flex items-center gap-2 font-bold text-base px-10 py-4 rounded-xl transition-all duration-300 shadow-md hover:shadow-lg hover:-translate-y-0.5"
+                style={{
+                  background: "linear-gradient(135deg, #C9A84C 0%, #E8C96A 50%, #C9A84C 100%)",
+                  color: "#1A2E4A",
+                }}
+              >
+                まずは口座を開設する
+              </a>
+              <p className="text-xs text-gray-500 mt-3">※投資信託や株式への投資には証券会社での口座開設が必要となります（無料）。</p>
+            </div>
           </div>
         </section>
 
@@ -693,27 +708,39 @@ export default async function MarketPage() {
             </div>
 
             {/* NISA口座開設CTAボタン */}
-            <div className="mt-2 mb-8">
+            <div className="mt-2 mb-4">
               <a
-                href="#nisa-broker-comparison"
-                className="inline-flex items-center gap-2 font-bold text-base px-8 py-4 rounded-xl transition-all duration-300 shadow-md hover:shadow-lg hover:-translate-y-0.5"
+                href="/accounts/stock"
+                className="inline-flex items-center justify-center gap-2 font-bold text-base rounded-xl transition-all duration-300 shadow-md hover:shadow-lg hover:-translate-y-0.5"
                 style={{
                   background: "linear-gradient(135deg, #C9A84C 0%, #E8C96A 50%, #C9A84C 100%)",
                   color: "#1A2E4A",
+                  width: "280px",
+                  padding: "16px 24px",
+                  display: "inline-flex",
                 }}
               >
-                🏦 NISA口座を開設する
+                NISA口座を開設する
               </a>
               <p className="text-xs text-gray-500 mt-2">※口座開設は無料です</p>
             </div>
 
-            <a
-              href="#sbi-affiliate-url-placeholder"
-              className="btn-primary text-lg px-10 py-5 rounded-xl shadow-lg inline-block"
-            >
-              証券口座を開設する（無料）
-            </a>
-            <p style={{fontSize:"9px"}} className="text-gray-500 mt-4">※投資信託や株式への投資には証券会社での口座開設が必要となります。</p>
+            <div className="mb-4">
+              <a
+                href="/accounts/stock"
+                className="inline-flex items-center justify-center gap-2 font-bold text-base rounded-xl transition-all duration-300 shadow-md hover:shadow-lg hover:-translate-y-0.5"
+                style={{
+                  background: "linear-gradient(135deg, #C9A84C 0%, #E8C96A 50%, #C9A84C 100%)",
+                  color: "#1A2E4A",
+                  width: "280px",
+                  padding: "16px 24px",
+                  display: "inline-flex",
+                }}
+              >
+                証券口座を開設する
+              </a>
+            </div>
+            <p className="text-xs text-gray-500 mt-2">※投資信託や株式への投資には証券会社での口座開設が必要となります。</p>
           </div>
         </section>
 
