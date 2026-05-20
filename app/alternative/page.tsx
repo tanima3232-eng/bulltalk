@@ -147,9 +147,9 @@ export default function AlternativePage() {
                     <p className="text-navy font-bold">申告分離課税 20.315%</p>
                   </div>
                 </div>
-                <div className="flex items-start gap-2 text-xs leading-relaxed mb-6 p-3 rounded-xl" style={{ background: "#FEF2F2", border: "1px solid #FECACA" }}>
-                  <span className="flex-shrink-0 text-red-400 font-bold">⚠</span>
-                  <span className="text-red-600">ALTERNA（オルタナ）が提供する金融商品は元本や将来の投資成果を保証するものではありません。</span>
+                <div className="flex items-start gap-2 text-xs leading-relaxed mb-6 p-3 rounded-xl" style={{ background: "#F8F9FA", border: "1px solid #E5E7EB" }}>
+                  <span className="flex-shrink-0 text-gray-400">※</span>
+                  <span className="text-gray-500">ALTERNA（オルタナ）が提供する金融商品は元本や将来の投資成果を保証するものではありません。</span>
                 </div>
                 <a
                   href="https://h.accesstrade.net/sp/cc?rk=0100pv9j00oqbc"
@@ -402,7 +402,7 @@ export default function AlternativePage() {
             <p className="text-xs text-gray-400">※本ページにはアフィリエイト広告（PR）が含まれています。</p>
             <p className="text-xs text-gray-400">※本ページは情報提供を目的としており、投資助言ではありません。</p>
             <p className="text-xs text-gray-400">※投資は自己責任でお願いします。</p>
-            <p className="text-xs text-gray-400">※2026年4月時点の情報に基づきます。制度・サービス内容は変更される可能性があります。</p>
+            <p className="text-xs text-gray-400">※2026年5月時点の情報に基づきます。制度・サービス内容は変更される可能性があります。</p>
           </div>
         </section>
       </main>

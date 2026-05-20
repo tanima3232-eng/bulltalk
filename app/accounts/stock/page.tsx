@@ -354,7 +354,7 @@ export default function StockAccountPage() {
             <p className="text-xs text-gray-400">※本ページにはアフィリエイト広告（PR）が含まれています。</p>
             <p className="text-xs text-gray-400">※本ページは情報提供を目的としており、投資助言ではありません。</p>
             <p className="text-xs text-gray-400">※投資は自己責任でお願いします。</p>
-            <p className="text-xs text-gray-400">※2026年4月時点の情報に基づきます。</p>
+            <p className="text-xs text-gray-400">※2026年5月時点の情報に基づきます。</p>
           </div>
         </section>
       </main>

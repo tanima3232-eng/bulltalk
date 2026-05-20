@@ -357,7 +357,7 @@ export default function IDeCoPage() {
             <p className="text-xs text-gray-400">※本ページにはアフィリエイト広告（PR）が含まれています。</p>
             <p className="text-xs text-gray-400">※本ページは情報提供を目的としており、投資助言ではありません。</p>
             <p className="text-xs text-gray-400">※投資は自己責任でお願いします。</p>
-            <p className="text-xs text-gray-400">※2026年4月時点の情報に基づきます。制度改正等により内容が変更される場合があります。最新情報は各社公式サイトおよび国民年金基金連合会でご確認ください。</p>
+            <p className="text-xs text-gray-400">※2026年5月時点の情報に基づきます。制度改正等により内容が変更される場合があります。最新情報は各社公式サイトおよび国民年金基金連合会でご確認ください。</p>
           </div>
         </section>
       </main>
