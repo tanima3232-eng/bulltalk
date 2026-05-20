@@ -143,14 +143,14 @@ export default function IDeCoPage() {
               className="rounded-2xl p-6"
               style={{ border: "2px solid #4ADE80", background: "#F0FDF4" }}
             >
-              <div className="flex items-center gap-2 mb-3">
+              <div className="flex items-center justify-between gap-2 mb-3">
+                <h2 className="text-navy font-bold text-base">② マッチング拠出の変更点</h2>
                 <span
-                  className="text-xs font-bold px-3 py-1 rounded-full"
+                  className="text-xs font-bold px-3 py-1 rounded-full flex-shrink-0"
                   style={{ background: "#4ADE80", color: "#1A2E4A" }}
                 >
-                  2026年4月〜<br className="sm:hidden" />制度改正
+                  2026年4月〜制度改正
                 </span>
-                <h2 className="text-navy font-bold text-base">② マッチング拠出の変更点</h2>
               </div>
               <ul className="space-y-2 text-sm text-gray-700 leading-relaxed">
                 <li className="flex items-start gap-2">
