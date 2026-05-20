@@ -12,18 +12,6 @@ export const metadata: Metadata = {
 // 比較表データ
 const brokers = [
   {
-    id: "rakuten",
-    name: "楽天証券",
-    star: false,
-    fee: "0円",
-    products: "◎ 豊富",
-    app: "◎ 便利",
-    target: "楽天ユーザー・初心者",
-    point: "NISA口座数No.1。楽天ポイントで投資可能",
-    ctaUrl: "https://www.rakuten-sec.co.jp/",
-    hidden: true, // 審査中：コメントアウト相当
-  },
-  {
     id: "monex",
     name: "マネックス証券",
     star: true, // ゴールドハイライト
@@ -34,6 +22,18 @@ const brokers = [
     point: "NISA手数料0円！dポイントが貯まる",
     ctaUrl: "https://h.accesstrade.net/sp/cc?rk=010072vk00oqbc",
     mobileUrl: "https://h.accesstrade.net/sp/cc?rk=010072vk00oqbc",
+    hidden: false,
+  },
+  {
+    id: "rakuten",
+    name: "楽天証券",
+    star: false,
+    fee: "0円",
+    products: "◎ 豊富",
+    app: "◎ 便利",
+    target: "楽天ユーザー・積立投資家",
+    point: "NISA口座数No.1。楽天ポイントでクレカ積立（最大2%還元）！iSPEED・MARKET SPEED IIなど高機能ツールが無料",
+    ctaUrl: "https://ad2.trafficgate.net/t/r/1230/738/317466_396735",
     hidden: false,
   },
   {
