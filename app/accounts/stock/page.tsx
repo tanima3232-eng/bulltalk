@@ -81,7 +81,8 @@ const brokers = [
     app: "○ 普通",
     target: "アクティブトレーダー・株式投資家",
     point: "マンスリーコースで1取引220円〜！米国株リアルタイムトレード対応。かんたん入力10分で口座開設完了",
-    ctaUrl: "https://www.iwaicosmo.net/",
+    ctaUrl: "https://h.accesstrade.net/sp/cc?rk=0100ip8800oqbc",
+    pixelUrl: "https://h.accesstrade.net/sp/rr?rk=0100ip8800oqbc",
     hidden: false,
   },
   {
@@ -93,7 +94,8 @@ const brokers = [
     app: "○ 普通",
     target: "長期積立派・日本株を応援したい人",
     point: "藤野英人氏率いるカリスマ直販投信。5年超保有で信託報酬還元（最大0.4%）。市場変化に応じた柔軟な運用が特徴",
-    ctaUrl: "https://www.rheos.jp/",
+    ctaUrl: "https://h.accesstrade.net/sp/cc?rk=01006f1e00oqbc",
+    pixelUrl: "https://h.accesstrade.net/sp/rr?rk=01006f1e00oqbc",
     hidden: false,
   },
 ];
@@ -221,6 +223,9 @@ export default function StockAccountPage() {
                             color: broker.star ? "#1A2E4A" : "#FFFFFF",
                           }}
                         >
+                          {broker.pixelUrl && (
+                            <img src={broker.pixelUrl} alt="" style={{ display: "none" }} width={1} height={1} />
+                          )}
                           公式サイトへ →
                         </a>
 
@@ -276,6 +281,9 @@ export default function StockAccountPage() {
                         color: broker.star ? "#1A2E4A" : "#FFFFFF",
                       }}
                     >
+                      {broker.pixelUrl && (
+                        <img src={broker.pixelUrl} alt="" style={{ display: "none" }} width={1} height={1} />
+                      )}
                       公式サイトへ →
                     </a>
 
