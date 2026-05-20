@@ -183,11 +183,11 @@ export default function StockAccountPage() {
                   </tr>
                 </thead>
                 <tbody>
-                  {visibleBrokers.map((broker) => (
+                  {visibleBrokers.map((broker, index) => (
                     <tr
                       key={broker.id}
                       style={{
-                        background: broker.star
+                        background: index % 2 === 0
                           ? "linear-gradient(135deg,#FFF8E7 0%,#FFF3D0 100%)"
                           : "#FFFFFF",
                         borderBottom: "1px solid #F3F4F6",
@@ -238,15 +238,15 @@ export default function StockAccountPage() {
 
             {/* スマホ カード */}
             <div className="md:hidden space-y-4">
-              {visibleBrokers.map((broker) => (
+              {visibleBrokers.map((broker, index) => (
                 <div
                   key={broker.id}
                   className="rounded-2xl overflow-hidden shadow-sm"
                   style={{
-                    background: broker.star
+                    background: index % 2 === 0
                       ? "linear-gradient(135deg,#FFF8E7,#FFF3D0)"
                       : "#FFFFFF",
-                    border: broker.star ? "2px solid #C9A84C" : "1px solid #E5E7EB",
+                    border: index % 2 === 0 ? "2px solid #C9A84C" : "1px solid #E5E7EB",
                   }}
                 >
                   <div className="p-5">
