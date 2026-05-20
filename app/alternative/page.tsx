@@ -111,13 +111,13 @@ export default function AlternativePage() {
               不動産やインフラを裏付資産とするデジタル証券です。値動きだけでなく、安定した分配金収入を重視したい方に向いています。
             </p>
 
-            {/* ALTERNA カード（審査中・非表示） */}
-            {/*
-            ========== 提携審査通過後に下記コメントを解除 ==========
+
+            {/* ALTERNA カード */}
             <div
               className="rounded-3xl overflow-hidden shadow-lg"
               style={{ border: "2px solid #1A2E4A" }}
             >
+              {/* カードヘッダー */}
               <div className="px-8 py-6" style={{ background: "linear-gradient(135deg,#1e3a5f,#2d4a70)" }}>
                 <div className="flex items-center justify-between flex-wrap gap-3">
                   <div>
@@ -127,6 +127,7 @@ export default function AlternativePage() {
                   </div>
                 </div>
               </div>
+              {/* カード本文 */}
               <div className="bg-white px-8 py-6">
                 <div className="grid grid-cols-2 gap-4 mb-6 text-sm">
                   <div className="bg-offwhite rounded-xl p-3">
@@ -146,27 +147,35 @@ export default function AlternativePage() {
                     <p className="text-navy font-bold">申告分離課税 20.315%</p>
                   </div>
                 </div>
-                <div className="text-xs text-red-500 leading-relaxed mb-6">
-                  ⚠ ALTERNA（オルタナ）が提供する金融商品は元本や将来の投資成果を保証するものではありません。
+                <div className="flex items-start gap-2 text-xs leading-relaxed mb-6 p-3 rounded-xl" style={{ background: "#FEF2F2", border: "1px solid #FECACA" }}>
+                  <span className="flex-shrink-0 text-red-400 font-bold">⚠</span>
+                  <span className="text-red-600">ALTERNA（オルタナ）が提供する金融商品は元本や将来の投資成果を保証するものではありません。</span>
                 </div>
                 <a
-                  href="[提携承認後のアフィリエイトURLを差し替え]"
+                  href="https://h.accesstrade.net/sp/cc?rk=0100pv9j00oqbc"
                   target="_blank"
                   rel="nofollow"
                   referrerPolicy="no-referrer-when-downgrade"
-                  className="block w-full text-center py-4 rounded-2xl font-bold text-base"
-                  style={{ background: "#1A2E4A", color: "#FFFFFF" }}
+                  className="block w-full text-center py-4 rounded-2xl font-bold text-base transition-all duration-300 hover:-translate-y-0.5 hover:shadow-lg"
+                  style={{ background: "linear-gradient(135deg,#1A2E4A,#2A4A7F)", color: "#FFFFFF" }}
                 >
+                  <img
+                    src="https://h.accesstrade.net/sp/rr?rk=0100pv9j00oqbc"
+                    alt=""
+                    style={{ display: "none" }}
+                    width={1}
+                    height={1}
+                  />
                   公式サイトへ →
                 </a>
               </div>
             </div>
-            ============================================================= */}
 
 
 
           </div>
         </section>
+
 
         {/* ===== セクション②：暗号資産 ===== */}
         <section className="bg-white py-14 px-4">
