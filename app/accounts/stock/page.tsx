@@ -246,7 +246,7 @@ export default function StockAccountPage() {
                     background: index % 2 === 0
                       ? "linear-gradient(135deg,#FFF8E7,#FFF3D0)"
                       : "#FFFFFF",
-                    border: index % 2 === 0 ? "2px solid #C9A84C" : "1px solid #E5E7EB",
+                    border: index % 2 === 0 ? "2px solid #C9A84C" : "2px solid #1A2E4A",
                   }}
                 >
                   <div className="p-5">
@@ -257,11 +257,23 @@ export default function StockAccountPage() {
                       <span className="text-gold font-bold text-sm">手数料 {broker.fee}</span>
                     </div>
                     <div className="grid grid-cols-2 gap-2 text-xs mb-3">
-                      <div className="bg-white/80 rounded-lg p-2">
+                      <div
+                        className="rounded-lg p-2"
+                        style={{
+                          background: index % 2 === 0 ? "rgba(255,255,255,0.8)" : "#F8FAFC",
+                          border: index % 2 === 0 ? "1px solid #C9A84C" : "1px solid #1A2E4A",
+                        }}
+                      >
                         <p className="text-gray-400">商品数</p>
                         <p className="text-navy font-bold">{broker.products}</p>
                       </div>
-                      <div className="bg-white/80 rounded-lg p-2">
+                      <div
+                        className="rounded-lg p-2"
+                        style={{
+                          background: index % 2 === 0 ? "rgba(255,255,255,0.8)" : "#F8FAFC",
+                          border: index % 2 === 0 ? "1px solid #C9A84C" : "1px solid #1A2E4A",
+                        }}
+                      >
                         <p className="text-gray-400">アプリ</p>
                         <p className="text-navy font-bold">{broker.app}</p>
                       </div>
