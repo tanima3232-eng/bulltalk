@@ -217,10 +217,10 @@ export default function StockAccountPage() {
                           referrerPolicy="no-referrer-when-downgrade"
                           className="inline-flex items-center justify-center px-4 py-2 rounded-lg font-bold text-xs whitespace-nowrap transition-all duration-200 hover:-translate-y-0.5 hover:shadow-md"
                           style={{
-                            background: broker.star
-                              ? "linear-gradient(135deg,#C9A84C,#E8C96A)"
-                              : "#1A2E4A",
-                            color: broker.star ? "#1A2E4A" : "#FFFFFF",
+                            background: index % 2 === 0
+                               ? "linear-gradient(135deg,#C9A84C,#E8C96A)"
+                               : "#1A2E4A",
+                             color: index % 2 === 0 ? "#1A2E4A" : "#FFFFFF",
                           }}
                         >
                           {broker.pixelUrl && (
@@ -275,10 +275,10 @@ export default function StockAccountPage() {
                       referrerPolicy="no-referrer-when-downgrade"
                       className="w-full flex items-center justify-center gap-2 py-3 rounded-xl font-bold text-sm transition-all duration-200 hover:shadow-md"
                       style={{
-                        background: broker.star
+                        background: index % 2 === 0
                           ? "linear-gradient(135deg,#C9A84C,#E8C96A)"
                           : "#1A2E4A",
-                        color: broker.star ? "#1A2E4A" : "#FFFFFF",
+                        color: index % 2 === 0 ? "#1A2E4A" : "#FFFFFF",
                       }}
                     >
                       {broker.pixelUrl && (
