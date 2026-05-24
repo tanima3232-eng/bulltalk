@@ -71,7 +71,7 @@ export default function AlternativePage() {
                 <span className="text-3xl flex-shrink-0">🏢</span>
                 <div>
                   <p className="font-bold text-navy mb-1">不動産・インフラ投資</p>
-                  <p className="text-gray-500 text-sm leading-relaxed">値動きだけでなく、安定した分配金収入を重視したい方に向いています。</p>
+                  <p className="text-gray-500 text-sm leading-relaxed">値上がりだけでなく、安定した分配金収入を重視したい方に向いています。</p>
                 </div>
               </div>
               <div className="flex items-start gap-4 bg-offwhite rounded-2xl p-5">
@@ -108,7 +108,7 @@ export default function AlternativePage() {
               </div>
             </div>
             <p className="text-gray-500 text-sm leading-relaxed mb-8 pl-1">
-              不動産やインフラを裏付資産とするデジタル証券です。値動きだけでなく、安定した分配金収入を重視したい方に向いています。
+              不動産やインフラを裏付資産とするデジタル証券です。値上がりだけでなく、安定した分配金収入を重視したい方に向いています。
             </p>
 
 
