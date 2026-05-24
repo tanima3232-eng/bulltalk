@@ -121,10 +121,10 @@ export default function AlternativePage() {
               }}
             >
               <p className="text-navy font-bold text-sm mb-2">
-                💡 機関投資家が実践する分散投資を、個人でも
+                💡 プロの投資家が実践する分散投資を、個人でも
               </p>
               <p className="text-gray-500 text-xs leading-relaxed mb-4">
-                年金基金やハーバード大学基金など、プロが組み込む不動産・インフラ投資。なぜ今注目なのか、どう始めるのか詳しく解説しています。
+                国の年金基金や金融機関、ハーバード大学基金など、プロが組み込む不動産・インフラ投資。なぜ今注目なのか、どう始めるのか詳しく解説しています。
               </p>
               <a
                 href="/real-estate"
