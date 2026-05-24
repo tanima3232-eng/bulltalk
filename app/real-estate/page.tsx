@@ -74,9 +74,9 @@ export default function RealEstatePage() {
             >
               金融機関など
               <br />
-              プロが実践するセオリーを
+              プロが実践する投資戦略を
               <br />
-              <span style={{ color: "#C9A84C" }}>個人のポートフォリオに。</span>
+              <span style={{ color: "#C9A84C" }}>個人の資産形成に活かす。</span>
             </h1>
             <p className="text-white/70 text-sm md:text-base leading-relaxed max-w-xl mx-auto mb-8">
               インフレ時代に備える「実物資産」という選択肢。
