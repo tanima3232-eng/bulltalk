@@ -298,13 +298,13 @@ export default function RealEstatePage() {
                 📈 市場規模の拡大
               </p>
               <div className="grid grid-cols-3 gap-2 text-center mb-4 items-start">
-                <div>
+                <div className="pt-2">
                   <p className="text-xs text-gray-400 mb-1">2025年実績</p>
                   <p className="text-navy font-bold text-xl">3,288<span className="text-sm font-normal">億円</span></p>
                   <p className="text-xs text-gray-400">（前年比約3倍）</p>
                 </div>
                 <div
-                  className="rounded-xl py-2 px-1 overflow-hidden"
+                  className="rounded-xl py-2 px-1 overflow-hidden pt-2"
                   style={{ background: "rgba(201,168,76,0.08)" }}
                 >
                   <p className="text-xs text-gray-400 mb-1">2026年予想</p>
@@ -316,7 +316,7 @@ export default function RealEstatePage() {
                   </p>
                   <p className="text-[10px] text-gray-400">（前年比+40%超）</p>
                 </div>
-                <div>
+                <div className="pt-2">
                   <p className="text-xs text-gray-400 mb-1">2030年見通し</p>
                   <p className="text-navy font-bold text-xl">2.5<span className="text-sm font-normal">兆円</span></p>
                   <p className="text-xs text-gray-400">（ケネディクス予想）</p>
@@ -460,14 +460,13 @@ export default function RealEstatePage() {
                     <p className="text-navy font-bold text-lg">10万円から</p>
                   </div>
                   <div className="bg-offwhite rounded-xl p-4">
-                    <p className="text-gray-400 text-xs mb-0.5">想定利回り</p>
-                    <p className="text-gray-400 text-[10px] mb-1">（過去実績）</p>
+                    <p className="text-gray-400 text-[10px] mb-1">想定利回り（過去実績）</p>
                     <p className="text-navy font-bold text-base">年3.0～4.3%</p>
                   </div>
                   <div className="bg-offwhite rounded-xl p-4">
                     <p className="text-gray-400 text-xs mb-1">投資対象</p>
-                    <p className="text-navy font-bold text-sm">
-                      不動産・インフラを裏付資産としたデジタル証券
+                    <p className="text-navy font-bold text-sm leading-snug">
+                      不動産・インフラ<br />を裏付け資産と<br />したデジタル証券
                     </p>
                   </div>
                   <div className="bg-offwhite rounded-xl p-4">
