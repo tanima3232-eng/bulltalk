@@ -704,7 +704,7 @@ export default function RealEstatePage() {
               <br />
               仕組みをしっかり理解してから始めることが重要です。
               <br />
-              不明点はLINEから無料でご相談いただけます。
+              ご不明点はLINEから無料でご相談いただけます。
             </p>
             <div className="flex flex-col items-center gap-4">
               <div className="flex flex-col items-center gap-1 w-full sm:w-auto">
