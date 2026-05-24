@@ -319,7 +319,7 @@ export default function RealEstatePage() {
                 <div className="pt-2">
                   <p className="text-xs text-gray-400 mb-1">2030年見通し</p>
                   <p className="text-navy font-bold text-xl">2.5<span className="text-sm font-normal">兆円</span></p>
-                  <p className="text-xs text-gray-400">（ケネディクス予想）</p>
+                  <p className="text-[9px] text-gray-400 whitespace-nowrap mb-1">(ケネディクス予想)</p>
                 </div>
               </div>
               <p className="text-xs text-gray-400 text-right">
@@ -460,13 +460,13 @@ export default function RealEstatePage() {
                     <p className="text-navy font-bold text-lg">10万円から</p>
                   </div>
                   <div className="bg-offwhite rounded-xl p-4">
-                    <p className="text-gray-400 text-[10px] mb-1">想定利回り（過去実績）</p>
+                    <p className="text-gray-400 text-[9px] whitespace-nowrap mb-1">想定利回り（過去実績）</p>
                     <p className="text-navy font-bold text-base">年3.0～4.3%</p>
                   </div>
                   <div className="bg-offwhite rounded-xl p-4">
                     <p className="text-gray-400 text-xs mb-1">投資対象</p>
                     <p className="text-navy font-bold text-sm leading-snug">
-                      不動産・インフラ<br />を裏付け資産と<br />したデジタル証券
+                      不動産・インフ<br />ラを裏付け資産<br />としたデジタル<br />証券
                     </p>
                   </div>
                   <div className="bg-offwhite rounded-xl p-4">
