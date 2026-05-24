@@ -104,7 +104,7 @@ export default function RealEstatePage() {
               無料で口座開設して案件を見てみる →
             </a>
             <p className="text-white/40 text-xs mt-3">
-              ※元本保証ではありません。詳細は公式サイトをご確認ください。
+              ※詳細は、三井物産デジタル・アセットマネジメントの公式サイトをご確認ください。
             </p>
           </div>
         </section>
@@ -576,7 +576,7 @@ export default function RealEstatePage() {
                   無料で口座開設して案件を見てみる →
                 </a>
                 <p className="text-center text-xs text-gray-400 mt-2">
-                  ※元本保証ではありません。詳細は公式サイトをご確認ください。
+                  ※詳細は、三井物産デジタル・アセットマネジメントの公式サイトをご確認ください。
                 </p>
               </div>
             </div>
