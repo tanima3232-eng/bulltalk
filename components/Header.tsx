@@ -83,7 +83,7 @@ export default function Header() {
               </svg>
             </button>
             {altDropOpen && (
-              <div className="absolute top-full left-0 pt-1 min-w-[200px] z-50">
+              <div className="absolute top-full left-0 pt-1 min-w-[230px] z-50">
                 <div className="bg-white rounded-xl shadow-xl border border-gray-100 overflow-hidden">
                   <Link
                     href="/alternative"
