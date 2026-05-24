@@ -181,7 +181,7 @@ export default function RealEstatePage() {
 
             {/* 2つの理由 */}
             <p className="text-gray-600 leading-relaxed mb-6">
-              彼らが不動産などの実物資産を組み込む理由は大きく<strong className="text-navy">2つ</strong>あります。
+              プロの投資家が不動産などの実物資産を組み込む理由は大きく<strong className="text-navy">2つ</strong>あります。
             </p>
             <div className="space-y-4 mb-8">
               <div className="flex items-start gap-4 bg-offwhite rounded-2xl p-5">
