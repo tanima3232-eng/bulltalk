@@ -112,6 +112,32 @@ export default function AlternativePage() {
             </p>
 
 
+            {/* 詳細ページへのCTA */}
+            <div
+              className="rounded-2xl p-5 mb-8"
+              style={{
+                background: "linear-gradient(135deg,rgba(201,168,76,0.10),rgba(201,168,76,0.03))",
+                border: "1px solid rgba(201,168,76,0.30)",
+              }}
+            >
+              <p className="text-navy font-bold text-sm mb-2">
+                💡 機関投資家が実践する分散投資を、個人でも
+              </p>
+              <p className="text-gray-500 text-xs leading-relaxed mb-4">
+                年金基金やハーバード大学基金など、プロが組み込む不動産・インフラ投資。なぜ今注目なのか、どう始めるのか詳しく解説しています。
+              </p>
+              <a
+                href="/real-estate"
+                className="inline-flex items-center gap-2 font-bold text-sm px-5 py-3 rounded-xl transition-all duration-300 hover:-translate-y-0.5 hover:shadow-md"
+                style={{
+                  background: "linear-gradient(135deg,#1A2E4A,#2A4A7F)",
+                  color: "#C9A84C",
+                }}
+              >
+                もっと詳しく知る →
+              </a>
+            </div>
+
             {/* ALTERNA カード */}
             <div
               className="rounded-3xl overflow-hidden shadow-lg"
