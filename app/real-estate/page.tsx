@@ -144,15 +144,15 @@ export default function RealEstatePage() {
                   className="text-xs font-bold uppercase tracking-widest mb-2"
                   style={{ color: "#C9A84C" }}
                 >
-                  Harvard Endowment
+                  GPIF（あなたの年金を運用する国の機関）
                 </p>
                 <p className="text-white font-bold text-3xl mb-1">
-                  約<span style={{ color: "#C9A84C" }}>78</span>%
+                  約<span style={{ color: "#C9A84C" }}>3.6</span>兆円
                 </p>
                 <p className="text-white/60 text-sm leading-relaxed">
-                  ハーバード大学基金の資産配分において、オルタナティブ資産が占める割合
+                  実はあなたの年金も、不動産・インフラへ投資されています。国民年金や厚生年金を運用するGPIFでは3.6兆円もの資金を投資しています。
                   <br />
-                  <span className="text-white/40 text-xs">（※2023会計年度実績）</span>
+                  <span className="text-white/40 text-xs">（※2024年3月末時点）</span>
                 </p>
               </div>
               <div
@@ -166,15 +166,15 @@ export default function RealEstatePage() {
                   className="text-xs font-bold uppercase tracking-widest mb-2"
                   style={{ color: "#C9A84C" }}
                 >
-                  GPIF（あなたの年金を運用する国の機関）
+                  Harvard Endowment
                 </p>
                 <p className="text-white font-bold text-3xl mb-1">
-                  約<span style={{ color: "#C9A84C" }}>3.6</span>兆円
+                  約<span style={{ color: "#C9A84C" }}>78</span>%
                 </p>
                 <p className="text-white/60 text-sm leading-relaxed">
-                  実はあなたの年金も、不動産・インフラへ投資されています。国民年金や厚生年金を運用するGPIFでは3.6兆円もの資金を投資しています。
+                  ハーバード大学基金の資産配分において、オルタナティブ資産が占める割合
                   <br />
-                  <span className="text-white/40 text-xs">（※2024年3月末時点）</span>
+                  <span className="text-white/40 text-xs">（※2023会計年度実績）</span>
                 </p>
               </div>
             </div>
