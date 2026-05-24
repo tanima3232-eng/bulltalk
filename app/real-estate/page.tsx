@@ -197,7 +197,7 @@ export default function RealEstatePage() {
                 <div>
                   <p className="font-bold text-navy mb-1">インフレ対策</p>
                   <p className="text-gray-500 text-sm leading-relaxed">
-                    モノの値段が上がるインフレ局面に強い実物資産。現金の実質価値が目減りする時代だからこそ、不動産などを組み込む考え方があります。
+                    モノの値段が上がるインフレ局面に強い実物資産。現金の実質価値が目減りする時代だからこそ、不動産などを組み込むことで資産を守るという考え方です。
                   </p>
                 </div>
               </div>
@@ -214,7 +214,7 @@ export default function RealEstatePage() {
                 <div>
                   <p className="font-bold text-navy mb-1">分散効果</p>
                   <p className="text-gray-500 text-sm leading-relaxed">
-                    株式市場との相関性が低く、ポートフォリオ全体のリスクを抑える分散効果が期待できます。株が下がる局面でも比較的値動きが緩やかとされています。
+                    株式市場との相関性が低く、ポートフォリオ全体のリスクを抑える分散効果が期待できます。株価が下がる局面でも比較的値動きが緩やかとされています。
                   </p>
                 </div>
               </div>
@@ -234,7 +234,7 @@ export default function RealEstatePage() {
               <p className="text-gray-600 text-sm leading-relaxed">
                 これまで、プロが扱うような都心の大型不動産やインフラへの投資には数億円単位の資金が必要でした。しかし、
                 <strong className="text-navy">ブロックチェーン技術を活用した「不動産デジタル証券」</strong>
-                の登場により、状況は一変しています。
+                の登場により、個人でも10万円から投資できるようになりました。
               </p>
             </div>
           </div>
