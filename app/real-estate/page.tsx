@@ -105,7 +105,7 @@ export default function RealEstatePage() {
               />
               無料で登録して案件を見てみる →
             </a>
-            <p className="text-white/40 text-xs mt-3 whitespace-nowrap">
+            <p className="text-white/40 text-[10px] mt-3 whitespace-nowrap">
               ※三井物産デジタル・アセットマネジメントの公式サイトに移ります。
             </p>
           </div>
@@ -261,9 +261,9 @@ export default function RealEstatePage() {
                 />
                 無料で登録して案件を見てみる →
               </a>
-              <p className="text-gray-400 text-xs mt-2">
-                ※三井物産デジタル・アセットマネジメントの公式サイトに移ります。
-              </p>
+              <p className="text-gray-400 text-[10px] mt-2 text-center">
+              ※三井物産デジタル・アセットマネジメントの公式サイトに移ります。
+            </p>
             </div>
           </div>
         </section>
@@ -297,14 +297,14 @@ export default function RealEstatePage() {
               <p className="text-navy font-bold mb-4 text-sm uppercase tracking-wide">
                 📈 市場規模の拡大
               </p>
-              <div className="grid grid-cols-3 gap-4 text-center mb-4">
+              <div className="grid grid-cols-3 gap-2 text-center mb-4 items-start">
                 <div>
                   <p className="text-xs text-gray-400 mb-1">2025年実績</p>
                   <p className="text-navy font-bold text-xl">3,288<span className="text-sm font-normal">億円</span></p>
                   <p className="text-xs text-gray-400">（前年比約3倍）</p>
                 </div>
                 <div
-                  className="rounded-xl py-2"
+                  className="rounded-xl py-2 px-1 overflow-hidden"
                   style={{ background: "rgba(201,168,76,0.08)" }}
                 >
                   <p className="text-xs text-gray-400 mb-1">2026年予想</p>
@@ -314,7 +314,7 @@ export default function RealEstatePage() {
                   >
                     4,732<span className="text-sm font-normal">億円</span>
                   </p>
-                  <p className="text-xs text-gray-400 whitespace-nowrap">（前年比+40%超）</p>
+                  <p className="text-[10px] text-gray-400">（前年比+40%超）</p>
                 </div>
                 <div>
                   <p className="text-xs text-gray-400 mb-1">2030年見通し</p>
@@ -460,8 +460,9 @@ export default function RealEstatePage() {
                     <p className="text-navy font-bold text-lg">10万円から</p>
                   </div>
                   <div className="bg-offwhite rounded-xl p-4">
-                    <p className="text-gray-400 text-xs mb-1 whitespace-nowrap">想定利回り（過去実績）</p>
-                    <p className="text-navy font-bold text-lg">3.0〜4.3%/年</p>
+                    <p className="text-gray-400 text-xs mb-0.5">想定利回り</p>
+                    <p className="text-gray-400 text-[10px] mb-1">（過去実績）</p>
+                    <p className="text-navy font-bold text-base">年3.0～4.3%</p>
                   </div>
                   <div className="bg-offwhite rounded-xl p-4">
                     <p className="text-gray-400 text-xs mb-1">投資対象</p>
@@ -706,8 +707,8 @@ export default function RealEstatePage() {
               <br />
               不明点はLINEから無料でご相談いただけます。
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center items-start">
-              <div className="flex flex-col items-center gap-1">
+            <div className="flex flex-col items-center gap-4">
+              <div className="flex flex-col items-center gap-1 w-full sm:w-auto">
                 <a
                   href="https://h.accesstrade.net/sp/cc?rk=0100pv9j00oqbc"
                   target="_blank"
@@ -729,15 +730,15 @@ export default function RealEstatePage() {
                   />
                   ALTERNAに無料で登録する →
                 </a>
-                <p className="text-white/30 text-[10px] leading-tight text-center w-full">
-                  ※三井物産デジタル・アセットマネジメントの<br />公式サイトに移ります。
+                <p className="text-white/30 text-[10px] leading-tight text-center">
+                  ※三井物産デジタル・アセットマネジメントの公式サイトに移ります。
                 </p>
               </div>
               <a
                 href="https://lin.ee/FmH7NXr"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center justify-center gap-2 font-bold text-sm px-6 py-4 rounded-2xl transition-all duration-300 hover:opacity-80"
+                className="inline-flex items-center justify-center gap-2 font-bold text-sm px-6 py-4 rounded-2xl transition-all duration-300 hover:opacity-80 w-full sm:w-auto"
                 style={{ background: "#06C755", color: "#FFFFFF", boxShadow: "0 0 20px rgba(6,199,85,0.35)" }}
               >
                 <svg className="w-5 h-5" viewBox="0 0 24 24" fill="currentColor">
