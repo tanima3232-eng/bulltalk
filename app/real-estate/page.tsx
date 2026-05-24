@@ -301,7 +301,7 @@ export default function RealEstatePage() {
                 <div className="pt-2">
                   <p className="text-xs text-gray-400 mb-1">2025年実績</p>
                   <p className="text-navy font-bold text-xl">3,288<span className="text-sm font-normal">億円</span></p>
-                  <p className="text-xs text-gray-400">（前年比約3倍）</p>
+                  <p className="text-[10px] text-gray-400">（前年比約3倍）</p>
                 </div>
                 <div
                   className="rounded-xl py-2 px-1 overflow-hidden pt-2"
@@ -460,7 +460,9 @@ export default function RealEstatePage() {
                     <p className="text-navy font-bold text-lg">10万円から</p>
                   </div>
                   <div className="bg-offwhite rounded-xl p-4">
-                    <p className="text-gray-400 text-[9px] whitespace-nowrap mb-1">想定利回り（過去実績）</p>
+                    <p className="text-gray-400 mb-1">
+                      <span className="text-xs">想定利回り</span><span className="text-[9px]">（過去実績）</span>
+                    </p>
                     <p className="text-navy font-bold text-base">年3.0～4.3%</p>
                   </div>
                   <div className="bg-offwhite rounded-xl p-4">
@@ -668,7 +670,7 @@ export default function RealEstatePage() {
               }}
             >
               <p className="text-navy font-bold text-sm mb-2">
-                📣 専門家の声（Bloomberg 2026年5月報道より）
+                📣 専門家の声<span className="text-[10px] font-normal text-gray-500">（Bloomberg 2026年5月報道より）</span>
               </p>
               <blockquote className="text-gray-600 text-sm leading-relaxed italic">
                 「不動産裏付けのデジタル証券はインフレヘッジの機能がある。少額投資が可能で、REITで扱うような大型物件にも投資できる。自らポートフォリオを組めるのも利点」
