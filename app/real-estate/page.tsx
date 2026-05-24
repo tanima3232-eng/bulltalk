@@ -166,13 +166,13 @@ export default function RealEstatePage() {
                   className="text-xs font-bold uppercase tracking-widest mb-2"
                   style={{ color: "#C9A84C" }}
                 >
-                  GPIF（年金積立金）
+                  GPIF（あなたの年金を運用する国の機関）
                 </p>
                 <p className="text-white font-bold text-3xl mb-1">
                   約<span style={{ color: "#C9A84C" }}>3.6</span>兆円
                 </p>
                 <p className="text-white/60 text-sm leading-relaxed">
-                  GPIFのインフラ・不動産等への投資時価総額
+                  実はあなたの年金も、不動産・インフラへ投資されています
                   <br />
                   <span className="text-white/40 text-xs">（※2024年3月末時点）</span>
                 </p>
