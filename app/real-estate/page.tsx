@@ -172,7 +172,7 @@ export default function RealEstatePage() {
                   約<span style={{ color: "#C9A84C" }}>3.6</span>兆円
                 </p>
                 <p className="text-white/60 text-sm leading-relaxed">
-                  実はあなたの年金も、不動産・インフラへ投資されています
+                  実はあなたの年金も、不動産・インフラへ投資されています。国民年金や厚生年金を運用するGPIFでは3.6兆円もの資金を投資しています。
                   <br />
                   <span className="text-white/40 text-xs">（※2024年3月末時点）</span>
                 </p>
