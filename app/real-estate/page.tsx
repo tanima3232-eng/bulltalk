@@ -105,7 +105,7 @@ export default function RealEstatePage() {
               />
               無料で登録して案件を見てみる →
             </a>
-            <p className="text-white/40 text-xs mt-3">
+            <p className="text-white/40 text-xs mt-3 whitespace-nowrap">
               ※三井物産デジタル・アセットマネジメントの公式サイトに移ります。
             </p>
           </div>
@@ -314,7 +314,7 @@ export default function RealEstatePage() {
                   >
                     4,732<span className="text-sm font-normal">億円</span>
                   </p>
-                  <p className="text-xs text-gray-400">（前年比+40%超）</p>
+                  <p className="text-xs text-gray-400 whitespace-nowrap">（前年比+40%超）</p>
                 </div>
                 <div>
                   <p className="text-xs text-gray-400 mb-1">2030年見通し</p>
@@ -350,8 +350,8 @@ export default function RealEstatePage() {
                   <div className="p-3 font-bold text-gray-500">REIT</div>
                 </div>
                 {[
-                  ["最低投資額", "10万円〜", "数万円〜（市場価格）"],
-                  ["投資対象", "個別の厳選不動産", "複数物件に分散"],
+                  ["最低投資額", "10万円〜", <>数万円〜<br />（市場価格）</>],
+                  ["投資対象", "厳選した不動産", "複数物件に分散"],
                   ["上場", "非上場（OTC）", "東証上場"],
                   ["流動性", "低め", "高い"],
                   ["株式相関", "低い", "やや高い"],
@@ -399,7 +399,8 @@ export default function RealEstatePage() {
                 RECOMMENDED SERVICE
               </p>
               <h2 className="section-title mb-3">
-                スマホで手軽に、プロ品質の安定資産へ
+                スマホで手軽に、<br className="sm:hidden" />
+                プロ品質の安定資産へ
               </h2>
               <p className="text-gray-500 text-sm leading-relaxed">
                 不動産デジタル証券「ALTERNA（オルタナ）」
@@ -459,7 +460,7 @@ export default function RealEstatePage() {
                     <p className="text-navy font-bold text-lg">10万円から</p>
                   </div>
                   <div className="bg-offwhite rounded-xl p-4">
-                    <p className="text-gray-400 text-xs mb-1">想定利回り（過去実績）</p>
+                    <p className="text-gray-400 text-xs mb-1 whitespace-nowrap">想定利回り（過去実績）</p>
                     <p className="text-navy font-bold text-lg">3.0〜4.3%/年</p>
                   </div>
                   <div className="bg-offwhite rounded-xl p-4">
@@ -728,7 +729,7 @@ export default function RealEstatePage() {
                   />
                   ALTERNAに無料で登録する →
                 </a>
-                <p className="text-white/30 text-[10px] leading-tight text-center">
+                <p className="text-white/30 text-[10px] leading-tight text-center w-full">
                   ※三井物産デジタル・アセットマネジメントの<br />公式サイトに移ります。
                 </p>
               </div>
