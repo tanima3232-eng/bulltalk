@@ -19,6 +19,7 @@ const accountLinks = [
 export default function Header() {
   const [menuOpen, setMenuOpen] = useState(false);
   const [accountDropOpen, setAccountDropOpen] = useState(false);
+  const [altDropOpen, setAltDropOpen] = useState(false);
 
   return (
     <header className="bg-navy sticky top-0 z-50 shadow-lg">
@@ -64,6 +65,38 @@ export default function Header() {
                       {link.label}
                     </Link>
                   ))}
+                </div>
+              </div>
+            )}
+          </div>
+
+          {/* オルタナティブ投資ドロップダウン */}
+          <div
+            className="relative"
+            onMouseEnter={() => setAltDropOpen(true)}
+            onMouseLeave={() => setAltDropOpen(false)}
+          >
+            <button className="text-white text-sm font-medium hover:text-gold transition-colors duration-200 flex items-center gap-1">
+              オルタナティブ投資
+              <svg className={`w-3 h-3 transition-transform duration-200 ${altDropOpen ? "rotate-180" : ""}`} fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+              </svg>
+            </button>
+            {altDropOpen && (
+              <div className="absolute top-full left-0 pt-1 min-w-[200px] z-50">
+                <div className="bg-white rounded-xl shadow-xl border border-gray-100 overflow-hidden">
+                  <Link
+                    href="/alternative"
+                    className="block px-4 py-3 text-navy text-sm font-medium hover:bg-light-gold transition-colors border-b border-gray-50"
+                  >
+                    オルタナティブ投資とは
+                  </Link>
+                  <Link
+                    href="/real-estate"
+                    className="block px-4 py-3 text-navy text-sm font-medium hover:bg-light-gold transition-colors"
+                  >
+                    不動産・インフラ投資とは
+                  </Link>
                 </div>
               </div>
             )}
@@ -124,6 +157,24 @@ export default function Header() {
               {link.label}
             </Link>
           ))}
+          {/* オルタナティブ投資グループ（モバイル） */}
+          <div className="px-6 pt-3 pb-1">
+            <p className="text-gold text-xs font-bold uppercase tracking-widest mb-1">オルタナティブ投資</p>
+          </div>
+          <Link
+            href="/alternative"
+            className="block px-8 py-3 text-white/80 hover:bg-white/10 transition-colors border-b border-white/5 text-sm"
+            onClick={() => setMenuOpen(false)}
+          >
+            オルタナティブ投資とは
+          </Link>
+          <Link
+            href="/real-estate"
+            className="block px-8 py-3 text-white/80 hover:bg-white/10 transition-colors border-b border-white/5 text-sm"
+            onClick={() => setMenuOpen(false)}
+          >
+            不動産・インフラ投資とは
+          </Link>
           <Link
             href="/about"
             className="block px-6 py-4 text-white hover:bg-white/10 transition-colors border-b border-white/5"

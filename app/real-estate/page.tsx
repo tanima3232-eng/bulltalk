@@ -103,10 +103,10 @@ export default function RealEstatePage() {
                 width={1}
                 height={1}
               />
-              無料で口座開設して案件を見てみる →
+              無料で登録して案件を見てみる →
             </a>
             <p className="text-white/40 text-xs mt-3">
-              ※詳細は、三井物産デジタル・アセットマネジメントの公式サイトをご確認ください。
+              ※三井物産デジタル・アセットマネジメントの公式サイトに移ります。
             </p>
           </div>
         </section>
@@ -235,6 +235,34 @@ export default function RealEstatePage() {
                 これまで、プロが扱うような都心の大型不動産やインフラへの投資には数億円単位の資金が必要でした。しかし、
                 <strong className="text-navy">ブロックチェーン技術を活用した「不動産デジタル証券」</strong>
                 の登場により、個人でも10万円から投資できるようになりました。
+              </p>
+            </div>
+
+            {/* セクション①末CTA */}
+            <div className="mt-8 text-center">
+              <a
+                href="https://h.accesstrade.net/sp/cc?rk=0100pv9j00oqbc"
+                target="_blank"
+                rel="nofollow"
+                referrerPolicy="no-referrer-when-downgrade"
+                className="inline-flex items-center gap-2 font-bold text-base px-8 py-4 rounded-2xl transition-all duration-300 hover:-translate-y-1 hover:shadow-xl"
+                style={{
+                  background: "linear-gradient(135deg,#C9A84C,#E8C96A)",
+                  color: "#1A2E4A",
+                  boxShadow: "0 4px 24px rgba(201,168,76,0.40)",
+                }}
+              >
+                <img
+                  src="https://h.accesstrade.net/sp/rr?rk=0100pv9j00oqbc"
+                  alt=""
+                  style={{ display: "none" }}
+                  width={1}
+                  height={1}
+                />
+                無料で登録して案件を見てみる →
+              </a>
+              <p className="text-gray-400 text-xs mt-2">
+                ※三井物産デジタル・アセットマネジメントの公式サイトに移ります。
               </p>
             </div>
           </div>
@@ -575,10 +603,10 @@ export default function RealEstatePage() {
                     width={1}
                     height={1}
                   />
-                  無料で口座開設して案件を見てみる →
+                  無料で登録して案件を見てみる →
                 </a>
                 <p className="text-center text-xs text-gray-400 mt-2">
-                  ※詳細は、三井物産デジタル・アセットマネジメントの公式サイトをご確認ください。
+                  ※三井物産デジタル・アセットマネジメントの公式サイトに移ります。
                 </p>
               </div>
             </div>
@@ -677,28 +705,33 @@ export default function RealEstatePage() {
               <br />
               不明点はLINEから無料でご相談いただけます。
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <a
-                href="https://h.accesstrade.net/sp/cc?rk=0100pv9j00oqbc"
-                target="_blank"
-                rel="nofollow"
-                referrerPolicy="no-referrer-when-downgrade"
-                className="inline-flex items-center justify-center gap-2 font-bold text-sm px-6 py-4 rounded-2xl transition-all duration-300 hover:-translate-y-0.5 hover:shadow-xl"
-                style={{
-                  background: "linear-gradient(135deg,#C9A84C,#E8C96A)",
-                  color: "#1A2E4A",
-                  boxShadow: "0 4px 20px rgba(201,168,76,0.40)",
-                }}
-              >
-                <img
-                  src="https://h.accesstrade.net/sp/rr?rk=0100pv9j00oqbc"
-                  alt=""
-                  style={{ display: "none" }}
-                  width={1}
-                  height={1}
-                />
-                ALTERNAの口座を開設する →
-              </a>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center items-start">
+              <div className="flex flex-col items-center gap-1">
+                <a
+                  href="https://h.accesstrade.net/sp/cc?rk=0100pv9j00oqbc"
+                  target="_blank"
+                  rel="nofollow"
+                  referrerPolicy="no-referrer-when-downgrade"
+                  className="inline-flex items-center justify-center gap-2 font-bold text-sm px-6 py-4 rounded-2xl transition-all duration-300 hover:-translate-y-0.5 hover:shadow-xl w-full sm:w-auto"
+                  style={{
+                    background: "linear-gradient(135deg,#C9A84C,#E8C96A)",
+                    color: "#1A2E4A",
+                    boxShadow: "0 4px 20px rgba(201,168,76,0.40)",
+                  }}
+                >
+                  <img
+                    src="https://h.accesstrade.net/sp/rr?rk=0100pv9j00oqbc"
+                    alt=""
+                    style={{ display: "none" }}
+                    width={1}
+                    height={1}
+                  />
+                  ALTERNAに無料で登録する →
+                </a>
+                <p className="text-white/30 text-[10px] leading-tight text-center">
+                  ※三井物産デジタル・アセットマネジメントの<br />公式サイトに移ります。
+                </p>
+              </div>
               <a
                 href="https://lin.ee/FmH7NXr"
                 target="_blank"
