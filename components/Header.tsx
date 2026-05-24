@@ -13,7 +13,6 @@ const navLinks = [
 const accountLinks = [
   { href: "/accounts/stock", label: "NISA・証券口座開設" },
   { href: "/accounts/ideco", label: "iDeCo口座開設" },
-  { href: "/alternative", label: "オルタナティブ投資" },
 ];
 
 export default function Header() {
