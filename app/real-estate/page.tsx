@@ -72,7 +72,9 @@ export default function RealEstatePage() {
               className="font-bold mb-6"
               style={{ fontSize: "clamp(1.8rem,5vw,3rem)", lineHeight: 1.25 }}
             >
-              金融機関などプロが実践するセオリーを、
+              金融機関など
+              <br />
+              プロが実践するセオリーを、
               <br />
               <span style={{ color: "#C9A84C" }}>個人のポートフォリオに。</span>
             </h1>
