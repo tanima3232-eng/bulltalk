@@ -74,7 +74,7 @@ export default function RealEstatePage() {
             >
               金融機関など
               <br />
-              プロが実践するセオリーを、
+              プロが実践するセオリーを
               <br />
               <span style={{ color: "#C9A84C" }}>個人のポートフォリオに。</span>
             </h1>
