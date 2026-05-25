@@ -461,7 +461,7 @@ export default function RealEstatePage() {
                   </div>
                   <div className="bg-offwhite rounded-xl p-4">
                     <p className="text-gray-400 text-xs mb-1 whitespace-nowrap overflow-hidden">
-                      <span className="text-xs">想定利回り</span><span className="text-[8px]">（過去実績）</span>
+                      <span className="text-xs">想定利回り</span>
                     </p>
                     <p className="text-navy font-bold text-base">年3.0～4.3%</p>
                   </div>
