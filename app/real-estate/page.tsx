@@ -103,7 +103,7 @@ export default function RealEstatePage() {
                 width={1}
                 height={1}
               />
-              無料で登録して案件を見てみる →
+              不動産デジタル証券をもっと知る →
             </a>
             <p className="text-white/40 text-[10px] mt-3 whitespace-nowrap">
               ※三井物産デジタル・アセットマネジメントの公式サイトに移ります。
@@ -259,7 +259,7 @@ export default function RealEstatePage() {
                   width={1}
                   height={1}
                 />
-                無料で登録して案件を見てみる →
+                不動産デジタル証券をもっと知る →
               </a>
               <p className="text-gray-400 text-[10px] mt-2 text-center">
               ※三井物産デジタル・アセットマネジメントの公式サイトに移ります。
@@ -606,7 +606,7 @@ export default function RealEstatePage() {
                     width={1}
                     height={1}
                   />
-                  無料で登録して案件を見てみる →
+                  ALTERNAについてもっと知る →
                 </a>
                 <p className="text-center text-xs text-gray-400 mt-2">
                   ※三井物産デジタル・アセットマネジメントの公式サイトに移ります。
@@ -729,7 +729,7 @@ export default function RealEstatePage() {
                     width={1}
                     height={1}
                   />
-                  ALTERNAに無料で登録する →
+                  ALTERNA公式サイトを見る →
                 </a>
                 <p className="text-white/30 text-[10px] leading-tight text-center">
                   ※三井物産デジタル・アセットマネジメントの公式サイトに移ります。
