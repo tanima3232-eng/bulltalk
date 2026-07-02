@@ -107,7 +107,7 @@ export default function LineTokutenPage() {
                     資産配分の考え方
                   </h2>
                   <p className="text-white/50 text-xs mt-1 leading-relaxed">
-                    元大手信託銀行員が解説する、長期的な資産形成に役立つ配分戦略をまとめたPDF資料です。
+                    元大手信託銀行員が解説する、長期的な資産形成に役立つ資産配分の考え方をまとめたPDF資料です。
                   </p>
                 </div>
               </div>
@@ -118,9 +118,9 @@ export default function LineTokutenPage() {
               {/* 内容ポイント */}
               <ul className="flex flex-col gap-2">
                 {[
-                  "なぜ資産配分が最重要なのか",
-                  "リスク許容度に合わせた配分の目安",
-                  "日本人が陥りがちな偏りとその対策",
+                  "なぜプロは商品より先に資産配分を決めるのか",
+                  "お金を「使う・備える・残す・増やす」で整理する方法",
+                  "長期で資産形成するための基本的な考え方",
                 ].map((point) => (
                   <li key={point} className="flex items-center gap-2 text-sm text-white/70">
                     <span style={{ color: "#C9A84C", flexShrink: 0 }}>✓</span>
