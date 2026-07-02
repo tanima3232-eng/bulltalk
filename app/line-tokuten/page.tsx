@@ -14,6 +14,15 @@ export const metadata: Metadata = {
 export default function LineTokutenPage() {
   return (
     <>
+      <style>{`
+        .download-btn:hover {
+          box-shadow: 0 0 48px rgba(201,168,76,0.65), 0 6px 24px rgba(0,0,0,0.4) !important;
+          transform: translateY(-2px);
+        }
+        .download-btn {
+          transition: box-shadow 0.25s ease, transform 0.25s ease;
+        }
+      `}</style>
       <Header />
       <main>
         <section
@@ -76,7 +85,6 @@ export default function LineTokutenPage() {
                     boxShadow: "0 4px 20px rgba(201,168,76,0.4)",
                   }}
                 >
-                  {/* PDF icon */}
                   <svg width="32" height="32" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M14 2H6C4.9 2 4 2.9 4 4V20C4 21.1 4.9 22 6 22H18C19.1 22 20 21.1 20 20V8L14 2Z" fill="#1A2E4A" opacity="0.9"/>
                     <path d="M14 2V8H20" fill="#1A2E4A" opacity="0.5"/>
@@ -127,22 +135,13 @@ export default function LineTokutenPage() {
               href="/line-tokuten.pdf"
               download="【LINE特典】Bulltalk_資産配分の考え方.pdf"
               id="line-tokuten-download-btn"
-              className="inline-flex items-center gap-3 font-bold text-lg px-10 py-5 rounded-2xl transition-all duration-300 w-full justify-center"
+              className="download-btn inline-flex items-center gap-3 font-bold text-lg px-10 py-5 rounded-2xl w-full justify-center"
               style={{
                 background: "linear-gradient(135deg, #C9A84C 0%, #e8c96a 100%)",
                 color: "#1A2E4A",
                 boxShadow: "0 0 32px rgba(201,168,76,0.45), 0 4px 20px rgba(0,0,0,0.3)",
               }}
-              onMouseEnter={(e) => {
-                (e.currentTarget as HTMLAnchorElement).style.boxShadow = "0 0 48px rgba(201,168,76,0.65), 0 6px 24px rgba(0,0,0,0.4)";
-                (e.currentTarget as HTMLAnchorElement).style.transform = "translateY(-2px)";
-              }}
-              onMouseLeave={(e) => {
-                (e.currentTarget as HTMLAnchorElement).style.boxShadow = "0 0 32px rgba(201,168,76,0.45), 0 4px 20px rgba(0,0,0,0.3)";
-                (e.currentTarget as HTMLAnchorElement).style.transform = "translateY(0)";
-              }}
             >
-              {/* Download icon */}
               <svg width="22" height="22" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M12 16L7 11H10V4H14V11H17L12 16Z" fill="currentColor"/>
                 <path d="M5 18H19V20H5V18Z" fill="currentColor"/>
