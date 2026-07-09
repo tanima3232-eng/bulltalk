@@ -103,7 +103,7 @@ export default function LinksPage() {
                 </p>
                 <div style={{ display: "flex", flexDirection: "column", gap: 5, marginBottom: 14 }}>
                   {[
-                    "NISAを始める前に考えること",
+                    "投資を始める前に考えること",
                     "プロが商品より先に決めること",
                     "インフレ時代のお金の守り方",
                   ].map((item) => (
