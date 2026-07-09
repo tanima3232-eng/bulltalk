@@ -122,21 +122,21 @@ export default function LinksPage() {
                 background: "#06C755",
                 color: "#fff",
                 fontWeight: 800,
-                fontSize: 14,
-                borderRadius: 12,
-                padding: "12px 0",
+                fontSize: 15,
+                borderRadius: 999,
+                padding: "14px 0",
                 textAlign: "center",
                 display: "flex",
                 alignItems: "center",
                 justifyContent: "center",
                 gap: 8,
-                boxShadow: "0 4px 16px rgba(6,199,85,0.4)",
+                boxShadow: "0 4px 20px rgba(6,199,85,0.5)",
               }}
             >
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
                 <path d="M12 2C6.48 2 2 6.04 2 11c0 3.45 1.92 6.47 4.8 8.19L6 22l2.72-1.44C9.77 20.83 10.87 21 12 21c5.52 0 10-4.04 10-9S17.52 2 12 2z" />
               </svg>
-              🟩 LINEで無料受け取り
+              LINEで無料で受け取る
             </div>
           </div>
         </a>
@@ -436,12 +436,12 @@ export default function LinksPage() {
             </p>
             <div style={{
               background: "#06C755", color: "#fff",
-              fontWeight: 800, fontSize: 14,
-              borderRadius: 12, padding: "12px 0",
+              fontWeight: 800, fontSize: 15,
+              borderRadius: 999, padding: "14px 0",
               display: "flex", alignItems: "center", justifyContent: "center", gap: 8,
-              boxShadow: "0 4px 16px rgba(6,199,85,0.4)",
+              boxShadow: "0 4px 20px rgba(6,199,85,0.5)",
             }}>
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
                 <path d="M12 2C6.48 2 2 6.04 2 11c0 3.45 1.92 6.47 4.8 8.19L6 22l2.72-1.44C9.77 20.83 10.87 21 12 21c5.52 0 10-4.04 10-9S17.52 2 12 2z" />
               </svg>
               LINEで無料で受け取る
