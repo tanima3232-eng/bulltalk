@@ -254,7 +254,7 @@ export default function LinksPage() {
               {[
                 "初心者でも使いやすい画面",
                 "NISA口座数No.1",
-                "ポイントが貯まる・使える",
+                "楽天ポイントが貯まる・使える",
               ].map((item) => (
                 <div key={item} style={{ display: "flex", alignItems: "center", gap: 8 }}>
                   <span style={{
@@ -285,7 +285,7 @@ export default function LinksPage() {
               {[
                 "アプリが使いやすい",
                 "より高精度の分析ツール",
-                "銘柄分析時間の削減ができる",
+                "dポイントが貯まる・使える",
               ].map((item) => (
                 <div key={item} style={{ display: "flex", alignItems: "center", gap: 8 }}>
                   <span style={{
