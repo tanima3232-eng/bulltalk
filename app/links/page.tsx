@@ -179,11 +179,17 @@ export default function LinksPage() {
               borderRadius: 12, padding: "14px 10px", textAlign: "center",
             }}>
               <div style={{
-                width: 36, height: 36, borderRadius: "50%",
-                background: "#BF0000", margin: "0 auto 8px",
-                display: "flex", alignItems: "center", justifyContent: "center",
+                width: 48, height: 48, borderRadius: "50%",
+                overflow: "hidden", margin: "0 auto 8px",
+                background: "#fff",
               }}>
-                <span style={{ color: "#fff", fontSize: 16, fontWeight: 900 }}>楽</span>
+                <Image
+                  src="/rakuten-logo.jpg"
+                  alt="楽天証券"
+                  width={48}
+                  height={48}
+                  style={{ objectFit: "cover", width: "100%", height: "100%" }}
+                />
               </div>
               <p style={{ color: "#fff", fontWeight: 800, fontSize: 13 }}>楽天証券</p>
             </div>
@@ -194,11 +200,16 @@ export default function LinksPage() {
               borderRadius: 12, padding: "14px 10px", textAlign: "center",
             }}>
               <div style={{
-                width: 36, height: 36, borderRadius: "50%",
-                background: "#003D7A", margin: "0 auto 8px",
-                display: "flex", alignItems: "center", justifyContent: "center",
+                width: 48, height: 48, borderRadius: "50%",
+                overflow: "hidden", margin: "0 auto 8px",
               }}>
-                <span style={{ color: "#fff", fontSize: 16, fontWeight: 900 }}>M</span>
+                <Image
+                  src="/monex-logo.jpg"
+                  alt="マネックス証券"
+                  width={48}
+                  height={48}
+                  style={{ objectFit: "cover", width: "100%", height: "100%" }}
+                />
               </div>
               <p style={{ color: "#fff", fontWeight: 800, fontSize: 13 }}>マネックス証券</p>
             </div>
