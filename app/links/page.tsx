@@ -418,14 +418,14 @@ export default function LinksPage() {
               border: "1px solid rgba(0,61,122,0.4)",
             }}>
               <a
-                href="https://h.accesstrade.net/sp/cc?rk=0100pe7200oqbc"
-                rel="nofollow noreferrer"
+                href="https://h.accesstrade.net/sp/cc?rk=010072vk00oqbc"
+                rel="nofollow"
                 referrerPolicy="no-referrer-when-downgrade"
                 style={{ display: "block" }}
               >
                 {/* eslint-disable-next-line @next/next/no-img-element */}
                 <img
-                  src="https://h.accesstrade.net/sp/rr?rk=0100pe7200oqbc"
+                  src="https://h.accesstrade.net/sp/rr?rk=010072vk00oqbc"
                   alt="マネックス証券"
                   style={{ width: "100%", display: "block" }}
                 />
