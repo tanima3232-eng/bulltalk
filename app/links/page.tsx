@@ -243,13 +243,20 @@ export default function LinksPage() {
           {/* 楽天証券 */}
           <div style={{ marginBottom: 20 }}>
             <div style={{ marginBottom: 12 }}>
-              <Image
-                src="/rakuten-banner.png"
-                alt="楽天証券"
-                width={400}
-                height={60}
-                style={{ width: "100%", height: "auto", borderRadius: 8, display: "block" }}
-              />
+              <a
+                href="https://ad2.trafficgate.net/t/r/1109/738/317466_396735"
+                target="_blank"
+                rel="nofollow noreferrer"
+                style={{ display: "block" }}
+              >
+                <Image
+                  src="/rakuten-banner.png"
+                  alt="楽天証券 口座開設"
+                  width={400}
+                  height={60}
+                  style={{ width: "100%", height: "auto", borderRadius: 8, display: "block", cursor: "pointer" }}
+                />
+              </a>
             </div>
             <div style={{ display: "flex", flexDirection: "column", gap: 8 }}>
               {[
@@ -276,13 +283,21 @@ export default function LinksPage() {
           {/* マネックス証券 */}
           <div>
             <div style={{ marginBottom: 12 }}>
-              <Image
-                src="/monex-banner.png"
-                alt="マネックス証券"
-                width={400}
-                height={60}
-                style={{ width: "100%", height: "auto", borderRadius: 8, display: "block" }}
-              />
+              <a
+                href="https://h.accesstrade.net/sp/cc?rk=0100pe7200oqbc"
+                target="_blank"
+                rel="nofollow noreferrer"
+                referrerPolicy="no-referrer-when-downgrade"
+                style={{ display: "block" }}
+              >
+                <Image
+                  src="/monex-banner.png"
+                  alt="マネックス証券 口座開設"
+                  width={400}
+                  height={60}
+                  style={{ width: "100%", height: "auto", borderRadius: 8, display: "block", cursor: "pointer" }}
+                />
+              </a>
             </div>
             <div style={{ display: "flex", flexDirection: "column", gap: 8 }}>
               {[
