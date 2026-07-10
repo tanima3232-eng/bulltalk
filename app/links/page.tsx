@@ -179,16 +179,15 @@ export default function LinksPage() {
               borderRadius: 12, padding: "14px 10px", textAlign: "center",
             }}>
               <div style={{
-                width: 48, height: 48, borderRadius: "50%",
+                width: 52, height: 52, borderRadius: "50%",
                 overflow: "hidden", margin: "0 auto 8px",
-                background: "#fff",
               }}>
                 <Image
-                  src="/rakuten-logo.jpg"
+                  src="/rakuten-logo.png"
                   alt="楽天証券"
-                  width={48}
-                  height={48}
-                  style={{ objectFit: "cover", width: "100%", height: "100%" }}
+                  width={52}
+                  height={52}
+                  style={{ objectFit: "contain", width: "100%", height: "100%" }}
                 />
               </div>
               <p style={{ color: "#fff", fontWeight: 800, fontSize: 13 }}>楽天証券</p>
@@ -200,15 +199,15 @@ export default function LinksPage() {
               borderRadius: 12, padding: "14px 10px", textAlign: "center",
             }}>
               <div style={{
-                width: 48, height: 48, borderRadius: "50%",
+                width: 52, height: 52, borderRadius: "50%",
                 overflow: "hidden", margin: "0 auto 8px",
               }}>
                 <Image
-                  src="/monex-logo.jpg"
+                  src="/monex-logo.png"
                   alt="マネックス証券"
-                  width={48}
-                  height={48}
-                  style={{ objectFit: "cover", width: "100%", height: "100%" }}
+                  width={52}
+                  height={52}
+                  style={{ objectFit: "contain", width: "100%", height: "100%" }}
                 />
               </div>
               <p style={{ color: "#fff", fontWeight: 800, fontSize: 13 }}>マネックス証券</p>
