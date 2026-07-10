@@ -242,13 +242,14 @@ export default function LinksPage() {
         >
           {/* 楽天証券 */}
           <div style={{ marginBottom: 20 }}>
-            <div style={{
-              display: "inline-flex", alignItems: "center", gap: 8,
-              background: "#BF0000", borderRadius: 8,
-              padding: "6px 14px", marginBottom: 12,
-            }}>
-              <span style={{ color: "#fff", fontWeight: 900, fontSize: 12 }}>楽</span>
-              <span style={{ color: "#fff", fontWeight: 800, fontSize: 13 }}>楽天証券</span>
+            <div style={{ marginBottom: 12 }}>
+              <Image
+                src="/rakuten-banner.png"
+                alt="楽天証券"
+                width={400}
+                height={60}
+                style={{ width: "100%", height: "auto", borderRadius: 8, display: "block" }}
+              />
             </div>
             <div style={{ display: "flex", flexDirection: "column", gap: 8 }}>
               {[
@@ -260,10 +261,11 @@ export default function LinksPage() {
                   <span style={{
                     width: 18, height: 18, background: "#BF0000", borderRadius: 4,
                     display: "flex", alignItems: "center", justifyContent: "center", flexShrink: 0,
+                    border: "1.5px solid #ff4444",
                   }}>
-                    <span style={{ color: "#fff", fontSize: 10 }}>✓</span>
+                    <span style={{ color: "#fff", fontSize: 10, fontWeight: 900 }}>✓</span>
                   </span>
-                  <span style={{ color: "rgba(255,255,255,0.85)", fontSize: 13 }}>{item}</span>
+                  <span style={{ color: "#ffaaaa", fontSize: 13, fontWeight: 600 }}>{item}</span>
                 </div>
               ))}
             </div>
@@ -273,13 +275,14 @@ export default function LinksPage() {
 
           {/* マネックス証券 */}
           <div>
-            <div style={{
-              display: "inline-flex", alignItems: "center", gap: 8,
-              background: "#003D7A", borderRadius: 8,
-              padding: "6px 14px", marginBottom: 12,
-            }}>
-              <span style={{ color: "#fff", fontWeight: 900, fontSize: 12 }}>M</span>
-              <span style={{ color: "#fff", fontWeight: 800, fontSize: 13 }}>マネックス証券</span>
+            <div style={{ marginBottom: 12 }}>
+              <Image
+                src="/monex-banner.png"
+                alt="マネックス証券"
+                width={400}
+                height={60}
+                style={{ width: "100%", height: "auto", borderRadius: 8, display: "block" }}
+              />
             </div>
             <div style={{ display: "flex", flexDirection: "column", gap: 8 }}>
               {[
@@ -289,12 +292,13 @@ export default function LinksPage() {
               ].map((item) => (
                 <div key={item} style={{ display: "flex", alignItems: "center", gap: 8 }}>
                   <span style={{
-                    width: 18, height: 18, background: "#003D7A", borderRadius: 4,
+                    width: 18, height: 18, background: "#FFC200", borderRadius: 4,
                     display: "flex", alignItems: "center", justifyContent: "center", flexShrink: 0,
+                    border: "1.5px solid #e6a800",
                   }}>
-                    <span style={{ color: "#fff", fontSize: 10 }}>✓</span>
+                    <span style={{ color: "#1a1a1a", fontSize: 10, fontWeight: 900 }}>✓</span>
                   </span>
-                  <span style={{ color: "rgba(255,255,255,0.85)", fontSize: 13 }}>{item}</span>
+                  <span style={{ color: "#FFE066", fontSize: 13, fontWeight: 600 }}>{item}</span>
                 </div>
               ))}
             </div>
