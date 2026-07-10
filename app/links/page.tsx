@@ -389,22 +389,19 @@ export default function LinksPage() {
           {/* アフィリエイトバナー：楽天証券 */}
           <div style={{ marginBottom: 12 }}>
             <p style={{ color: "rgba(255,255,255,0.5)", fontSize: 10, marginBottom: 6 }}>楽天証券</p>
-            <div style={{
-              borderRadius: 10, overflow: "hidden",
-              border: "1px solid rgba(191,0,0,0.4)",
-            }}>
-              {/* eslint-disable-next-line @next/next/no-html-link-for-pages */}
+            <div style={{ borderRadius: 10, overflow: "hidden" }}>
               <a
-                href="https://ad2.trafficgate.net/t/r/1109/738/317466_396735"
+                href="https://ad2.trafficgate.net/t/r/1193/738/317466_396735"
                 target="_blank"
-                rel="nofollow noreferrer"
+                rel="nofollow"
                 style={{ display: "block" }}
               >
-                {/* eslint-disable-next-line @next/next/no-img-element */}
-                <img
-                  src="https://srv2.trafficgate.net/t/b/1109/738/317466_396735"
+                <Image
+                  src="/rakuten-banner.png"
                   alt="楽天証券 口座開設"
-                  style={{ width: "100%", display: "block" }}
+                  width={400}
+                  height={80}
+                  style={{ width: "100%", height: "auto", display: "block", cursor: "pointer" }}
                 />
               </a>
             </div>
@@ -413,21 +410,22 @@ export default function LinksPage() {
           {/* アフィリエイトバナー：マネックス証券 */}
           <div>
             <p style={{ color: "rgba(255,255,255,0.5)", fontSize: 10, marginBottom: 6 }}>マネックス証券</p>
-            <div style={{
-              borderRadius: 10, overflow: "hidden",
-              border: "1px solid rgba(0,61,122,0.4)",
-            }}>
+            <div style={{ borderRadius: 10, overflow: "hidden" }}>
               <a
                 href="https://h.accesstrade.net/sp/cc?rk=010072vk00oqbc"
                 rel="nofollow"
                 referrerPolicy="no-referrer-when-downgrade"
                 style={{ display: "block" }}
               >
+                {/* トラッキングピクセル */}
                 {/* eslint-disable-next-line @next/next/no-img-element */}
-                <img
-                  src="https://h.accesstrade.net/sp/rr?rk=010072vk00oqbc"
-                  alt="マネックス証券"
-                  style={{ width: "100%", display: "block" }}
+                <img src="https://h.accesstrade.net/sp/rr?rk=010072vk00oqbc" width={1} height={1} alt="" style={{ display: "none" }} />
+                <Image
+                  src="/monex-banner.png"
+                  alt="マネックス証券 口座開設"
+                  width={400}
+                  height={80}
+                  style={{ width: "100%", height: "auto", display: "block", cursor: "pointer" }}
                 />
               </a>
             </div>
