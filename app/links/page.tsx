@@ -244,9 +244,9 @@ export default function LinksPage() {
           <div style={{ marginBottom: 20 }}>
             <div style={{ marginBottom: 12 }}>
               <a
-                href="https://ad2.trafficgate.net/t/r/1109/738/317466_396735"
+                href="https://ad2.trafficgate.net/t/r/1193/738/317466_396735"
                 target="_blank"
-                rel="nofollow noreferrer"
+                rel="nofollow"
                 style={{ display: "block" }}
               >
                 <Image
@@ -284,12 +284,14 @@ export default function LinksPage() {
           <div>
             <div style={{ marginBottom: 12 }}>
               <a
-                href="https://h.accesstrade.net/sp/cc?rk=0100pe7200oqbc"
-                target="_blank"
-                rel="nofollow noreferrer"
+                href="https://h.accesstrade.net/sp/cc?rk=010072vk00oqbc"
+                rel="nofollow"
                 referrerPolicy="no-referrer-when-downgrade"
                 style={{ display: "block" }}
               >
+                {/* マネックス証券 トラッキングピクセル */}
+                {/* eslint-disable-next-line @next/next/no-img-element */}
+                <img src="https://h.accesstrade.net/sp/rr?rk=010072vk00oqbc" width={1} height={1} alt="" style={{ display: "none" }} />
                 <Image
                   src="/monex-banner.png"
                   alt="マネックス証券 口座開設"
