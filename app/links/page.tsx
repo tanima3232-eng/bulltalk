@@ -174,10 +174,19 @@ export default function LinksPage() {
           {/* 2社並列 */}
           <div style={{ display: "flex", gap: 10, marginBottom: 18 }}>
             {/* 楽天証券 */}
-            <div style={{
-              flex: 1, background: "rgba(255,255,255,0.08)", border: "1px solid rgba(201,168,76,0.25)",
-              borderRadius: 12, padding: "14px 10px", textAlign: "center",
-            }}>
+            <a
+              href="https://ad2.trafficgate.net/t/r/1193/738/317466_396735"
+              target="_blank"
+              rel="nofollow"
+              style={{
+                flex: 1, background: "rgba(255,255,255,0.08)", border: "1px solid rgba(201,168,76,0.25)",
+                borderRadius: 12, padding: "14px 10px", textAlign: "center",
+                textDecoration: "none", display: "block", cursor: "pointer",
+                transition: "transform 0.15s, box-shadow 0.15s",
+              }}
+              onMouseEnter={e => { (e.currentTarget as HTMLAnchorElement).style.transform = "translateY(-2px)"; (e.currentTarget as HTMLAnchorElement).style.boxShadow = "0 6px 20px rgba(191,0,0,0.3)"; }}
+              onMouseLeave={e => { (e.currentTarget as HTMLAnchorElement).style.transform = "translateY(0)"; (e.currentTarget as HTMLAnchorElement).style.boxShadow = "none"; }}
+            >
               <div style={{
                 width: 52, height: 52, borderRadius: "50%",
                 overflow: "hidden", margin: "0 auto 8px",
@@ -191,13 +200,25 @@ export default function LinksPage() {
                 />
               </div>
               <p style={{ color: "#fff", fontWeight: 800, fontSize: 13 }}>楽天証券</p>
-            </div>
+            </a>
 
             {/* マネックス証券 */}
-            <div style={{
-              flex: 1, background: "rgba(255,255,255,0.08)", border: "1px solid rgba(201,168,76,0.25)",
-              borderRadius: 12, padding: "14px 10px", textAlign: "center",
-            }}>
+            <a
+              href="https://h.accesstrade.net/sp/cc?rk=010072vk00oqbc"
+              rel="nofollow"
+              referrerPolicy="no-referrer-when-downgrade"
+              style={{
+                flex: 1, background: "rgba(255,255,255,0.08)", border: "1px solid rgba(201,168,76,0.25)",
+                borderRadius: 12, padding: "14px 10px", textAlign: "center",
+                textDecoration: "none", display: "block", cursor: "pointer",
+                transition: "transform 0.15s, box-shadow 0.15s",
+              }}
+              onMouseEnter={e => { (e.currentTarget as HTMLAnchorElement).style.transform = "translateY(-2px)"; (e.currentTarget as HTMLAnchorElement).style.boxShadow = "0 6px 20px rgba(255,194,0,0.3)"; }}
+              onMouseLeave={e => { (e.currentTarget as HTMLAnchorElement).style.transform = "translateY(0)"; (e.currentTarget as HTMLAnchorElement).style.boxShadow = "none"; }}
+            >
+              {/* トラッキングピクセル */}
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img src="https://h.accesstrade.net/sp/rr?rk=010072vk00oqbc" width={1} height={1} alt="" style={{ display: "none" }} />
               <div style={{
                 width: 52, height: 52, borderRadius: "50%",
                 overflow: "hidden", margin: "0 auto 8px",
@@ -211,7 +232,7 @@ export default function LinksPage() {
                 />
               </div>
               <p style={{ color: "#fff", fontWeight: 800, fontSize: 13 }}>マネックス証券</p>
-            </div>
+            </a>
           </div>
 
           {/* なんで2つ使ってるの？ */}
