@@ -1,12 +1,6 @@
-import type { Metadata } from "next";
-import Image from "next/image";
+"use client";
 
-export const metadata: Metadata = {
-  title: "Bulltalk リンク一覧｜元大手信託銀行員 谷本光章",
-  description:
-    "元大手信託銀行員・谷本光章のリンク集。LINE特典PDF・おすすめ証券口座など。",
-  robots: { index: false, follow: false },
-};
+import Image from "next/image";
 
 export default function LinksPage() {
   return (
