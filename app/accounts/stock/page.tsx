@@ -33,7 +33,7 @@ const brokers = [
     app: "◎ 便利",
     target: "楽天ユーザー・積立投資家",
     point: "NISA口座数No.1。楽天ポイントでクレカ積立（最大2%還元）！iSPEED・MARKET SPEED IIなど高機能ツールが無料",
-    ctaUrl: "https://ad2.trafficgate.net/t/r/1230/738/317466_396735",
+    ctaUrl: "https://www.rakuten-sec.co.jp/web/lp/start_no1_02/?sclid=a_GO_brand_r_ne_no1_02_cv_t2&gad_source=1&gad_campaignid=23589195982&gbraid=0AAAAADhAqaGauJZqPBRb9ssxnsnKNtHa5&gclid=Cj0KCQjwguLSBhDLARIsAH-yPrEBwrhLdl6a8E9MzIUdVbkWE6a51yjy9lGjrpC1K1wsbcsBdJNJ5NUaAnnsEALw_wcB",
     hidden: false,
   },
   {

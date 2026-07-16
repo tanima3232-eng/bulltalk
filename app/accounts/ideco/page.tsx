@@ -67,7 +67,7 @@ const idecoProviders = [
     points: "○ 楽天P",
     app: "◎",
     target: "楽天ユーザー・NISAも楽天の方",
-    ctaUrl: "https://www.rakuten-sec.co.jp/",
+    ctaUrl: "https://www.rakuten-sec.co.jp/web/lp/start_no1_02/?sclid=a_GO_brand_r_ne_no1_02_cv_t2&gad_source=1&gad_campaignid=23589195982&gbraid=0AAAAADhAqaGauJZqPBRb9ssxnsnKNtHa5&gclid=Cj0KCQjwguLSBhDLARIsAH-yPrEBwrhLdl6a8E9MzIUdVbkWE6a51yjy9lGjrpC1K1wsbcsBdJNJ5NUaAnnsEALw_wcB",
     hidden: true,
   },
 ];
