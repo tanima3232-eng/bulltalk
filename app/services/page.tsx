@@ -237,6 +237,14 @@ export default function ServicesPage() {
             >
               LINEで無料相談する →
             </a>
+            <div className="mt-4">
+              <a
+                href="/contact"
+                className="inline-flex items-center gap-2 text-sm text-white/70 hover:text-gold transition-colors underline underline-offset-4"
+              >
+                📩 お問い合わせフォームはこちら
+              </a>
+            </div>
           </div>
         </section>
 
