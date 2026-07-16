@@ -110,6 +110,13 @@ export default function Header() {
           </Link>
 
           <Link
+            href="/contact"
+            className="text-white text-sm font-medium hover:text-gold transition-colors duration-200"
+          >
+            お問い合わせ
+          </Link>
+
+          <Link
             href="/line"
             className="text-navy text-sm font-bold px-4 py-2 rounded-full transition-all duration-200 hover:opacity-80"
             style={{background: "#C9A84C"}}
@@ -181,6 +188,13 @@ export default function Header() {
             onClick={() => setMenuOpen(false)}
           >
             経歴
+          </Link>
+          <Link
+            href="/contact"
+            className="block px-6 py-4 text-white hover:bg-white/10 transition-colors border-b border-white/5"
+            onClick={() => setMenuOpen(false)}
+          >
+            お問い合わせ
           </Link>
           <Link
             href="/line"
