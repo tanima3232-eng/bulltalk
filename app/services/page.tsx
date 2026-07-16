@@ -229,20 +229,20 @@ export default function ServicesPage() {
             <p className="text-white/70 text-sm md:text-base leading-relaxed mb-8">
               研修・セミナー・コンサルティングの内容やご予算は、<br className="hidden md:inline" />
               ご要望に応じて柔軟にカスタマイズ可能です。<br />
-              どんな些細なことでも、まずはLINEでお気軽にお声がけください。
+              どんな些細なことでも、まずはお気軽にお問い合わせください。
             </p>
-            <a
-              href="https://lin.ee/FmH7NXr"
-              className="btn-line inline-flex items-center gap-2 text-lg px-8 py-4"
-            >
-              LINEで無料相談する →
-            </a>
-            <div className="mt-4">
+            <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
+              <a
+                href="https://lin.ee/FmH7NXr"
+                className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-8 py-4 bg-green-500 text-white font-bold rounded-lg hover:bg-green-600 transition-all duration-200 text-base"
+              >
+                💬 LINEで相談する
+              </a>
               <a
                 href="/contact"
-                className="inline-flex items-center gap-2 text-sm text-white/70 hover:text-gold transition-colors underline underline-offset-4"
+                className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-8 py-4 bg-white text-navy font-bold rounded-lg hover:bg-light-gold transition-all duration-200 text-base"
               >
-                📩 お問い合わせフォームはこちら
+                📩 メールで相談する
               </a>
             </div>
           </div>
