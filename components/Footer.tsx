@@ -31,6 +31,7 @@ export default function Footer() {
                 { href: "/accounts/ideco", label: "iDeCo口座開設" },
                 { href: "/alternative", label: "オルタナティブ投資とは" },
                 { href: "/real-estate", label: "不動産・インフラ投資とは" },
+                { href: "/services", label: "サービス" },
                 { href: "/about", label: "経歴" },
                 { href: "/line", label: "Bull友になる" },
               ].map((link) => (

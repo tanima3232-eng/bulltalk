@@ -8,6 +8,7 @@ const navLinks = [
   { href: "/market", label: "相場分析" },
   { href: "/simulation", label: "シミュレーション" },
   { href: "/column", label: "金融コラム" },
+  { href: "/services", label: "サービス" },
 ];
 
 const accountLinks = [
