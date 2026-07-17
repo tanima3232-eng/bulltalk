@@ -9,7 +9,7 @@ const menuSections = [
     links: [
       { href: "/market", label: "📈 相場分析", desc: "日経225の分析・売買判断" },
       { href: "/column", label: "📚 金融コラム", desc: "資産形成・相続・不動産を学ぶ" },
-      { href: "/simulation", label: "🧮 シミュレーション", desc: "資産形成をシミュレーション" },
+      { href: "/simulation", label: "📊 シミュレーション", desc: "資産形成をシミュレーション" },
     ],
   },
   {

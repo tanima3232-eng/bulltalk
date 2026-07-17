@@ -30,7 +30,7 @@ const serviceCards = [
     tag: "30本以上",
   },
   {
-    icon: "🧮",
+    icon: "📊",
     title: "シミュレーション",
     desc: "積立投資の将来を\nグラフで可視化",
     href: "/simulation",
