@@ -11,38 +11,38 @@ export const metadata: Metadata = {
 
 const serviceCategories = [
   {
-    id: "financial",
-    icon: "🏦",
-    label: "金融機関向け",
-    color: "from-navy to-[#2a4470]",
-    accent: "border-gold",
-    items: [
-      "金融機関営業員向け各種研修・指導（資産形成運用営業、相続対策コンサル、不動産コンサル、信託に関するもの、保有資格に関するもの等）",
-      "その他、金融、信託、不動産、相続、事業承継に関すること全般ご要望に応じて対応可能です。",
-    ],
-  },
-  {
     id: "corporate",
     icon: "🏢",
-    label: "法人向け",
+    label: "企業様向け",
     color: "from-[#2a4470] to-[#3a5a8a]",
     accent: "border-blue-400",
     items: [
-      "福利厚生制度、金融教育、退職前ライフプラン、事業承継対策、相続対策",
-      "上記に関連する職員向け各種研修",
+      "役員・従業員様向け、各種研修・セミナー・コンサルティング（金融教育、退職前ライフプラン、事業承継対策、相続対策、福利厚生制度に関する内容等）",
+      "オーナー様向け、コンサルティング（資産運用、不動産、相続、事業承継に関する内容等）",
       "その他、金融、不動産、相続、事業承継に関すること全般ご要望に応じて対応可能です。",
     ],
   },
   {
     id: "individual",
     icon: "👤",
-    label: "個人向け",
+    label: "個人の方向け",
     color: "from-[#3a5a8a] to-[#4a6a9a]",
     accent: "border-green-400",
     items: [
-      "ライフプラン、資産形成、NISA・iDeCo、住宅購入、不動産投資、相続・老後資金相談",
-      "上記に関連する各種研修",
+      "ライフプラン、資産形成、NISA・iDeCo、住宅購入、不動産投資、相続・老後資金に関する相談",
       "その他、金融、不動産、相続、事業承継に関すること全般ご要望に応じて対応可能です。",
+    ],
+  },
+  {
+    id: "financial",
+    icon: "🏦",
+    label: "金融機関様向け",
+    color: "from-navy to-[#2a4470]",
+    accent: "border-gold",
+    items: [
+      "営業担当者向け各種研修（資産形成、相続対策、不動産、信託、保有資格に関する内容等）",
+      "顧客向けセミナー講師（資産形成、相続対策、不動産、信託に関する内容等）",
+      "その他、金融、信託、不動産、相続、事業承継に関すること全般ご要望に応じて対応可能です。",
     ],
   },
 ];
@@ -202,7 +202,7 @@ export default function ServicesPage() {
             <p className="section-subtitle text-center">まずはお気軽にお問い合わせください</p>
             <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
               {[
-                { step: "01", title: "お問い合わせ", desc: "LINEまたはサイトからお気軽にご連絡ください。", icon: "📩" },
+                { step: "01", title: "お問い合わせ", desc: "LINEまたはメールからお気軽にご連絡ください。", icon: "📩" },
                 { step: "02", title: "ヒアリング", desc: "ご要望・課題をお伺いし、最適なプランをご提案します。", icon: "🗣️" },
                 { step: "03", title: "ご提案", desc: "内容・スケジュール・費用をご提示いたします。", icon: "📄" },
                 { step: "04", title: "実施", desc: "コンサルティング・研修を実施。アフターフォローも対応。", icon: "✅" },
