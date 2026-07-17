@@ -12,6 +12,48 @@ export const metadata: Metadata = {
     "日経225分析・相続・資産運用・不動産まで。元大手信託銀行員12年・FP1級・証券アナリスト（CMA）・宅建士が無料で解説します。",
 };
 
+const serviceCards = [
+  {
+    icon: "📈",
+    title: "相場分析",
+    desc: "日経225の分析・売買判断を\n毎日配信",
+    href: "/market",
+    color: "border-red-400",
+    tag: "毎日更新",
+  },
+  {
+    icon: "📚",
+    title: "金融コラム",
+    desc: "資産形成・相続・不動産を\nプロが基礎から解説",
+    href: "/column",
+    color: "border-blue-400",
+    tag: "30本以上",
+  },
+  {
+    icon: "🧮",
+    title: "シミュレーション",
+    desc: "積立投資の将来を\nグラフで可視化",
+    href: "/simulation",
+    color: "border-green-400",
+    tag: "無料",
+  },
+  {
+    icon: "💼",
+    title: "提供サービス",
+    desc: "研修・セミナー・\nコンサルティング",
+    href: "/services",
+    color: "border-gold",
+    tag: "企業様・金融機関様",
+  },
+];
+
+const quickLinks = [
+  { icon: "🏦", label: "NISA・証券口座を開設", href: "/accounts/stock" },
+  { icon: "💰", label: "iDeCoを始める", href: "/accounts/ideco" },
+  { icon: "📊", label: "オルタナティブ投資とは", href: "/alternative" },
+  { icon: "🏠", label: "不動産・インフラ投資とは", href: "/real-estate" },
+];
+
 export default async function HomePage() {
   const videos = await getLatestVideos(3);
   return (
@@ -19,12 +61,20 @@ export default async function HomePage() {
       <Header />
       <main>
 
-        <section className="bg-navy text-white py-24 px-4">
-          <div className="max-w-4xl mx-auto text-center">
-            <p className="text-gold text-sm font-bold uppercase tracking-widest mb-4">FP1級×証券アナリスト×宅建士</p>
+        {/* ━━━ HERO ━━━ */}
+        <section className="bg-navy text-white py-24 px-4 relative overflow-hidden">
+          <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-gold/5 rounded-full -translate-y-1/2 translate-x-1/3" />
+          <div className="absolute bottom-0 left-0 w-80 h-80 bg-gold/5 rounded-full translate-y-1/2 -translate-x-1/3" />
+
+          <div className="max-w-4xl mx-auto text-center relative z-10">
+            <p className="text-gold text-sm font-bold uppercase tracking-widest mb-4">
+              FP1級 × 証券アナリスト × 宅建士
+            </p>
             <h1 className="text-3xl md:text-5xl font-bold mb-8">
               <span className="block mb-5">勝つための情報を</span>
-              <span className="block"><span className="text-gold">プロ</span>が直接届ける</span>
+              <span className="block">
+                <span className="text-gold">プロ</span>が直接届ける
+              </span>
             </h1>
             <p className="text-white/80 text-base md:text-lg leading-relaxed mb-10 max-w-2xl mx-auto">
               相場分析から資産形成・相続・不動産まで<br />
@@ -41,50 +91,86 @@ export default async function HomePage() {
           </div>
         </section>
 
-        {/* S2: 分岐カード */}
+        {/* ━━━ サービス一覧カード ━━━ */}
         <section className="bg-offwhite py-20 px-4">
           <div className="max-w-5xl mx-auto">
-            <h2 className="section-title text-center">あなたはどちら？</h2>
-            <p className="section-subtitle text-center">Bulltalkは2つのコンテンツで構成されています</p>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-              {/* Bulltalk Card */}
-              <div className="card p-8 border-t-4 border-gold">
-                <span className="inline-block bg-gold/20 text-gold text-xs font-bold px-3 py-1 rounded-full mb-4">毎日勝負したい方</span>
-                <div className="text-5xl mb-4">📈</div>
-                <h3 className="text-2xl font-bold text-navy mb-2">Bulltalk</h3>
-                <p className="text-navy font-semibold mb-3">日経225・ブル型投信に興味がある方へ</p>
-                <p className="text-gray-600 text-sm leading-relaxed mb-6">
-                  毎日場引け前に買い/売り判断を配信。元大手信託銀行の証券アナリストが相場の動きをわかりやすく解説します。
-                </p>
-                <Link href="/market" className="btn-primary block text-center">
-                  分析を見る →
-                </Link>
-              </div>
-
-              {/* 人生信託ラボ Card */}
-              <div className="card p-8 border-t-4 border-navy">
-                <span className="inline-block bg-navy/10 text-navy text-xs font-bold px-3 py-1 rounded-full mb-4">人生を豊かにしたい方</span>
-                <div className="text-5xl mb-4">📚</div>
-                <h3 className="text-2xl font-bold text-navy mb-2">人生信託ラボ</h3>
-                <p className="text-navy font-semibold mb-3">資産形成・相続・不動産を学びたい方へ</p>
-                <p className="text-gray-600 text-sm leading-relaxed mb-6">
-                  実務12年のプロが基礎から解説。信託銀行で培った知識を惜しみなくお伝えします。
-                </p>
-                <Link href="/simulation" className="btn-navy block text-center mb-3">
-                  資産形成シミュレーションを<br />実施する →
-                </Link>
+            <h2 className="section-title text-center">Bulltalkでできること</h2>
+            <p className="section-subtitle text-center">
+              元大手信託銀行員の知見を、すべて無料で公開しています
+            </p>
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+              {serviceCards.map((card) => (
                 <Link
-                  href="/column"
-                  className="block text-center text-sm font-bold py-3 px-4 rounded-xl border-2 border-navy text-navy hover:bg-navy hover:text-white transition-all duration-200"
+                  key={card.href}
+                  href={card.href}
+                  className={`bg-white rounded-2xl p-6 shadow-sm border-t-4 ${card.color} hover:shadow-lg hover:-translate-y-1 transition-all duration-300 group block`}
                 >
-                  コラムを読む →
+                  <div className="flex items-center justify-between mb-3">
+                    <span className="text-3xl">{card.icon}</span>
+                    <span className="text-xs font-bold text-gold bg-light-gold px-2 py-0.5 rounded-full">
+                      {card.tag}
+                    </span>
+                  </div>
+                  <h3 className="font-bold text-navy text-lg mb-2 group-hover:text-gold transition-colors">
+                    {card.title}
+                  </h3>
+                  <p className="text-gray-500 text-sm leading-relaxed whitespace-pre-line">
+                    {card.desc}
+                  </p>
                 </Link>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* ━━━ 経歴サマリー ━━━ */}
+        <section className="bg-navy text-white py-20 px-4">
+          <div className="max-w-5xl mx-auto">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+              <div className="flex justify-center">
+                <div className="w-56 h-56 md:w-64 md:h-64 rounded-full border-4 border-gold overflow-hidden shadow-xl">
+                  <Image
+                    src="/profile.jpg"
+                    alt="谷本光章 プロフィール写真"
+                    width={256}
+                    height={256}
+                    className="w-full h-full object-cover object-top"
+                  />
+                </div>
+              </div>
+              <div>
+                <p className="text-gold text-sm font-bold uppercase tracking-wider mb-2">
+                  ABOUT ME
+                </p>
+                <h2 className="text-3xl font-bold mb-6">谷本 光章とは</h2>
+                <ul className="space-y-3 mb-8">
+                  {[
+                    "🏦 元大手信託銀行 12年",
+                    "📜 FP1級 ／ 証券アナリスト（CMA）／ 宅建士",
+                    "🏆 新人コンペ全国2位・社長賞受賞",
+                    "💼 個人〜機関投資家まで幅広く担当",
+                    "🎤 金融機関向け研修講師として多数登壇",
+                  ].map((item) => (
+                    <li key={item} className="flex items-start gap-3 text-white/90">
+                      <span className="text-xl">{item.slice(0, 2)}</span>
+                      <span>{item.slice(3)}</span>
+                    </li>
+                  ))}
+                </ul>
+                <div className="flex flex-col sm:flex-row gap-3">
+                  <Link href="/about" className="btn-primary text-center">
+                    経歴を見る →
+                  </Link>
+                  <Link href="/services" className="inline-block px-6 py-3 border border-white/30 text-white font-bold rounded-lg hover:bg-white/10 transition-all duration-200 text-center">
+                    提供サービスを見る →
+                  </Link>
+                </div>
               </div>
             </div>
           </div>
         </section>
 
-        {/* S3: 最新コンテンツ */}
+        {/* ━━━ 最新コンテンツ ━━━ */}
         <section className="bg-white py-20 px-4">
           <div className="max-w-5xl mx-auto">
             <h2 className="section-title text-center">最新コンテンツ</h2>
@@ -157,7 +243,7 @@ export default async function HomePage() {
                 </>
               ) : (
                 <>
-                  {/* スマホ：横スクロール */}
+                  {/* スマホ placeholder */}
                   <div className="flex md:hidden gap-3 mb-6 overflow-x-auto pb-3 -mx-4 px-4">
                     {[1, 2, 3].map((i) => (
                       <div key={i} className="flex-none bg-white rounded-xl overflow-hidden shadow-sm border border-gray-100"
@@ -179,7 +265,7 @@ export default async function HomePage() {
                       </div>
                     ))}
                   </div>
-                  {/* PC: 3列 */}
+                  {/* PC placeholder */}
                   <div className="hidden md:flex justify-center gap-4 mb-6">
                     {[1, 2, 3].map((i) => (
                       <div key={i} className="bg-white rounded-xl overflow-hidden shadow-sm border border-gray-100" style={{width: "200px", flexShrink: 0}}>
@@ -202,7 +288,6 @@ export default async function HomePage() {
                   </div>
                 </>
               )}
-
             </div>
 
             {/* 最新コラム */}
@@ -238,48 +323,29 @@ export default async function HomePage() {
           </div>
         </section>
 
-        {/* S4: 経歴サマリー */}
-        <section className="bg-navy text-white py-20 px-4">
+        {/* ━━━ クイックリンク ━━━ */}
+        <section className="bg-offwhite py-16 px-4">
           <div className="max-w-5xl mx-auto">
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
-              <div className="flex justify-center">
-                <div className="w-64 h-64 rounded-full border-4 border-gold overflow-hidden shadow-xl">
-                  <Image
-                    src="/profile.jpg"
-                    alt="谷本光章 プロフィール写真"
-                    width={256}
-                    height={256}
-                    className="w-full h-full object-cover object-top"
-                  />
-                </div>
-              </div>
-              <div>
-                <p className="text-gold text-sm font-bold uppercase tracking-wider mb-2">ABOUT ME</p>
-                <h2 className="text-3xl font-bold mb-6">谷本 光章とは</h2>
-                <ul className="space-y-3 mb-8">
-                  {[
-                    "🏦 元大手信託銀行 12年",
-                    "📜 FP1級 ／ 証券アナリスト（CMA）／ 宅建士",
-                    "🏆 新人コンペ全国2位・社長賞受賞",
-                    "💼 個人〜機関投資家まで幅広く担当",
-                  ].map((item) => (
-                    <li key={item} className="flex items-start gap-3 text-white/90">
-                      <span className="text-xl">{item.slice(0, 2)}</span>
-                      <span>{item.slice(3)}</span>
-                    </li>
-                  ))}
-                </ul>
-                <div className="text-center md:text-left">
-                  <Link href="/about" className="btn-primary">
-                    詳しく見る →
-                  </Link>
-                </div>
-              </div>
+            <h2 className="section-title text-center">もっと探す</h2>
+            <p className="section-subtitle text-center">口座開設・投資についてもっと知りたい方はこちら</p>
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+              {quickLinks.map((link) => (
+                <Link
+                  key={link.href}
+                  href={link.href}
+                  className="bg-white rounded-xl p-5 text-center shadow-sm hover:shadow-md hover:-translate-y-0.5 transition-all duration-300 group"
+                >
+                  <span className="text-3xl mb-3 block">{link.icon}</span>
+                  <p className="text-navy font-bold text-sm group-hover:text-gold transition-colors">
+                    {link.label}
+                  </p>
+                </Link>
+              ))}
             </div>
           </div>
         </section>
 
-        {/* LINE CTA */}
+        {/* ━━━ LINE CTA ━━━ */}
         <LineCtaBanner />
       </main>
       <Footer />

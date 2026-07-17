@@ -1,210 +1,162 @@
 "use client";
 
 import Link from "next/link";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
-const navLinks = [
-  { href: "/", label: "トップ" },
-  { href: "/market", label: "相場分析" },
-  { href: "/simulation", label: "シミュレーション" },
-  { href: "/column", label: "金融コラム" },
-  { href: "/services", label: "提供サービス" },
-];
-
-const accountLinks = [
-  { href: "/accounts/stock", label: "NISA・証券口座開設" },
-  { href: "/accounts/ideco", label: "iDeCo口座開設" },
+const menuSections = [
+  {
+    label: "コンテンツ",
+    links: [
+      { href: "/market", label: "📈 相場分析", desc: "日経225の分析・売買判断" },
+      { href: "/column", label: "📚 金融コラム", desc: "資産形成・相続・不動産を学ぶ" },
+      { href: "/simulation", label: "🧮 シミュレーション", desc: "資産形成をシミュレーション" },
+    ],
+  },
+  {
+    label: "サービス",
+    links: [
+      { href: "/services", label: "💼 提供サービス", desc: "研修・コンサル・セミナー" },
+      { href: "/contact", label: "📩 お問い合わせ", desc: "ご依頼・ご相談はこちら" },
+    ],
+  },
+  {
+    label: "口座開設",
+    links: [
+      { href: "/accounts/stock", label: "🏦 NISA・証券口座開設", desc: "" },
+      { href: "/accounts/ideco", label: "🏦 iDeCo口座開設", desc: "" },
+    ],
+  },
+  {
+    label: "投資を学ぶ",
+    links: [
+      { href: "/alternative", label: "📊 オルタナティブ投資とは", desc: "" },
+      { href: "/real-estate", label: "🏠 不動産・インフラ投資とは", desc: "" },
+    ],
+  },
+  {
+    label: "その他",
+    links: [
+      { href: "/about", label: "👤 経歴", desc: "谷本光章について" },
+    ],
+  },
 ];
 
 export default function Header() {
   const [menuOpen, setMenuOpen] = useState(false);
-  const [accountDropOpen, setAccountDropOpen] = useState(false);
-  const [altDropOpen, setAltDropOpen] = useState(false);
+
+  // メニュー開いている時にbodyスクロールを止める
+  useEffect(() => {
+    if (menuOpen) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "";
+    }
+    return () => {
+      document.body.style.overflow = "";
+    };
+  }, [menuOpen]);
 
   return (
-    <header className="bg-navy sticky top-0 z-50 shadow-lg">
-      <div className="max-w-6xl mx-auto px-4 py-4 flex items-center justify-between">
-        {/* Logo */}
-        <Link href="/" className="text-white font-bold text-2xl tracking-wide">
-          <span className="text-gold">Bull</span>talk
-        </Link>
+    <>
+      <header className="bg-navy sticky top-0 z-50 shadow-lg">
+        <div className="max-w-6xl mx-auto px-4 py-4 flex items-center justify-between">
+          {/* Logo */}
+          <Link href="/" className="text-white font-bold text-2xl tracking-wide" onClick={() => setMenuOpen(false)}>
+            <span className="text-gold">Bull</span>talk
+          </Link>
 
-        {/* Desktop Nav */}
-        <nav className="hidden md:flex items-center gap-6">
-          {navLinks.map((link) => (
+          {/* Right side: CTA + Hamburger */}
+          <div className="flex items-center gap-3">
             <Link
-              key={link.href}
-              href={link.href}
-              className="text-white text-sm font-medium hover:text-gold transition-colors duration-200"
+              href="/line"
+              className="text-navy text-sm font-bold px-4 py-2 rounded-full transition-all duration-200 hover:opacity-80"
+              style={{ background: "#C9A84C" }}
             >
-              {link.label}
+              Bull友になる
             </Link>
-          ))}
 
-          {/* 口座開設ドロップダウン */}
-          <div
-            className="relative"
-            onMouseEnter={() => setAccountDropOpen(true)}
-            onMouseLeave={() => setAccountDropOpen(false)}
-          >
-            <button className="text-white text-sm font-medium hover:text-gold transition-colors duration-200 flex items-center gap-1">
-              口座開設
-              <svg className={`w-3 h-3 transition-transform duration-200 ${accountDropOpen ? "rotate-180" : ""}`} fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
-              </svg>
+            {/* Hamburger button - always visible */}
+            <button
+              className="text-white p-2 relative w-10 h-10 flex items-center justify-center"
+              onClick={() => setMenuOpen(!menuOpen)}
+              aria-label="メニューを開く"
+            >
+              <div className={`w-6 h-0.5 bg-white absolute transition-all duration-300 ${menuOpen ? "rotate-45" : "-translate-y-2"}`} />
+              <div className={`w-6 h-0.5 bg-white absolute transition-all duration-300 ${menuOpen ? "opacity-0" : ""}`} />
+              <div className={`w-6 h-0.5 bg-white absolute transition-all duration-300 ${menuOpen ? "-rotate-45" : "translate-y-2"}`} />
             </button>
-            {accountDropOpen && (
-              <div className="absolute top-full left-0 pt-1 min-w-[180px] z-50">
-                <div className="bg-white rounded-xl shadow-xl border border-gray-100 overflow-hidden">
-                  {accountLinks.map((link) => (
+          </div>
+        </div>
+      </header>
+
+      {/* Full-screen overlay menu */}
+      <div
+        className={`fixed inset-0 z-40 transition-all duration-300 ${
+          menuOpen ? "opacity-100 visible" : "opacity-0 invisible"
+        }`}
+      >
+        {/* Backdrop */}
+        <div
+          className="absolute inset-0 bg-black/50 backdrop-blur-sm"
+          onClick={() => setMenuOpen(false)}
+        />
+
+        {/* Slide-in panel */}
+        <div
+          className={`absolute right-0 top-0 h-full w-full max-w-md bg-navy shadow-2xl transition-transform duration-300 ease-out overflow-y-auto ${
+            menuOpen ? "translate-x-0" : "translate-x-full"
+          }`}
+          style={{ paddingTop: "72px" }}
+        >
+          <nav className="px-6 py-6">
+            {menuSections.map((section) => (
+              <div key={section.label} className="mb-6">
+                <p className="text-gold text-xs font-bold uppercase tracking-widest mb-3">
+                  {section.label}
+                </p>
+                <div className="space-y-1">
+                  {section.links.map((link) => (
                     <Link
                       key={link.href}
                       href={link.href}
-                      className="block px-4 py-3 text-navy text-sm font-medium hover:bg-light-gold transition-colors border-b border-gray-50 last:border-0"
+                      className="flex items-center gap-3 px-4 py-3 rounded-xl text-white hover:bg-white/10 transition-colors group"
+                      onClick={() => setMenuOpen(false)}
                     >
-                      {link.label}
+                      <div>
+                        <p className="font-medium text-sm group-hover:text-gold transition-colors">
+                          {link.label}
+                        </p>
+                        {link.desc && (
+                          <p className="text-white/40 text-xs mt-0.5">{link.desc}</p>
+                        )}
+                      </div>
                     </Link>
                   ))}
                 </div>
               </div>
-            )}
-          </div>
+            ))}
 
-          {/* オルタナティブ投資ドロップダウン */}
-          <div
-            className="relative"
-            onMouseEnter={() => setAltDropOpen(true)}
-            onMouseLeave={() => setAltDropOpen(false)}
-          >
-            <button className="text-white text-sm font-medium hover:text-gold transition-colors duration-200 flex items-center gap-1">
-              オルタナティブ投資
-              <svg className={`w-3 h-3 transition-transform duration-200 ${altDropOpen ? "rotate-180" : ""}`} fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
-              </svg>
-            </button>
-            {altDropOpen && (
-              <div className="absolute top-full left-0 pt-1 min-w-[230px] z-50">
-                <div className="bg-white rounded-xl shadow-xl border border-gray-100 overflow-hidden">
-                  <Link
-                    href="/alternative"
-                    className="block px-4 py-3 text-navy text-sm font-medium hover:bg-light-gold transition-colors border-b border-gray-50"
-                  >
-                    オルタナティブ投資とは
-                  </Link>
-                  <Link
-                    href="/real-estate"
-                    className="block px-4 py-3 text-navy text-sm font-medium hover:bg-light-gold transition-colors"
-                  >
-                    不動産・インフラ投資とは
-                  </Link>
-                </div>
-              </div>
-            )}
-          </div>
-
-          <Link
-            href="/about"
-            className="text-white text-sm font-medium hover:text-gold transition-colors duration-200"
-          >
-            経歴
-          </Link>
-
-          <Link
-            href="/contact"
-            className="text-white text-sm font-medium hover:text-gold transition-colors duration-200"
-          >
-            お問い合わせ
-          </Link>
-
-          <Link
-            href="/line"
-            className="text-navy text-sm font-bold px-4 py-2 rounded-full transition-all duration-200 hover:opacity-80"
-            style={{background: "#C9A84C"}}
-          >
-            Bull友になる
-          </Link>
-        </nav>
-
-        {/* Mobile Hamburger */}
-        <button
-          className="md:hidden text-white p-2"
-          onClick={() => setMenuOpen(!menuOpen)}
-          aria-label="メニューを開く"
-        >
-          <div className={`w-6 h-0.5 bg-white mb-1.5 transition-all duration-300 ${menuOpen ? "rotate-45 translate-y-2" : ""}`} />
-          <div className={`w-6 h-0.5 bg-white mb-1.5 transition-all duration-300 ${menuOpen ? "opacity-0" : ""}`} />
-          <div className={`w-6 h-0.5 bg-white transition-all duration-300 ${menuOpen ? "-rotate-45 -translate-y-2" : ""}`} />
-        </button>
-      </div>
-
-      {/* Mobile Menu */}
-      {menuOpen && (
-        <div className="md:hidden bg-navy border-t border-white/10">
-          {navLinks.map((link) => (
-            <Link
-              key={link.href}
-              href={link.href}
-              className="block px-6 py-4 text-white hover:bg-white/10 transition-colors border-b border-white/5"
-              onClick={() => setMenuOpen(false)}
-            >
-              {link.label}
-            </Link>
-          ))}
-          {/* 口座開設グループ */}
-          <div className="px-6 pt-3 pb-1">
-            <p className="text-gold text-xs font-bold uppercase tracking-widest mb-1">口座開設</p>
-          </div>
-          {accountLinks.map((link) => (
-            <Link
-              key={link.href}
-              href={link.href}
-              className="block px-8 py-3 text-white/80 hover:bg-white/10 transition-colors border-b border-white/5 text-sm"
-              onClick={() => setMenuOpen(false)}
-            >
-              {link.label}
-            </Link>
-          ))}
-          {/* オルタナティブ投資グループ（モバイル） */}
-          <div className="px-6 pt-3 pb-1">
-            <p className="text-gold text-xs font-bold uppercase tracking-widest mb-1">オルタナティブ投資</p>
-          </div>
-          <Link
-            href="/alternative"
-            className="block px-8 py-3 text-white/80 hover:bg-white/10 transition-colors border-b border-white/5 text-sm"
-            onClick={() => setMenuOpen(false)}
-          >
-            オルタナティブ投資とは
-          </Link>
-          <Link
-            href="/real-estate"
-            className="block px-8 py-3 text-white/80 hover:bg-white/10 transition-colors border-b border-white/5 text-sm"
-            onClick={() => setMenuOpen(false)}
-          >
-            不動産・インフラ投資とは
-          </Link>
-          <Link
-            href="/about"
-            className="block px-6 py-4 text-white hover:bg-white/10 transition-colors border-b border-white/5"
-            onClick={() => setMenuOpen(false)}
-          >
-            経歴
-          </Link>
-          <Link
-            href="/contact"
-            className="block px-6 py-4 text-white hover:bg-white/10 transition-colors border-b border-white/5"
-            onClick={() => setMenuOpen(false)}
-          >
-            お問い合わせ
-          </Link>
-          <Link
-            href="/line"
-            className="flex items-center gap-2 px-6 py-4 text-gold font-bold hover:bg-white/10 transition-colors border-b border-white/5"
-            onClick={() => setMenuOpen(false)}
-          >
-            Bull友になる
-          </Link>
+            {/* LINE CTA in menu */}
+            <div className="mt-4 pt-4 border-t border-white/10">
+              <Link
+                href="/line"
+                className="flex items-center justify-center gap-2 w-full py-4 rounded-xl font-bold text-navy transition-all duration-200 hover:opacity-90"
+                style={{ background: "#C9A84C" }}
+                onClick={() => setMenuOpen(false)}
+              >
+                Bull友になる
+              </Link>
+              <Link
+                href="/contact"
+                className="flex items-center justify-center gap-2 w-full py-3 mt-3 rounded-xl font-bold text-white border border-white/20 hover:bg-white/10 transition-all duration-200 text-sm"
+                onClick={() => setMenuOpen(false)}
+              >
+                📩 お問い合わせ
+              </Link>
+            </div>
+          </nav>
         </div>
-      )}
-    </header>
+      </div>
+    </>
   );
 }
