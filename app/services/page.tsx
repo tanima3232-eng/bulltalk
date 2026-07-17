@@ -51,10 +51,10 @@ const seminarThemes = [
   { title: "退職前ライフプラン研修", icon: "📋", tag: "法人・団体" },
   { title: "社会人1年目から始める資産形成", icon: "🌱", tag: "法人・個人" },
   { title: "相続で揉めない方法", icon: "🏠", tag: "個人・法人" },
-  { title: "金融機関職員向け営業研修", icon: "💼", tag: "金融機関" },
+  { title: "金融機関職員様向け営業研修", icon: "💼", tag: "金融機関" },
   { title: "事業承継はじめの一歩", icon: "🔑", tag: "法人" },
   { title: "NISA・iDeCo活用講座", icon: "📈", tag: "法人・個人" },
-  { title: "経営者向け資産形成", icon: "👔", tag: "法人" },
+  { title: "経営者様向け資産運用", icon: "👔", tag: "法人" },
 ];
 
 const strengths = [
