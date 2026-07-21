@@ -71,7 +71,7 @@ export default async function HomePage() {
               FP1級 × 証券アナリスト × 宅建士
             </p>
             <h1 className="text-3xl md:text-5xl font-bold mb-8">
-              <span className="block mb-5">勝つための情報を</span>
+              <span className="block mb-5">資産形成に役立つ情報を、</span>
               <span className="block">
                 <span className="text-gold">プロ</span>が直接届ける
               </span>
