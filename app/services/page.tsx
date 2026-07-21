@@ -74,7 +74,7 @@ const strengths = [
     desc: "新人コンペ全国2位、金融法人営業で全社最高水準の成果を上げ社長賞を受賞。",
   },
   {
-    icon: "🎤",
+    icon: "🏢",
     title: "研修講師としての登壇経験",
     desc: "全国本支店への戦略指導や営業担当者向け各種研修企画・講師として多数登壇。",
   },
@@ -97,7 +97,7 @@ export default function ServicesPage() {
             <h1 className="text-3xl md:text-5xl font-bold mb-6">提供サービス</h1>
             <p className="text-white/70 text-base md:text-lg leading-relaxed max-w-2xl mx-auto">
               大手信託銀行12年の実務経験と3つの難関資格を活かし、<br className="hidden md:inline" />
-              金融機関・法人・個人のお客様に幅広くサービスを提供しています。
+              企業・個人・金融機関のお客様に幅広くサービスを提供しています。
             </p>
           </div>
         </section>

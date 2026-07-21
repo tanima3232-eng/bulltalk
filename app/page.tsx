@@ -43,7 +43,7 @@ const serviceCards = [
     desc: "研修・セミナー・\nコンサルティング",
     href: "/services",
     color: "border-gold",
-    tag: "企業様・金融機関様",
+    tag: "企業・個人・金融機関様向け",
   },
 ];
 
@@ -149,7 +149,7 @@ export default async function HomePage() {
                     "📜 FP1級 ／ 証券アナリスト（CMA）／ 宅建士",
                     "🏆 新人コンペ全国2位・社長賞受賞",
                     "💼 個人〜機関投資家まで幅広く担当",
-                    "🎤 金融機関向け研修講師として多数登壇",
+                    "🏢 金融機関向け研修講師として多数登壇",
                   ].map((item) => (
                     <li key={item} className="flex items-start gap-3 text-white/90">
                       <span className="text-xl">{item.slice(0, 2)}</span>
