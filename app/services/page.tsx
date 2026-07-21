@@ -13,7 +13,7 @@ const serviceCategories = [
   {
     id: "corporate",
     icon: "🏢",
-    label: "企業様向け",
+    label: "法人・団体様向け",
     color: "from-[#2a4470] to-[#3a5a8a]",
     accent: "border-blue-400",
     items: [
@@ -25,7 +25,7 @@ const serviceCategories = [
   {
     id: "individual",
     icon: "👤",
-    label: "個人の方向け",
+    label: "個人のお客様向け",
     color: "from-[#3a5a8a] to-[#4a6a9a]",
     accent: "border-green-400",
     items: [
@@ -54,7 +54,7 @@ const seminarThemes = [
   { title: "金融機関職員様向け営業研修", icon: "💼", tag: "金融機関" },
   { title: "事業承継はじめの一歩", icon: "🔑", tag: "法人" },
   { title: "NISA・iDeCo活用講座", icon: "📈", tag: "法人・個人" },
-  { title: "経営者様向け資産運用", icon: "👔", tag: "法人" },
+  { title: "経営者様向け資産設計", icon: "👔", tag: "法人" },
 ];
 
 const strengths = [
@@ -97,7 +97,7 @@ export default function ServicesPage() {
             <h1 className="text-3xl md:text-5xl font-bold mb-6">提供サービス</h1>
             <p className="text-white/70 text-base md:text-lg leading-relaxed max-w-2xl mx-auto">
               大手信託銀行12年の実務経験と3つの難関資格を活かし、<br className="hidden md:inline" />
-              企業・個人・金融機関のお客様に幅広くサービスを提供しています。
+              法人・個人・金融機関のお客様に幅広くサービスを提供しています。
             </p>
           </div>
         </section>
