@@ -169,7 +169,7 @@ export default function LinksPage() {
           <div style={{ display: "flex", gap: 10, marginBottom: 18 }}>
             {/* 楽天証券 */}
             <a
-              href="https://www.rakuten-sec.co.jp/web/lp/start_no1_02/?sclid=a_GO_brand_r_ne_no1_02_cv_t2&gad_source=1&gad_campaignid=23589195982&gbraid=0AAAAADhAqaGauJZqPBRb9ssxnsnKNtHa5&gclid=Cj0KCQjwguLSBhDLARIsAH-yPrEBwrhLdl6a8E9MzIUdVbkWE6a51yjy9lGjrpC1K1wsbcsBdJNJ5NUaAnnsEALw_wcB"
+              href="https://ad2.trafficgate.net/t/r/1193/738/317466_396735"
               target="_blank"
               rel="nofollow"
               style={{
@@ -259,7 +259,7 @@ export default function LinksPage() {
           <div style={{ marginBottom: 20 }}>
             <div style={{ marginBottom: 12 }}>
               <a
-                href="https://www.rakuten-sec.co.jp/web/lp/start_no1_02/?sclid=a_GO_brand_r_ne_no1_02_cv_t2&gad_source=1&gad_campaignid=23589195982&gbraid=0AAAAADhAqaGauJZqPBRb9ssxnsnKNtHa5&gclid=Cj0KCQjwguLSBhDLARIsAH-yPrEBwrhLdl6a8E9MzIUdVbkWE6a51yjy9lGjrpC1K1wsbcsBdJNJ5NUaAnnsEALw_wcB"
+                href="https://ad2.trafficgate.net/t/r/1193/738/317466_396735"
                 target="_blank"
                 rel="nofollow"
                 style={{ display: "block" }}
@@ -406,7 +406,7 @@ export default function LinksPage() {
             <p style={{ color: "rgba(255,255,255,0.5)", fontSize: 10, marginBottom: 6 }}>楽天証券</p>
             <div style={{ borderRadius: 10, overflow: "hidden" }}>
               <a
-                href="https://www.rakuten-sec.co.jp/web/lp/start_no1_02/?sclid=a_GO_brand_r_ne_no1_02_cv_t2&gad_source=1&gad_campaignid=23589195982&gbraid=0AAAAADhAqaGauJZqPBRb9ssxnsnKNtHa5&gclid=Cj0KCQjwguLSBhDLARIsAH-yPrEBwrhLdl6a8E9MzIUdVbkWE6a51yjy9lGjrpC1K1wsbcsBdJNJ5NUaAnnsEALw_wcB"
+                href="https://ad2.trafficgate.net/t/r/1193/738/317466_396735"
                 target="_blank"
                 rel="nofollow"
                 style={{ display: "block" }}
