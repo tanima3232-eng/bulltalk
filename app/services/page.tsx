@@ -97,7 +97,7 @@ export default function ServicesPage() {
             <h1 className="text-3xl md:text-5xl font-bold mb-6">提供サービス</h1>
             <p className="text-white/70 text-base md:text-lg leading-relaxed max-w-2xl mx-auto">
               大手信託銀行12年の実務経験と3つの難関資格を活かし、<br className="hidden md:inline" />
-              法人・個人・金融機関のお客様に幅広くサービスを提供しています。
+              法人・個人・金融機関様向けに幅広くサービスを提供しています。
             </p>
           </div>
         </section>
