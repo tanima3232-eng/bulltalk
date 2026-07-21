@@ -32,7 +32,7 @@ const serviceCards = [
   {
     icon: "📊",
     title: "シミュレーション",
-    desc: "積立投資の将来を\nグラフで可視化",
+    desc: "あなたに合った資産形成の\n優先順位を診断",
     href: "/simulation",
     color: "border-green-400",
     tag: "無料",

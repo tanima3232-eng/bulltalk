@@ -5,6 +5,12 @@ import { useState, useEffect } from "react";
 
 const menuSections = [
   {
+    label: "",
+    links: [
+      { href: "/", label: "🏠 トップ", desc: "Bulltalkトップページ" },
+    ],
+  },
+  {
     label: "コンテンツ",
     links: [
       { href: "/market", label: "📈 相場分析", desc: "日経225の分析・売買判断" },
@@ -109,11 +115,13 @@ export default function Header() {
           style={{ paddingTop: "72px" }}
         >
           <nav className="px-6 py-6">
-            {menuSections.map((section) => (
-              <div key={section.label} className="mb-6">
-                <p className="text-gold text-xs font-bold uppercase tracking-widest mb-3">
-                  {section.label}
-                </p>
+            {menuSections.map((section, i) => (
+              <div key={i} className="mb-6">
+                {section.label && (
+                  <p className="text-gold text-xs font-bold uppercase tracking-widest mb-3">
+                    {section.label}
+                  </p>
+                )}
                 <div className="space-y-1">
                   {section.links.map((link) => (
                     <Link
