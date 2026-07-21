@@ -78,7 +78,7 @@ export default async function HomePage() {
             </h1>
             <p className="text-white/80 text-base md:text-lg leading-relaxed mb-10 max-w-2xl mx-auto">
               相場分析から資産形成・相続・不動産まで<br />
-              元大手信託銀行員が、プロの視点で無料解説
+              元大手信託銀行員が、実務経験をもとに解説
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link href="/market" className="btn-red text-base px-8 py-4 rounded-xl">
@@ -96,7 +96,7 @@ export default async function HomePage() {
           <div className="max-w-5xl mx-auto">
             <h2 className="section-title text-center">Bulltalkでできること</h2>
             <p className="section-subtitle text-center">
-              元大手信託銀行員の知見を、すべて無料で公開しています
+              資産形成に役立つ情報をプロの視点でお届けしています。
             </p>
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
               {serviceCards.map((card) => (
