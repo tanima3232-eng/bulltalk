@@ -43,7 +43,7 @@ const serviceCards = [
     desc: "研修・セミナー・\nコンサルティング",
     href: "/services",
     color: "border-gold",
-    tag: "企業・個人・金融機関様向け",
+    tag: "企業・個人・金融機関様",
   },
 ];
 
