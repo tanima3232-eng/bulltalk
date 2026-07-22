@@ -243,10 +243,19 @@ export default function AboutPage() {
               日経225の今日の動向や、「資産形成で何から始めればいいか？」など。<br />
               何でも気軽にLINEで相談してください。
             </p>
-            <div className="mt-8 text-center">
+            <div className="mt-8 flex flex-col items-center gap-4">
               <a href="https://lin.ee/FmH7NXr" className="btn-line inline-flex items-center gap-2">
                 LINEで無料相談する →
               </a>
+              <div className="flex flex-col items-center gap-1">
+                <a
+                  href="/services"
+                  className="inline-flex items-center gap-2 bg-gold text-navy font-bold px-8 py-4 rounded-xl shadow-lg hover:brightness-110 transition-all duration-200 text-base"
+                >
+                  提供サービスへ →
+                </a>
+                <p className="text-white/50 text-xs mt-1">法人・団体・個人・金融機関様向け</p>
+              </div>
             </div>
           </div>
         </section>
