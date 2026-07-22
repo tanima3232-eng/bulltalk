@@ -6,7 +6,7 @@ export default function LinksPage() {
   return (
     <main
       style={{
-        background: "linear-gradient(160deg, #0d1b2e 0%, #1A2E4A 60%, #0d1b2e 100%)",
+        background: "#ffffff",
         minHeight: "100vh",
         fontFamily: "'Noto Sans JP', 'Inter', sans-serif",
       }}
@@ -34,10 +34,10 @@ export default function LinksPage() {
               style={{ objectFit: "cover", width: "100%", height: "100%" }}
             />
           </div>
-          <p style={{ color: "#C9A84C", fontWeight: 800, fontSize: 18, marginBottom: 4 }}>
+          <p style={{ color: "#1A2E4A", fontWeight: 800, fontSize: 18, marginBottom: 4 }}>
             Bulltalk｜谷本光章
           </p>
-          <p style={{ color: "rgba(255,255,255,0.6)", fontSize: 12 }}>
+          <p style={{ color: "rgba(0,0,0,0.5)", fontSize: 12 }}>
             元大手信託銀行員 / FP1級 / 証券アナリスト / 宅建士
           </p>
         </div>
@@ -52,7 +52,7 @@ export default function LinksPage() {
           style={{ textDecoration: "none", display: "block", marginBottom: 24 }}
         >
           <Image
-            src="/line-tokuten-banner.jpg"
+            src="/line-tokuten-banner.png"
             alt="LINE登録者限定 無料プレゼント｜資産配分の考え方 全17ページPDF"
             width={800}
             height={450}
@@ -84,12 +84,7 @@ export default function LinksPage() {
         {/* ══════════════════════════════
             ⑥ 免責事項フッター
         ══════════════════════════════ */}
-        <p style={{
-          color: "rgba(255,255,255,0.3)", fontSize: 11,
-          textAlign: "center", lineHeight: 1.7,
-        }}>
-          ※サイトの一部リンク先はアフィリエイト広告、PRを含みます。
-        </p>
+
       </div>
     </main>
   );
