@@ -83,7 +83,7 @@ export default async function HomePage() {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link href="/market" className="btn-red text-base px-8 py-4 rounded-xl">
-                📈 今日の225分析を見る
+                📈 今日の相場分析を見る
               </Link>
               <Link href="/column" className="btn-blue text-base px-8 py-4 rounded-xl">
                 📚 お金の知識を学ぶ
