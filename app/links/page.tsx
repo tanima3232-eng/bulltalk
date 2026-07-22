@@ -11,36 +11,9 @@ export default function LinksPage() {
         fontFamily: "'Noto Sans JP', 'Inter', sans-serif",
       }}
     >
-      <div style={{ maxWidth: 480, margin: "0 auto", padding: "40px 16px 60px" }}>
+      <div style={{ maxWidth: 480, margin: "0 auto", padding: "16px 16px 60px" }}>
 
-        {/* ── プロフィールヘッダー ── */}
-        <div style={{ textAlign: "center", marginBottom: 36 }}>
-          <div
-            style={{
-              width: 96,
-              height: 96,
-              borderRadius: "50%",
-              border: "3px solid #C9A84C",
-              overflow: "hidden",
-              margin: "0 auto 12px",
-              boxShadow: "0 0 24px rgba(201,168,76,0.35)",
-            }}
-          >
-            <Image
-              src="/profile.jpg"
-              alt="谷本光章 プロフィール"
-              width={96}
-              height={96}
-              style={{ objectFit: "cover", width: "100%", height: "100%" }}
-            />
-          </div>
-          <p style={{ color: "#1A2E4A", fontWeight: 800, fontSize: 18, marginBottom: 4 }}>
-            Bulltalk｜谷本光章
-          </p>
-          <p style={{ color: "rgba(0,0,0,0.5)", fontSize: 12 }}>
-            元大手信託銀行員 / FP1級 / 証券アナリスト / 宅建士
-          </p>
-        </div>
+        {/* ── プロフィールヘッダー（画像2に含まれるため非表示） ── */}
 
         {/* ══════════════════════════════
             ① LINE登録特典バナー（画像クリックでLINE登録）
