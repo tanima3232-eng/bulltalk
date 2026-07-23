@@ -1,6 +1,5 @@
 "use client";
 
-import type { Metadata } from "next";
 import Image from "next/image";
 
 const LINE_URL = "https://lin.ee/FmH7NXr";
