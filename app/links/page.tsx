@@ -2,6 +2,8 @@
 
 import Image from "next/image";
 
+const LINE_URL = "https://lin.ee/FmH7NXr";
+
 export default function LinksPage() {
   return (
     <main
@@ -43,10 +45,10 @@ export default function LinksPage() {
         </div>
 
         {/* ══════════════════════════════
-            ① LINE登録特典バナー（画像クリックでLINE登録）
+            ① LINE登録特典バナー（画像クリックでLINE友だち追加）
         ══════════════════════════════ */}
         <a
-          href="https://lin.ee/FmH7NXr"
+          href={LINE_URL}
           target="_blank"
           rel="noopener noreferrer"
           style={{ textDecoration: "none", display: "block", marginBottom: 24 }}
@@ -68,22 +70,36 @@ export default function LinksPage() {
         </a>
 
         {/* ══════════════════════════════
-            ② おすすめ証券会社セクション（一時非表示）
+            ② LINE友だち追加 CTAボタン
         ══════════════════════════════ */}
-        {/* 口座開設セクションは一時非表示
-        <div ...>...</div>
-        */}
-
-        {/* ══════════════════════════════
-            ⑤ LINE再案内（まだ受け取っていない方へ）（一時非表示）
-        ══════════════════════════════ */}
-        {/* LINE再案内は一時非表示
-        <a href="https://lin.ee/FmH7NXr" ...>...</a>
-        */}
-
-        {/* ══════════════════════════════
-            ⑥ 免責事項フッター
-        ══════════════════════════════ */}
+        <a
+          href={LINE_URL}
+          target="_blank"
+          rel="noopener noreferrer"
+          style={{ textDecoration: "none", display: "block", marginBottom: 32 }}
+        >
+          <div
+            style={{
+              background: "#06C755",
+              color: "#fff",
+              fontWeight: 800,
+              fontSize: 16,
+              borderRadius: 999,
+              padding: "16px 0",
+              textAlign: "center",
+              display: "flex",
+              alignItems: "center",
+              justifyContent: "center",
+              gap: 10,
+              boxShadow: "0 4px 20px rgba(6,199,85,0.5)",
+            }}
+          >
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M12 2C6.48 2 2 6.04 2 11c0 3.45 1.92 6.47 4.8 8.19L6 22l2.72-1.44C9.77 20.83 10.87 21 12 21c5.52 0 10-4.04 10-9S17.52 2 12 2z" />
+            </svg>
+            LINEで友だち追加して無料で受け取る
+          </div>
+        </a>
 
       </div>
     </main>
