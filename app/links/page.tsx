@@ -243,7 +243,7 @@ export default function LinksPage() {
           </div>
           <div style={s.eyebrow}>30秒<span style={{ color: "rgba(255,255,255,.4)", margin: "0 6px" }}>/</span>無料<span style={{ color: "rgba(255,255,255,.4)", margin: "0 6px" }}>/</span>匿名でOK</div>
           <h1 style={s.h1}>その保険・不動産・相続、<br /><span style={{ color: gold }}>損してないか</span>チェック</h1>
-          <p style={{ fontSize: 13.5, fontWeight: 500, opacity: .9, marginBottom: 22 }}>元大手信託銀行員(12年)がつくった診断。<br />回答するだけで、知らなかったお金の知識も身につきます。</p>
+          <p style={{ fontSize: 12, fontWeight: 500, opacity: .9, marginBottom: 22, lineHeight: 1.7 }}>元大手信託銀行員（12年）がつくった診断。<br />回答するだけで、知らなかったお金の知識も身につきます。</p>
           <div style={s.creds}>元大手信託銀行 12年<span style={{ color: "rgba(255,255,255,.35)", margin: "0 8px" }}>｜</span>FP1級<span style={{ color: "rgba(255,255,255,.35)", margin: "0 8px" }}>｜</span>証券アナリスト<span style={{ color: "rgba(255,255,255,.35)", margin: "0 8px" }}>｜</span>宅地建物取引士</div>
           <button style={s.startbtn} onClick={() => setScreen("attr")}>今すぐ無料診断をはじめる</button>
           <p style={s.herofoot}>診断結果はその場で表示されます。押し売りはしません。</p>
