@@ -129,7 +129,7 @@ export default async function HomePage() {
           <div className="max-w-5xl mx-auto">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
               <div className="flex justify-center">
-                <div className="w-56 h-56 md:w-64 md:h-64 rounded-full border-4 border-gold overflow-hidden shadow-xl">
+                <div className="w-56 h-56 md:w-64 md:h-64 rounded-full border-4 border-gold overflow-hidden shadow-xl" style={{position:"relative"}}>
                   <Image
                     src="/profile.jpg"
                     alt="谷本光章 プロフィール写真"
@@ -137,6 +137,22 @@ export default async function HomePage() {
                     height={256}
                     className="w-full h-full object-cover object-top"
                   />
+                  {/* なりすまし対策：斜線透かし */}
+                  <div style={{position:"absolute",inset:0,pointerEvents:"none"}}>
+                    <svg width="100%" height="100%" style={{position:"absolute",inset:0}}>
+                      <defs>
+                        <pattern id="diagonal-top" patternUnits="userSpaceOnUse" width="24" height="24" patternTransform="rotate(45)">
+                          <line x1="0" y1="0" x2="0" y2="24" stroke="rgba(255,255,255,0.35)" strokeWidth="1.5"/>
+                        </pattern>
+                      </defs>
+                      <rect width="100%" height="100%" fill="url(#diagonal-top)"/>
+                      <line x1="0" y1="0" x2="100%" y2="100%" stroke="rgba(255,50,50,0.55)" strokeWidth="2.5"/>
+                      <line x1="100%" y1="0" x2="0" y2="100%" stroke="rgba(255,50,50,0.55)" strokeWidth="2.5"/>
+                    </svg>
+                    <div style={{position:"absolute",inset:0,display:"flex",alignItems:"center",justifyContent:"center"}}>
+                      <span style={{color:"rgba(255,255,255,0.7)",fontSize:"11px",fontWeight:"bold",background:"rgba(0,0,0,0.45)",padding:"3px 8px",borderRadius:"4px",letterSpacing:"0.05em",whiteSpace:"nowrap"}}>©Bulltalk 無断転載禁止</span>
+                    </div>
+                  </div>
                 </div>
               </div>
               <div>
