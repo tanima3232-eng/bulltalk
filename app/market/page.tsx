@@ -244,19 +244,18 @@ export default async function MarketPage() {
               className="font-bold text-white mb-4"
               style={{fontSize:"clamp(1.8rem,5vw,2.8rem)", lineHeight: 1.2}}
             >
-              企業分析レポート<br />
-              <span style={{color:"#C9A84C"}}>はこちら</span>
+              企業分析レポートは<br />
+              <span style={{color:"#C9A84C"}}>こちら</span>
             </h2>
             <p className="text-white/70 text-sm md:text-base leading-relaxed mb-10 max-w-xl mx-auto">
-              日経225構成銘柄をはじめとする個別企業の分析レポートを<br className="hidden md:inline" />
-              noteにて公開中。プロの視点で読み解く企業価値をご覧ください。
+              個別企業の株価分析レポートをnoteにて公開中。
             </p>
 
             <a
               href="https://note.com/bulltalk"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-3 font-bold text-base md:text-lg px-10 py-5 rounded-2xl transition-all duration-300 hover:-translate-y-1 hover:shadow-2xl"
+              className="inline-flex items-center gap-2 font-bold text-sm md:text-base px-6 md:px-10 py-4 md:py-5 rounded-2xl transition-all duration-300 hover:-translate-y-1 hover:shadow-2xl whitespace-nowrap"
               style={{
                 background: "linear-gradient(135deg, #C9A84C 0%, #E8C96A 50%, #C9A84C 100%)",
                 color: "#1A2E4A",
@@ -264,12 +263,11 @@ export default async function MarketPage() {
               }}
             >
               {/* noteロゴ風アイコン */}
-              <svg className="w-6 h-6" viewBox="0 0 24 24" fill="currentColor">
+              <svg className="w-5 h-5 flex-shrink-0" viewBox="0 0 24 24" fill="currentColor">
                 <path d="M4 4h16v2H4V4zm0 4h16v2H4V8zm0 4h10v2H4v-2zm0 4h7v2H4v-2z"/>
               </svg>
               noteで企業分析レポートを見る →
             </a>
-            <p className="text-white/30 text-xs mt-5">note.com/bulltalk</p>
           </div>
         </section>
 
