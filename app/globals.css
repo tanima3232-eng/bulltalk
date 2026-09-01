@@ -68,3 +68,17 @@
     padding-bottom: 160px; /* scale後の高さ増加分を補填 */
   }
 }
+
+/* ━━━ 画像保護：長押し保存・ドラッグ禁止 ━━━ */
+img {
+  -webkit-touch-callout: none; /* iOS 長押しメニュー禁止 */
+  -webkit-user-select: none;
+  user-select: none;
+  pointer-events: none;        /* PC ドラッグ禁止 */
+}
+
+/* ボタン・リンク内の画像はクリック可能に戻す */
+a img,
+button img {
+  pointer-events: auto;
+}

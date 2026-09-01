@@ -40,6 +40,18 @@ export default function RootLayout({
         className={`${inter.variable} ${notoSansJP.variable} font-sans antialiased bg-offwhite text-dark`}
       >
         {children}
+        {/* 画像右クリック保存禁止 */}
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+              document.addEventListener('contextmenu', function(e) {
+                if (e.target.tagName === 'IMG') {
+                  e.preventDefault();
+                }
+              });
+            `,
+          }}
+        />
       </body>
     </html>
   );
