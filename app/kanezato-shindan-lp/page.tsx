@@ -26,7 +26,6 @@ export default function KanezatoShindanLpPage() {
               overflow: "hidden",
               margin: "0 auto 12px",
               boxShadow: "0 0 24px rgba(201,168,76,0.35)",
-              position: "relative",
             }}
           >
             <Image
@@ -36,10 +35,6 @@ export default function KanezatoShindanLpPage() {
               height={96}
               style={{ objectFit: "cover", width: "100%", height: "100%" }}
             />
-            <svg style={{position:"absolute",inset:0,width:"100%",height:"100%",pointerEvents:"none"}} viewBox="0 0 96 96">
-              <line x1="0" y1="0" x2="96" y2="96" stroke="rgba(255,40,40,0.6)" strokeWidth="2.5"/>
-              <line x1="96" y1="0" x2="0" y2="96" stroke="rgba(255,40,40,0.6)" strokeWidth="2.5"/>
-            </svg>
           </div>
           <p style={{ color: "#1A2E4A", fontWeight: 800, fontSize: 18, marginBottom: 4 }}>
             Bulltalk｜谷本光章

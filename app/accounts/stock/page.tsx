@@ -148,13 +148,8 @@ export default function StockAccountPage() {
             >
               <div
                 className="w-14 h-14 rounded-full flex-shrink-0 overflow-hidden border-2 border-gold"
-                style={{position:"relative"}}
               >
                 <Image src="/profile.jpg" alt="谷本光章" width={56} height={56} className="w-full h-full object-cover object-top" />
-                <svg style={{position:"absolute",inset:0,width:"100%",height:"100%",pointerEvents:"none"}} viewBox="0 0 56 56">
-                  <line x1="0" y1="0" x2="56" y2="56" stroke="rgba(255,40,40,0.6)" strokeWidth="2"/>
-                  <line x1="56" y1="0" x2="0" y2="56" stroke="rgba(255,40,40,0.6)" strokeWidth="2"/>
-                </svg>
               </div>
               <div>
                 <p className="text-gold text-xs font-bold uppercase tracking-widest mb-1">谷本コメント</p>
