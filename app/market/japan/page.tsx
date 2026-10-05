@@ -32,7 +32,7 @@ export default function MarketJapanPage() {
             <h1 className="section-title text-white">日本株マーケット情報</h1>
             <p className="text-gold font-bold mb-6">毎営業日の相場分析</p>
             <p className="text-white/80 leading-relaxed text-sm md:text-base">
-              毎営業日、後場開始後を目安に日本株を分析し、その日の値動きと背景を整理。翌営業日に向けて私が何を確認しているのか、相場の見方をまとめています。
+              毎営業日、後場開始後を目安に日本株を分析し、その日の値動きと背景を整理。翌営業日に向けた相場の見方をまとめています。
             </p>
           </div>
         </section>
