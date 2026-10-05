@@ -14,6 +14,7 @@ const menuSections = [
     label: "コンテンツ",
     links: [
       { href: "/market", label: "📈 相場分析", desc: "日経225分析・企業分析" },
+      { href: "/market/japan", label: "🇯🇵 日本株マーケット情報", desc: "毎営業日の相場分析" },
       { href: "/column", label: "📚 金融コラム", desc: "資産形成・相続・不動産を学ぶ" },
       { href: "/simulation", label: "📊 シミュレーション", desc: "資産形成をシミュレーション" },
     ],
