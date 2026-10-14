@@ -22,8 +22,8 @@ function MarketEyecatch({ date, large = false }: { date: string; large?: boolean
   const [y, m, d] = date.split("-");
   return (
     <div
-      className="bg-navy flex flex-col items-center justify-center text-center w-full h-full"
-      style={{ aspectRatio: "16 / 9", minHeight: large ? "180px" : undefined }}
+      className={`bg-navy flex flex-col items-center justify-center text-center w-full flex-shrink-0 ${large ? "h-full" : ""}`}
+      style={large ? { minHeight: "180px" } : { aspectRatio: "16 / 9" }}
     >
       <span className="text-gold text-xs font-bold tracking-widest mb-1">JAPAN STOCK MARKET</span>
       <span className={`text-white font-bold ${large ? "text-4xl" : "text-3xl"}`}>
@@ -271,7 +271,7 @@ export default async function MarketPage() {
             <h2 className="section-title text-center">最新の日本株マーケット分析</h2>
             <p className="section-subtitle text-center">毎営業日の日本株記事を新着順に掲載しています。</p>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-10">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 auto-rows-fr gap-6 mb-10">
               {recent.map((article) => (
                 <Link
                   key={article.slug}
