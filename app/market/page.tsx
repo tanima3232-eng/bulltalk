@@ -1,62 +1,72 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { getLatestVideos } from "@/lib/youtube";
+import { getAllMarketArticles } from "@/lib/market-japan";
 import Image from "next/image";
 
 export const metadata: Metadata = {
-  title: "相場分析｜Bulltalk - 日経225・ブル型投資信託の投資判断を毎日配信",
+  title: "相場分析｜日本株マーケット分析と企業分析",
   description:
-    "今日の日経225は買い？売り？元大手信託銀行12年・FP1級・CMA・宅建士が場引け前に毎日分析。日経225投資の最新情報をチェック。",
+    "日経平均を中心とした毎営業日の日本株マーケット分析と、個別企業の株価分析を掲載。元大手信託銀行12年・FP1級・CMAが、ニュース・金利・為替・企業動向などを整理し、相場の背景を解説します。",
 };
+
+function formatDateJa(dateStr: string): string {
+  const [y, m, d] = dateStr.split("-");
+  return `${y}年${parseInt(m)}月${parseInt(d)}日`;
+}
+
+/** アイキャッチ（画像がない記事用の、ネイビー＋ゴールドの日付タイル） */
+function MarketEyecatch({ date, large = false }: { date: string; large?: boolean }) {
+  const [y, m, d] = date.split("-");
+  return (
+    <div
+      className="bg-navy flex flex-col items-center justify-center text-center w-full h-full"
+      style={{ aspectRatio: "16 / 9", minHeight: large ? "180px" : undefined }}
+    >
+      <span className="text-gold text-xs font-bold tracking-widest mb-1">JAPAN STOCK MARKET</span>
+      <span className={`text-white font-bold ${large ? "text-4xl" : "text-3xl"}`}>
+        {parseInt(m)}/{parseInt(d)}
+      </span>
+      <span className="text-white/60 text-xs mt-1">{y}</span>
+    </div>
+  );
+}
 
 export default async function MarketPage() {
   const videos = await getLatestVideos(3);
+  const articles = getAllMarketArticles();
+  const latest = articles[0];
+  const recent = articles.slice(1, 7);
   return (
     <>
       <Header />
       <main>
         {/* S1: FV（ファーストビュー） */}
-        <section className="bg-navy text-white py-24 px-4">
+        <section className="bg-navy text-white py-16 md:py-24 px-4">
           <div className="max-w-4xl mx-auto text-center">
-            <p className="text-gold text-sm font-bold uppercase tracking-widest mb-6">毎日場引け前に更新</p>
-            <h1 className="font-bold mb-6">
-              <span className="block text-4xl md:text-6xl text-white mb-5">
-                本気で勝つなら
-              </span>
-              <span className="block text-4xl md:text-6xl">
-                <span className="text-gold" style={{fontSize: "1.15em"}}>Bull友</span>
-                <span className="text-white">会員</span>
-              </span>
-            </h1>
-
-            {/* 安心バッジ：会員 = LINE登録だけ */}
-            <div className="flex justify-center items-center gap-2 flex-wrap mb-2">
-              <span className="text-sm" style={{color:"#4ADE80"}}>＼</span>
-              <span
-                className="inline-flex items-center gap-1.5 text-xs font-bold px-3 py-1.5 rounded-full"
-                style={{background:"rgba(6,199,85,0.15)", color:"#4ADE80", border:"1px solid rgba(6,199,85,0.35)"}}
-              >
-                ✓ 完全無料
-              </span>
-              <span
-                className="inline-flex items-center gap-1.5 text-xs font-bold px-3 py-1.5 rounded-full"
-                style={{background:"rgba(6,199,85,0.15)", color:"#4ADE80", border:"1px solid rgba(6,199,85,0.35)"}}
-              >
-                ✓ LINE追加のみ
-              </span>
-              <span
-                className="inline-flex items-center gap-1.5 text-xs font-bold px-3 py-1.5 rounded-full"
-                style={{background:"rgba(6,199,85,0.15)", color:"#4ADE80", border:"1px solid rgba(6,199,85,0.35)"}}
-              >
-                ✓ 特典あり
-              </span>
-              <span className="text-sm" style={{color:"#4ADE80"}}>／</span>
+            <p className="text-gold text-sm font-bold uppercase tracking-widest mb-4">MARKET ANALYSIS</p>
+            <h1 className="font-bold mb-4 text-4xl md:text-6xl text-white">相場分析</h1>
+            <p className="text-gold font-bold text-xl md:text-2xl mb-6">プロの視点で、マーケットを分析。</p>
+            <div className="text-white/80 text-base md:text-lg max-w-2xl mx-auto leading-relaxed">
+              <p className="mb-4">
+                日経平均を中心とした毎営業日のマーケット分析と、個別企業の株価分析を掲載しています。
+              </p>
+              <p>
+                元大手信託銀行12年・FP1級・CMAが、ニュース・金利・為替・企業動向などを整理し、相場の背景を分かりやすく解説します。
+              </p>
             </div>
-
-            <div className="text-white/80 text-base md:text-lg max-w-2xl mx-auto mt-8">
-              <p className="text-gold font-bold text-xl md:text-2xl mb-3">今日は買い？売り？</p>
-              <p>元大手信託銀行12年・FP1級・CMA・宅建士が<br />毎日の日経225指数の投資判断を無料配信<br />個別企業の株価分析レポートをnoteにて無料公開中</p>
+            <div className="flex flex-col sm:flex-row gap-3 justify-center mt-10">
+              <a href="#japan-market" className="btn-primary px-8 py-3">
+                毎日の日本株を見る
+              </a>
+              <a
+                href="#company-analysis"
+                className="inline-flex items-center justify-center px-8 py-3 rounded-lg font-bold border-2 border-gold text-gold hover:bg-gold hover:text-navy transition-colors"
+              >
+                個別企業を調べる
+              </a>
             </div>
           </div>
         </section>
@@ -219,9 +229,81 @@ export default async function MarketPage() {
           </div>
         </section>
 
+
+        {/* S3: 今日の日本株マーケット（最新記事を大きく表示） */}
+        <section id="japan-market" className="bg-offwhite py-16 px-4 scroll-mt-20">
+          <div className="max-w-5xl mx-auto">
+            <h2 className="section-title text-center">今日の日本株マーケット</h2>
+            <p className="section-subtitle text-center max-w-2xl mx-auto">
+              毎営業日、日経平均や日本株市場の値動き、相場を動かした材料、翌営業日に確認したいポイントを整理しています。
+            </p>
+
+            {latest ? (
+              <Link
+                href={`/market/japan/${latest.slug}`}
+                className="card block overflow-hidden hover:shadow-lg transition-shadow group"
+              >
+                <div className="flex flex-col md:flex-row">
+                  <div className="md:w-2/5">
+                    <MarketEyecatch date={latest.date} large />
+                  </div>
+                  <div className="md:w-3/5 p-6 md:p-8 flex flex-col">
+                    <p className="text-gold font-bold text-sm mb-2">最新記事｜{formatDateJa(latest.date)}</p>
+                    <h3 className="text-xl md:text-2xl font-bold text-navy leading-snug mb-4 group-hover:text-gold transition-colors">
+                      {latest.title}
+                    </h3>
+                    <p className="text-gray-600 text-sm md:text-base leading-relaxed mb-6 line-clamp-4">
+                      {latest.summary || latest.description}
+                    </p>
+                    <span className="btn-primary self-start px-8 py-3">記事を読む</span>
+                  </div>
+                </div>
+              </Link>
+            ) : (
+              <p className="text-center text-gray-500">記事を準備中です。</p>
+            )}
+          </div>
+        </section>
+
+        {/* S4: 最新の日本株マーケット分析 */}
+        <section className="bg-white py-16 px-4">
+          <div className="max-w-5xl mx-auto">
+            <h2 className="section-title text-center">最新の日本株マーケット分析</h2>
+            <p className="section-subtitle text-center">毎営業日の日本株記事を新着順に掲載しています。</p>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-10">
+              {recent.map((article) => (
+                <Link
+                  key={article.slug}
+                  href={`/market/japan/${article.slug}`}
+                  className="card overflow-hidden flex flex-col hover:shadow-lg transition-shadow group"
+                >
+                  <MarketEyecatch date={article.date} />
+                  <div className="p-5 flex flex-col flex-1">
+                    <p className="text-gray-500 text-sm mb-2">{formatDateJa(article.date)}</p>
+                    <h3 className="text-base md:text-lg font-bold text-navy leading-snug mb-3 group-hover:text-gold transition-colors">
+                      {article.title}
+                    </h3>
+                    <p className="text-gray-600 text-sm leading-relaxed line-clamp-2">
+                      {article.description}
+                    </p>
+                  </div>
+                </Link>
+              ))}
+            </div>
+
+            <div className="text-center">
+              <Link href="/market/japan" className="btn-navy px-8 py-3 inline-block">
+                日本株マーケット記事をもっと見る →
+              </Link>
+            </div>
+          </div>
+        </section>
+
         {/* S3: 企業分析レポートはこちら */}
         <section
-          className="py-16 px-4"
+          id="company-analysis"
+          className="py-16 px-4 scroll-mt-20"
           style={{
             background: "linear-gradient(135deg, #0d1b2e 0%, #1A2E4A 50%, #0d1b2e 100%)",
             position: "relative",
@@ -384,137 +466,34 @@ export default async function MarketPage() {
           </div>
         </section>
 
-        {/* S5: 谷本光章プロフィール */}
-        <section className="bg-offwhite py-20 px-4">
-          <div className="max-w-5xl mx-auto">
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
-              {/* Profile Photo */}
-              <div className="flex justify-center">
-                <div className="w-64 h-64 rounded-full border-4 border-gold overflow-hidden shadow-xl">
-                  <Image
-                    src="/profile.jpg"
-                    alt="谷本光章 プロフィール写真"
-                    width={256}
-                    height={256}
-                    className="w-full h-full object-cover object-top"
-                  />
-                </div>
+        {/* S5: 谷本光章プロフィール（コンパクト） */}
+        <section className="bg-offwhite py-12 px-4">
+          <div className="max-w-3xl mx-auto">
+            <div className="flex flex-col md:flex-row items-center gap-8">
+              <div className="w-32 h-32 flex-shrink-0 rounded-full border-4 border-gold overflow-hidden shadow-lg">
+                <Image
+                  src="/profile.jpg"
+                  alt="谷本光章 プロフィール写真"
+                  width={128}
+                  height={128}
+                  className="w-full h-full object-cover object-top"
+                />
               </div>
-
-              {/* Profile */}
-              <div>
-                <p className="text-gold text-sm font-bold uppercase tracking-wider mb-2">ABOUT ME</p>
-                <h2 className="text-3xl font-bold text-navy mb-6">谷本 光章とは</h2>
-                <ul className="space-y-3 mb-8">
-                  {[
-                    "🏦 元大手信託銀行 12年",
-                    "📜 FP1級 ／ 証券アナリスト（CMA）／ 宅建士",
-                    "🏆 新人コンペ全国2位・社長賞受賞",
-                    "💼 個人〜機関投資家まで幅広く担当",
-                  ].map((item) => (
-                    <li key={item} className="flex items-start gap-3 text-navy/80">
-                      <span className="text-xl">{item.slice(0, 2)}</span>
-                      <span>{item.slice(3)}</span>
-                    </li>
-                  ))}
+              <div className="text-center md:text-left">
+                <p className="text-gold text-sm font-bold uppercase tracking-wider mb-1">ABOUT ME</p>
+                <h2 className="text-2xl font-bold text-navy mb-4">谷本 光章とは</h2>
+                <ul className="space-y-1 mb-5 text-navy/80 text-sm md:text-base">
+                  <li>元大手信託銀行 12年</li>
+                  <li>FP1級</li>
+                  <li>証券アナリスト（CMA）</li>
+                  <li>宅建士</li>
+                  <li>個人から機関投資家まで担当</li>
                 </ul>
-                <div className="text-center md:text-left">
-                  <a href="/about" className="btn-primary">
-                    詳しく見る →
-                  </a>
-                </div>
+                <Link href="/about" className="btn-primary">
+                  詳しく見る →
+                </Link>
               </div>
             </div>
-          </div>
-        </section>
-
-        {/* S6: Bull友CTA（最終） */}
-        <section className="bg-gold py-16 px-4">
-          <div className="max-w-2xl mx-auto text-center">
-            <p className="text-navy/60 text-xs font-bold uppercase tracking-widest mb-4">
-              🔥 BULL友 MEMBERS ONLY
-            </p>
-            <h2 className="text-2xl md:text-3xl font-bold text-navy mb-5">
-              Bull友になる
-            </h2>
-
-            {/* 安心バッジ */}
-            <div className="flex justify-center items-center gap-1.5 mb-8">
-              <span className="text-xs font-bold" style={{color: "#1A2E4A"}}>＼</span>
-              {["✓ 完全無料", "✓ LINE追加するだけ", "✓ 特典あり"].map((badge) => (
-                <span
-                  key={badge}
-                  className="inline-flex items-center font-bold rounded-full whitespace-nowrap"
-                  style={{
-                    background: "rgba(26,46,74,0.08)",
-                    color: "#1A2E4A",
-                    border: "1.5px solid #1A2E4A",
-                    fontSize: "11px",
-                    padding: "4px 10px",
-                  }}
-                >
-                  {badge}
-                </span>
-              ))}
-              <span className="text-xs font-bold" style={{color: "#1A2E4A"}}>／</span>
-            </div>
-
-            {/* カード型メリット3点 */}
-            <div className="flex flex-col gap-3 mb-8 text-left">
-              {[
-                {
-                  num: "①",
-                  title: "『プロが最初に決めている資産配分の考え方』ブック",
-                  desc: "資産形成の考え方をまとめた全21ページPDFを無料公開。",
-                },
-                {
-                  num: "②",
-                  title: "元大手信託銀行員への無料相談（1回）",
-                  desc: "投資・資産形成・相続・不動産等の疑問を直接プロに相談できます。",
-                },
-                {
-                  num: "③",
-                  title: "LINE登録者限定の相場情報・マーケットコメント",
-                  desc: "一般公開しないディープな相場情報をお届けします。",
-                },
-              ].map((item) => (
-                <div
-                  key={item.num}
-                  className="flex items-start gap-4 rounded-xl p-4"
-                  style={{
-                    background: "rgba(255,255,255,0.55)",
-                    border: "1px solid rgba(26,46,74,0.12)",
-                    backdropFilter: "blur(4px)",
-                  }}
-                >
-                  <span
-                    className="font-bold text-sm flex-shrink-0 w-7 h-7 flex items-center justify-center rounded-full"
-                    style={{ background: "#1A2E4A", color: "#C9A84C" }}
-                  >
-                    {item.num}
-                  </span>
-                  <div>
-                    <p className="text-navy font-bold text-sm leading-snug mb-0.5">{item.title}</p>
-                    <p className="text-navy/60 text-xs leading-relaxed">{item.desc}</p>
-                  </div>
-                </div>
-              ))}
-            </div>
-
-            {/* CTAボタン */}
-            <a
-              href="https://lin.ee/FmH7NXr"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="btn-line inline-flex items-center justify-center gap-3 text-lg px-8 py-4 rounded-xl shadow-lg"
-            >
-              <svg className="w-6 h-6" viewBox="0 0 24 24" fill="currentColor">
-                <path d="M12 2C6.48 2 2 6.04 2 11c0 3.45 1.92 6.47 4.8 8.19L6 22l2.72-1.44C9.77 20.83 10.87 21 12 21c5.52 0 10-4.04 10-9S17.52 2 12 2z" />
-              </svg>
-              今すぐBull友になる
-            </a>
-
-            <p className="text-navy/40 text-xs mt-4">LINE追加のみ・完全無料</p>
           </div>
         </section>
       </main>

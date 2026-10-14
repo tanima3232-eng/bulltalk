@@ -25,7 +25,6 @@ export default function Footer() {
               {[
                 { href: "/", label: "トップ" },
                 { href: "/market", label: "相場分析" },
-                { href: "/market/japan", label: "日本株マーケット情報" },
                 { href: "/simulation", label: "シミュレーション" },
                 { href: "/column", label: "金融コラム" },
                 { href: "/accounts/stock", label: "NISA・証券口座開設" },

@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { getAllMarketArticles, getMonthlyArchive } from "@/lib/market-japan";
@@ -29,6 +30,9 @@ export default function MarketJapanPage() {
         {/* Hero */}
         <section className="bg-navy text-white py-16 px-4">
           <div className="max-w-4xl mx-auto text-center">
+            <Link href="/market" className="inline-block text-white/70 hover:text-gold text-sm mb-4 transition-colors">
+              ← 相場分析トップへ戻る
+            </Link>
             <h1 className="section-title text-white">日本株マーケット情報</h1>
             <p className="text-gold font-bold mb-6">毎営業日の相場分析</p>
             <p className="text-white/80 leading-relaxed text-sm md:text-base">

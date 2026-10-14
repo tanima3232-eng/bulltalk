@@ -159,10 +159,16 @@ function ArticlePage({ slug }: { slug: string }) {
       {
         "@type": "ListItem",
         position: 2,
+        name: "相場分析",
+        item: "https://bulltalk.jp/market",
+      },
+      {
+        "@type": "ListItem",
+        position: 3,
         name: "日本株マーケット情報",
         item: "https://bulltalk.jp/market/japan/",
       },
-      { "@type": "ListItem", position: 3, name: formattedDate },
+      { "@type": "ListItem", position: 4, name: formattedDate },
     ],
   };
 
@@ -189,6 +195,10 @@ function ArticlePage({ slug }: { slug: string }) {
             <div className="text-white/70 text-sm mb-4">
               <Link href="/" className="hover:text-gold transition-colors">
                 ホーム
+              </Link>
+              <span className="mx-2">&gt;</span>
+              <Link href="/market" className="hover:text-gold transition-colors">
+                相場分析
               </Link>
               <span className="mx-2">&gt;</span>
               <Link
@@ -360,6 +370,12 @@ function ArticlePage({ slug }: { slug: string }) {
               )}
             </div>
 
+            <div className="text-center mb-12">
+              <Link href="/market" className="btn-navy px-8 py-3 inline-block">
+                相場分析トップへ戻る
+              </Link>
+            </div>
+
             {/* 関連記事 */}
             {relatedArticles.length > 0 && (
               <div className="mb-12">
@@ -501,6 +517,13 @@ function ArchivePage({ year, month }: { year: string; month: string }) {
               </Link>
               <span className="mx-2">&gt;</span>
               <Link
+                href="/market"
+                className="hover:text-gold transition-colors"
+              >
+                相場分析
+              </Link>
+              <span className="mx-2">&gt;</span>
+              <Link
                 href="/market/japan"
                 className="hover:text-gold transition-colors"
               >
@@ -559,9 +582,12 @@ function ArchivePage({ year, month }: { year: string; month: string }) {
               </p>
             )}
 
-            <div className="text-center mt-12">
+            <div className="text-center mt-12 flex flex-col sm:flex-row gap-3 justify-center">
               <Link href="/market/japan" className="btn-navy">
                 日本株マーケット情報一覧へ戻る
+              </Link>
+              <Link href="/market" className="btn-primary">
+                相場分析トップへ戻る
               </Link>
             </div>
           </div>
