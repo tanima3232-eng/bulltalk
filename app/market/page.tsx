@@ -50,11 +50,8 @@ export default async function MarketPage() {
             <h1 className="font-bold mb-4 text-4xl md:text-6xl text-white">相場分析</h1>
             <p className="text-gold font-bold text-xl md:text-2xl mb-6">プロの視点で、マーケットを分析。</p>
             <div className="text-white/80 text-base md:text-lg max-w-2xl mx-auto leading-relaxed">
-              <p className="mb-4">
-                日経平均を中心とした毎営業日のマーケット分析と、個別企業の株価分析を掲載しています。
-              </p>
               <p>
-                元大手信託銀行12年・FP1級・CMAが、ニュース・金利・為替・企業動向などを整理し、相場の背景を分かりやすく解説します。
+                ニュース・金利・為替・企業動向から<br />相場の動きを読み解きます。
               </p>
             </div>
             <div className="flex flex-col sm:flex-row gap-3 justify-center mt-10">
