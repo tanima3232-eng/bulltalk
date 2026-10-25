@@ -20,8 +20,8 @@ const brokers = [
     app: "◎ 便利",
     target: "dポイント・クレカ積立派",
     point: "NISA手数料0円！dポイントが貯まる",
-    ctaUrl: "https://h.accesstrade.net/sp/cc?rk=010072vk00oqbc",
-    mobileUrl: "https://h.accesstrade.net/sp/cc?rk=010072vk00oqbc",
+    ctaUrl: "https://www.monex.co.jp/",
+    mobileUrl: "https://www.monex.co.jp/",
     hidden: false,
   },
   {
