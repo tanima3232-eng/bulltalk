@@ -19,19 +19,31 @@ function formatDateJa(dateStr: string): string {
   return `${y}年${parseInt(m)}月${parseInt(d)}日`;
 }
 
-/** アイキャッチ（画像がない記事用の、ネイビー＋ゴールドの日付タイル） */
+/** 装飾用のチャート画像に、記事の日付を読みやすく重ねる。 */
 function MarketEyecatch({ date, large = false }: { date: string; large?: boolean }) {
   const [y, m, d] = date.split("-");
   return (
     <div
-      className={`brand-date-tile flex flex-col items-center justify-center text-center w-full flex-shrink-0 ${large ? "h-full" : ""}`}
+      className={`relative isolate overflow-hidden bg-navy flex items-center justify-center text-center w-full flex-shrink-0 ${large ? "h-full" : ""}`}
       style={large ? { minHeight: "180px" } : { aspectRatio: "16 / 9" }}
     >
-      <span className="text-gold text-xs font-bold tracking-widest mb-1">JAPAN STOCK MARKET</span>
-      <span className={`text-white font-bold ${large ? "text-4xl" : "text-3xl"}`}>
-        {parseInt(m)}/{parseInt(d)}
-      </span>
-      <span className="text-white/60 text-xs mt-1">{y}</span>
+      <Image
+        src="/images/cards/market-chart.webp"
+        alt=""
+        fill
+        sizes={large
+          ? "(min-width: 1024px) 410px, (min-width: 768px) 40vw, calc(100vw - 32px)"
+          : "(min-width: 1024px) 326px, (min-width: 768px) 50vw, calc(100vw - 32px)"}
+        className="object-cover"
+      />
+      <div aria-hidden="true" className="absolute inset-0 bg-gradient-to-b from-navy/20 via-navy/[0.45] to-navy/30" />
+      <div className="relative z-10 flex flex-col items-center py-8 drop-shadow-md">
+        <span className="text-[#E1C385] text-xs font-bold tracking-widest mb-1">JAPAN STOCK MARKET</span>
+        <span className={`text-white font-bold ${large ? "text-4xl" : "text-3xl"}`}>
+          {parseInt(m)}/{parseInt(d)}
+        </span>
+        <span className="text-white/80 text-xs mt-1">{y}</span>
+      </div>
     </div>
   );
 }

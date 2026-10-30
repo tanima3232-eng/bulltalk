@@ -17,28 +17,28 @@ export const metadata: Metadata = {
 
 const serviceCards = [
   {
-    icon: "market" as const,
+    image: "/images/cards/market-chart.webp",
     title: "相場分析",
     desc: "日経225の分析・売買判断を\n毎日配信",
     href: "/market",
     tag: "毎日更新",
   },
   {
-    icon: "book" as const,
+    image: "/images/cards/financial-knowledge.webp",
     title: "金融コラム",
     desc: "資産形成・相続・不動産を\nプロが基礎から解説",
     href: "/column",
     tag: "30本以上",
   },
   {
-    icon: "chart" as const,
+    image: "/images/cards/wealth-simulation.webp",
     title: "シミュレーション",
     desc: "あなたに合った資産形成の\n優先順位を診断",
     href: "/simulation",
     tag: "無料",
   },
   {
-    icon: "briefcase" as const,
+    image: "/images/cards/professional-services.webp",
     title: "提供サービス",
     desc: "研修・セミナー・\nコンサルティング",
     href: "/services",
@@ -101,20 +101,29 @@ export default async function HomePage() {
                 <Link
                   key={card.href}
                   href={card.href}
-                  className="brand-surface p-6 hover:-translate-y-1 group block"
+                  className="brand-surface overflow-hidden hover:-translate-y-1 group block"
                 >
-                  <div className="flex items-center justify-between mb-3">
-                    <span className="brand-icon"><BrandIcon name={card.icon} /></span>
-                    <span className="brand-tag text-xs font-bold px-2 py-1 rounded-full">
+                  <div className="relative aspect-[3/2] overflow-hidden bg-navy">
+                    <Image
+                      src={card.image}
+                      alt=""
+                      fill
+                      sizes="(min-width: 1024px) 238px, (min-width: 640px) 45vw, 92vw"
+                      className="object-cover transition-transform duration-500 ease-out group-hover:scale-[1.04] motion-reduce:transform-none"
+                    />
+                    <div aria-hidden="true" className="absolute inset-0 bg-gradient-to-t from-[#071a31]/25 via-transparent to-transparent" />
+                    <span className="absolute top-3 right-3 rounded-full border border-white/20 bg-[#071a31]/85 px-2.5 py-1.5 text-[11px] leading-snug font-bold text-[#f5d695] backdrop-blur-sm">
                       {card.tag}
                     </span>
                   </div>
-                  <h3 className="font-bold text-navy text-lg mb-2 group-hover:text-gold transition-colors">
-                    {card.title}
-                  </h3>
-                  <p className="text-gray-500 text-sm leading-relaxed whitespace-pre-line">
-                    {card.desc}
-                  </p>
+                  <div className="p-5">
+                    <h3 className="font-bold text-navy text-lg mb-2 group-hover:text-[#88672d] transition-colors">
+                      {card.title}
+                    </h3>
+                    <p className="text-gray-500 text-sm leading-relaxed whitespace-pre-line">
+                      {card.desc}
+                    </p>
+                  </div>
                 </Link>
               ))}
             </div>

@@ -2,11 +2,11 @@
 
 import { useState } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import LineCtaBanner from "@/components/LineCtaBanner";
 import SimulationCtaBanner from "@/components/SimulationCtaBanner";
-import BrandIcon from "@/components/BrandIcon";
 import type { ColumnMeta } from "@/lib/columns";
 
 const CATEGORIES = [
@@ -16,7 +16,20 @@ const CATEGORIES = [
   { id: "fudosan", label: "不動産" },
 ];
 
-const ICONS = { fudosan: "building", souzoku: "bank", asset: "chart" } as const;
+const CATEGORY_IMAGES = {
+  asset: {
+    src: "/images/cards/wealth-growth.webp",
+    position: "object-center",
+  },
+  souzoku: {
+    src: "/images/cards/inheritance.webp",
+    position: "object-center",
+  },
+  fudosan: {
+    src: "/images/cards/office-city.webp",
+    position: "object-top",
+  },
+} as const;
 
 export default function ColumnListClient({ columns }: { columns: ColumnMeta[] }) {
   const [active, setActive] = useState("all");
@@ -73,11 +86,18 @@ export default function ColumnListClient({ columns }: { columns: ColumnMeta[] })
                   href={`/column/${col.slug}`}
                   className="brand-surface p-5 flex flex-col group hover:-translate-y-1"
                 >
-                  {/* Icon Area */}
+                  {/* Category Cover */}
                   <div
-                    className="brand-date-tile rounded-xl aspect-video mb-4 flex items-center justify-center text-gold"
+                    className="relative overflow-hidden rounded-xl aspect-video mb-4 bg-navy"
                   >
-                    <BrandIcon name={ICONS[col.category as keyof typeof ICONS] || "book"} className="w-12 h-12" />
+                    <Image
+                      src={(CATEGORY_IMAGES[col.category as keyof typeof CATEGORY_IMAGES] || CATEGORY_IMAGES.asset).src}
+                      alt=""
+                      fill
+                      sizes="(min-width: 1024px) 285px, (min-width: 768px) 450px, calc(100vw - 72px)"
+                      className={`object-cover transition-transform duration-500 motion-safe:group-hover:scale-105 ${(CATEGORY_IMAGES[col.category as keyof typeof CATEGORY_IMAGES] || CATEGORY_IMAGES.asset).position}`}
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-navy/20 to-transparent pointer-events-none" />
                   </div>
 
                   {/* Category Badge */}
@@ -89,7 +109,7 @@ export default function ColumnListClient({ columns }: { columns: ColumnMeta[] })
                   </span>
 
                   {/* Title */}
-                  <h2 className="text-sm font-bold text-navy group-hover:text-gold transition-colors leading-relaxed flex-1">
+                  <h2 className="text-sm font-bold text-navy group-hover:text-[#88672d] transition-colors leading-relaxed flex-1">
                     {col.title}
                   </h2>
 
