@@ -6,6 +6,8 @@ import LineCtaBanner from "@/components/LineCtaBanner";
 import Image from "next/image";
 import { getLatestVideos } from "@/lib/youtube";
 
+export const revalidate = 900;
+
 export const metadata: Metadata = {
   title: "Bulltalkとは｜元大手信託銀行員が本音で発信する金融教育サイト",
   description:

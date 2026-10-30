@@ -6,6 +6,8 @@ import { getLatestVideos } from "@/lib/youtube";
 import { getAllMarketArticles } from "@/lib/market-japan";
 import Image from "next/image";
 
+export const revalidate = 900;
+
 export const metadata: Metadata = {
   title: "相場分析｜日本株マーケット分析と企業分析",
   description:
