@@ -16,7 +16,7 @@ export const metadata: Metadata = {
 
 const serviceCards = [
   {
-    image: "/images/cards-b/market-chart.webp",
+    image: "/images/cards-b/market-research-desk.webp",
     title: "相場分析",
     desc: "日経225の分析・売買判断を\n毎日配信",
     href: "/market",
