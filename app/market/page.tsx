@@ -314,33 +314,20 @@ export default async function MarketPage() {
         {/* S3: 企業分析レポートはこちら */}
         <section
           id="company-analysis"
-          className="brand-band py-16 px-4 scroll-mt-20"
-          style={{
-            background: "linear-gradient(135deg, #0d1b2e 0%, #1A2E4A 50%, #0d1b2e 100%)",
-            position: "relative",
-            overflow: "hidden",
-          }}
+          className="border-y border-[#e9e2d5] bg-[#f8f6f0] py-16 px-4 scroll-mt-20"
         >
-          {/* 背景グロー */}
-          <div style={{
-            position: "absolute", top: "-60px", left: "50%", transform: "translateX(-50%)",
-            width: "500px", height: "250px",
-            background: "radial-gradient(ellipse, rgba(201,168,76,0.15) 0%, transparent 70%)",
-            pointerEvents: "none",
-          }} />
-
-          <div className="max-w-3xl mx-auto text-center" style={{position: "relative", zIndex: 1}}>
-            <p className="text-gold text-xs font-bold uppercase tracking-widest mb-4" style={{letterSpacing:"0.2em"}}>
+          <div className="max-w-3xl mx-auto text-center">
+            <p className="text-[#88672d] text-xs font-bold uppercase tracking-widest mb-4" style={{letterSpacing:"0.2em"}}>
               📊 ANALYSIS REPORT
             </p>
             <h2
-              className="font-bold text-white mb-4"
+              className="font-bold text-navy mb-4"
               style={{fontSize:"clamp(1.8rem,5vw,2.8rem)", lineHeight: 1.2}}
             >
               企業分析レポートは<br />
-              <span style={{color:"#C9A84C"}}>こちら</span>
+              <span className="text-[#88672d]">こちら</span>
             </h2>
-            <p className="text-white/70 text-sm md:text-base leading-relaxed mb-10 max-w-xl mx-auto">
+            <p className="text-gray-600 text-sm md:text-base leading-relaxed mb-10 max-w-xl mx-auto">
               個別企業の株価分析レポートをnoteにて公開中。
             </p>
 
@@ -348,18 +335,13 @@ export default async function MarketPage() {
               href="https://note.com/bulltalk"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 font-bold text-sm md:text-base px-6 md:px-10 py-4 md:py-5 rounded-2xl transition-all duration-300 hover:-translate-y-1 hover:shadow-2xl whitespace-nowrap"
-              style={{
-                background: "linear-gradient(135deg, #C9A84C 0%, #E8C96A 50%, #C9A84C 100%)",
-                color: "#1A2E4A",
-                boxShadow: "0 0 28px rgba(201,168,76,0.4), 0 4px 20px rgba(0,0,0,0.3)",
-              }}
+              className="btn-navy inline-flex max-w-full items-center justify-center gap-2 text-sm md:text-base px-5 sm:px-8 py-4"
             >
               {/* noteロゴ風アイコン */}
               <svg className="w-5 h-5 flex-shrink-0" viewBox="0 0 24 24" fill="currentColor">
                 <path d="M4 4h16v2H4V4zm0 4h16v2H4V8zm0 4h10v2H4v-2zm0 4h7v2H4v-2z"/>
               </svg>
-              noteで企業分析レポートを見る →
+              <span>noteで企業分析レポートを見る →</span>
             </a>
           </div>
         </section>
