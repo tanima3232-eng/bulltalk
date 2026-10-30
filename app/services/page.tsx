@@ -46,13 +46,18 @@ const serviceCategories = [
 ];
 
 const seminarThemes = [
-  { title: "退職前ライフプラン研修", icon: "📋", tag: "法人・団体" },
-  { title: "社会人1年目から始める資産形成", icon: "🌱", tag: "法人" },
-  { title: "相続で揉めない方法", icon: "🏠", tag: "法人・団体" },
-  { title: "金融機関職員様向け営業研修", icon: "💼", tag: "金融機関" },
-  { title: "事業承継はじめの一歩", icon: "🔑", tag: "団体・経営者" },
-  { title: "NISA・iDeCo活用講座", icon: "📈", tag: "法人・団体" },
-  { title: "経営者様向け資産設計", icon: "👔", tag: "団体・経営者" },
+  { title: "退職前ライフプラン研修", image: "retirement-planning", tag: "法人・団体" },
+  { title: "社会人1年目から始める資産形成", image: "wealth-growth", tag: "法人" },
+  { title: "相続で揉めない方法", image: "inheritance", tag: "法人・団体" },
+  { title: "金融機関職員様向け営業研修", image: "seminar-stage", imagePosition: "50% 20%", tag: "金融機関" },
+  { title: "事業承継はじめの一歩", image: "business-succession", tag: "団体・経営者" },
+  { title: "NISA・iDeCo活用講座", image: "financial-knowledge", tag: "法人・団体" },
+  { title: "経営者様向け資産設計", image: "wealth-simulation", tag: "団体・経営者" },
+  {
+    title: "その他テーマにも対応",
+    image: "professional-services",
+    desc: "金融、不動産、相続、事業承継に関すること全般、ご要望に応じて対応可能です。お気軽にご相談ください。",
+  },
 ];
 
 const strengths = [
@@ -175,41 +180,41 @@ export default function ServicesPage() {
         </section>
 
         {/* ④ セミナー・研修テーマ */}
-        <section className="bg-light-navy py-16 px-4">
+        <section id="seminar-themes" className="bg-light-navy py-16 px-4 scroll-mt-24">
           <div className="max-w-5xl mx-auto">
             <h2 className="section-title text-center">主なセミナー・研修テーマ</h2>
             <p className="section-subtitle text-center">
               ご要望に応じてテーマのカスタマイズも可能です
             </p>
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
+            <div className="grid grid-cols-1 md:grid-cols-2 md:auto-rows-fr gap-5">
               {seminarThemes.map((theme) => (
                 <div
                   key={theme.title}
-                  className="bg-white rounded-xl p-5 shadow-sm hover:shadow-md transition-all duration-300 flex items-start gap-4 group hover:-translate-y-0.5"
+                  className="brand-surface flex min-h-[132px] overflow-hidden"
                 >
-                  <span className="text-2xl group-hover:scale-110 transition-transform duration-300">
-                    {theme.icon}
-                  </span>
-                  <div>
-                    <h3 className="font-bold text-navy text-sm mb-1">{theme.title}</h3>
-                    <span className="inline-block text-xs bg-light-gold text-gold font-semibold px-2 py-0.5 rounded-full">
-                      {theme.tag}
-                    </span>
+                  <div className="relative w-24 shrink-0 bg-navy sm:w-28 lg:w-32">
+                    <Image
+                      src={`/images/cards/${theme.image}.webp`}
+                      alt=""
+                      fill
+                      sizes="(min-width: 1024px) 128px, (min-width: 640px) 112px, 96px"
+                      className="object-cover"
+                      style={{ objectPosition: theme.imagePosition || "50% 50%" }}
+                    />
+                  </div>
+                  <div className="flex min-w-0 flex-1 flex-col justify-center p-4 sm:p-5">
+                    <h3 className="font-bold text-navy text-sm sm:text-base leading-relaxed mb-2">{theme.title}</h3>
+                    {theme.tag && (
+                      <span className="brand-tag self-start rounded-full px-2.5 py-1 text-xs font-semibold">
+                        {theme.tag}
+                      </span>
+                    )}
+                    {theme.desc && (
+                      <p className="text-xs text-gray-600 leading-relaxed">{theme.desc}</p>
+                    )}
                   </div>
                 </div>
               ))}
-              {/* その他 */}
-              <div className="bg-navy rounded-xl p-5 shadow-sm flex items-start gap-4 sm:col-span-2 lg:col-span-3">
-                <span className="text-2xl">💬</span>
-                <div>
-                  <h3 className="font-bold text-gold text-sm mb-1">
-                    その他テーマにも対応
-                  </h3>
-                  <p className="text-white/70 text-xs leading-relaxed">
-                    金融、不動産、相続、事業承継に関すること全般、ご要望に応じて対応可能です。お気軽にご相談ください。
-                  </p>
-                </div>
-              </div>
             </div>
           </div>
         </section>
