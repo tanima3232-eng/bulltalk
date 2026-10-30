@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import LineCtaBanner from "@/components/LineCtaBanner";
@@ -12,10 +13,9 @@ export const metadata: Metadata = {
 const serviceCategories = [
   {
     id: "corporate",
-    icon: "🏢",
     label: "法人・団体様向け",
-    color: "from-[#2a4470] to-[#3a5a8a]",
-    accent: "border-blue-400",
+    image: "/images/cards/professional-services.webp",
+    imagePosition: "50% 45%",
     items: [
       "役員・従業員様向け、各種研修・セミナー・コンサルティング（金融教育、退職前ライフプラン、事業承継対策、相続対策、福利厚生制度に関する内容等）",
       "オーナー様向け、コンサルティング（資産運用、不動産、相続、事業承継に関する内容等）",
@@ -24,10 +24,9 @@ const serviceCategories = [
   },
   {
     id: "individual",
-    icon: "👤",
     label: "個人のお客様向け",
-    color: "from-[#3a5a8a] to-[#4a6a9a]",
-    accent: "border-green-400",
+    image: "/images/cards/personal-planning.webp",
+    imagePosition: "50% 42%",
     items: [
       "ライフプラン、資産形成、NISA・iDeCo、住宅購入、不動産投資、相続・老後資金に関する相談",
       "その他、金融、不動産、相続、事業承継に関すること全般ご要望に応じて対応可能です。",
@@ -35,10 +34,9 @@ const serviceCategories = [
   },
   {
     id: "financial",
-    icon: "🏦",
     label: "金融機関様向け",
-    color: "from-navy to-[#2a4470]",
-    accent: "border-gold",
+    image: "/images/cards/trust-bank.webp",
+    imagePosition: "50% 28%",
     items: [
       "営業担当者向け各種研修（資産形成、相続対策、不動産、信託、保有資格に関する内容等）",
       "顧客向けセミナー講師（資産形成、相続対策、不動産、信託に関する内容等）",
@@ -59,22 +57,22 @@ const seminarThemes = [
 
 const strengths = [
   {
-    icon: "🎓",
+    image: "/images/cards/professional-credentials.webp",
     title: "3つの難関資格",
     desc: "FP1級・証券アナリスト（CMA）・宅建士を保有。金融・不動産・相続をワンストップでカバー。",
   },
   {
-    icon: "🏛️",
+    image: "/images/cards/trust-bank.webp",
     title: "大手信託銀行12年の実務",
     desc: "個人・法人・金融機関・機関投資家まで幅広い顧客への実務コンサルティング経験。",
   },
   {
-    icon: "🏆",
+    image: "/images/cards/achievement-award.webp",
     title: "社長賞受賞の実績",
     desc: "新人コンペ全国2位、金融法人営業で全社最高水準の成果を上げ社長賞を受賞。",
   },
   {
-    icon: "🏢",
+    image: "/images/cards/seminar-stage.webp",
     title: "研修講師としての登壇経験",
     desc: "全国本支店への戦略指導や営業担当者向け各種研修企画・講師として多数登壇。",
   },
@@ -103,7 +101,7 @@ export default function ServicesPage() {
         </section>
 
         {/* ② 選ばれる理由 */}
-        <section className="bg-white py-16 px-4">
+        <section id="strengths" className="bg-white py-16 px-4 scroll-mt-24">
           <div className="max-w-5xl mx-auto">
             <h2 className="section-title text-center">選ばれる理由</h2>
             <p className="section-subtitle text-center">12年の信託銀行キャリアで培った確かな専門性</p>
@@ -111,11 +109,21 @@ export default function ServicesPage() {
               {strengths.map((s) => (
                 <div
                   key={s.title}
-                  className="bg-offwhite rounded-2xl p-6 text-center hover:shadow-lg transition-shadow duration-300"
+                  className="relative isolate flex min-h-[360px] flex-col justify-end overflow-hidden rounded-2xl border border-navy/10 bg-navy shadow-sm"
                 >
-                  <div className="text-4xl mb-4">{s.icon}</div>
-                  <h3 className="font-bold text-navy text-sm mb-2">{s.title}</h3>
-                  <p className="text-gray-600 text-xs leading-relaxed">{s.desc}</p>
+                  <Image
+                    src={s.image}
+                    alt=""
+                    fill
+                    sizes="(min-width: 1024px) 238px, (min-width: 640px) 46vw, 100vw"
+                    className="object-cover object-top"
+                  />
+                  <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(7,26,49,0.04)_15%,rgba(7,26,49,0.35)_40%,rgba(7,26,49,0.94)_62%,#071a31_100%)]" />
+                  <div className="relative flex-1 px-5 pb-6 pt-44">
+                    <div className="mb-4 h-0.5 w-8 rounded-full bg-gold" />
+                    <h3 className="mb-3 text-base font-bold leading-relaxed text-white">{s.title}</h3>
+                    <p className="text-[13px] leading-[1.8] text-white/90">{s.desc}</p>
+                  </div>
                 </div>
               ))}
             </div>
@@ -123,7 +131,7 @@ export default function ServicesPage() {
         </section>
 
         {/* ③ サービスカテゴリ */}
-        <section className="bg-offwhite py-16 px-4">
+        <section id="service-categories" className="bg-offwhite py-16 px-4 scroll-mt-24">
           <div className="max-w-5xl mx-auto">
             <h2 className="section-title text-center">対応可能な業務</h2>
             <p className="section-subtitle text-center">ご要望に応じて柔軟にカスタマイズいたします</p>
@@ -131,12 +139,23 @@ export default function ServicesPage() {
               {serviceCategories.map((cat) => (
                 <div
                   key={cat.id}
-                  className={`bg-white rounded-2xl shadow-md overflow-hidden hover:shadow-xl transition-shadow duration-300 border-t-4 ${cat.accent}`}
+                  className="brand-surface overflow-hidden rounded-2xl bg-white"
                 >
                   {/* Card Header */}
-                  <div className="bg-navy px-6 py-5 flex items-center gap-3">
-                    <span className="text-3xl">{cat.icon}</span>
-                    <h3 className="text-white font-bold text-lg">{cat.label}</h3>
+                  <div className="relative isolate flex h-48 items-end bg-navy px-6 pb-6">
+                    <Image
+                      src={cat.image}
+                      alt=""
+                      fill
+                      sizes="(min-width: 1024px) 320px, calc(100vw - 32px)"
+                      className="object-cover"
+                      style={{ objectPosition: cat.imagePosition }}
+                    />
+                    <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(7,26,49,0.05)_15%,rgba(7,26,49,0.3)_40%,rgba(7,26,49,0.94)_100%)]" />
+                    <div className="relative">
+                      <div className="mb-3 h-0.5 w-8 rounded-full bg-gold" />
+                      <h3 className="text-lg font-bold text-white">{cat.label}</h3>
+                    </div>
                   </div>
                   {/* Card Body */}
                   <div className="p-6">

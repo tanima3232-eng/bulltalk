@@ -4,7 +4,6 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import LineCtaBanner from "@/components/LineCtaBanner";
 import Image from "next/image";
-import BrandIcon from "@/components/BrandIcon";
 import { getLatestVideos } from "@/lib/youtube";
 
 export const revalidate = 900;
@@ -47,10 +46,10 @@ const serviceCards = [
 ];
 
 const quickLinks = [
-  { icon: "bank" as const, label: "NISA・証券口座を開設", href: "/accounts/stock" },
-  { icon: "coins" as const, label: "iDeCoを始める", href: "/accounts/ideco" },
-  { icon: "chart" as const, label: "オルタナティブ投資とは", href: "/alternative" },
-  { icon: "building" as const, label: "不動産・インフラ投資とは", href: "/real-estate" },
+  { image: "/images/cards/wealth-growth.webp", label: ["NISA・証券", "口座を開設"], href: "/accounts/stock" },
+  { image: "/images/cards/retirement-planning.webp", label: ["iDeCoを始める"], href: "/accounts/ideco" },
+  { image: "/images/cards/alternative-assets.webp", label: ["オルタナティブ", "投資とは"], href: "/alternative" },
+  { image: "/images/cards/urban-infrastructure.webp", label: ["不動産・インフラ", "投資とは"], href: "/real-estate" },
 ];
 
 export default async function HomePage() {
@@ -331,7 +330,7 @@ export default async function HomePage() {
         </section>
 
         {/* ━━━ クイックリンク ━━━ */}
-        <section className="brand-section py-16 px-4">
+        <section id="explore" className="brand-section py-16 px-4 scroll-mt-24">
           <div className="max-w-5xl mx-auto">
             <h2 className="section-title text-center">もっと探す</h2>
             <p className="section-subtitle text-center">口座開設・投資についてもっと知りたい方はこちら</p>
@@ -340,12 +339,22 @@ export default async function HomePage() {
                 <Link
                   key={link.href}
                   href={link.href}
-                  className="brand-surface p-5 text-center hover:-translate-y-0.5 group"
+                  className="relative isolate flex min-h-[200px] flex-col justify-end overflow-hidden rounded-2xl border border-white/10 bg-navy shadow-sm transition duration-300 hover:-translate-y-1 hover:shadow-lg group sm:min-h-[230px]"
                 >
-                  <span className="brand-icon mx-auto mb-3"><BrandIcon name={link.icon} /></span>
-                  <p className="text-navy font-bold text-sm group-hover:text-gold transition-colors">
-                    {link.label}
-                  </p>
+                  <Image
+                    src={link.image}
+                    alt=""
+                    fill
+                    sizes="(min-width: 768px) 244px, 46vw"
+                    className="object-cover transition-transform duration-500 ease-out group-hover:scale-[1.04] motion-reduce:transform-none"
+                  />
+                  <div aria-hidden="true" className="absolute inset-0 bg-gradient-to-t from-[#06162c] via-[#06162c]/25 to-transparent" />
+                  <div className="relative z-10 px-3 pb-4 pt-20 sm:px-5 sm:pb-5">
+                    <span aria-hidden="true" className="mb-3 block h-0.5 w-7 bg-[#D7B76E]" />
+                    <p className="min-h-[44px] text-[13px] font-bold leading-[1.7] text-white [text-wrap:balance] sm:text-sm">
+                      {link.label.map((part) => <span key={part} className="inline-block">{part}</span>)}
+                    </p>
+                  </div>
                 </Link>
               ))}
             </div>
