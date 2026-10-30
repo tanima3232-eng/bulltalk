@@ -4,6 +4,7 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import LineCtaBanner from "@/components/LineCtaBanner";
 import Image from "next/image";
+import BrandIcon from "@/components/BrandIcon";
 import { getLatestVideos } from "@/lib/youtube";
 
 export const revalidate = 900;
@@ -16,44 +17,40 @@ export const metadata: Metadata = {
 
 const serviceCards = [
   {
-    icon: "📈",
+    icon: "market" as const,
     title: "相場分析",
     desc: "日経225の分析・売買判断を\n毎日配信",
     href: "/market",
-    color: "border-red-400",
     tag: "毎日更新",
   },
   {
-    icon: "📚",
+    icon: "book" as const,
     title: "金融コラム",
     desc: "資産形成・相続・不動産を\nプロが基礎から解説",
     href: "/column",
-    color: "border-blue-400",
     tag: "30本以上",
   },
   {
-    icon: "📊",
+    icon: "chart" as const,
     title: "シミュレーション",
     desc: "あなたに合った資産形成の\n優先順位を診断",
     href: "/simulation",
-    color: "border-green-400",
     tag: "無料",
   },
   {
-    icon: "💼",
+    icon: "briefcase" as const,
     title: "提供サービス",
     desc: "研修・セミナー・\nコンサルティング",
     href: "/services",
-    color: "border-gold",
     tag: "法人・個人・金融機関様",
   },
 ];
 
 const quickLinks = [
-  { icon: "🏦", label: "NISA・証券口座を開設", href: "/accounts/stock" },
-  { icon: "💰", label: "iDeCoを始める", href: "/accounts/ideco" },
-  { icon: "📊", label: "オルタナティブ投資とは", href: "/alternative" },
-  { icon: "🏠", label: "不動産・インフラ投資とは", href: "/real-estate" },
+  { icon: "bank" as const, label: "NISA・証券口座を開設", href: "/accounts/stock" },
+  { icon: "coins" as const, label: "iDeCoを始める", href: "/accounts/ideco" },
+  { icon: "chart" as const, label: "オルタナティブ投資とは", href: "/alternative" },
+  { icon: "building" as const, label: "不動産・インフラ投資とは", href: "/real-estate" },
 ];
 
 export default async function HomePage() {
@@ -64,9 +61,7 @@ export default async function HomePage() {
       <main>
 
         {/* ━━━ HERO ━━━ */}
-        <section className="bg-navy text-white py-24 px-4 relative overflow-hidden">
-          <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-gold/5 rounded-full -translate-y-1/2 translate-x-1/3" />
-          <div className="absolute bottom-0 left-0 w-80 h-80 bg-gold/5 rounded-full translate-y-1/2 -translate-x-1/3" />
+        <section className="brand-hero brand-hero--home text-white px-4">
 
           <div className="max-w-4xl mx-auto text-center relative z-10">
             <p className="text-gold text-sm font-bold uppercase tracking-widest mb-4">
@@ -85,17 +80,17 @@ export default async function HomePage() {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link href="/market" className="btn-red text-base px-8 py-4 rounded-xl">
-                📈 今日の相場分析を見る
+                今日の相場分析を見る
               </Link>
               <Link href="/column" className="btn-blue text-base px-8 py-4 rounded-xl">
-                📚 お金の知識を学ぶ
+                お金の知識を学ぶ
               </Link>
             </div>
           </div>
         </section>
 
         {/* ━━━ サービス一覧カード ━━━ */}
-        <section className="bg-offwhite py-20 px-4">
+        <section className="brand-section py-20 px-4">
           <div className="max-w-5xl mx-auto">
             <h2 className="section-title text-center">Bulltalkでできること</h2>
             <p className="section-subtitle text-center">
@@ -106,11 +101,11 @@ export default async function HomePage() {
                 <Link
                   key={card.href}
                   href={card.href}
-                  className={`bg-white rounded-2xl p-6 shadow-sm border-t-4 ${card.color} hover:shadow-lg hover:-translate-y-1 transition-all duration-300 group block`}
+                  className="brand-surface p-6 hover:-translate-y-1 group block"
                 >
                   <div className="flex items-center justify-between mb-3">
-                    <span className="text-3xl">{card.icon}</span>
-                    <span className="text-xs font-bold text-gold bg-light-gold px-2 py-0.5 rounded-full">
+                    <span className="brand-icon"><BrandIcon name={card.icon} /></span>
+                    <span className="brand-tag text-xs font-bold px-2 py-1 rounded-full">
                       {card.tag}
                     </span>
                   </div>
@@ -127,7 +122,7 @@ export default async function HomePage() {
         </section>
 
         {/* ━━━ 経歴サマリー ━━━ */}
-        <section className="bg-navy text-white py-20 px-4">
+        <section className="brand-band text-white py-20 px-4">
           <div className="max-w-5xl mx-auto">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
               <div className="flex justify-center">
@@ -196,7 +191,7 @@ export default async function HomePage() {
                         href={video.url}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="flex-none bg-white rounded-xl overflow-hidden shadow-sm group"
+                        className="brand-video-card flex-none bg-white overflow-hidden group"
                         style={{width: "55vw", maxWidth: "200px", scrollSnapAlign: "start"}}
                       >
                         <div style={{position: "relative", paddingBottom: "177.78%", background: "#f3f4f6", overflow: "hidden"}}>
@@ -224,7 +219,7 @@ export default async function HomePage() {
                         href={video.url}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="bg-white rounded-xl overflow-hidden shadow-sm hover:shadow-md transition-all duration-200 group hover:-translate-y-1"
+                        className="brand-video-card bg-white overflow-hidden hover:shadow-md transition-all duration-200 group hover:-translate-y-1"
                         style={{width: "200px", flexShrink: 0}}
                       >
                         <div style={{position: "relative", paddingBottom: "177.78%", background: "#f3f4f6", overflow: "hidden"}}>
@@ -327,7 +322,7 @@ export default async function HomePage() {
         </section>
 
         {/* ━━━ クイックリンク ━━━ */}
-        <section className="bg-offwhite py-16 px-4">
+        <section className="brand-section py-16 px-4">
           <div className="max-w-5xl mx-auto">
             <h2 className="section-title text-center">もっと探す</h2>
             <p className="section-subtitle text-center">口座開設・投資についてもっと知りたい方はこちら</p>
@@ -336,9 +331,9 @@ export default async function HomePage() {
                 <Link
                   key={link.href}
                   href={link.href}
-                  className="bg-white rounded-xl p-5 text-center shadow-sm hover:shadow-md hover:-translate-y-0.5 transition-all duration-300 group"
+                  className="brand-surface p-5 text-center hover:-translate-y-0.5 group"
                 >
-                  <span className="text-3xl mb-3 block">{link.icon}</span>
+                  <span className="brand-icon mx-auto mb-3"><BrandIcon name={link.icon} /></span>
                   <p className="text-navy font-bold text-sm group-hover:text-gold transition-colors">
                     {link.label}
                   </p>

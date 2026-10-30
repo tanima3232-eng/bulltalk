@@ -22,7 +22,7 @@ export default async function BulltalkPage() {
       <main>
 
 
-        <section className="bg-navy text-white py-24 px-4">
+        <section className="brand-hero brand-hero--home text-white px-4">
           <div className="max-w-4xl mx-auto text-center">
             <p className="text-gold text-sm font-bold uppercase tracking-widest mb-4">FP1級×証券アナリスト×宅建士</p>
             <h1 className="text-3xl md:text-5xl font-bold mb-8">
@@ -46,7 +46,7 @@ export default async function BulltalkPage() {
         </section>
 
         {/* S2: 分岐カード */}
-        <section className="bg-offwhite py-20 px-4">
+        <section className="brand-section py-20 px-4">
           <div className="max-w-5xl mx-auto">
             <h2 className="section-title text-center">あなたはどちら？</h2>
             <p className="section-subtitle text-center">Bulltalkは2つのコンテンツで構成されています</p>
@@ -105,7 +105,7 @@ export default async function BulltalkPage() {
                         href={video.url}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="flex-none bg-white rounded-xl overflow-hidden shadow-sm group"
+                        className="brand-video-card flex-none bg-white overflow-hidden group"
                         style={{width: "55vw", maxWidth: "200px", scrollSnapAlign: "start"}}
                       >
                         <div style={{position: "relative", paddingBottom: "177.78%", background: "#f3f4f6", overflow: "hidden"}}>
@@ -133,7 +133,7 @@ export default async function BulltalkPage() {
                         href={video.url}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="bg-white rounded-xl overflow-hidden shadow-sm hover:shadow-md transition-all duration-200 group hover:-translate-y-1"
+                        className="brand-video-card bg-white overflow-hidden hover:shadow-md transition-all duration-200 group hover:-translate-y-1"
                         style={{width: "200px", flexShrink: 0}}
                       >
                         <div style={{position: "relative", paddingBottom: "177.78%", background: "#f3f4f6", overflow: "hidden"}}>
@@ -238,7 +238,7 @@ export default async function BulltalkPage() {
         </section>
 
         {/* S4: 経歴サマリー */}
-        <section className="bg-navy text-white py-20 px-4">
+        <section className="brand-band text-white py-20 px-4">
           <div className="max-w-5xl mx-auto">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
               {/* Photo Placeholder */}

@@ -13,8 +13,8 @@ export default function FP3Page() {
     <>
       <Header />
       <main>
-        <section className="bg-navy text-white min-h-[60vh] py-20 px-4 flex items-center">
-          <div className="max-w-3xl mx-auto text-center">
+        <section className="brand-hero brand-hero--quiet bg-navy text-white min-h-[60vh] py-20 px-4 flex items-center">
+          <div className="max-w-3xl mx-auto text-center relative z-10">
             <p className="text-gold text-sm font-bold uppercase tracking-widest mb-4">Coming Soon</p>
             <h1 className="text-3xl md:text-5xl font-bold mb-6">FP3級講座</h1>
             <p className="text-white/80 text-lg mb-4">

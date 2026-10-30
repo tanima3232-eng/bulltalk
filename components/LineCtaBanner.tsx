@@ -1,34 +1,29 @@
 export default function LineCtaBanner() {
   return (
-    <section className="bg-gold py-16 px-4">
+    <section className="brand-band py-16 px-4 text-white">
       <div className="max-w-2xl mx-auto text-center">
 
-        <p className="text-navy/60 text-xs font-bold uppercase tracking-widest mb-4">
+        <p className="text-gold text-xs font-bold uppercase tracking-widest mb-4">
           🔥 BULL友 MEMBERS ONLY
         </p>
-        <h2 className="text-2xl md:text-3xl font-bold text-navy mb-5">
+        <h2 className="text-2xl md:text-3xl font-bold text-white mb-5">
           Bull友になる
         </h2>
 
         {/* 安心バッジ */}
-        <div className="flex justify-center items-center gap-1.5 mb-8">
-          <span className="text-xs font-bold" style={{color: "#1A2E4A"}}>＼</span>
-          {["✓ 完全無料", "✓ LINE追加するだけ", "✓ 特典あり"].map((badge) => (
-            <span
-              key={badge}
-              className="inline-flex items-center font-bold rounded-full whitespace-nowrap"
-              style={{
-                background: "rgba(26,46,74,0.08)",
-                color: "#1A2E4A",
-                border: "1.5px solid #1A2E4A",
-                fontSize: "11px",
-                padding: "4px 10px",
-              }}
-            >
-              {badge}
-            </span>
-          ))}
-          <span className="text-xs font-bold" style={{color: "#1A2E4A"}}>／</span>
+        <div className="flex justify-center items-center gap-2 mb-8">
+          <span className="text-xs font-bold text-gold/70 shrink-0">＼</span>
+          <div className="flex flex-wrap justify-center gap-2 min-w-0">
+            {["✓ 完全無料", "✓ LINE追加するだけ", "✓ 特典あり"].map((badge) => (
+              <span
+                key={badge}
+                className="inline-flex items-center font-bold rounded-full whitespace-nowrap bg-white/5 text-white/80 border border-white/[0.15] text-[11px] px-2.5 py-1"
+              >
+                {badge}
+              </span>
+            ))}
+          </div>
+          <span className="text-xs font-bold text-gold/70 shrink-0">／</span>
         </div>
 
         {/* カード型メリット3点 */}
@@ -52,22 +47,16 @@ export default function LineCtaBanner() {
           ].map((item) => (
             <div
               key={item.num}
-              className="flex items-start gap-4 rounded-xl p-4"
-              style={{
-                background: "rgba(255,255,255,0.55)",
-                border: "1px solid rgba(26,46,74,0.12)",
-                backdropFilter: "blur(4px)",
-              }}
+              className="brand-panel-dark flex items-start gap-3 sm:gap-4 p-4 sm:p-5"
             >
               <span
-                className="font-bold text-sm flex-shrink-0 w-7 h-7 flex items-center justify-center rounded-full"
-                style={{ background: "#1A2E4A", color: "#C9A84C" }}
+                className="font-bold text-sm flex-shrink-0 w-8 h-8 flex items-center justify-center rounded-full bg-sky-400/10 border border-sky-300/[0.15] text-gold"
               >
                 {item.num}
               </span>
-              <div>
-                <p className="text-navy font-bold text-sm leading-snug mb-0.5">{item.title}</p>
-                <p className="text-navy/60 text-xs leading-relaxed">{item.desc}</p>
+              <div className="min-w-0">
+                <p className="text-white font-bold text-sm leading-relaxed mb-1">{item.title}</p>
+                <p className="text-white/75 text-xs leading-relaxed">{item.desc}</p>
               </div>
             </div>
           ))}
@@ -76,15 +65,15 @@ export default function LineCtaBanner() {
         {/* CTAボタン */}
         <a
           href="https://lin.ee/FmH7NXr"
-          className="btn-line inline-flex items-center justify-center gap-3 text-lg px-8 py-4 rounded-xl shadow-lg"
+          className="btn-line inline-flex items-center justify-center gap-3 w-full sm:w-auto max-w-full text-base sm:text-lg px-6 sm:px-8 py-4 rounded-xl"
         >
-          <svg className="w-6 h-6" viewBox="0 0 24 24" fill="currentColor">
+          <svg className="w-6 h-6 shrink-0" viewBox="0 0 24 24" fill="currentColor">
             <path d="M12 2C6.48 2 2 6.04 2 11c0 3.45 1.92 6.47 4.8 8.19L6 22l2.72-1.44C9.77 20.83 10.87 21 12 21c5.52 0 10-4.04 10-9S17.52 2 12 2z" />
           </svg>
           今すぐBull友になる
         </a>
 
-        <p className="text-navy/40 text-xs mt-4">LINE追加のみ・完全無料</p>
+        <p className="text-white/60 text-xs mt-4">LINE追加のみ・完全無料</p>
       </div>
     </section>
   );

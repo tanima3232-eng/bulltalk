@@ -64,10 +64,10 @@ export default function Header() {
 
   return (
     <>
-      <header className="bg-navy sticky top-0 z-50 shadow-lg">
+      <header className="site-header sticky top-0 z-50">
         <div className="max-w-6xl mx-auto px-4 py-4 flex items-center justify-between">
           {/* Logo */}
-          <Link href="/" className="text-white font-bold text-2xl tracking-wide" onClick={() => setMenuOpen(false)}>
+          <Link href="/" className="brand-wordmark text-white font-bold text-2xl tracking-wide" onClick={() => setMenuOpen(false)}>
             <span className="text-gold">Bull</span>talk
           </Link>
 
@@ -75,8 +75,7 @@ export default function Header() {
           <div className="flex items-center gap-3">
             <Link
               href="/line"
-              className="text-navy text-sm font-bold px-4 py-2 rounded-full transition-all duration-200 hover:opacity-80"
-              style={{ background: "#C9A84C" }}
+              className="text-navy text-sm font-bold px-4 py-2 rounded-full bg-gold transition-all duration-200 hover:opacity-90"
             >
               Bull友になる
             </Link>
@@ -85,7 +84,9 @@ export default function Header() {
             <button
               className="text-white p-2 relative w-10 h-10 flex items-center justify-center"
               onClick={() => setMenuOpen(!menuOpen)}
-              aria-label="メニューを開く"
+              aria-label={menuOpen ? "メニューを閉じる" : "メニューを開く"}
+              aria-expanded={menuOpen}
+              aria-controls="site-menu"
             >
               <div className={`w-6 h-0.5 bg-white absolute transition-all duration-300 ${menuOpen ? "rotate-45" : "-translate-y-2"}`} />
               <div className={`w-6 h-0.5 bg-white absolute transition-all duration-300 ${menuOpen ? "opacity-0" : ""}`} />
@@ -109,12 +110,12 @@ export default function Header() {
 
         {/* Slide-in panel */}
         <div
-          className={`absolute right-0 top-0 h-full w-full max-w-md bg-navy shadow-2xl transition-transform duration-300 ease-out overflow-y-auto ${
+          className={`brand-menu absolute right-0 top-0 h-full w-full max-w-md shadow-2xl transition-transform duration-300 ease-out overflow-y-auto ${
             menuOpen ? "translate-x-0" : "translate-x-full"
           }`}
           style={{ paddingTop: "72px" }}
         >
-          <nav className="px-6 py-6">
+          <nav id="site-menu" aria-label="サイトメニュー" className="px-6 py-6">
             {menuSections.map((section, i) => (
               <div key={i} className="mb-6">
                 {section.label && (
@@ -135,7 +136,7 @@ export default function Header() {
                           {link.label}
                         </p>
                         {link.desc && (
-                          <p className="text-white/40 text-xs mt-0.5">{link.desc}</p>
+                          <p className="text-white/70 text-xs mt-0.5">{link.desc}</p>
                         )}
                       </div>
                     </Link>

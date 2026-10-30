@@ -26,7 +26,7 @@ export default function LineTokutenPage() {
       <Header />
       <main>
         <section
-          className="min-h-screen py-20 px-4 flex items-center"
+          className="brand-hero brand-hero--quiet min-h-screen py-20 px-4 flex items-center"
           style={{
             background: "linear-gradient(135deg, #0d1b2e 0%, #1A2E4A 50%, #0d1b2e 100%)",
             position: "relative",

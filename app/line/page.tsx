@@ -13,7 +13,7 @@ export default function LinePage() {
       <Header />
       <main>
         <section
-          className="min-h-screen py-20 px-4 flex items-center"
+          className="brand-hero brand-hero--standard min-h-screen py-20 px-4 flex items-center"
           style={{
             background: "linear-gradient(135deg, #0d1b2e 0%, #1A2E4A 50%, #0d1b2e 100%)",
             position: "relative",

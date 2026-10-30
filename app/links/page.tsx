@@ -237,7 +237,7 @@ export default function LinksPage() {
     <div style={s.wrap}>
       {/* ── HERO ── */}
       {screen === "cover" && (
-        <div style={s.hero}>
+        <div className="brand-hero brand-hero--quiet" style={s.hero}>
           <div style={{ position: "absolute", top: 20, right: 22, width: 54, height: 54, border: "1.5px solid #a1463d", borderRadius: "50%", display: "flex", alignItems: "center", justifyContent: "center", transform: "rotate(-6deg)", opacity: .85 }}>
             <span style={{ fontFamily: "'Noto Serif JP', serif", fontWeight: 900, fontSize: 20, color: "#a1463d" }}>診</span>
           </div>

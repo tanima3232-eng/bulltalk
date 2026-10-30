@@ -85,7 +85,7 @@ export default function IDeCoPage() {
         </div>
         {/* Hero */}
         <section
-          className="py-20 px-4 text-white"
+          className="brand-hero brand-hero--standard py-20 px-4 text-white"
           style={{ background: "linear-gradient(135deg,#0d1b2e 0%,#1e3a5f 60%,#0d1b2e 100%)", position: "relative", overflow: "hidden" }}
         >
           <div

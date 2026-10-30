@@ -9,7 +9,16 @@
 
   body {
     @apply text-dark;
+    -webkit-font-smoothing: antialiased;
+    line-height: 1.75;
   }
+
+  :focus-visible {
+    outline: 3px solid #3979ce;
+    outline-offset: 4px;
+  }
+
+  ::selection { background: #d9e8fa; color: #0d2340; }
 
   h1, h2, h3, h4, h5, h6 {
     @apply font-bold;
@@ -19,6 +28,7 @@
 @layer components {
   .btn-primary {
     @apply inline-block px-6 py-3 bg-gold text-navy font-bold rounded-lg hover:opacity-90 transition-all duration-200 text-center;
+    background-image: linear-gradient(120deg, #dbc180, #c9a75d);
   }
 
   .btn-navy {
@@ -39,6 +49,23 @@
 
   .section-title {
     @apply text-2xl md:text-3xl font-bold text-navy mb-2;
+    letter-spacing: .035em;
+    line-height: 1.5;
+    text-wrap: balance;
+  }
+
+  .section-title::before {
+    content: "";
+    display: block;
+    width: 36px;
+    height: 3px;
+    margin-bottom: 16px;
+    border-radius: 10px;
+    background: linear-gradient(90deg, #c9a75d 0%, #4c83c8 100%);
+  }
+
+  .section-title.text-center::before, .text-center > .section-title::before {
+    margin-inline: auto;
   }
 
   .section-subtitle {
@@ -46,7 +73,22 @@
   }
 
   .card {
-    @apply bg-white rounded-xl shadow-md overflow-hidden hover:shadow-lg transition-shadow duration-300;
+    @apply bg-white rounded-2xl overflow-hidden transition-all duration-300;
+    border: 1px solid #e0e7ef;
+    box-shadow: 0 5px 24px -14px rgba(13, 35, 64, .22);
+  }
+
+  a.card:hover {
+    border-color: #a6bfdc;
+    box-shadow: 0 14px 36px -18px rgba(13, 35, 64, .28);
+  }
+
+  .card .text-gold, .brand-surface .text-gold {
+    color: #88672d;
+  }
+
+  .card [class*="group-hover:text-gold"]:is(:hover, :focus-visible) {
+    color: #88672d;
   }
 
   .blockquote-style {
@@ -56,6 +98,131 @@
   .disclaimer {
     @apply text-xs text-gray-500 leading-relaxed;
   }
+}
+
+/* Cの光とネットワークはヒーローに集約。本文は白い読書面を保つ。 */
+.brand-hero {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  color: #fff;
+  background: #071a31 !important;
+  border-bottom: 1px solid rgba(139, 173, 214, .2);
+}
+
+.brand-hero::before, .brand-hero::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+}
+
+.brand-hero::before {
+  z-index: -2;
+  background: url('/images/brand/network-c.webp') center / cover no-repeat;
+}
+
+.brand-hero::after {
+  z-index: -1;
+  background: linear-gradient(90deg, rgba(4, 16, 34, .15), rgba(4, 16, 34, .25) 50%, rgba(4, 16, 34, .12));
+}
+
+.brand-hero--home { padding-block: clamp(80px, 8vw, 120px); }
+.brand-hero--home h1 { line-height: 1.42; letter-spacing: .035em; }
+.brand-hero--home h1 > span { margin-bottom: 0; }
+.brand-hero--standard::before { opacity: .7; }
+.brand-hero--standard::after { background: linear-gradient(90deg, #071a3166, #071a3144); }
+.brand-hero--quiet::before { opacity: .3; background-position: right center; }
+.brand-hero--quiet::after { background: linear-gradient(90deg, rgba(7, 26, 49, .4), rgba(7, 26, 49, .12)); }
+.brand-hero h1 { text-wrap: balance; }
+.brand-hero :focus-visible, .site-header :focus-visible, .brand-band :focus-visible { outline-color: #e6ca86; }
+
+.site-header {
+  background: rgba(8, 26, 47, .96);
+  border-bottom: 1px solid rgba(173, 197, 226, .16);
+  box-shadow: 0 5px 24px rgba(1, 12, 27, .12);
+  backdrop-filter: blur(16px);
+}
+.site-header .brand-wordmark { letter-spacing: .015em; }
+.brand-menu {
+  background: linear-gradient(145deg, #0d2340, #07182d);
+  border-left: 1px solid rgba(173, 197, 226, .16);
+}
+.site-footer {
+  background: radial-gradient(ellipse at 10% 0%, #163b62 0%, transparent 52%), #07182d;
+  border-top: 1px solid rgba(201, 167, 93, .3);
+}
+
+.brand-band {
+  background: radial-gradient(ellipse at 10% 0%, rgba(50, 109, 176, .25), transparent 55%),
+    radial-gradient(ellipse at 100% 100%, rgba(201, 167, 93, .08), transparent 50%), #0d2340 !important;
+  color: #fff;
+  border-block: 1px solid rgba(130, 166, 207, .15);
+}
+.brand-panel-dark { background: rgba(255, 255, 255, .045); border: 1px solid rgba(166, 195, 228, .18); border-radius: 18px; }
+.brand-section {
+  background: radial-gradient(ellipse at 100% 0%, rgba(91, 146, 208, .055), transparent 50%), #f5f7fa;
+  border-block: 1px solid #e7edf4;
+}
+.brand-surface {
+  background: #fff;
+  border: 1px solid #e0e7ef;
+  border-radius: 18px;
+  box-shadow: 0 5px 24px -14px rgba(13, 35, 64, .22);
+  transition: border-color .2s, box-shadow .2s, transform .2s;
+}
+a.brand-surface:hover { border-color: #a6bfdc; box-shadow: 0 14px 36px -18px rgba(13, 35, 64, .28); }
+.brand-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  height: 48px;
+  flex-shrink: 0;
+  color: #326292;
+  border: 1px solid #dbe6f1;
+  border-radius: 14px;
+  background: linear-gradient(140deg, #edf4fb, #f9fbfd);
+}
+.brand-tag { color: #88672d; background: #faf5e9; border: 1px solid #eee2c5; text-wrap: balance; text-align: center; line-height: 1.5; }
+.brand-date-tile {
+  background: radial-gradient(ellipse at 100% 0%, #255484, transparent 70%), linear-gradient(135deg, #102b49, #091c33);
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+}
+.brand-date-tile::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background-image: linear-gradient(#ffffff08 1px, transparent 1px), linear-gradient(90deg, #ffffff08 1px, transparent 1px);
+  background-size: 28px 28px;
+  mask-image: linear-gradient(120deg, transparent 20%, #000);
+}
+.brand-date-tile.text-gold, .brand-date-tile .text-gold { color: #e1c385; }
+.brand-video-card { border: 1px solid #e0e7ef; border-radius: 16px; box-shadow: 0 6px 26px -16px #0d234044; }
+.btn-primary, .btn-navy, .btn-blue, .btn-red, .btn-line {
+  border: 1px solid transparent;
+  border-radius: 12px;
+  box-shadow: 0 5px 16px -10px rgba(13, 35, 64, .45);
+  line-height: 1.5;
+}
+.btn-blue { background: linear-gradient(120deg, #2563d6, #194ba8); }
+.btn-red { background: linear-gradient(120deg, #d72f34, #b9202a); }
+.btn-navy { background: linear-gradient(120deg, #153452, #0d2340); }
+
+@media (max-width: 767px) {
+  .brand-hero::before { background-position: 64% center; }
+  .brand-hero::after { background: linear-gradient(180deg, #071a314d, #071a3177 60%, #071a3133); }
+  .brand-hero--home { padding-block: 64px 72px; }
+  .brand-hero--home h1 { font-size: clamp(1.75rem, 7.5vw, 2.5rem); }
+  .brand-hero--quiet::before { opacity: .22; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after { transition-duration: .01ms !important; animation-duration: .01ms !important; animation-iteration-count: 1 !important; }
 }
 
 /* 投資信託の仕組み図：PCのみ拡大 */

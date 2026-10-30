@@ -190,8 +190,8 @@ function ArticlePage({ slug }: { slug: string }) {
         />
 
         {/* Hero section */}
-        <section className="bg-navy text-white py-16 px-4">
-          <div className="max-w-3xl mx-auto">
+        <section className="brand-hero brand-hero--quiet bg-navy text-white py-16 px-4">
+          <div className="max-w-3xl mx-auto relative z-10">
             <div className="text-white/70 text-sm mb-4">
               <Link href="/" className="hover:text-gold transition-colors">
                 ホーム
@@ -506,8 +506,8 @@ function ArchivePage({ year, month }: { year: string; month: string }) {
       <Header />
       <main>
         {/* Hero */}
-        <section className="bg-navy text-white py-12 px-4">
-          <div className="max-w-4xl mx-auto">
+        <section className="brand-hero brand-hero--quiet bg-navy text-white py-12 px-4">
+          <div className="max-w-4xl mx-auto relative z-10">
             <div className="text-sm text-white/70 mb-4 flex items-center">
               <Link
                 href="/"

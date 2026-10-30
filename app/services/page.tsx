@@ -87,7 +87,7 @@ export default function ServicesPage() {
       <main>
 
         {/* ① Hero */}
-        <section className="bg-navy text-white py-20 px-4 relative overflow-hidden">
+        <section className="brand-hero brand-hero--standard bg-navy text-white py-20 px-4 relative overflow-hidden">
           {/* Decorative elements */}
           <div className="absolute top-0 right-0 w-96 h-96 bg-gold/5 rounded-full -translate-y-1/2 translate-x-1/2" />
           <div className="absolute bottom-0 left-0 w-64 h-64 bg-gold/5 rounded-full translate-y-1/2 -translate-x-1/2" />

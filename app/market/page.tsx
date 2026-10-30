@@ -24,7 +24,7 @@ function MarketEyecatch({ date, large = false }: { date: string; large?: boolean
   const [y, m, d] = date.split("-");
   return (
     <div
-      className={`bg-navy flex flex-col items-center justify-center text-center w-full flex-shrink-0 ${large ? "h-full" : ""}`}
+      className={`brand-date-tile flex flex-col items-center justify-center text-center w-full flex-shrink-0 ${large ? "h-full" : ""}`}
       style={large ? { minHeight: "180px" } : { aspectRatio: "16 / 9" }}
     >
       <span className="text-gold text-xs font-bold tracking-widest mb-1">JAPAN STOCK MARKET</span>
@@ -46,7 +46,7 @@ export default async function MarketPage() {
       <Header />
       <main>
         {/* S1: FV（ファーストビュー） */}
-        <section className="bg-navy text-white py-16 md:py-24 px-4">
+        <section className="brand-hero brand-hero--standard text-white py-16 md:py-24 px-4">
           <div className="max-w-4xl mx-auto text-center">
             <p className="text-gold text-sm font-bold uppercase tracking-widest mb-4">MARKET ANALYSIS</p>
             <h1 className="font-bold mb-4 text-4xl md:text-6xl text-white">相場分析</h1>
@@ -88,7 +88,7 @@ export default async function MarketPage() {
                       href={video.url}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="flex-none bg-white rounded-xl overflow-hidden shadow-sm group"
+                      className="brand-video-card flex-none bg-white overflow-hidden group"
                       style={{width: "55vw", maxWidth: "200px", scrollSnapAlign: "start"}}
                     >
                       <div style={{position: "relative", paddingBottom: "177.78%", background: "#f3f4f6", overflow: "hidden"}}>
@@ -127,7 +127,7 @@ export default async function MarketPage() {
                         href={video.url}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="bg-white rounded-xl overflow-hidden shadow-sm hover:shadow-md transition-all duration-200 group hover:-translate-y-1"
+                        className="brand-video-card bg-white overflow-hidden hover:shadow-md transition-all duration-200 group hover:-translate-y-1"
                         style={{width: "200px", flexShrink: 0}}
                       >
                         <div style={{position: "relative", paddingBottom: "177.78%", background: "#f3f4f6", overflow: "hidden"}}>
@@ -230,7 +230,7 @@ export default async function MarketPage() {
 
 
         {/* S3: 今日の日本株マーケット（最新記事を大きく表示） */}
-        <section id="japan-market" className="bg-offwhite py-16 px-4 scroll-mt-20">
+        <section id="japan-market" className="brand-section py-16 px-4 scroll-mt-20">
           <div className="max-w-5xl mx-auto">
             <h2 className="section-title text-center">今日の日本株マーケット</h2>
             <p className="section-subtitle text-center max-w-2xl mx-auto">
@@ -302,7 +302,7 @@ export default async function MarketPage() {
         {/* S3: 企業分析レポートはこちら */}
         <section
           id="company-analysis"
-          className="py-16 px-4 scroll-mt-20"
+          className="brand-band py-16 px-4 scroll-mt-20"
           style={{
             background: "linear-gradient(135deg, #0d1b2e 0%, #1A2E4A 50%, #0d1b2e 100%)",
             position: "relative",
@@ -354,7 +354,7 @@ export default async function MarketPage() {
 
         {/* S4: Bull友3特典・LINE */}
         <section
-          className="py-20 px-4"
+          className="brand-band py-20 px-4"
           style={{
             background: "linear-gradient(135deg, #0d1b2e 0%, #1A2E4A 50%, #0d1b2e 100%)",
             position: "relative",
@@ -422,7 +422,7 @@ export default async function MarketPage() {
               ].map((item) => (
                 <div
                   key={item.num}
-                  className="flex items-start gap-4 rounded-xl p-5"
+                  className="brand-panel-dark flex items-start gap-4 p-5"
                   style={{
                     background: "rgba(255,255,255,0.06)",
                     border: "1px solid rgba(201,168,76,0.25)",
@@ -466,7 +466,7 @@ export default async function MarketPage() {
         </section>
 
         {/* S5: 谷本光章プロフィール（コンパクト） */}
-        <section className="bg-offwhite py-12 px-4">
+        <section className="brand-section py-12 px-4">
           <div className="max-w-3xl mx-auto">
             <div className="flex flex-col md:flex-row items-center gap-8">
               <div className="w-32 h-32 flex-shrink-0 rounded-full border-4 border-gold overflow-hidden shadow-lg">

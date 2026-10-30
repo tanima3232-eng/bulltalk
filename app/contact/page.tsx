@@ -60,7 +60,7 @@ export default function ContactPage() {
       <Header />
       <main>
         {/* Hero */}
-        <section className="bg-navy text-white py-16 px-4 relative overflow-hidden">
+        <section className="brand-hero brand-hero--quiet bg-navy text-white py-16 px-4 relative overflow-hidden">
           <div className="absolute top-0 right-0 w-80 h-80 bg-gold/5 rounded-full -translate-y-1/2 translate-x-1/2" />
           <div className="max-w-4xl mx-auto text-center relative z-10">
             <p className="text-gold text-sm font-bold uppercase tracking-widest mb-4">Contact</p>

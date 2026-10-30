@@ -28,8 +28,8 @@ export default function MarketJapanPage() {
       <Header />
       <main>
         {/* Hero */}
-        <section className="bg-navy text-white py-16 px-4">
-          <div className="max-w-4xl mx-auto text-center">
+        <section className="brand-hero brand-hero--standard bg-navy text-white py-16 px-4">
+          <div className="max-w-4xl mx-auto text-center relative z-10">
             <Link href="/market" className="inline-block text-white/70 hover:text-gold text-sm mb-4 transition-colors">
               ← 相場分析トップへ戻る
             </Link>

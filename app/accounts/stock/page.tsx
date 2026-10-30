@@ -114,7 +114,7 @@ export default function StockAccountPage() {
 
         {/* Hero */}
         <section
-          className="py-20 px-4 text-white"
+          className="brand-hero brand-hero--standard py-20 px-4 text-white"
           style={{ background: "linear-gradient(135deg,#0d1b2e 0%,#1A2E4A 60%,#0d1b2e 100%)", position: "relative", overflow: "hidden" }}
         >
           <div
@@ -156,7 +156,7 @@ export default function StockAccountPage() {
                 <p className="text-navy font-bold text-sm leading-relaxed">
                   「NISA口座は証券会社によって選べる商品やポイント還元などの特典が異なります。例えば、dポイントを活用したい方はマネックス証券を検討してみてはいかがでしょうか。」
                 </p>
-                <p className="text-gray-400 text-[11px] sm:text-xs mt-2 whitespace-nowrap">元大手信託銀行12年・FP1級・CMA・宅建士</p>
+                <p className="text-gray-500 text-[11px] sm:text-xs mt-2">元大手信託銀行12年・FP1級・CMA・宅建士</p>
               </div>
             </div>
           </div>

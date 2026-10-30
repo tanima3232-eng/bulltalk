@@ -55,8 +55,8 @@ export default async function ColumnDetailPage({
       <Header />
       <main>
         {/* Hero */}
-        <section className="bg-navy text-white py-16 px-4">
-          <div className="max-w-3xl mx-auto">
+        <section className="brand-hero brand-hero--quiet bg-navy text-white py-16 px-4">
+          <div className="max-w-3xl mx-auto relative z-10">
             <div className="flex items-center gap-6 mb-5">
               <Link
                 href="/column"

@@ -20,7 +20,7 @@ export default function AlternativePage() {
 
         {/* Hero */}
         <section
-          className="py-20 px-4 text-white"
+          className="brand-hero brand-hero--standard py-20 px-4 text-white"
           style={{
             background: "linear-gradient(135deg,#0d1b2e 0%,#1a2e4a 50%,#2d1b4e 100%)",
             position: "relative",

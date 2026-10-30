@@ -68,8 +68,8 @@ export default function AboutPage() {
       <main>
 
         {/* ① Hero — bg-navy */}
-        <section className="bg-navy text-white py-20 px-4">
-          <div className="max-w-4xl mx-auto">
+        <section className="brand-hero brand-hero--quiet bg-navy text-white py-20 px-4">
+          <div className="max-w-4xl mx-auto relative z-10">
             <div className="flex flex-col md:flex-row items-center gap-10">
               <div className="flex-shrink-0 flex justify-center">
                 <div className="w-48 h-48 md:w-64 md:h-64 rounded-full border-4 border-gold overflow-hidden shadow-2xl">

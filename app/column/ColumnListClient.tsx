@@ -6,6 +6,7 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import LineCtaBanner from "@/components/LineCtaBanner";
 import SimulationCtaBanner from "@/components/SimulationCtaBanner";
+import BrandIcon from "@/components/BrandIcon";
 import type { ColumnMeta } from "@/lib/columns";
 
 const CATEGORIES = [
@@ -15,11 +16,7 @@ const CATEGORIES = [
   { id: "fudosan", label: "不動産" },
 ];
 
-const ICONS: Record<string, string> = {
-  fudosan: "🏠",
-  souzoku: "🏛️",
-  asset:   "📊",
-};
+const ICONS = { fudosan: "building", souzoku: "bank", asset: "chart" } as const;
 
 export default function ColumnListClient({ columns }: { columns: ColumnMeta[] }) {
   const [active, setActive] = useState("all");
@@ -32,8 +29,8 @@ export default function ColumnListClient({ columns }: { columns: ColumnMeta[] })
       <Header />
       <main>
         {/* Hero */}
-        <section className="bg-navy text-white py-16 px-4">
-          <div className="max-w-4xl mx-auto text-center">
+        <section className="brand-hero brand-hero--standard bg-navy text-white py-16 px-4">
+          <div className="max-w-4xl mx-auto text-center relative z-10">
             <p className="text-gold text-sm font-bold uppercase tracking-widest mb-4">Column</p>
             <h1 className="text-3xl md:text-4xl font-bold">金融コラム</h1>
             <p className="text-white/70 mt-4">
@@ -43,7 +40,7 @@ export default function ColumnListClient({ columns }: { columns: ColumnMeta[] })
         </section>
 
         {/* Column List */}
-        <section className="bg-offwhite py-16 px-4">
+        <section className="brand-section py-16 px-4">
           <div className="max-w-5xl mx-auto">
 
             {/* Category Tabs */}
@@ -74,14 +71,13 @@ export default function ColumnListClient({ columns }: { columns: ColumnMeta[] })
                 <Link
                   key={col.slug}
                   href={`/column/${col.slug}`}
-                  className="bg-white rounded-2xl shadow-sm hover:shadow-md transition-all duration-200 p-5 flex flex-col group border border-gray-100 hover:-translate-y-1"
+                  className="brand-surface p-5 flex flex-col group hover:-translate-y-1"
                 >
                   {/* Icon Area */}
                   <div
-                    className="rounded-xl aspect-video mb-4 flex items-center justify-center text-5xl"
-                    style={{ backgroundColor: col.categoryColor + "18" }}
+                    className="brand-date-tile rounded-xl aspect-video mb-4 flex items-center justify-center text-gold"
                   >
-                    {ICONS[col.category] || "📄"}
+                    <BrandIcon name={ICONS[col.category as keyof typeof ICONS] || "book"} className="w-12 h-12" />
                   </div>
 
                   {/* Category Badge */}

@@ -43,7 +43,7 @@ export default function MarketJapanListClient({
   };
 
   return (
-    <section className="bg-white py-14 px-4">
+    <section className="brand-section py-14 px-4">
       <div className="max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-4 gap-8">
         
         {/* メインカラム: 記事一覧 */}
@@ -62,7 +62,7 @@ export default function MarketJapanListClient({
                 </p>
                 <div className="flex flex-wrap gap-2 mb-4">
                   {article.tags.map((tag) => (
-                    <span key={tag} className="bg-gray-100 text-gray-600 text-xs px-2 py-1 rounded">
+                    <span key={tag} className="bg-light-navy text-navy text-xs px-2 py-1 rounded-md">
                       #{tag}
                     </span>
                   ))}
@@ -89,7 +89,7 @@ export default function MarketJapanListClient({
 
         {/* サイドバー: 月別アーカイブ */}
         <aside className="lg:col-span-1">
-          <div className="bg-gray-50 p-6 rounded-xl sticky top-24">
+          <div className="brand-surface p-6 sticky top-24">
             <h3 className="font-bold text-navy mb-4 border-b border-gray-200 pb-2">月別アーカイブ</h3>
             <ul className="space-y-2">
               {archives.map((archive) => (

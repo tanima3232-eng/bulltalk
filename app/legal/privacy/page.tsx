@@ -88,8 +88,8 @@ export default function PrivacyPolicyPage() {
       <Header />
       <main>
         {/* Hero */}
-        <section className="bg-navy text-white py-16 px-4">
-          <div className="max-w-4xl mx-auto">
+        <section className="brand-hero brand-hero--quiet bg-navy text-white py-16 px-4">
+          <div className="max-w-4xl mx-auto relative z-10">
             <p className="text-gold text-sm font-bold uppercase tracking-widest mb-3">
               LEGAL
             </p>
