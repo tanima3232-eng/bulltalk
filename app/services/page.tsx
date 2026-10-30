@@ -193,7 +193,7 @@ export default function ServicesPage() {
                       src={`/images/cards-b/${theme.image}.webp`}
                       alt=""
                       fill
-                      sizes="(min-width: 1024px) 128px, (min-width: 640px) 112px, 96px"
+                      sizes="256px"
                       className="object-cover"
                       style={{ objectPosition: theme.imagePosition || "50% 50%" }}
                     />
