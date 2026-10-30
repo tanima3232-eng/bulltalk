@@ -28,7 +28,7 @@ function MarketEyecatch({ date, large = false }: { date: string; large?: boolean
       style={large ? { minHeight: "180px" } : { aspectRatio: "16 / 9" }}
     >
       <Image
-        src="/images/cards/market-chart.webp"
+        src="/images/cards-b/market-chart.webp"
         alt=""
         fill
         sizes={large
@@ -36,9 +36,9 @@ function MarketEyecatch({ date, large = false }: { date: string; large?: boolean
           : "(min-width: 1024px) 326px, (min-width: 768px) 50vw, calc(100vw - 32px)"}
         className="object-cover"
       />
-      <div aria-hidden="true" className="absolute inset-0 bg-gradient-to-b from-navy/20 via-navy/[0.45] to-navy/30" />
-      <div className="relative z-10 flex flex-col items-center py-8 drop-shadow-md">
-        <span className="text-[#E1C385] text-xs font-bold tracking-widest mb-1">JAPAN STOCK MARKET</span>
+      <div aria-hidden="true" className="absolute inset-0 bg-navy/50" />
+      <div className="relative z-10 flex flex-col items-center py-8">
+        <span className="text-slate-200 text-xs font-bold tracking-widest mb-1">JAPAN STOCK MARKET</span>
         <span className={`text-white font-bold ${large ? "text-4xl" : "text-3xl"}`}>
           {parseInt(m)}/{parseInt(d)}
         </span>

@@ -28,7 +28,7 @@
 @layer components {
   .btn-primary {
     @apply inline-block px-6 py-3 bg-gold text-navy font-bold rounded-lg hover:opacity-90 transition-all duration-200 text-center;
-    background-image: linear-gradient(120deg, #dbc180, #c9a75d);
+    background-image: none;
   }
 
   .btn-navy {
@@ -61,7 +61,7 @@
     height: 3px;
     margin-bottom: 16px;
     border-radius: 10px;
-    background: linear-gradient(90deg, #c9a75d 0%, #4c83c8 100%);
+    background: #55748f;
   }
 
   .section-title.text-center::before, .text-center > .section-title::before {
@@ -100,13 +100,13 @@
   }
 }
 
-/* Cの光とネットワークはヒーローに集約。本文は白い読書面を保つ。 */
+/* B案：端に控えめな分析図、中央に文字の余白。本文は白い読書面。 */
 .brand-hero {
   position: relative;
   isolation: isolate;
   overflow: hidden;
   color: #fff;
-  background: #071a31 !important;
+  background: #0b2037 !important;
   border-bottom: 1px solid rgba(139, 173, 214, .2);
 }
 
@@ -119,59 +119,60 @@
 
 .brand-hero::before {
   z-index: -2;
-  background: url('/images/brand/network-c.webp') center / cover no-repeat;
+  background: url('/images/brand/research-b.webp') center / cover no-repeat;
 }
 
 .brand-hero::after {
   z-index: -1;
-  background: linear-gradient(90deg, rgba(4, 16, 34, .15), rgba(4, 16, 34, .25) 50%, rgba(4, 16, 34, .12));
+  background: linear-gradient(90deg, rgba(8, 24, 42, .08), rgba(8, 24, 42, .12) 50%, rgba(8, 24, 42, .08));
 }
 
 .brand-hero--home { padding-block: clamp(80px, 8vw, 120px); }
 .brand-hero--home h1 { line-height: 1.42; letter-spacing: .035em; }
 .brand-hero--home h1 > span { margin-bottom: 0; }
-.brand-hero--standard::before { opacity: .7; }
-.brand-hero--standard::after { background: linear-gradient(90deg, #071a3166, #071a3144); }
-.brand-hero--quiet::before { opacity: .3; background-position: right center; }
-.brand-hero--quiet::after { background: linear-gradient(90deg, rgba(7, 26, 49, .4), rgba(7, 26, 49, .12)); }
+.brand-hero--standard::before { opacity: .72; }
+.brand-hero--standard::after { background: rgba(11, 32, 55, .1); }
+.brand-hero--quiet::before { opacity: .34; background-position: right center; }
+.brand-hero--quiet::after { background: rgba(11, 32, 55, .08); }
+.brand-hero > .absolute, .brand-hero > [style*="radial-gradient"] { display: none; }
+.brand-hero [style*="box-shadow"] { box-shadow: none !important; }
 .brand-hero h1 { text-wrap: balance; }
 .brand-hero :focus-visible, .site-header :focus-visible, .brand-band :focus-visible { outline-color: #e6ca86; }
 
 .site-header {
-  background: rgba(8, 26, 47, .96);
+  background: rgba(14, 33, 53, .98);
   border-bottom: 1px solid rgba(173, 197, 226, .16);
-  box-shadow: 0 5px 24px rgba(1, 12, 27, .12);
+  box-shadow: 0 2px 10px rgba(1, 12, 27, .06);
   backdrop-filter: blur(16px);
 }
 .site-header .brand-wordmark { letter-spacing: .015em; }
 .brand-menu {
-  background: linear-gradient(145deg, #0d2340, #07182d);
+  background: #10263d;
   border-left: 1px solid rgba(173, 197, 226, .16);
 }
 .site-footer {
-  background: radial-gradient(ellipse at 10% 0%, #163b62 0%, transparent 52%), #07182d;
-  border-top: 1px solid rgba(201, 167, 93, .3);
+  background: #0d2238;
+  border-top: 1px solid rgba(158, 180, 202, .2);
 }
 
 .brand-band {
-  background: radial-gradient(ellipse at 10% 0%, rgba(50, 109, 176, .25), transparent 55%),
-    radial-gradient(ellipse at 100% 100%, rgba(201, 167, 93, .08), transparent 50%), #0d2340 !important;
+  background: #162e47 !important;
   color: #fff;
   border-block: 1px solid rgba(130, 166, 207, .15);
 }
 .brand-panel-dark { background: rgba(255, 255, 255, .045); border: 1px solid rgba(166, 195, 228, .18); border-radius: 18px; }
 .brand-section {
-  background: radial-gradient(ellipse at 100% 0%, rgba(91, 146, 208, .055), transparent 50%), #f5f7fa;
+  background: #f5f7fa;
   border-block: 1px solid #e7edf4;
 }
 .brand-surface {
   background: #fff;
   border: 1px solid #e0e7ef;
-  border-radius: 18px;
-  box-shadow: 0 5px 24px -14px rgba(13, 35, 64, .22);
+  border-radius: 14px;
+  box-shadow: 0 3px 14px -9px rgba(13, 35, 64, .18);
   transition: border-color .2s, box-shadow .2s, transform .2s;
 }
-a.brand-surface:hover { border-color: #a6bfdc; box-shadow: 0 14px 36px -18px rgba(13, 35, 64, .28); }
+a.brand-surface:hover { border-color: #a8bdcf; box-shadow: 0 8px 24px -14px rgba(13, 35, 64, .22); }
 .brand-icon {
   display: inline-flex;
   align-items: center;
@@ -184,9 +185,9 @@ a.brand-surface:hover { border-color: #a6bfdc; box-shadow: 0 14px 36px -18px rgb
   border-radius: 14px;
   background: linear-gradient(140deg, #edf4fb, #f9fbfd);
 }
-.brand-tag { color: #88672d; background: #faf5e9; border: 1px solid #eee2c5; text-wrap: balance; text-align: center; line-height: 1.5; }
+.brand-tag { color: #38546e; background: #f0f4f8; border: 1px solid #dbe4ed; text-wrap: balance; text-align: center; line-height: 1.5; }
 .brand-date-tile {
-  background: radial-gradient(ellipse at 100% 0%, #255484, transparent 70%), linear-gradient(135deg, #102b49, #091c33);
+  background: #19364f;
   position: relative;
   isolation: isolate;
   overflow: hidden;
@@ -200,21 +201,21 @@ a.brand-surface:hover { border-color: #a6bfdc; box-shadow: 0 14px 36px -18px rgb
   background-size: 28px 28px;
   mask-image: linear-gradient(120deg, transparent 20%, #000);
 }
-.brand-date-tile.text-gold, .brand-date-tile .text-gold { color: #e1c385; }
+.brand-date-tile.text-gold, .brand-date-tile .text-gold { color: #dce7f1; }
 .brand-video-card { border: 1px solid #e0e7ef; border-radius: 16px; box-shadow: 0 6px 26px -16px #0d234044; }
 .btn-primary, .btn-navy, .btn-blue, .btn-red, .btn-line {
   border: 1px solid transparent;
   border-radius: 12px;
-  box-shadow: 0 5px 16px -10px rgba(13, 35, 64, .45);
+  box-shadow: none;
   line-height: 1.5;
 }
-.btn-blue { background: linear-gradient(120deg, #2563d6, #194ba8); }
-.btn-red { background: linear-gradient(120deg, #d72f34, #b9202a); }
-.btn-navy { background: linear-gradient(120deg, #153452, #0d2340); }
+.btn-blue { background: #285b95; }
+.btn-red { background: #b94548; }
+.btn-navy { background: #173753; }
 
 @media (max-width: 767px) {
   .brand-hero::before { background-position: 64% center; }
-  .brand-hero::after { background: linear-gradient(180deg, #071a314d, #071a3177 60%, #071a3133); }
+  .brand-hero::after { background: linear-gradient(180deg, #0b203733, #0b20375c 60%, #0b203733); }
   .brand-hero--home { padding-block: 64px 72px; }
   .brand-hero--home h1 { font-size: clamp(1.75rem, 7.5vw, 2.5rem); }
   .brand-hero--quiet::before { opacity: .22; }

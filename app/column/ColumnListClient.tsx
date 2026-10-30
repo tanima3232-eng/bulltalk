@@ -18,15 +18,15 @@ const CATEGORIES = [
 
 const CATEGORY_IMAGES = {
   asset: {
-    src: "/images/cards/wealth-growth.webp",
+    src: "/images/cards-b/wealth-growth.webp",
     position: "object-center",
   },
   souzoku: {
-    src: "/images/cards/inheritance.webp",
+    src: "/images/cards-b/inheritance.webp",
     position: "object-center",
   },
   fudosan: {
-    src: "/images/cards/office-city.webp",
+    src: "/images/cards-b/office-city.webp",
     position: "object-top",
   },
 } as const;
@@ -97,7 +97,6 @@ export default function ColumnListClient({ columns }: { columns: ColumnMeta[] })
                       sizes="(min-width: 1024px) 285px, (min-width: 768px) 450px, calc(100vw - 72px)"
                       className={`object-cover transition-transform duration-500 motion-safe:group-hover:scale-105 ${(CATEGORY_IMAGES[col.category as keyof typeof CATEGORY_IMAGES] || CATEGORY_IMAGES.asset).position}`}
                     />
-                    <div className="absolute inset-0 bg-gradient-to-t from-navy/20 to-transparent pointer-events-none" />
                   </div>
 
                   {/* Category Badge */}
@@ -109,7 +108,7 @@ export default function ColumnListClient({ columns }: { columns: ColumnMeta[] })
                   </span>
 
                   {/* Title */}
-                  <h2 className="text-sm font-bold text-navy group-hover:text-[#88672d] transition-colors leading-relaxed flex-1">
+                  <h2 className="text-sm font-bold text-navy group-hover:text-[#315e83] transition-colors leading-relaxed flex-1">
                     {col.title}
                   </h2>
 

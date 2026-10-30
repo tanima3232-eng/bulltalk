@@ -16,28 +16,28 @@ export const metadata: Metadata = {
 
 const serviceCards = [
   {
-    image: "/images/cards/market-chart.webp",
+    image: "/images/cards-b/market-chart.webp",
     title: "相場分析",
     desc: "日経225の分析・売買判断を\n毎日配信",
     href: "/market",
     tag: "毎日更新",
   },
   {
-    image: "/images/cards/financial-knowledge.webp",
+    image: "/images/cards-b/financial-knowledge.webp",
     title: "金融コラム",
     desc: "資産形成・相続・不動産を\nプロが基礎から解説",
     href: "/column",
     tag: "30本以上",
   },
   {
-    image: "/images/cards/wealth-simulation.webp",
+    image: "/images/cards-b/wealth-simulation.webp",
     title: "シミュレーション",
     desc: "あなたに合った資産形成の\n優先順位を診断",
     href: "/simulation",
     tag: "無料",
   },
   {
-    image: "/images/cards/professional-services.webp",
+    image: "/images/cards-b/professional-services.webp",
     title: "提供サービス",
     desc: "研修・セミナー・\nコンサルティング",
     href: "/services",
@@ -46,10 +46,10 @@ const serviceCards = [
 ];
 
 const quickLinks = [
-  { image: "/images/cards/wealth-growth.webp", label: ["NISA・証券", "口座を開設"], href: "/accounts/stock" },
-  { image: "/images/cards/retirement-planning.webp", label: ["iDeCoを始める"], href: "/accounts/ideco" },
-  { image: "/images/cards/alternative-assets.webp", label: ["オルタナティブ", "投資とは"], href: "/alternative" },
-  { image: "/images/cards/urban-infrastructure.webp", label: ["不動産・インフラ", "投資とは"], href: "/real-estate" },
+  { image: "/images/cards-b/wealth-growth.webp", label: ["NISA・証券", "口座を開設"], href: "/accounts/stock" },
+  { image: "/images/cards-b/retirement-planning.webp", label: ["iDeCoを始める"], href: "/accounts/ideco" },
+  { image: "/images/cards-b/alternative-assets.webp", label: ["オルタナティブ", "投資とは"], href: "/alternative" },
+  { image: "/images/cards-b/urban-infrastructure.webp", label: ["不動産・インフラ", "投資とは"], href: "/real-estate" },
 ];
 
 export default async function HomePage() {
@@ -110,13 +110,12 @@ export default async function HomePage() {
                       sizes="(min-width: 1024px) 238px, (min-width: 640px) 45vw, 92vw"
                       className="object-cover transition-transform duration-500 ease-out group-hover:scale-[1.04] motion-reduce:transform-none"
                     />
-                    <div aria-hidden="true" className="absolute inset-0 bg-gradient-to-t from-[#071a31]/25 via-transparent to-transparent" />
-                    <span className="absolute top-3 right-3 rounded-full border border-white/20 bg-[#071a31]/85 px-2.5 py-1.5 text-[11px] leading-snug font-bold text-[#f5d695] backdrop-blur-sm">
+                    <span className="absolute top-3 right-3 rounded-md border border-white/60 bg-white/95 px-2.5 py-1.5 text-[11px] leading-snug font-bold text-navy">
                       {card.tag}
                     </span>
                   </div>
                   <div className="p-5">
-                    <h3 className="font-bold text-navy text-lg mb-2 group-hover:text-[#88672d] transition-colors">
+                    <h3 className="font-bold text-navy text-lg mb-2 group-hover:text-[#315e83] transition-colors">
                       {card.title}
                     </h3>
                     <p className="text-gray-500 text-sm leading-relaxed whitespace-pre-line">
@@ -339,19 +338,19 @@ export default async function HomePage() {
                 <Link
                   key={link.href}
                   href={link.href}
-                  className="relative isolate flex min-h-[200px] flex-col justify-end overflow-hidden rounded-2xl border border-white/10 bg-navy shadow-sm transition duration-300 hover:-translate-y-1 hover:shadow-lg group sm:min-h-[230px]"
+                  className="brand-surface flex flex-col overflow-hidden transition duration-300 hover:-translate-y-1 group"
                 >
-                  <Image
-                    src={link.image}
-                    alt=""
-                    fill
-                    sizes="(min-width: 768px) 244px, 46vw"
-                    className="object-cover transition-transform duration-500 ease-out group-hover:scale-[1.04] motion-reduce:transform-none"
-                  />
-                  <div aria-hidden="true" className="absolute inset-0 bg-gradient-to-t from-[#06162c] via-[#06162c]/25 to-transparent" />
-                  <div className="relative z-10 px-3 pb-4 pt-20 sm:px-5 sm:pb-5">
-                    <span aria-hidden="true" className="mb-3 block h-0.5 w-7 bg-[#D7B76E]" />
-                    <p className="min-h-[44px] text-[13px] font-bold leading-[1.7] text-white [text-wrap:balance] sm:text-sm">
+                  <div className="relative aspect-[3/2] overflow-hidden bg-light-navy">
+                    <Image
+                      src={link.image}
+                      alt=""
+                      fill
+                      sizes="(min-width: 768px) 244px, 46vw"
+                      className="object-cover transition-transform duration-500 ease-out group-hover:scale-[1.04] motion-reduce:transform-none"
+                    />
+                  </div>
+                  <div className="px-3 py-4 sm:px-5 sm:py-5">
+                    <p className="min-h-[44px] text-[13px] font-bold leading-[1.7] text-navy [text-wrap:balance] sm:text-sm">
                       {link.label.map((part) => <span key={part} className="inline-block">{part}</span>)}
                     </p>
                   </div>
