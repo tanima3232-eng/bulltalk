@@ -216,27 +216,35 @@ export default function ServicesPage() {
         </section>
 
         {/* ⑤ ご相談の流れ */}
-        <section className="bg-white py-16 px-4">
-          <div className="max-w-4xl mx-auto">
+        <section id="consultation-flow" className="bg-white py-16 px-4 scroll-mt-24">
+          <div className="max-w-5xl mx-auto">
             <h2 className="section-title text-center">ご相談の流れ</h2>
             <p className="section-subtitle text-center">まずはお気軽にお問い合わせください</p>
-            <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
+            <ol className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5" aria-label="ご相談から実施までの4ステップ">
               {[
-                { step: "01", title: "お問い合わせ", desc: "LINEまたはメールからお気軽にご連絡ください。", icon: "📩" },
-                { step: "02", title: "ヒアリング", desc: "ご要望・課題をお伺いし、最適なプランをご提案します。", icon: "🗣️" },
-                { step: "03", title: "ご提案", desc: "内容・スケジュール・費用をご提示いたします。", icon: "📄" },
-                { step: "04", title: "実施", desc: "コンサルティング・研修を実施。アフターフォローも対応。", icon: "✅" },
+                { step: "01", title: "お問い合わせ", desc: "LINEまたはメールからお気軽にご連絡ください。", image: "consultation-contact" },
+                { step: "02", title: "ヒアリング", desc: "ご要望・課題をお伺いし、最適なプランをご提案します。", image: "personal-planning" },
+                { step: "03", title: "ご提案", desc: "内容・スケジュール・費用をご提示いたします。", image: "consultation-proposal" },
+                { step: "04", title: "実施", desc: "コンサルティング・研修を実施。アフターフォローも対応。", image: "seminar-stage" },
               ].map((s) => (
-                <div key={s.step} className="text-center">
-                  <div className="w-16 h-16 bg-navy rounded-full flex items-center justify-center mx-auto mb-4">
-                    <span className="text-2xl">{s.icon}</span>
+                <li key={s.step} className="brand-surface flex overflow-hidden sm:flex-col">
+                  <div className="relative min-h-[168px] w-28 shrink-0 bg-light-navy sm:aspect-[3/2] sm:min-h-0 sm:w-full">
+                    <Image
+                      src={`/images/cards-b/${s.image}.webp`}
+                      alt=""
+                      fill
+                      sizes="(min-width: 1024px) 238px, (min-width: 640px) 46vw, 320px"
+                      className="object-cover"
+                    />
                   </div>
-                  <div className="text-gold font-bold text-xs mb-1">STEP {s.step}</div>
-                  <h3 className="font-bold text-navy text-sm mb-2">{s.title}</h3>
-                  <p className="text-gray-600 text-xs leading-relaxed">{s.desc}</p>
-                </div>
+                  <div className="flex flex-1 flex-col justify-center p-4 sm:justify-start sm:p-5">
+                    <p className="mb-2 text-xs font-bold tracking-widest text-[#55748f]">STEP <span className="text-base text-navy">{s.step}</span></p>
+                    <h3 className="mb-2 text-base font-bold text-navy">{s.title}</h3>
+                    <p className="text-[13px] leading-relaxed text-gray-600">{s.desc}</p>
+                  </div>
+                </li>
               ))}
-            </div>
+            </ol>
           </div>
         </section>
 
