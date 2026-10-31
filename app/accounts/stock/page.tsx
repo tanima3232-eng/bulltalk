@@ -115,7 +115,7 @@ export default function StockAccountPage() {
         {/* Hero */}
         <section
           className="brand-hero brand-hero--standard py-20 px-4 text-white"
-          style={{ background: "linear-gradient(135deg,#0d1b2e 0%,#1A2E4A 60%,#0d1b2e 100%)", position: "relative", overflow: "hidden" }}
+          style={{ background: "var(--brand-navy)", position: "relative", overflow: "hidden" }}
         >
           <div
             style={{
@@ -172,7 +172,7 @@ export default function StockAccountPage() {
             <div className="hidden md:block overflow-x-auto rounded-2xl shadow-sm">
               <table className="w-full text-sm">
                 <thead>
-                  <tr style={{ background: "#1A2E4A", color: "#FFFFFF" }}>
+                  <tr style={{ background: "var(--brand-navy)", color: "#FFFFFF" }}>
                     <th className="px-4 py-4 text-left font-bold">証券会社</th>
                     <th className="px-4 py-4 text-center font-bold whitespace-nowrap">手数料</th>
                     <th className="px-4 py-4 text-center font-bold whitespace-nowrap">商品数</th>
@@ -219,8 +219,8 @@ export default function StockAccountPage() {
                           style={{
                             background: index % 2 === 0
                                ? "linear-gradient(135deg,#C9A84C,#E8C96A)"
-                               : "#1A2E4A",
-                             color: index % 2 === 0 ? "#1A2E4A" : "#FFFFFF",
+                               : "var(--brand-navy)",
+                             color: index % 2 === 0 ? "var(--brand-navy)" : "#FFFFFF",
                           }}
                         >
                           {broker.pixelUrl && (
@@ -246,7 +246,7 @@ export default function StockAccountPage() {
                     background: index % 2 === 0
                       ? "linear-gradient(135deg,#FFF8E7,#FFF3D0)"
                       : "#FFFFFF",
-                    border: index % 2 === 0 ? "2px solid #C9A84C" : "2px solid #1A2E4A",
+                    border: index % 2 === 0 ? "2px solid #C9A84C" : "2px solid var(--brand-navy)",
                   }}
                 >
                   <div className="p-5">
@@ -261,7 +261,7 @@ export default function StockAccountPage() {
                         className="rounded-lg p-2"
                         style={{
                           background: index % 2 === 0 ? "rgba(255,255,255,0.8)" : "#F8FAFC",
-                          border: index % 2 === 0 ? "1px solid #C9A84C" : "1px solid #1A2E4A",
+                          border: index % 2 === 0 ? "1px solid #C9A84C" : "1px solid var(--brand-navy)",
                         }}
                       >
                         <p className="text-gray-400">商品数</p>
@@ -271,7 +271,7 @@ export default function StockAccountPage() {
                         className="rounded-lg p-2"
                         style={{
                           background: index % 2 === 0 ? "rgba(255,255,255,0.8)" : "#F8FAFC",
-                          border: index % 2 === 0 ? "1px solid #C9A84C" : "1px solid #1A2E4A",
+                          border: index % 2 === 0 ? "1px solid #C9A84C" : "1px solid var(--brand-navy)",
                         }}
                       >
                         <p className="text-gray-400">アプリ</p>
@@ -289,8 +289,8 @@ export default function StockAccountPage() {
                       style={{
                         background: index % 2 === 0
                           ? "linear-gradient(135deg,#C9A84C,#E8C96A)"
-                          : "#1A2E4A",
-                        color: index % 2 === 0 ? "#1A2E4A" : "#FFFFFF",
+                          : "var(--brand-navy)",
+                        color: index % 2 === 0 ? "var(--brand-navy)" : "#FFFFFF",
                       }}
                     >
                       {broker.pixelUrl && (
@@ -343,7 +343,7 @@ export default function StockAccountPage() {
         {/* LINE CTA */}
         <section
           className="py-16 px-4"
-          style={{ background: "linear-gradient(135deg,#0d1b2e,#1A2E4A,#0d1b2e)" }}
+          style={{ background: "var(--brand-navy)" }}
         >
           <div className="max-w-xl mx-auto text-center">
             <p className="text-gold text-xs font-bold uppercase tracking-widest mb-3">どれを選ぶか迷ったら</p>

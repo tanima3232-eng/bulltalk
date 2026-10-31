@@ -37,7 +37,7 @@ export function getAllColumns(): ColumnMeta[] {
       const { data } = matter(raw);
       if (!data.published) continue;
 
-      const meta = CATEGORY_MAP[cat] ?? { label: cat, color: "#1A2E4A", priority: 99 };
+      const meta = CATEGORY_MAP[cat] ?? { label: cat, color: "#061d39", priority: 99 };
       columns.push({
         slug: data.slug || file.replace(".mdx", ""),
         title: data.title || "",
@@ -70,7 +70,7 @@ export function getColumnBySlug(
       const { data, content } = matter(raw);
 
       if (data.slug === slug || file.replace(".mdx", "") === slug) {
-        const meta = CATEGORY_MAP[cat] ?? { label: cat, color: "#1A2E4A" };
+        const meta = CATEGORY_MAP[cat] ?? { label: cat, color: "#061d39" };
         return {
           meta: {
             slug,

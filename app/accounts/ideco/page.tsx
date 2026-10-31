@@ -86,7 +86,7 @@ export default function IDeCoPage() {
         {/* Hero */}
         <section
           className="brand-hero brand-hero--standard py-20 px-4 text-white"
-          style={{ background: "linear-gradient(135deg,#0d1b2e 0%,#1e3a5f 60%,#0d1b2e 100%)", position: "relative", overflow: "hidden" }}
+          style={{ background: "var(--brand-navy)", position: "relative", overflow: "hidden" }}
         >
           <div
             style={{
@@ -147,7 +147,7 @@ export default function IDeCoPage() {
                 <h2 className="text-navy font-bold text-base">② マッチング拠出の変更点</h2>
                 <span
                   className="text-xs font-bold px-3 py-1 rounded-full flex-shrink-0"
-                  style={{ background: "#4ADE80", color: "#1A2E4A" }}
+                  style={{ background: "#4ADE80", color: "var(--brand-navy)" }}
                 >
                   2026年4月〜制度改正
                 </span>
@@ -185,7 +185,7 @@ export default function IDeCoPage() {
             <div className="hidden md:block overflow-x-auto rounded-2xl shadow-sm">
               <table className="w-full text-sm">
                 <thead>
-                  <tr style={{ background: "#1A2E4A", color: "#FFFFFF" }}>
+                  <tr style={{ background: "var(--brand-navy)", color: "#FFFFFF" }}>
                     <th className="px-4 py-4 text-left font-bold">金融機関</th>
                     <th className="px-4 py-4 text-center font-bold">運営管理<br />手数料</th>
                     <th className="px-4 py-4 text-center font-bold">商品数</th>
@@ -224,8 +224,8 @@ export default function IDeCoPage() {
                           style={{
                             background: p.star
                               ? "linear-gradient(135deg,#C9A84C,#E8C96A)"
-                              : "#1A2E4A",
-                            color: p.star ? "#1A2E4A" : "#FFFFFF",
+                              : "var(--brand-navy)",
+                            color: p.star ? "var(--brand-navy)" : "#FFFFFF",
                           }}
                         >
                           公式サイトへ →
@@ -276,8 +276,8 @@ export default function IDeCoPage() {
                       referrerPolicy="no-referrer-when-downgrade"
                       className="w-full flex items-center justify-center gap-2 py-3 rounded-xl font-bold text-sm transition-all duration-200 hover:shadow-md"
                       style={{
-                        background: p.star ? "linear-gradient(135deg,#C9A84C,#E8C96A)" : "#1A2E4A",
-                        color: p.star ? "#1A2E4A" : "#FFFFFF",
+                        background: p.star ? "linear-gradient(135deg,#C9A84C,#E8C96A)" : "var(--brand-navy)",
+                        color: p.star ? "var(--brand-navy)" : "#FFFFFF",
                       }}
                     >
                       公式サイトへ →
@@ -326,7 +326,7 @@ export default function IDeCoPage() {
         {/* LINE CTA */}
         <section
           className="py-16 px-4"
-          style={{ background: "linear-gradient(135deg,#0d1b2e,#1e3a5f,#0d1b2e)" }}
+          style={{ background: "var(--brand-navy)" }}
         >
           <div className="max-w-xl mx-auto text-center">
             <p className="text-xs font-bold uppercase tracking-widest mb-3" style={{ color: "#4ADE80" }}>iDeCoについて迷ったら</p>

@@ -158,7 +158,7 @@ export default function LinksPage() {
   const [answers, setAnswers] = useState<Record<number, string>>({});
   const [resultData, setResultData] = useState<ResultData | null>(null);
 
-  const navy = "#1c3a5c", gold = "#d9a441", blue = "#2f6fb0", blueSoft = "#5b8fc7", lineGreen = "#06c755", bg = "#f8f4ec";
+  const navy = "var(--brand-navy)", gold = "#d9a441", blue = "#2f6fb0", blueSoft = "#5b8fc7", lineGreen = "#06c755", bg = "#f8f4ec";
 
   const attrComplete = attrs.age && attrs.housing && attrs.family;
   const stepComplete = STEPS[step]?.every(qi => answers[qi]);
@@ -210,14 +210,14 @@ export default function LinksPage() {
     stepsWrap: { display: "flex", alignItems: "flex-start", justifyContent: "center", padding: "18px 20px 0" },
     hint: { borderLeft: `3px solid ${gold}`, background: bg, padding: "10px 14px", marginTop: 10, fontSize: 12.5, color: navy, lineHeight: 1.65, borderRadius: "0 8px 8px 0" },
     linebtn: { display: "flex", alignItems: "center", justifyContent: "center", gap: 8, width: "100%", background: lineGreen, color: "#fff", border: "none", borderRadius: 10, boxShadow: "0 4px 14px rgba(6,199,85,.3)", padding: 16, fontFamily: "'Noto Serif JP', serif", fontWeight: 900, fontSize: 16, letterSpacing: ".02em", textDecoration: "none", cursor: "pointer" },
-    rescard: { border: "1px solid rgba(28,58,92,.18)", borderRadius: 14, padding: "26px 22px", textAlign: "center" as const, marginBottom: 20, background: "#fff" },
-    figbox: { border: "1px solid rgba(28,58,92,.18)", borderRadius: 10, padding: "14px 16px", margin: "4px 0 14px", background: bg },
+    rescard: { border: "1px solid rgba(var(--brand-navy-rgb),.18)", borderRadius: 14, padding: "26px 22px", textAlign: "center" as const, marginBottom: 20, background: "#fff" },
+    figbox: { border: "1px solid rgba(var(--brand-navy-rgb),.18)", borderRadius: 10, padding: "14px 16px", margin: "4px 0 14px", background: bg },
     disclaimer: { fontSize: 10.5, color: "#767f8c", textAlign: "center" as const, padding: "20px 26px 30px", lineHeight: 1.7 },
   };
 
   function ChipBtn({ label, selected, onClick }: { label: string; selected: boolean; onClick: () => void }) {
     return (
-      <button onClick={onClick} style={{ flex: 1, minWidth: 90, background: selected ? navy : "#fff", border: `1.5px solid ${selected ? navy : "rgba(28,58,92,.25)"}`, borderRadius: 10, padding: "12px 6px", fontFamily: "'Noto Sans JP'", fontWeight: 700, fontSize: 13, color: selected ? "#fff" : navy, cursor: "pointer" }}>
+      <button onClick={onClick} style={{ flex: 1, minWidth: 90, background: selected ? navy : "#fff", border: `1.5px solid ${selected ? navy : "rgba(var(--brand-navy-rgb),.25)"}`, borderRadius: 10, padding: "12px 6px", fontFamily: "'Noto Sans JP'", fontWeight: 700, fontSize: 13, color: selected ? "#fff" : navy, cursor: "pointer" }}>
         {label}
       </button>
     );
@@ -227,7 +227,7 @@ export default function LinksPage() {
     const active = n === current + 1;
     return (
       <div style={{ display: "flex", flexDirection: "column", alignItems: "center", gap: 5 }}>
-        <div style={{ width: 26, height: 26, borderRadius: "50%", border: `1.5px solid ${active ? navy : done ? gold : "rgba(28,58,92,.35)"}`, background: active ? navy : done ? gold : "#fff", display: "flex", alignItems: "center", justifyContent: "center", fontWeight: 700, fontSize: 12, color: active ? "#fff" : done ? navy : navy }}>{n}</div>
+        <div style={{ width: 26, height: 26, borderRadius: "50%", border: `1.5px solid ${active ? navy : done ? gold : "rgba(var(--brand-navy-rgb),.35)"}`, background: active ? navy : done ? gold : "#fff", display: "flex", alignItems: "center", justifyContent: "center", fontWeight: 700, fontSize: 12, color: active ? "#fff" : done ? navy : navy }}>{n}</div>
         <span style={{ fontWeight: 700, fontSize: 10.5, color: navy, opacity: .7 }}>Step {n}</span>
       </div>
     );
@@ -278,9 +278,9 @@ export default function LinksPage() {
         <>
           <div style={s.stepsWrap}>
             <StepDot n={1} current={step} done={step > 0} />
-            <span style={{ width: 44, borderTop: "1px solid rgba(28,58,92,.25)", margin: "13px 8px 0" }} />
+            <span style={{ width: 44, borderTop: "1px solid rgba(var(--brand-navy-rgb),.25)", margin: "13px 8px 0" }} />
             <StepDot n={2} current={step} done={step > 1} />
-            <span style={{ width: 44, borderTop: "1px solid rgba(28,58,92,.25)", margin: "13px 8px 0" }} />
+            <span style={{ width: 44, borderTop: "1px solid rgba(var(--brand-navy-rgb),.25)", margin: "13px 8px 0" }} />
             <StepDot n={3} current={step} done={step > 2} />
           </div>
           <div style={{ padding: "20px 22px 44px" }}>
@@ -294,7 +294,7 @@ export default function LinksPage() {
                   </div>
                   <div style={{ display: "flex", gap: 8 }}>
                     {CHOICES.map(c => (
-                      <button key={c.k} onClick={() => setAnswers(a => ({ ...a, [qi]: c.k }))} style={{ flex: 1, background: answers[qi] === c.k ? blue : "#fff", border: `1.5px solid ${answers[qi] === c.k ? blue : "rgba(28,58,92,.25)"}`, borderRadius: 10, padding: "12px 3px", fontFamily: "'Noto Sans JP'", fontWeight: 700, fontSize: 13.5, color: answers[qi] === c.k ? "#fff" : navy, cursor: "pointer" }}>
+                      <button key={c.k} onClick={() => setAnswers(a => ({ ...a, [qi]: c.k }))} style={{ flex: 1, background: answers[qi] === c.k ? blue : "#fff", border: `1.5px solid ${answers[qi] === c.k ? blue : "rgba(var(--brand-navy-rgb),.25)"}`, borderRadius: 10, padding: "12px 3px", fontFamily: "'Noto Sans JP'", fontWeight: 700, fontSize: 13.5, color: answers[qi] === c.k ? "#fff" : navy, cursor: "pointer" }}>
                         {c.t}
                       </button>
                     ))}
@@ -344,7 +344,7 @@ export default function LinksPage() {
                 <div style={s.figbox}>
                   <div style={{ fontSize: 10.5, fontWeight: 700, letterSpacing: ".08em", color: blueSoft, marginBottom: 8 }}>{resultData.fig.label}</div>
                   {resultData.fig.rows.map((r, i) => (
-                    <div key={i} style={{ display: "flex", justifyContent: "space-between", alignItems: "baseline", fontSize: 13, padding: "3px 0", borderBottom: i < resultData.fig!.rows.length - 1 ? "1px dashed rgba(28,58,92,.15)" : "none" }}>
+                    <div key={i} style={{ display: "flex", justifyContent: "space-between", alignItems: "baseline", fontSize: 13, padding: "3px 0", borderBottom: i < resultData.fig!.rows.length - 1 ? "1px dashed rgba(var(--brand-navy-rgb),.15)" : "none" }}>
                       <span style={{ color: navy, opacity: .75 }}>{r.k}</span>
                       <span style={{ fontFamily: "'Noto Serif JP', serif", fontWeight: 700, fontSize: 14.5, color: r.hl ? "#a1463d" : navy }}>{r.v}</span>
                     </div>
@@ -362,8 +362,8 @@ export default function LinksPage() {
             LINEで無料相談を予約する
           </a>
           <p style={{ fontSize: 12, color: navy, opacity: .65, textAlign: "center", marginTop: 12, lineHeight: 1.6 }}>相談は無料・オンライン可。しつこい営業は一切ありません。<br />まずは状況整理だけのご相談も歓迎です。</p>
-          <div style={{ fontSize: 11.5, color: navy, opacity: .7, letterSpacing: ".02em", margin: "22px 0 4px", textAlign: "center", borderTop: "1px solid rgba(28,58,92,.15)", paddingTop: 14 }}>
-            元大手信託銀行 12年<span style={{ color: "rgba(28,58,92,.3)", margin: "0 8px" }}>｜</span>FP1級<span style={{ color: "rgba(28,58,92,.3)", margin: "0 8px" }}>｜</span>証券アナリスト<span style={{ color: "rgba(28,58,92,.3)", margin: "0 8px" }}>｜</span>宅地建物取引士
+          <div style={{ fontSize: 11.5, color: navy, opacity: .7, letterSpacing: ".02em", margin: "22px 0 4px", textAlign: "center", borderTop: "1px solid rgba(var(--brand-navy-rgb),.15)", paddingTop: 14 }}>
+            元大手信託銀行 12年<span style={{ color: "rgba(var(--brand-navy-rgb),.3)", margin: "0 8px" }}>｜</span>FP1級<span style={{ color: "rgba(var(--brand-navy-rgb),.3)", margin: "0 8px" }}>｜</span>証券アナリスト<span style={{ color: "rgba(var(--brand-navy-rgb),.3)", margin: "0 8px" }}>｜</span>宅地建物取引士
           </div>
         </div>
       )}

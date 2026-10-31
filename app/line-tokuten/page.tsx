@@ -14,116 +14,58 @@ export const metadata: Metadata = {
 export default function LineTokutenPage() {
   return (
     <>
-      <style>{`
-        .download-btn:hover {
-          box-shadow: 0 0 48px rgba(201,168,76,0.65), 0 6px 24px rgba(0,0,0,0.4) !important;
-          transform: translateY(-2px);
-        }
-        .download-btn {
-          transition: box-shadow 0.25s ease, transform 0.25s ease;
-        }
-      `}</style>
       <Header />
       <main>
-        <section
-          className="brand-hero brand-hero--quiet min-h-screen py-20 px-4 flex items-center"
-          style={{
-            background: "linear-gradient(135deg, #0d1b2e 0%, #1A2E4A 50%, #0d1b2e 100%)",
-            position: "relative",
-            overflow: "hidden",
-          }}
-        >
-          {/* 背景グロー（上） */}
-          <div style={{
-            position: "absolute", top: "-80px", left: "50%", transform: "translateX(-50%)",
-            width: "700px", height: "350px",
-            background: "radial-gradient(ellipse, rgba(201,168,76,0.2) 0%, transparent 70%)",
-            pointerEvents: "none",
-          }} />
-          {/* 背景グロー（下） */}
-          <div style={{
-            position: "absolute", bottom: "-100px", right: "10%",
-            width: "400px", height: "400px",
-            background: "radial-gradient(ellipse, rgba(6,199,85,0.08) 0%, transparent 70%)",
-            pointerEvents: "none",
-          }} />
-
-          <div className="max-w-2xl mx-auto text-center" style={{ position: "relative", zIndex: 1 }}>
-
-            {/* バッジ */}
-            <p className="text-xs font-bold uppercase tracking-widest mb-4" style={{ color: "#C9A84C", letterSpacing: "0.2em" }}>
+        <section className="brand-hero brand-hero--quiet py-16 px-4 text-white">
+          <div className="max-w-2xl mx-auto text-center">
+            <p className="text-gold text-xs font-bold uppercase tracking-widest mb-4">
               🎁 LINE MEMBERS ONLY GIFT
             </p>
-
-            <h1
-              className="font-bold mb-3 text-white"
-              style={{ fontSize: "clamp(1.8rem,5vw,2.8rem)", lineHeight: 1.2 }}
-            >
+            <h1 className="text-3xl md:text-4xl font-bold mb-4 leading-tight">
               LINE登録者限定特典
             </h1>
-            <p className="text-white/60 text-sm mb-10 leading-relaxed">
+            <p className="text-white/70 text-sm leading-relaxed">
               友だち登録いただきありがとうございます。<br />
               以下のボタンから限定PDFをダウンロードしてください。
             </p>
+          </div>
+        </section>
 
+        <section className="brand-membership py-16 px-4" aria-label="限定資料のダウンロード">
+          <div className="max-w-2xl mx-auto text-center">
             {/* PDFカード */}
-            <div
-              className="rounded-2xl p-8 mb-8 text-left"
-              style={{
-                background: "rgba(255,255,255,0.06)",
-                border: "1px solid rgba(201,168,76,0.35)",
-                backdropFilter: "blur(8px)",
-              }}
-            >
+            <div className="bg-light-navy border border-slate-200 rounded-2xl p-5 sm:p-8 mb-8 text-left">
               {/* PDFアイコン＆タイトル */}
-              <div className="flex items-start gap-5">
-                <div
-                  className="flex-shrink-0 flex items-center justify-center rounded-xl"
-                  style={{
-                    width: "64px", height: "64px",
-                    background: "linear-gradient(135deg, #C9A84C 0%, #e8c96a 100%)",
-                    boxShadow: "0 4px 20px rgba(201,168,76,0.4)",
-                  }}
-                >
+              <div className="flex flex-col sm:flex-row items-start gap-4 sm:gap-5">
+                <div className="shrink-0 flex items-center justify-center rounded-xl w-14 h-14 sm:w-16 sm:h-16 bg-navy">
                   <svg width="32" height="32" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M14 2H6C4.9 2 4 2.9 4 4V20C4 21.1 4.9 22 6 22H18C19.1 22 20 21.1 20 20V8L14 2Z" fill="#1A2E4A" opacity="0.9"/>
-                    <path d="M14 2V8H20" fill="#1A2E4A" opacity="0.5"/>
-                    <text x="7" y="17" fill="white" fontSize="5" fontWeight="bold" fontFamily="sans-serif">PDF</text>
+                    <path d="M14 2H6C4.9 2 4 2.9 4 4V20C4 21.1 4.9 22 6 22H18C19.1 22 20 21.1 20 20V8L14 2Z" fill="white" opacity="0.9"/>
+                    <path d="M14 2V8H20" fill="white" opacity="0.5"/>
+                    <text x="7" y="17" fill="var(--brand-navy)" fontSize="5" fontWeight="bold" fontFamily="sans-serif">PDF</text>
                   </svg>
                 </div>
-                <div className="flex-1">
-                  <span
-                    className="inline-block text-xs font-bold rounded-full mb-2"
-                    style={{
-                      background: "rgba(201,168,76,0.18)",
-                      color: "#C9A84C",
-                      border: "1px solid rgba(201,168,76,0.4)",
-                      padding: "3px 10px",
-                    }}
-                  >
+                <div className="flex-1 min-w-0">
+                  <span className="inline-block text-xs font-bold rounded-full mb-2 bg-white text-navy border border-slate-200 px-2.5 py-1">
                     限定資料
                   </span>
-                  <h2 className="text-white font-bold text-lg leading-snug">
+                  <h2 className="text-navy font-bold text-lg leading-snug">
                     資産配分の考え方
                   </h2>
-                  <p className="text-white/50 text-xs mt-1 leading-relaxed">
+                  <p className="text-slate-600 text-xs mt-2 leading-relaxed">
                     元大手信託銀行員が解説する、長期的な資産形成に役立つ資産配分の考え方をまとめたPDF資料です。
                   </p>
                 </div>
               </div>
 
-              {/* 区切り線 */}
-              <div style={{ height: "1px", background: "rgba(255,255,255,0.1)", margin: "24px 0" }} />
-
               {/* 内容ポイント */}
-              <ul className="flex flex-col gap-2">
+              <ul className="flex flex-col gap-3 border-t border-slate-200 mt-6 pt-6">
                 {[
                   "なぜプロは商品より先に資産配分を決めるのか",
                   "お金を「使う・備える・残す・増やす」で整理する方法",
                   "長期で資産形成するための基本的な考え方",
                 ].map((point) => (
-                  <li key={point} className="flex items-center gap-2 text-sm text-white/70">
-                    <span style={{ color: "#C9A84C", flexShrink: 0 }}>✓</span>
+                  <li key={point} className="flex items-start gap-2 text-sm text-slate-600 leading-relaxed">
+                    <span className="text-navy font-bold shrink-0">✓</span>
                     {point}
                   </li>
                 ))}
@@ -135,21 +77,16 @@ export default function LineTokutenPage() {
               href="/line-tokuten.pdf"
               download="【LINE特典】Bulltalk_資産配分の考え方.pdf"
               id="line-tokuten-download-btn"
-              className="download-btn inline-flex items-center gap-3 font-bold text-lg px-10 py-5 rounded-2xl w-full justify-center"
-              style={{
-                background: "linear-gradient(135deg, #C9A84C 0%, #e8c96a 100%)",
-                color: "#1A2E4A",
-                boxShadow: "0 0 32px rgba(201,168,76,0.45), 0 4px 20px rgba(0,0,0,0.3)",
-              }}
+              className="btn-primary inline-flex items-center justify-center gap-3 w-full text-base sm:text-lg px-4 sm:px-8 py-4"
             >
-              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <svg className="shrink-0" width="22" height="22" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M12 16L7 11H10V4H14V11H17L12 16Z" fill="currentColor"/>
                 <path d="M5 18H19V20H5V18Z" fill="currentColor"/>
               </svg>
               PDFをダウンロードする
             </a>
 
-            <p className="text-white/30 text-xs mt-5">
+            <p className="text-slate-500 text-xs mt-5 leading-relaxed">
               ※ このページはLINE登録者限定です。URLの共有はご遠慮ください。
             </p>
           </div>

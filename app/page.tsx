@@ -115,7 +115,7 @@ export default async function HomePage() {
                     </span>
                   </div>
                   <div className="p-5">
-                    <h3 className="font-bold text-navy text-lg mb-2 group-hover:text-[#315e83] transition-colors">
+                    <h3 className="font-bold text-navy text-lg mb-2 group-hover:text-navy/80 transition-colors">
                       {card.title}
                     </h3>
                     <p className="text-gray-500 text-sm leading-relaxed whitespace-pre-line">

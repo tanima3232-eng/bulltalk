@@ -27,7 +27,7 @@ export default function RealEstatePage() {
           className="brand-hero brand-hero--standard py-20 px-4 text-white"
           style={{
             background:
-              "linear-gradient(135deg,#0d1b2e 0%,#1a2e4a 50%,#1a3a2a 100%)",
+              "var(--brand-navy)",
             position: "relative",
             overflow: "hidden",
           }}
@@ -92,7 +92,7 @@ export default function RealEstatePage() {
               className="inline-flex items-center gap-2 font-bold text-base px-8 py-4 rounded-2xl transition-all duration-300 hover:-translate-y-1 hover:shadow-2xl"
               style={{
                 background: "linear-gradient(135deg,#C9A84C,#E8C96A)",
-                color: "#1A2E4A",
+                color: "var(--brand-navy)",
                 boxShadow: "0 4px 24px rgba(201,168,76,0.45)",
               }}
             >
@@ -136,7 +136,7 @@ export default function RealEstatePage() {
               <div
                 className="rounded-2xl p-6"
                 style={{
-                  background: "linear-gradient(135deg,#0d1b2e,#1a2e4a)",
+                  background: "var(--brand-navy)",
                   border: "1px solid rgba(201,168,76,0.3)",
                 }}
               >
@@ -158,7 +158,7 @@ export default function RealEstatePage() {
               <div
                 className="rounded-2xl p-6"
                 style={{
-                  background: "linear-gradient(135deg,#0d1b2e,#1a2e4a)",
+                  background: "var(--brand-navy)",
                   border: "1px solid rgba(201,168,76,0.3)",
                 }}
               >
@@ -188,7 +188,7 @@ export default function RealEstatePage() {
                 <div
                   className="w-10 h-10 rounded-xl flex items-center justify-center font-bold text-sm flex-shrink-0"
                   style={{
-                    background: "linear-gradient(135deg,#1A2E4A,#2A4A7F)",
+                    background: "var(--brand-navy)",
                     color: "#C9A84C",
                   }}
                 >
@@ -205,7 +205,7 @@ export default function RealEstatePage() {
                 <div
                   className="w-10 h-10 rounded-xl flex items-center justify-center font-bold text-sm flex-shrink-0"
                   style={{
-                    background: "linear-gradient(135deg,#1A2E4A,#2A4A7F)",
+                    background: "var(--brand-navy)",
                     color: "#C9A84C",
                   }}
                 >
@@ -248,7 +248,7 @@ export default function RealEstatePage() {
                 className="inline-flex items-center gap-2 font-bold text-base px-8 py-4 rounded-2xl transition-all duration-300 hover:-translate-y-1 hover:shadow-xl"
                 style={{
                   background: "linear-gradient(135deg,#C9A84C,#E8C96A)",
-                  color: "#1A2E4A",
+                  color: "var(--brand-navy)",
                   boxShadow: "0 4px 24px rgba(201,168,76,0.40)",
                 }}
               >
@@ -334,7 +334,7 @@ export default function RealEstatePage() {
             >
               <div
                 className="px-6 py-3 text-white text-sm font-bold"
-                style={{ background: "linear-gradient(135deg,#1A2E4A,#2A4A7F)" }}
+                style={{ background: "var(--brand-navy)" }}
               >
                 不動産デジタル証券 vs REIT（不動産投資信託）比較
               </div>
@@ -343,7 +343,7 @@ export default function RealEstatePage() {
                   <div className="p-3 bg-gray-50 font-bold text-gray-500"></div>
                   <div
                     className="p-3 font-bold"
-                    style={{ color: "#1A2E4A", background: "rgba(201,168,76,0.07)" }}
+                    style={{ color: "var(--brand-navy)", background: "rgba(201,168,76,0.07)" }}
                   >
                     デジタル証券
                   </div>
@@ -410,14 +410,14 @@ export default function RealEstatePage() {
             {/* ALTERNAカード */}
             <div
               className="rounded-3xl overflow-hidden shadow-xl mb-6"
-              style={{ border: "2px solid #1A2E4A" }}
+              style={{ border: "2px solid var(--brand-navy)" }}
             >
               {/* カードヘッダー */}
               <div
                 className="px-8 py-7"
                 style={{
                   background:
-                    "linear-gradient(135deg,#0d1b2e 0%,#1e3a5f 50%,#2d4a70 100%)",
+                    "var(--brand-navy)",
                 }}
               >
                 <div className="flex items-start justify-between flex-wrap gap-4">
@@ -484,7 +484,7 @@ export default function RealEstatePage() {
                 <div className="mb-6">
                   <p
                     className="text-xs font-bold uppercase tracking-widest mb-3"
-                    style={{ color: "#1A2E4A" }}
+                    style={{ color: "var(--brand-navy)" }}
                   >
                     4つの特徴
                   </p>
@@ -535,8 +535,8 @@ export default function RealEstatePage() {
                   className="rounded-2xl p-5 mb-6"
                   style={{
                     background:
-                      "linear-gradient(135deg,rgba(26,46,74,0.04),rgba(26,46,74,0.02))",
-                    border: "1px solid rgba(26,46,74,0.12)",
+                      "linear-gradient(135deg,rgba(var(--brand-navy-rgb),0.04),rgba(var(--brand-navy-rgb),0.02))",
+                    border: "1px solid rgba(var(--brand-navy-rgb),0.12)",
                   }}
                 >
                   <p className="text-navy font-bold text-sm mb-3">
@@ -594,7 +594,7 @@ export default function RealEstatePage() {
                   className="block w-full text-center py-5 rounded-2xl font-bold text-base transition-all duration-300 hover:-translate-y-0.5 hover:shadow-2xl"
                   style={{
                     background: "linear-gradient(135deg,#C9A84C,#E8C96A)",
-                    color: "#1A2E4A",
+                    color: "var(--brand-navy)",
                     boxShadow: "0 4px 24px rgba(201,168,76,0.40)",
                     fontSize: "1rem",
                   }}
@@ -665,8 +665,8 @@ export default function RealEstatePage() {
               className="rounded-2xl p-5"
               style={{
                 background:
-                  "linear-gradient(135deg,rgba(26,46,74,0.05),rgba(26,46,74,0.02))",
-                border: "1px solid rgba(26,46,74,0.15)",
+                  "linear-gradient(135deg,rgba(var(--brand-navy-rgb),0.05),rgba(var(--brand-navy-rgb),0.02))",
+                border: "1px solid rgba(var(--brand-navy-rgb),0.15)",
               }}
             >
               <p className="text-navy font-bold text-sm mb-2">
@@ -686,7 +686,7 @@ export default function RealEstatePage() {
         <section
           className="py-16 px-4"
           style={{
-            background: "linear-gradient(135deg,#0d1b2e,#1a3a2a,#0d1b2e)",
+            background: "var(--brand-navy)",
           }}
         >
           <div className="max-w-xl mx-auto text-center">
@@ -718,7 +718,7 @@ export default function RealEstatePage() {
                   className="inline-flex items-center justify-center gap-2 font-bold text-sm px-6 py-4 rounded-2xl transition-all duration-300 hover:-translate-y-0.5 hover:shadow-xl w-full sm:w-auto"
                   style={{
                     background: "linear-gradient(135deg,#C9A84C,#E8C96A)",
-                    color: "#1A2E4A",
+                    color: "var(--brand-navy)",
                     boxShadow: "0 4px 20px rgba(201,168,76,0.40)",
                   }}
                 >

@@ -108,7 +108,7 @@ export default function ColumnListClient({ columns }: { columns: ColumnMeta[] })
                   </span>
 
                   {/* Title */}
-                  <h2 className="text-sm font-bold text-navy group-hover:text-[#315e83] transition-colors leading-relaxed flex-1">
+                  <h2 className="text-sm font-bold text-navy group-hover:text-navy/80 transition-colors leading-relaxed flex-1">
                     {col.title}
                   </h2>
 

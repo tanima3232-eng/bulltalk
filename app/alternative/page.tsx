@@ -22,7 +22,7 @@ export default function AlternativePage() {
         <section
           className="brand-hero brand-hero--standard py-20 px-4 text-white"
           style={{
-            background: "linear-gradient(135deg,#0d1b2e 0%,#1a2e4a 50%,#2d1b4e 100%)",
+            background: "var(--brand-navy)",
             position: "relative",
             overflow: "hidden",
           }}
@@ -96,7 +96,7 @@ export default function AlternativePage() {
             <div className="flex items-center gap-3 mb-8">
               <div
                 className="w-12 h-12 rounded-2xl flex items-center justify-center text-2xl flex-shrink-0"
-                style={{ background: "linear-gradient(135deg,#1A2E4A,#2A4A7F)" }}
+                style={{ background: "var(--brand-navy)" }}
               >
                 🏢
               </div>
@@ -130,7 +130,7 @@ export default function AlternativePage() {
                 href="/real-estate"
                 className="inline-flex items-center gap-2 font-bold text-sm px-5 py-3 rounded-xl transition-all duration-300 hover:-translate-y-0.5 hover:shadow-md"
                 style={{
-                  background: "linear-gradient(135deg,#1A2E4A,#2A4A7F)",
+                  background: "var(--brand-navy)",
                   color: "#C9A84C",
                 }}
               >
@@ -141,10 +141,10 @@ export default function AlternativePage() {
             {/* ALTERNA カード */}
             <div
               className="rounded-3xl overflow-hidden shadow-lg"
-              style={{ border: "2px solid #1A2E4A" }}
+              style={{ border: "2px solid var(--brand-navy)" }}
             >
               {/* カードヘッダー */}
-              <div className="px-8 py-6" style={{ background: "linear-gradient(135deg,#1e3a5f,#2d4a70)" }}>
+              <div className="px-8 py-6" style={{ background: "var(--brand-navy)" }}>
                 <div className="flex items-center justify-between flex-wrap gap-3">
                   <div>
                     <p className="text-white/60 text-xs font-bold uppercase tracking-widest mb-1">DIGITAL SECURITIES</p>
@@ -183,7 +183,7 @@ export default function AlternativePage() {
                   rel="nofollow"
                   referrerPolicy="no-referrer-when-downgrade"
                   className="block w-full text-center py-4 rounded-2xl font-bold text-base transition-all duration-300 hover:-translate-y-0.5 hover:shadow-lg"
-                  style={{ background: "linear-gradient(135deg,#1A2E4A,#2A4A7F)", color: "#FFFFFF" }}
+                  style={{ background: "var(--brand-navy)", color: "#FFFFFF" }}
                 >
                   <img
                     src="https://h.accesstrade.net/sp/rr?rk=0100pv9j00oqbc"
@@ -243,7 +243,7 @@ export default function AlternativePage() {
               {/* カードヘッダー */}
               <div
                 className="px-8 py-6"
-                style={{ background: "linear-gradient(135deg,#1A2E4A,#2A4A7F)" }}
+                style={{ background: "var(--brand-navy)" }}
               >
                 <div className="flex items-center justify-between flex-wrap gap-3">
                   <div>
@@ -301,7 +301,7 @@ export default function AlternativePage() {
                   className="hidden md:block w-full text-center py-4 rounded-2xl font-bold text-base transition-all duration-300 hover:-translate-y-0.5 hover:shadow-lg"
                   style={{
                     background: "linear-gradient(135deg,#C9A84C,#E8C96A)",
-                    color: "#1A2E4A",
+                    color: "var(--brand-navy)",
                     boxShadow: "0 4px 20px rgba(201,168,76,0.35)",
                   }}
                 >
@@ -323,7 +323,7 @@ export default function AlternativePage() {
                   className="block md:hidden w-full text-center py-4 rounded-2xl font-bold text-base transition-all duration-300 hover:-translate-y-0.5 hover:shadow-lg"
                   style={{
                     background: "linear-gradient(135deg,#C9A84C,#E8C96A)",
-                    color: "#1A2E4A",
+                    color: "var(--brand-navy)",
                     boxShadow: "0 4px 20px rgba(201,168,76,0.35)",
                   }}
                 >
@@ -356,7 +356,7 @@ export default function AlternativePage() {
               className="rounded-3xl overflow-hidden shadow-lg"
               style={{ border: "2px solid #E5E7EB" }}
             >
-              <div className="px-8 py-6" style={{ background: "linear-gradient(135deg,#1A2E4A,#2A4A7F)" }}>
+              <div className="px-8 py-6" style={{ background: "var(--brand-navy)" }}>
                 <p className="text-white/60 text-xs font-bold uppercase tracking-widest mb-1">CRYPTO ASSET</p>
                 <h3 className="text-white font-bold text-xl">コインチェック（Coincheck）</h3>
                 <p className="text-white/50 text-xs mt-1">提供：コインチェック株式会社（マネックスグループ傘下）</p>
@@ -378,7 +378,7 @@ export default function AlternativePage() {
                   rel="nofollow"
                   referrerPolicy="no-referrer-when-downgrade"
                   className="block w-full text-center py-4 rounded-2xl font-bold text-base"
-                  style={{ background: "#1A2E4A", color: "#FFFFFF" }}
+                  style={{ background: "var(--brand-navy)", color: "#FFFFFF" }}
                 >
                   公式サイトへ →
                 </a>
@@ -394,7 +394,7 @@ export default function AlternativePage() {
         {/* アドバイスCTA */}
         <section
           className="py-16 px-4"
-          style={{ background: "linear-gradient(135deg,#0d1b2e,#2d1b4e,#0d1b2e)" }}
+          style={{ background: "var(--brand-navy)" }}
         >
           <div className="max-w-xl mx-auto text-center">
             <p className="text-xs font-bold uppercase tracking-widest mb-3" style={{ color: "#A78BFA" }}>投資を始める前に</p>

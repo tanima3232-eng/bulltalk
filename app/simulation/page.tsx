@@ -23,7 +23,7 @@ function pctStr(base: number, val: number): string {
 }
 
 const S: Record<string, React.CSSProperties> = {
-  card: { background: "#fff", borderRadius: "16px", padding: "24px 20px", margin: "16px 14px", boxShadow: "0 2px 12px rgba(26,46,74,0.08)" },
+  card: { background: "#fff", borderRadius: "16px", padding: "24px 20px", margin: "16px 14px", boxShadow: "0 2px 12px rgba(var(--brand-navy-rgb),0.08)" },
   label: { fontSize: "11px", fontWeight: 700, color: "#C9A84C", letterSpacing: "2px", marginBottom: "6px" } as React.CSSProperties,
   h2: { fontSize: "16px", fontWeight: 700, marginBottom: "18px" } as React.CSSProperties,
   sliderRow: { display: "flex", justifyContent: "space-between", alignItems: "center", marginBottom: "8px" },
@@ -32,9 +32,9 @@ const S: Record<string, React.CSSProperties> = {
   range: { width: "100%", height: "6px", appearance: "none" as const, background: "#E8EEF4", borderRadius: "3px", outline: "none", cursor: "pointer", accentColor: "#C9A84C" },
   navBtns: { display: "flex", gap: "10px", marginTop: "8px" },
   btnPrev: { flex: 1, padding: "13px", borderRadius: "10px", border: "1.5px solid #E8EEF4", background: "#fff", color: "#6B7280", fontSize: "14px", fontWeight: 700, cursor: "pointer" } as React.CSSProperties,
-  btnNext: { flex: 2, padding: "13px", borderRadius: "10px", border: "none", background: "#C9A84C", color: "#1A2E4A", fontSize: "14px", fontWeight: 700, cursor: "pointer" } as React.CSSProperties,
-  formLabel: { fontSize: "13px", fontWeight: 600, color: "#1A2E4A", marginBottom: "8px", display: "block" } as React.CSSProperties,
-  input: { width: "90px", border: "1.5px solid #E8EEF4", borderRadius: "8px", padding: "11px 14px", fontSize: "14px", color: "#1A2E4A", outline: "none" } as React.CSSProperties,
+  btnNext: { flex: 2, padding: "13px", borderRadius: "10px", border: "none", background: "#C9A84C", color: "var(--brand-navy)", fontSize: "14px", fontWeight: 700, cursor: "pointer" } as React.CSSProperties,
+  formLabel: { fontSize: "13px", fontWeight: 600, color: "var(--brand-navy)", marginBottom: "8px", display: "block" } as React.CSSProperties,
+  input: { width: "90px", border: "1.5px solid #E8EEF4", borderRadius: "8px", padding: "11px 14px", fontSize: "14px", color: "var(--brand-navy)", outline: "none" } as React.CSSProperties,
 };
 
 const assets = [
@@ -79,7 +79,7 @@ function RadioGroup({ label, options, value, onChange }: { label:string; options
       <label style={S.formLabel}>{label}</label>
       <div style={{ display:"flex", flexWrap:"wrap", gap:"8px" }}>
         {options.map(v => (
-          <button key={v} onClick={()=>onChange(v)} style={{ border: value===v?"1.5px solid #C9A84C":"1.5px solid #E8EEF4", borderRadius:"8px", padding:"8px 12px", fontSize:"13px", cursor:"pointer", background:value===v?"#FDF8EE":"#fff", color:"#1A2E4A", fontWeight:value===v?700:500, transition:"all 0.15s" }}>{v}</button>
+          <button key={v} onClick={()=>onChange(v)} style={{ border: value===v?"1.5px solid #C9A84C":"1.5px solid #E8EEF4", borderRadius:"8px", padding:"8px 12px", fontSize:"13px", cursor:"pointer", background:value===v?"#FDF8EE":"#fff", color:"var(--brand-navy)", fontWeight:value===v?700:500, transition:"all 0.15s" }}>{v}</button>
         ))}
       </div>
     </div>
@@ -137,9 +137,9 @@ export default function SimulationPage() {
   const totalA = cash+stock+ins+oth||1;
 
   const ctaStyle = (s: string, href: string) => {
-    const bgMap: Record<string,string> = { gold:"#C9A84C", navy:"#1A2E4A", green:"#06C755", outline:"#1A2E4A" };
-    const clrMap: Record<string,string> = { gold:"#1A2E4A", navy:"#fff", green:"#fff", outline:"#fff" };
-    const bg = bgMap[s]||"#1A2E4A", color = clrMap[s]||"#fff";
+    const bgMap: Record<string,string> = { gold:"#C9A84C", navy:"var(--brand-navy)", green:"#06C755", outline:"var(--brand-navy)" };
+    const clrMap: Record<string,string> = { gold:"var(--brand-navy)", navy:"#fff", green:"#fff", outline:"#fff" };
+    const bg = bgMap[s]||"var(--brand-navy)", color = clrMap[s]||"#fff";
     const inner = <span>{href==="line"?"LINEで詳しく相談する":""}</span>;
     if (href === "line") return <a href="https://lin.ee/FmH7NXr" target="_blank" rel="noopener noreferrer" style={{ display:"block", marginTop:"12px", padding:"11px", borderRadius:"8px", fontSize:"13px", fontWeight:700, textAlign:"center", background:bg, color, textDecoration:"none" }}>{inner}</a>;
     return null;
@@ -147,7 +147,7 @@ export default function SimulationPage() {
   void ctaStyle;
 
   const StepDot = ({ s }: { s: number }) => (
-    <div style={{ width:"28px", height:"28px", borderRadius:"50%", display:"flex", alignItems:"center", justifyContent:"center", fontSize:"11px", fontWeight:700, background:step>s?"#1A2E4A":step===s?"#C9A84C":"#E8EEF4", color:step>s?"#fff":step===s?"#1A2E4A":"#9CA3AF", flexShrink:0, transition:"all 0.3s" }}>
+    <div style={{ width:"28px", height:"28px", borderRadius:"50%", display:"flex", alignItems:"center", justifyContent:"center", fontSize:"11px", fontWeight:700, background:step>s?"var(--brand-navy)":step===s?"#C9A84C":"#E8EEF4", color:step>s?"#fff":step===s?"var(--brand-navy)":"#9CA3AF", flexShrink:0, transition:"all 0.3s" }}>
       {step > s ? "✓" : s}
     </div>
   );
@@ -158,7 +158,7 @@ export default function SimulationPage() {
       <main style={{ background:"#F4F4F2", minHeight:"100vh" }}>
 
         {/* Hero */}
-        <section className="brand-hero brand-hero--quiet" style={{ background:"#1A2E4A", color:"#F4F4F2", textAlign:"center", padding:"48px 24px 40px" }}>
+        <section className="brand-hero brand-hero--quiet" style={{ background:"var(--brand-navy)", color:"#F4F4F2", textAlign:"center", padding:"48px 24px 40px" }}>
           <p style={{ color:"#C9A84C", fontSize:"12px", letterSpacing:"2px", marginBottom:"10px" }}>FREE SIMULATOR</p>
           <h1 style={{ fontSize:"clamp(1.4rem,5vw,1.8rem)", fontWeight:800, lineHeight:1.4, marginBottom:"12px" }}>毎月いくら積み立てると<br />将来どのくらいになる？</h1>
           <p style={{ fontSize:"13px", opacity:0.8, lineHeight:1.7 }}>積立額、積立期間、想定リターンを選ぶだけ。<br />あなたの将来の資産設計イメージがわかります。</p>
@@ -186,7 +186,7 @@ export default function SimulationPage() {
               <div style={{ display:"grid", gridTemplateColumns:"1fr 1fr", gap:"8px" }}>
                 {assets.map((a,i) => (
                   <button key={i} onClick={()=>{ setRate(a.rate); setActiveAsset(i); }} style={{ border:activeAsset===i?"1.5px solid #C9A84C":"1.5px solid #E8EEF4", borderRadius:"10px", padding:"10px 8px", background:activeAsset===i?"#FDF8EE":"#fff", cursor:"pointer", textAlign:"left", transition:"all 0.15s" }}>
-                    <div style={{ fontSize:"12px", fontWeight:700, color:"#1A2E4A", marginBottom:"2px" }}>{a.name}</div>
+                    <div style={{ fontSize:"12px", fontWeight:700, color:"var(--brand-navy)", marginBottom:"2px" }}>{a.name}</div>
                     <div style={{ fontSize:"13px", fontWeight:800, color:"#C9A84C" }}>{a.rateLabel}</div>
                     <div style={{ fontSize:"9px", color:"#9CA3AF", marginTop:"2px", lineHeight:1.4 }}>{a.note}</div>
                   </button>
@@ -208,19 +208,19 @@ export default function SimulationPage() {
               <div style={{ display:"flex", alignItems:"flex-end", gap:"10px", height:"160px" }}>
                 {[
                   { h:saveH, bg:"#B0BEC5", pct:"基準（0%）", pctColor:"#9CA3AF", amt:fmtMan(saveMan), lbl:"貯金のみ" },
-                  { h:inv3H, bg:"#1A2E4A", pct:pctStr(saveMan,inv3Man), pctColor:"#1A7A4A", amt:fmtMan(inv3Man), lbl:"3%（長期積立の一例）" },
+                  { h:inv3H, bg:"var(--brand-navy)", pct:pctStr(saveMan,inv3Man), pctColor:"#1A7A4A", amt:fmtMan(inv3Man), lbl:"3%（長期積立の一例）" },
                   { h:invRH, bg:"#C9A84C", pct:pctStr(saveMan,invRMan), pctColor:"#1A7A4A", amt:fmtMan(invRMan), lbl:`想定${rate}%` },
                 ].map((b,i) => (
                   <div key={i} style={{ flex:1, display:"flex", flexDirection:"column", alignItems:"center", gap:"4px", height:"100%", justifyContent:"flex-end" }}>
                     <p style={{ fontSize:"11px", fontWeight:800, color:b.pctColor, textAlign:"center" }}>{b.pct}</p>
-                    <p style={{ fontSize:"11px", fontWeight:700, color:"#1A2E4A", textAlign:"center" }}>{b.amt}</p>
+                    <p style={{ fontSize:"11px", fontWeight:700, color:"var(--brand-navy)", textAlign:"center" }}>{b.amt}</p>
                     <div style={{ width:"100%", borderRadius:"6px 6px 0 0", background:b.bg, height:`${b.h}px`, minHeight:"4px", transition:"height 0.45s" }} />
                     <p style={{ fontSize:"9px", color:"#6B7280", textAlign:"center", whiteSpace:"nowrap" }}>{b.lbl}</p>
                   </div>
                 ))}
               </div>
             </div>
-            <div style={{ background:"#1A2E4A", borderRadius:"12px", padding:"18px", color:"#F4F4F2", marginBottom:"16px" }}>
+            <div style={{ background:"var(--brand-navy)", borderRadius:"12px", padding:"18px", color:"#F4F4F2", marginBottom:"16px" }}>
               <p style={{ fontSize:"11px", color:"#C9A84C", marginBottom:"4px" }}>リターン3%運用で貯金より…</p>
               <p style={{ fontSize:"26px", fontWeight:800, color:"#C9A84C" }}>+{fmtMan(inv3Man-saveMan)}</p>
               <p style={{ fontSize:"11px", color:"rgba(244,244,242,0.55)", marginTop:"4px" }}>（月2万円 × 30年・想定リターン3%の場合）</p>
@@ -232,8 +232,8 @@ export default function SimulationPage() {
           {/* CTA Buttons */}
           <div style={{ padding:"0 14px 8px" }}>
             {[
-              { href:"/accounts/stock", label:"NISA口座を開設する（無料）", bg:"#C9A84C", color:"#1A2E4A" },
-              { href:"/accounts/ideco", label:"iDeCoで将来に備える", bg:"#1A2E4A", color:"#F4F4F2" },
+              { href:"/accounts/stock", label:"NISA口座を開設する（無料）", bg:"#C9A84C", color:"var(--brand-navy)" },
+              { href:"/accounts/ideco", label:"iDeCoで将来に備える", bg:"var(--brand-navy)", color:"#F4F4F2" },
               { href:"/alternative", label:"オルタナティブ投資に興味がある", bg:"#5B7FA6", color:"#fff" },
             ].map(b => <Link key={b.href} href={b.href} style={{ display:"block", width:"100%", padding:"15px", borderRadius:"12px", fontSize:"14px", fontWeight:700, textAlign:"center", background:b.bg, color:b.color, marginBottom:"10px", textDecoration:"none" }}>{b.label}</Link>)}
             <a href="https://lin.ee/FmH7NXr" target="_blank" rel="noopener noreferrer" style={{ display:"block", width:"100%", padding:"15px", borderRadius:"12px", fontSize:"14px", fontWeight:700, textAlign:"center", background:"#06C755", color:"#fff", textDecoration:"none" }}>まずはLINEで無料相談する</a>
@@ -254,11 +254,11 @@ export default function SimulationPage() {
                 <polyline points="6 9 12 15 18 9" />
               </svg>
             </div>
-            <p style={{ fontSize:"15px", color:"#1A2E4A", fontWeight:800, marginTop:"6px", letterSpacing:"0.05em" }}>さらに詳しく診断できます</p>
+            <p style={{ fontSize:"15px", color:"var(--brand-navy)", fontWeight:800, marginTop:"6px", letterSpacing:"0.05em" }}>さらに詳しく診断できます</p>
           </div>
 
           <div className="brand-hero brand-hero--quiet" style={{
-            background: "linear-gradient(135deg,#0d1b2e 0%,#1A2E4A 60%,#0d1b2e 100%)",
+            background: "var(--brand-navy)",
             color: "#F4F4F2",
             textAlign: "center",
             padding: "36px 24px 32px",
@@ -316,7 +316,7 @@ export default function SimulationPage() {
               {[1,2,3,4].map(s => (
                 <>{/* eslint-disable-next-line react/jsx-key */}
                   <StepDot key={s} s={s} />
-                  {s < 4 && <div key={`l${s}`} style={{ flex:1, height:"2px", maxWidth:"32px", background:step>s?"#1A2E4A":"#E8EEF4" }} />}
+                  {s < 4 && <div key={`l${s}`} style={{ flex:1, height:"2px", maxWidth:"32px", background:step>s?"var(--brand-navy)":"#E8EEF4" }} />}
                 </>
               ))}
             </div>
@@ -431,7 +431,7 @@ export default function SimulationPage() {
                 <p style={S.label}>貯金の色分け</p>
                 <h2 style={S.h2}>資産の内訳</h2>
                 <div style={{ background:"#F4F4F2", borderRadius:"12px", padding:"16px" }}>
-                  {[["預貯金",cash,"#B0BEC5"],["投資・株",stock,"#1A2E4A"],["保険",ins,"#C9A84C"],["不動産他",oth,"#6B7280"]].map(([l,v,c])=>(
+                  {[["預貯金",cash,"#B0BEC5"],["投資・株",stock,"var(--brand-navy)"],["保険",ins,"#C9A84C"],["不動産他",oth,"#6B7280"]].map(([l,v,c])=>(
                     <div key={l as string} style={{ display:"flex", alignItems:"center", gap:"8px", marginBottom:"10px" }}>
                       <span style={{ fontSize:"12px", color:"#6B7280", width:"64px", flexShrink:0 }}>{l as string}</span>
                       <div style={{ flex:1, height:"10px", background:"#E8EEF4", borderRadius:"5px", overflow:"hidden" }}>
@@ -448,14 +448,14 @@ export default function SimulationPage() {
                 <p style={S.label}>優先順位アドバイス</p>
                 <h2 style={S.h2}>今すぐ取り組むべきこと</h2>
                 {buildPriorities(checks, housing, ins).map((p,i) => {
-                  const bgMap: Record<string,string> = { gold:"#C9A84C", navy:"#1A2E4A", green:"#06C755", outline:"#1A2E4A" };
-                  const clrMap: Record<string,string> = { gold:"#1A2E4A", navy:"#fff", green:"#fff", outline:"#fff" };
+                  const bgMap: Record<string,string> = { gold:"#C9A84C", navy:"var(--brand-navy)", green:"#06C755", outline:"var(--brand-navy)" };
+                  const clrMap: Record<string,string> = { gold:"var(--brand-navy)", navy:"#fff", green:"#fff", outline:"#fff" };
                   const ctaBg = bgMap[p.style], ctaClr = clrMap[p.style];
                   const isLine = p.href === "line";
                   return (
                     <div key={i} style={{ border:p.highlight?"1.5px solid #C9A84C":"1.5px solid #E8EEF4", borderRadius:"12px", padding:"16px", marginBottom:"10px", background:p.highlight?"#FDF8EE":"#fff" }}>
                       {p.num && <p style={{ fontSize:"10px", fontWeight:700, color:"#C9A84C", marginBottom:"4px" }}>{p.num}</p>}
-                      <p style={{ fontSize:"14px", fontWeight:700, marginBottom:"6px", color:"#1A2E4A" }}>{p.title}</p>
+                      <p style={{ fontSize:"14px", fontWeight:700, marginBottom:"6px", color:"var(--brand-navy)" }}>{p.title}</p>
                       <p style={{ fontSize:"12px", color:"#6B7280", lineHeight:1.7 }}>{p.desc}</p>
                       {p.note && <p style={{ fontSize:"11px", color:"#9CA3AF", marginTop:"6px", lineHeight:1.6, fontStyle:"italic" }}>{p.note}</p>}
                       {p.cta && (isLine

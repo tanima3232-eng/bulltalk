@@ -350,20 +350,12 @@ export default async function MarketPage() {
         <section
           className="brand-band py-20 px-4"
           style={{
-            background: "linear-gradient(135deg, #0d1b2e 0%, #1A2E4A 50%, #0d1b2e 100%)",
+            background: "var(--brand-navy)",
             position: "relative",
             overflow: "hidden",
             borderTop: "1px solid rgba(201,168,76,0.2)",
           }}
         >
-          {/* 背景グロー装飾 */}
-          <div style={{
-            position: "absolute", top: "-80px", left: "50%", transform: "translateX(-50%)",
-            width: "600px", height: "300px",
-            background: "radial-gradient(ellipse, rgba(201,168,76,0.18) 0%, transparent 70%)",
-            pointerEvents: "none",
-          }} />
-
           <div className="max-w-2xl mx-auto text-center" style={{position:"relative", zIndex:1}}>
             <p className="text-gold text-xs font-bold uppercase tracking-widest mb-4" style={{letterSpacing:"0.2em"}}>
               🔥 BULL友 MEMBERS ONLY
@@ -425,7 +417,7 @@ export default async function MarketPage() {
                 >
                   <span
                     className="font-bold text-lg flex-shrink-0 w-8 h-8 flex items-center justify-center rounded-full"
-                    style={{background:"#C9A84C", color:"#1A2E4A", fontSize:"0.85rem"}}
+                    style={{background:"#C9A84C", color:"var(--brand-navy)", fontSize:"0.85rem"}}
                   >
                     {item.num}
                   </span>

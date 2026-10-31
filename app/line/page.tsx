@@ -12,47 +12,33 @@ export default function LinePage() {
     <>
       <Header />
       <main>
-        <section
-          className="brand-hero brand-hero--standard min-h-screen py-20 px-4 flex items-center"
-          style={{
-            background: "linear-gradient(135deg, #0d1b2e 0%, #1A2E4A 50%, #0d1b2e 100%)",
-            position: "relative",
-            overflow: "hidden",
-          }}
-        >
-          {/* 背景グロー */}
-          <div style={{
-            position: "absolute", top: "-80px", left: "50%", transform: "translateX(-50%)",
-            width: "600px", height: "300px",
-            background: "radial-gradient(ellipse, rgba(201,168,76,0.18) 0%, transparent 70%)",
-            pointerEvents: "none",
-          }} />
-
-          <div className="max-w-2xl mx-auto text-center" style={{ position: "relative", zIndex: 1 }}>
-
-            <p className="text-xs font-bold uppercase tracking-widest mb-4" style={{ color: "#C9A84C", letterSpacing: "0.2em" }}>
+        <section className="brand-hero brand-hero--standard py-16 px-4 text-white">
+          <div className="max-w-2xl mx-auto text-center">
+            <p className="text-gold text-xs font-bold uppercase tracking-widest mb-4">
               🔥 BULL友 MEMBERS ONLY
             </p>
-            <h1
-              className="font-bold mb-4 text-white"
-              style={{ fontSize: "clamp(2rem,6vw,3rem)", lineHeight: 1.15 }}
-            >
+            <h1 className="text-3xl md:text-4xl font-bold leading-tight">
               Bull友になる
             </h1>
+          </div>
+        </section>
 
+        <section className="brand-membership py-16 px-4" aria-label="Bull友の特典と登録">
+          <div className="max-w-2xl mx-auto text-center">
             {/* 安心バッジ */}
-            <div className="flex justify-center items-center gap-1.5 mb-10" style={{flexWrap:"nowrap"}}>
-              <span style={{color:"#4ADE80", fontSize:"13px", flexShrink:0}}>＼</span>
-              {["✓ 完全無料", "\u2713 LINE\u8ffd\u52a0\u3059\u308b\u3060\u3051", "\u2713 \u7279\u5178\u3042\u308a"].map((badge) => (
-                <span
-                  key={badge}
-                  className="inline-flex items-center font-bold rounded-full"
-                  style={{ background: "rgba(6,199,85,0.15)", color: "#4ADE80", border: "1px solid rgba(6,199,85,0.35)", fontSize:"10px", padding:"4px 8px", whiteSpace:"nowrap" }}
-                >
-                  {badge}
-                </span>
-              ))}
-              <span style={{color:"#4ADE80", fontSize:"13px", flexShrink:0}}>／</span>
+            <div className="flex justify-center items-center gap-2 mb-10">
+              <span className="text-xs font-bold text-slate-400 shrink-0">＼</span>
+              <div className="flex flex-wrap justify-center gap-2 min-w-0">
+                {["✓ 完全無料", "✓ LINE追加するだけ", "✓ 特典あり"].map((badge) => (
+                  <span
+                    key={badge}
+                    className="inline-flex items-center font-bold rounded-full whitespace-nowrap bg-offwhite text-slate-600 border border-slate-200 text-[11px] px-2.5 py-1"
+                  >
+                    {badge}
+                  </span>
+                ))}
+              </div>
+              <span className="text-xs font-bold text-slate-400 shrink-0">／</span>
             </div>
 
             {/* メリット3点 */}
@@ -64,22 +50,14 @@ export default function LinePage() {
               ].map((item) => (
                 <div
                   key={item.num}
-                  className="flex items-start gap-4 rounded-xl p-5"
-                  style={{
-                    background: "rgba(255,255,255,0.06)",
-                    border: "1px solid rgba(201,168,76,0.25)",
-                    backdropFilter: "blur(4px)",
-                  }}
+                  className="bg-light-navy border border-slate-200 rounded-2xl flex items-start gap-3 sm:gap-4 p-4 sm:p-5"
                 >
-                  <span
-                    className="font-bold text-lg flex-shrink-0 w-8 h-8 flex items-center justify-center rounded-full"
-                    style={{ background: "#C9A84C", color: "#1A2E4A", fontSize: "0.85rem" }}
-                  >
+                  <span className="font-bold text-sm shrink-0 w-8 h-8 flex items-center justify-center rounded-full bg-navy text-white">
                     {item.num}
                   </span>
-                  <div>
-                    <p className="text-white font-bold text-sm leading-snug mb-1">{item.title}</p>
-                    <p className="text-white/50 text-xs leading-relaxed">{item.desc}</p>
+                  <div className="min-w-0">
+                    <p className="text-navy font-bold text-sm leading-relaxed mb-1">{item.title}</p>
+                    <p className="text-slate-600 text-xs leading-relaxed">{item.desc}</p>
                   </div>
                 </div>
               ))}
@@ -90,20 +68,15 @@ export default function LinePage() {
               href="https://lin.ee/FmH7NXr"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-3 font-bold text-lg px-10 py-5 rounded-2xl transition-all duration-300"
-              style={{
-                background: "#06C755",
-                color: "#FFFFFF",
-                boxShadow: "0 0 32px rgba(6,199,85,0.45), 0 4px 20px rgba(0,0,0,0.3)",
-              }}
+              className="inline-flex items-center justify-center gap-3 bg-green-700 hover:bg-green-800 text-white font-bold transition-colors w-full sm:w-auto max-w-full text-base sm:text-lg px-6 sm:px-8 py-4 rounded-xl"
             >
-              <svg className="w-6 h-6" viewBox="0 0 24 24" fill="currentColor">
+              <svg className="w-6 h-6 shrink-0" viewBox="0 0 24 24" fill="currentColor">
                 <path d="M12 2C6.48 2 2 6.04 2 11c0 3.45 1.92 6.47 4.8 8.19L6 22l2.72-1.44C9.77 20.83 10.87 21 12 21c5.52 0 10-4.04 10-9S17.52 2 12 2z"/>
               </svg>
               今すぐBull友になる
             </a>
 
-            <p className="text-white/30 text-xs mt-5">完全無料</p>
+            <p className="text-slate-500 text-xs mt-5">完全無料</p>
           </div>
         </section>
       </main>

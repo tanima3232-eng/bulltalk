@@ -212,7 +212,7 @@ export default function ContactPage() {
                     className={`w-full py-4 rounded-xl font-bold text-base transition-all duration-300 ${
                       status === "submitting"
                         ? "bg-gray-300 text-gray-500 cursor-not-allowed"
-                        : "bg-navy text-white hover:bg-[#2a4470] hover:shadow-lg active:scale-[0.98]"
+                        : "bg-navy text-white hover:bg-navy/90 hover:shadow-lg active:scale-[0.98]"
                     }`}
                   >
                     {status === "submitting" ? (

@@ -36,7 +36,7 @@ export default function KanezatoShindanLpPage() {
               style={{ objectFit: "cover", width: "100%", height: "100%" }}
             />
           </div>
-          <p style={{ color: "#1A2E4A", fontWeight: 800, fontSize: 18, marginBottom: 4 }}>
+          <p style={{ color: "var(--brand-navy)", fontWeight: 800, fontSize: 18, marginBottom: 4 }}>
             Bulltalk｜谷本光章
           </p>
           <p style={{ color: "rgba(0,0,0,0.5)", fontSize: 12 }}>
