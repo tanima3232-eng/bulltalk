@@ -291,49 +291,17 @@ export default function AlternativePage() {
                   ))}
                 </div>
 
-                {/* CTAボタン（PC：アフィリエイトURL / スマホ：monex.co.jp） */}
-                {/* PC用 */}
+                {/* PC・スマートフォン共通の公式サイトリンク */}
                 <a
-                  href="https://h.accesstrade.net/sp/cc?rk=0100p7mq00oqbc"
+                  href="https://info.monex.co.jp/crypto/index.html"
                   target="_self"
-                  rel="nofollow"
-                  referrerPolicy="no-referrer-when-downgrade"
-                  className="hidden md:block w-full text-center py-4 rounded-2xl font-bold text-base transition-all duration-300 hover:-translate-y-0.5 hover:shadow-lg"
+                  className="block w-full text-center py-4 rounded-2xl font-bold text-base transition-all duration-300 hover:-translate-y-0.5 hover:shadow-lg"
                   style={{
                     background: "linear-gradient(135deg,#C9A84C,#E8C96A)",
                     color: "var(--brand-navy)",
                     boxShadow: "0 4px 20px rgba(201,168,76,0.35)",
                   }}
                 >
-                  <img
-                    src="https://h.accesstrade.net/sp/rr?rk=0100p7mq00oqbc"
-                    alt=""
-                    style={{ display: "none" }}
-                    width={1}
-                    height={1}
-                  />
-                  公式サイトへ →
-                </a>
-                {/* スマホ用 */}
-                <a
-                  href="https://h.accesstrade.net/sp/cc?rk=0100p7mq00oqbc"
-                  target="_self"
-                  rel="nofollow"
-                  referrerPolicy="no-referrer-when-downgrade"
-                  className="block md:hidden w-full text-center py-4 rounded-2xl font-bold text-base transition-all duration-300 hover:-translate-y-0.5 hover:shadow-lg"
-                  style={{
-                    background: "linear-gradient(135deg,#C9A84C,#E8C96A)",
-                    color: "var(--brand-navy)",
-                    boxShadow: "0 4px 20px rgba(201,168,76,0.35)",
-                  }}
-                >
-                  <img
-                    src="https://h.accesstrade.net/sp/rr?rk=0100p7mq00oqbc"
-                    alt=""
-                    style={{ display: "none" }}
-                    width={1}
-                    height={1}
-                  />
                   公式サイトへ →
                 </a>
                 {/* スマホ環境注意 */}
