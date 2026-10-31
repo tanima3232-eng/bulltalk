@@ -249,12 +249,12 @@ export default function ServicesPage() {
         </section>
 
         {/* ⑥ CTA */}
-        <section className="bg-navy text-white py-16 px-4">
+        <section id="service-contact" className="bg-light-navy text-navy border-y border-slate-200 py-16 px-4 scroll-mt-24">
           <div className="max-w-3xl mx-auto text-center">
-            <h2 className="text-2xl md:text-3xl font-bold text-gold mb-4">
+            <h2 className="text-2xl md:text-3xl font-bold text-navy mb-4">
               まずはお気軽にご相談ください
             </h2>
-            <p className="text-white/70 text-sm md:text-base leading-relaxed mb-8">
+            <p className="text-slate-600 text-sm md:text-base leading-relaxed mb-8">
               研修・セミナー・コンサルティングの内容やご予算は、<br className="hidden md:inline" />
               ご要望に応じて柔軟にカスタマイズ可能です。<br />
               どんな些細なことでも、まずはお気軽にお問い合わせください。
@@ -262,13 +262,13 @@ export default function ServicesPage() {
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
               <a
                 href="https://lin.ee/FmH7NXr"
-                className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-8 py-4 bg-green-500 text-white font-bold rounded-lg hover:bg-green-600 transition-all duration-200 text-base"
+                className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-8 py-4 bg-green-700 text-white font-bold rounded-xl hover:bg-green-800 transition-all duration-200 text-base"
               >
                 💬 LINEで相談する
               </a>
               <a
                 href="/contact"
-                className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-8 py-4 bg-white text-navy font-bold rounded-lg hover:bg-light-gold transition-all duration-200 text-base"
+                className="btn-navy w-full sm:w-auto inline-flex items-center justify-center gap-2 px-8 py-4 text-base"
               >
                 📩 メールで相談する
               </a>

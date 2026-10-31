@@ -140,14 +140,12 @@
 .brand-hero :focus-visible, .site-header :focus-visible, .brand-band :focus-visible { outline-color: #e6ca86; }
 
 .site-header {
-  background: rgba(14, 33, 53, .98);
-  border-bottom: 1px solid rgba(173, 197, 226, .16);
-  box-shadow: 0 2px 10px rgba(1, 12, 27, .06);
-  backdrop-filter: blur(16px);
+  background: #061d39;
+  border-bottom: 1px solid rgba(173, 197, 226, .1);
 }
 .site-header .brand-wordmark { letter-spacing: .015em; }
 .brand-menu {
-  background: #10263d;
+  background: #061d39;
   border-left: 1px solid rgba(173, 197, 226, .16);
 }
 .site-footer {
