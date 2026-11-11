@@ -325,7 +325,7 @@ export default function StockAccountPage() {
             <p className="section-subtitle text-center">最短翌営業日から投資スタートできます</p>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
               {[
-                { step: "STEP 1", icon: "🌐", title: "公式サイトへアクセス", desc: "上の比較表CTAボタンから" },
+                { step: "STEP 1", icon: "🌐", title: "公式サイトへアクセス", desc: "上の比較表のボタンから" },
                 { step: "STEP 2", icon: "✍️", title: "無料登録", desc: "メールアドレスと基本情報を入力" },
                 { step: "STEP 3", icon: "📋", title: "本人確認書類を提出", desc: "最短翌営業日に審査完了" },
               ].map((s) => (
