@@ -5,17 +5,17 @@ import Footer from "@/components/Footer";
 export const metadata: Metadata = {
   title: "特定商取引法に基づく表記 | Bulltalk",
   description:
-    "Bulltalk（ブルトーク）の特定商取引法に基づく表記ページです。販売事業者・代表者・所在地・電話番号・メールアドレス・販売価格・お支払い方法等を掲載しています。",
+    "Bulltalk（ブルトーク）の特定商取引法に基づく表記ページです。販売事業者・運営責任者・所在地・電話番号・メールアドレス・販売価格・お支払い方法等を掲載しています。",
 };
 
 const items = [
   {
     label: "販売事業者",
-    value: "アドフィン",
+    value: "谷本光章",
   },
   {
-    label: "代表者",
-    value: "谷本 光章",
+    label: "運営責任者",
+    value: "谷本光章",
   },
   {
     label: "所在地",
@@ -47,7 +47,7 @@ const items = [
   },
   {
     label: "お支払い方法",
-    value: "クレジットカード決済、その他当社が指定する決済方法",
+    value: "クレジットカード決済、その他販売事業者が指定する決済方法",
   },
   {
     label: "お支払い時期",
@@ -126,7 +126,7 @@ export default function TokuteishouTorihikiPage() {
             </div>
 
             <p className="text-gray-400 text-xs mt-8 text-center">
-              最終更新日：2026年6月28日
+              最終更新日：2026年11月14日
             </p>
           </div>
         </section>
