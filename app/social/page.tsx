@@ -100,7 +100,7 @@ export default function SocialPage() {
           <div className="space-y-6">
             <section aria-labelledby="videos-heading">
               <SectionHeading id="videos-heading" number="01">SNSでマーケットを知る</SectionHeading>
-              <p className="mb-3 text-sm leading-relaxed text-slate-600">日本株・米国株に役立つ情報を毎日発信</p>
+              <p className="mb-3 text-sm leading-relaxed text-slate-600">日本株・米国株に役立つ情報をタイムリーに発信</p>
               <LinkCard href="https://x.com/bulltalk_jp" title="X" icon={<Logo src="/images/social/x.png" />} external />
               <p className="mb-3 mt-5 text-sm leading-relaxed text-slate-600">毎日1分でプロの視点で相場を解説</p>
               <div className="space-y-2.5">
