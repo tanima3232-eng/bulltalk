@@ -33,6 +33,7 @@ export default function Footer() {
                 { href: "/real-estate", label: "不動産・インフラ投資とは" },
                 { href: "/services", label: "提供サービス" },
                 { href: "/about", label: "経歴" },
+                { href: "/social", label: "公式SNS・リンク集" },
                 { href: "/contact", label: "お問い合わせ" },
                 { href: "/line", label: "Bull友になる" },
               ].map((link) => (

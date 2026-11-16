@@ -43,6 +43,7 @@ const menuSections = [
     label: "その他",
     links: [
       { href: "/about", label: "👤 経歴", desc: "谷本光章について" },
+      { href: "/social", label: "🔗 公式SNS・リンク集", desc: "動画・分析レポート・無料相談" },
     ],
   },
 ];
