@@ -104,7 +104,7 @@ export default function SocialPage() {
               <p className="mb-4 text-sm leading-relaxed text-slate-600">毎日1分で投資に役立つ情報と注目ポイントを解説</p>
               <div className="space-y-3">
                 <LinkCard href="https://www.instagram.com/bulltalk_jp" title="Instagram" detail="@bulltalk_jp" icon={<InstagramIcon />} external />
-                <LinkCard href="https://www.youtube.com/@bulltalk_jp" title="YouTube" detail="@bulltalk_jp" icon={<Logo src="/images/social/youtube.png" />} external />
+                <LinkCard href="https://www.youtube.com/@bulltalk_jp" title="YouTube" detail="@bulltalk_jp" icon={<span className="block rounded-xl border border-slate-200 bg-white"><Logo src="/images/social/youtube.png" /></span>} external />
                 <LinkCard href="https://www.tiktok.com/@bulltalk_jp" title="TikTok" detail="@bulltalk_jp" icon={<Logo src="/images/social/tiktok.png" />} external />
               </div>
             </section>
@@ -132,7 +132,7 @@ export default function SocialPage() {
 
             <section aria-labelledby="simulation-heading">
               <SectionHeading id="simulation-heading" number="04">自分の資産形成を考える</SectionHeading>
-              <LinkCard href="/simulation" title="資産形成シミュレーション" icon={<span aria-hidden="true" className="flex h-12 w-12 items-center justify-center rounded-xl bg-light-navy text-navy"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round" className="h-7 w-7"><path d="M4 4v16h16M8 16v-4m5 4V9m5 7V5" /></svg></span>} />
+              <LinkCard href="/simulation" title="資産形成シミュレーション" icon={<Logo src="/profile.jpg" portrait />} />
             </section>
 
             <section aria-labelledby="website-heading">
