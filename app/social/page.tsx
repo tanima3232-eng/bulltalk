@@ -52,10 +52,11 @@ function Logo({ src, portrait = false }: { src: string; portrait?: boolean }) {
   return <Image src={src} alt="" width={48} height={48} sizes="48px" className={`h-12 w-12 ${portrait ? "rounded-full object-cover" : "rounded-xl object-contain"}`} />;
 }
 
-function LinkCard({ href, title, detail, icon, external = false }: {
+function LinkCard({ href, title, detail, cta, icon, external = false }: {
   href: string;
   title: string;
   detail?: string;
+  cta?: string;
   icon: ReactNode;
   external?: boolean;
 }) {
@@ -65,6 +66,7 @@ function LinkCard({ href, title, detail, icon, external = false }: {
       <span className="min-w-0 flex-1">
         <span className="block text-base font-bold leading-relaxed text-navy">{title}</span>
         {detail && <span className="mt-0.5 block text-sm leading-relaxed text-slate-600">{detail}</span>}
+        {cta && <span className="mt-2 block text-sm font-medium leading-relaxed text-navy underline decoration-slate-300 underline-offset-4 group-hover:decoration-navy">{cta}</span>}
       </span>
       <span className="text-slate-400 transition-colors group-hover:text-navy"><Arrow external={external} /></span>
     </>
@@ -88,50 +90,53 @@ export default function SocialPage() {
       <main className="bg-offwhite px-4 pb-9 pt-7 sm:pb-12 sm:pt-10">
         <div className="mx-auto max-w-xl">
           <div className="mb-7 text-center">
-            <h1 className="font-inter text-3xl font-bold tracking-wide text-navy"><span className="text-[#8B7038]">Bull</span>talk<span className="sr-only"> 公式SNS・リンク集</span></h1>
-            <p className="mt-3 text-base font-bold text-navy sm:text-lg">プロの視点で、マーケットを分析。</p>
-            <p className="mt-2 text-sm leading-relaxed text-slate-600">日本株・米国株のマーケット情報、<br />株価分析・企業分析を発信しています。</p>
+            <p className="mb-2 font-inter text-[11px] font-bold tracking-[0.2em] text-[#8B7038]">BULLTALK / OFFICIAL LINKS</p>
+            <h1 className="text-2xl font-bold tracking-wide text-navy sm:text-3xl">公式SNS・リンク集</h1>
             <p className="mt-4 text-sm font-bold text-navy">谷本光章</p>
             <p className="mt-1 text-xs leading-relaxed text-slate-600">証券アナリスト（CMA）｜FP1級｜宅建士</p>
+            <p className="mt-3 text-sm leading-relaxed text-slate-600">日本株・米国株のマーケット情報、<br />株価分析・企業分析を発信しています。</p>
           </div>
 
           <div className="space-y-6">
             <section aria-labelledby="videos-heading">
-              <SectionHeading id="videos-heading" number="01">動画・SNS</SectionHeading>
+              <SectionHeading id="videos-heading" number="01">SNSでマーケットを知る</SectionHeading>
+              <p className="mb-3 text-sm leading-relaxed text-slate-600">日本株・米国株に役立つ情報を毎日発信</p>
               <div className="space-y-2.5">
-                <LinkCard href="https://www.instagram.com/bulltalk_jp" title="Instagram" icon={<InstagramIcon />} external />
                 <LinkCard href="https://x.com/bulltalk_jp" title="X" icon={<Logo src="/images/social/x.png" />} external />
+                <LinkCard href="https://www.instagram.com/bulltalk_jp" title="Instagram" icon={<InstagramIcon />} external />
                 <LinkCard href="https://www.youtube.com/@bulltalk_jp" title="YouTube" icon={<span className="block rounded-xl border border-slate-200 bg-white"><Logo src="/images/social/youtube.png" /></span>} external />
                 <LinkCard href="https://www.tiktok.com/@bulltalk_jp" title="TikTok" icon={<Logo src="/images/social/tiktok.png" />} external />
               </div>
             </section>
 
             <section aria-labelledby="reports-heading">
-              <SectionHeading id="reports-heading" number="02">分析を読む</SectionHeading>
-              <div className="space-y-2.5">
-                <LinkCard href="https://note.com/bulltalk" title="note" detail="個別企業の株価分析レポート" icon={<span aria-hidden="true" className="flex h-12 w-12 items-center justify-center rounded-xl border border-slate-200 bg-white font-inter text-sm font-extrabold tracking-tighter text-black">note</span>} external />
-                <LinkCard href="/market" title="マーケット分析・企業分析" detail="Bulltalkの相場分析ページ" icon={<span aria-hidden="true" className="flex h-12 w-12 items-center justify-center rounded-xl bg-light-navy text-navy"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round" className="h-7 w-7"><path d="M4 4v16h16M8 15l4-5 3 2 5-6" /></svg></span>} />
-              </div>
+              <SectionHeading id="reports-heading" number="02">分析を詳しく読む</SectionHeading>
+              <LinkCard href="https://note.com/bulltalk" title="note" detail="個別企業の株価分析レポートを無料公開" cta="noteで株価分析レポートを読む" icon={<span aria-hidden="true" className="flex h-12 w-12 items-center justify-center rounded-xl border border-slate-200 bg-white font-inter text-sm font-extrabold tracking-tighter text-black">note</span>} external />
+            </section>
+
+            <section aria-labelledby="simulation-heading">
+              <SectionHeading id="simulation-heading" number="03">自分の資産形成を考える</SectionHeading>
+              <LinkCard href="/simulation" title="資産形成シミュレーション" detail="毎月の積立額・期間・想定リターンから、将来の資産額を試算" cta="無料でシミュレーションする" icon={<Logo src="/profile.jpg" portrait />} />
             </section>
 
             <section aria-labelledby="line-heading">
-              <SectionHeading id="line-heading" number="03">LINE</SectionHeading>
+              <SectionHeading id="line-heading" number="04">無料資料・最新情報を受け取る</SectionHeading>
               <p className="mb-3 text-sm leading-relaxed text-slate-600">資産形成に役立つ無料資料や最新情報を配信しています。</p>
               <LinkCard href="https://lin.ee/FmH7NXr" title="LINE公式アカウントを見る" icon={<Logo src="/images/social/line.png" />} external />
             </section>
 
-            <div className="border-t border-slate-200 pt-6">
-              <LinkCard href="/" title="Bulltalk 公式サイト" icon={<Logo src="/profile.jpg" portrait />} />
-            </div>
+            <section aria-labelledby="website-heading">
+              <SectionHeading id="website-heading" number="05">Bulltalkをもっと知る</SectionHeading>
+              <LinkCard href="/" title="Bulltalk公式サイト" detail="マーケット分析・金融コラム・プロフィールなど" cta="Bulltalk公式サイトを見る" icon={<Logo src="/profile.jpg" portrait />} />
+            </section>
           </div>
         </div>
       </main>
       <footer className="border-t border-slate-200 bg-white px-4 py-5 text-center">
-        <nav aria-label="リンク集の補足メニュー" className="mx-auto flex max-w-xl flex-wrap justify-center gap-x-5 gap-y-2 text-xs text-slate-600">
-          {[
-            { href: "/about", label: "運営者情報" },
-            { href: "/legal/privacy", label: "プライバシーポリシー" },
-          ].map(({ href, label }) => <Link key={href} href={href} prefetch={false} className="inline-flex min-h-[44px] items-center hover:text-navy hover:underline focus-visible:outline focus-visible:outline-2 focus-visible:outline-navy">{label}</Link>)}
+        <nav aria-label="リンク集の補足メニュー" className="mx-auto flex max-w-xl items-center justify-center gap-2 text-xs text-slate-600">
+          <Link href="/about" prefetch={false} className="inline-flex min-h-[44px] items-center hover:text-navy hover:underline focus-visible:outline focus-visible:outline-2 focus-visible:outline-navy">運営者情報</Link>
+          <span aria-hidden="true" className="text-slate-300">｜</span>
+          <Link href="/legal/privacy" prefetch={false} className="inline-flex min-h-[44px] items-center hover:text-navy hover:underline focus-visible:outline focus-visible:outline-2 focus-visible:outline-navy">プライバシーポリシー</Link>
         </nav>
         <p className="mt-2 text-[11px] text-slate-500">© {new Date().getFullYear()} Bulltalk</p>
       </footer>
