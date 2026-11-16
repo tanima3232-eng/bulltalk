@@ -134,7 +134,7 @@ export default function SocialPage() {
       </main>
       <footer className="border-t border-slate-200 bg-white px-4 py-5 text-center">
         <nav aria-label="リンク集の補足メニュー" className="mx-auto flex max-w-xl items-center justify-center gap-2 text-xs text-slate-600">
-          <Link href="/about" prefetch={false} className="inline-flex min-h-[44px] items-center hover:text-navy hover:underline focus-visible:outline focus-visible:outline-2 focus-visible:outline-navy">運営者情報</Link>
+          <Link href="/operator" prefetch={false} className="inline-flex min-h-[44px] items-center hover:text-navy hover:underline focus-visible:outline focus-visible:outline-2 focus-visible:outline-navy">運営者情報</Link>
           <span aria-hidden="true" className="text-slate-300">｜</span>
           <Link href="/legal/privacy" prefetch={false} className="inline-flex min-h-[44px] items-center hover:text-navy hover:underline focus-visible:outline focus-visible:outline-2 focus-visible:outline-navy">プライバシーポリシー</Link>
         </nav>
