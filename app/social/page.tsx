@@ -6,7 +6,7 @@ import Header from "@/components/Header";
 
 const pageUrl = "https://www.bulltalk.jp/social";
 const description =
-  "谷本光章｜証券アナリスト（CMA）・FP1級・宅建士が金融・投資情報をわかりやすく発信。Instagram、YouTube、TikTok、公式LINE、note、資産形成シミュレーションへのリンクをまとめました。";
+  "谷本光章｜証券アナリスト（CMA）｜FP1級｜宅建士が金融・投資情報をわかりやすく発信。Instagram、YouTube、TikTok、公式LINE、note、資産形成シミュレーションへのリンクをまとめました。";
 
 export const metadata: Metadata = {
   title: "公式SNS・リンク集",
@@ -94,7 +94,7 @@ export default function SocialPage() {
             <p className="mb-2 font-inter text-[11px] font-bold tracking-[0.2em] text-[#8B7038]">BULLTALK / OFFICIAL LINKS</p>
             <h1 className="text-2xl font-bold tracking-wide text-navy sm:text-3xl">公式SNS・リンク集</h1>
             <p className="mt-4 text-lg font-bold text-navy">谷本光章</p>
-            <p className="mt-1 text-xs leading-relaxed text-slate-600 sm:text-sm">証券アナリスト（CMA）・FP1級｜宅建士</p>
+            <p className="mt-1 text-xs leading-relaxed text-slate-600 sm:text-sm">証券アナリスト（CMA）｜FP1級｜宅建士</p>
             <p className="mt-3 text-sm text-dark">金融・投資情報をわかりやすく発信</p>
           </div>
 
@@ -118,10 +118,10 @@ export default function SocialPage() {
                   <span className="rounded-full bg-green-50 px-3 py-1 text-xs font-bold text-green-800">登録無料</span>
                 </span>
                 <span className="mt-4 block space-y-3 text-sm leading-relaxed text-dark">
-                  <span className="block"><span className="block font-bold text-navy">『プロが最初に決めている資産配分の考え方』ブック</span><span className="text-slate-600">LINE登録で受け取れます。</span></span>
-                  <span className="block font-bold text-navy">元大手信託銀行員への無料相談（1回）</span>
+                  <span className="flex items-start gap-2"><span aria-hidden="true" className="shrink-0 font-bold text-green-700">✓</span><span><span className="block font-bold text-navy">『プロが最初に決めている資産配分の考え方』ブック</span><span className="text-slate-600">LINE登録で受け取れます。</span></span></span>
+                  <span className="flex items-center gap-2 font-bold text-navy"><span aria-hidden="true" className="shrink-0 text-green-700">✓</span>無料相談</span>
                 </span>
-                <span className="mt-5 flex min-h-[48px] items-center justify-center gap-2 rounded-xl bg-green-700 px-3 py-3 text-sm font-bold text-white transition-colors group-hover:bg-green-800">LINEで特典を受け取る・相談する<Arrow external /></span>
+                <span className="mt-4 flex min-h-[48px] items-center justify-center gap-2 rounded-xl bg-green-700 px-3 py-3 text-sm font-bold text-white transition-colors group-hover:bg-green-800">LINEで特典を受け取る・相談する<Arrow external /></span>
               </a>
             </section>
 
