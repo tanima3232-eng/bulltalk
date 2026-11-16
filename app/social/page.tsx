@@ -122,7 +122,7 @@ export default function SocialPage() {
 
             <section aria-labelledby="line-heading">
               <SectionHeading id="line-heading" number="04">無料資料・最新情報を受け取る</SectionHeading>
-              <p className="mb-3 text-sm leading-relaxed text-slate-600">資産形成に役立つ無料資料や最新情報を配信しています。</p>
+              <p className="mb-3 text-sm leading-relaxed text-slate-600">資産形成に役立つ無料資料や最新情報を配信</p>
               <LinkCard href="https://lin.ee/FmH7NXr" title="LINE公式アカウントを見る" icon={<Logo src="/images/social/line.png" />} external />
             </section>
 
