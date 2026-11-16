@@ -55,7 +55,7 @@ function Logo({ src, portrait = false }: { src: string; portrait?: boolean }) {
 function LinkCard({ href, title, detail, cta, icon, external = false }: {
   href: string;
   title: string;
-  detail?: string;
+  detail?: ReactNode;
   cta?: string;
   icon: ReactNode;
   external?: boolean;
@@ -102,10 +102,10 @@ export default function SocialPage() {
               <SectionHeading id="videos-heading" number="01">SNSでマーケットを知る</SectionHeading>
               <p className="mb-3 text-sm leading-relaxed text-slate-600">日本株・米国株に役立つ情報を毎日発信</p>
               <div className="space-y-2.5">
-                <LinkCard href="https://x.com/bulltalk_jp" title="X" icon={<Logo src="/images/social/x.png" />} external />
-                <LinkCard href="https://www.instagram.com/bulltalk_jp" title="Instagram" icon={<InstagramIcon />} external />
-                <LinkCard href="https://www.youtube.com/@bulltalk_jp" title="YouTube" icon={<span className="block rounded-xl border border-slate-200 bg-white"><Logo src="/images/social/youtube.png" /></span>} external />
-                <LinkCard href="https://www.tiktok.com/@bulltalk_jp" title="TikTok" icon={<Logo src="/images/social/tiktok.png" />} external />
+                <LinkCard href="https://x.com/bulltalk_jp" title="X" detail={<><span className="inline-block">マーケット情報や動きを</span><span className="inline-block">タイムリーに</span></>} icon={<Logo src="/images/social/x.png" />} external />
+                <LinkCard href="https://www.instagram.com/bulltalk_jp" title="Instagram" detail="毎日1分、プロの視点で相場を解説" icon={<InstagramIcon />} external />
+                <LinkCard href="https://www.youtube.com/@bulltalk_jp" title="YouTube" detail="毎日1分、プロの視点で相場を解説" icon={<span className="block rounded-xl border border-slate-200 bg-white"><Logo src="/images/social/youtube.png" /></span>} external />
+                <LinkCard href="https://www.tiktok.com/@bulltalk_jp" title="TikTok" detail="毎日1分、プロの視点で相場を解説" icon={<Logo src="/images/social/tiktok.png" />} external />
               </div>
             </section>
 
