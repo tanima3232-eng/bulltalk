@@ -55,7 +55,7 @@ export default function KanezatoShindanLpPage() {
         >
           <Image
             src="/line-tokuten-banner.png"
-            alt="LINE登録者限定 無料プレゼント｜資産配分の考え方 全17ページPDF"
+            alt="LINE登録者限定 無料プレゼント｜資産形成について学べる全21ページPDF"
             width={800}
             height={450}
             style={{

@@ -31,8 +31,8 @@ export default function LineCtaBanner() {
           {[
             {
               num: "①",
-              title: "『プロが最初に決めている資産配分の考え方』ブック",
-              desc: "資産形成の考え方をまとめた全21ページPDFを無料公開。",
+              title: "『プロの投資先の選び方』ブック",
+              desc: "プロの投資先の選び方をまとめた全21ページPDFを無料公開。",
             },
             {
               num: "②",

@@ -402,7 +402,7 @@ export default async function MarketPage() {
             {/* メリットカード */}
             <div className="flex flex-col gap-4 mb-10 text-left">
               {[
-                { num: "①", title: "『プロが最初に決めている資産配分の考え方』ブック", desc: "資産形成の考え方をまとめた全21ページPDFを無料公開。" },
+                { num: "①", title: "『プロの投資先の選び方』ブック", desc: "プロの投資先の選び方をまとめた全21ページPDFを無料公開。" },
                 { num: "②", title: "元大手信託銀行員への無料相談（1回）", desc: "投資・資産形成・相続・不動産等の疑問を直接プロに相談できます。" },
                 { num: "③", title: "LINE登録者限定の相場情報・マーケットコメント", desc: "一般公開しないディープな相場情報をお届けします。" },
               ].map((item) => (

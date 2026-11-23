@@ -49,10 +49,10 @@ export default function LineTokutenPage() {
                     限定資料
                   </span>
                   <h2 className="text-navy font-bold text-lg leading-snug">
-                    資産配分の考え方
+                    『プロの投資先の選び方』ブック
                   </h2>
                   <p className="text-slate-600 text-xs mt-2 leading-relaxed">
-                    元大手信託銀行員が解説する、長期的な資産形成に役立つ資産配分の考え方をまとめたPDF資料です。
+                    プロの投資先の選び方をまとめた全21ページPDFを無料公開。
                   </p>
                 </div>
               </div>
@@ -75,7 +75,7 @@ export default function LineTokutenPage() {
             {/* ダウンロードボタン */}
             <a
               href="/line-tokuten.pdf"
-              download="【LINE特典】Bulltalk_資産配分の考え方.pdf"
+              download="【LINE特典】Bulltalk_プロの投資先の選び方.pdf"
               id="line-tokuten-download-btn"
               className="btn-primary inline-flex items-center justify-center gap-3 w-full text-base sm:text-lg px-4 sm:px-8 py-4"
             >
