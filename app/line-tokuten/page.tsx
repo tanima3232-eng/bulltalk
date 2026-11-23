@@ -74,7 +74,7 @@ export default function LineTokutenPage() {
 
             {/* ダウンロードボタン */}
             <a
-              href="/line-tokuten.pdf"
+              href="/line-tokuten.pdf?v=20261123"
               download="【LINE特典】Bulltalk_プロの投資先の選び方.pdf"
               id="line-tokuten-download-btn"
               className="btn-primary inline-flex items-center justify-center gap-3 w-full text-base sm:text-lg px-4 sm:px-8 py-4"

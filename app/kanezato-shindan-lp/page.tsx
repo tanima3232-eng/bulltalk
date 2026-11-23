@@ -54,8 +54,8 @@ export default function KanezatoShindanLpPage() {
           style={{ textDecoration: "none", display: "block", marginBottom: 24 }}
         >
           <Image
-            src="/line-tokuten-banner.png"
-            alt="LINE登録者限定 無料プレゼント｜資産形成について学べる全21ページPDF"
+            src="/line-tokuten-banner.png?v=20261123"
+            alt="LINE登録者限定 無料プレゼント｜『プロの投資先の選び方』ブック 全21ページPDF"
             width={800}
             height={450}
             style={{
